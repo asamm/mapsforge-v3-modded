@@ -1,5 +1,3 @@
-apply plugin: 'com.android.library'
-
 android {
     // defaults
     compileSdkVersion Integer.valueOf(PARAM_COMPILE_SDK_VERSION)

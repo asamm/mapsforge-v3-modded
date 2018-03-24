@@ -14,6 +14,8 @@
  */
 package org.mapsforgeV3.android.maps.rendertheme;
 
+import android.util.Log;
+
 import com.asamm.locus.mapsforge.utils.Utils;
 
 import org.mapsforgeV3.android.maps.mapgenerator.RenderThemeDefinition;
@@ -154,7 +156,8 @@ public final class RenderThemeHandler extends DefaultHandler {
      */
 	private RenderThemeHandler(String relativePathPrefix, String themeStyle) {
 		super();
-		this.mRelativePathPrefix = relativePathPrefix;
+        Log.d(TAG, "RenderThemeHandler(" + relativePathPrefix + ", " + themeStyle + ")");
+        this.mRelativePathPrefix = relativePathPrefix;
 		this.mThemeStyle = themeStyle;
         this.mTagIndex = 0;
         this.mCountRulesAll = 0;

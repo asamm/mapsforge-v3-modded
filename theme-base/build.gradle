@@ -1,3 +1,4 @@
+apply plugin: 'com.android.library'
 apply from: '../global.gradle'
 apply plugin: 'maven'
 
@@ -18,7 +19,7 @@ android {
 
 dependencies {
     // MapsForge API
-    compile project(':mapsforge-v3')
+    api project(':mapsforge-v3')
 }
 
 // upload to repository

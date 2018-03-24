@@ -156,9 +156,17 @@ public abstract class RenderInstruction {
      * @return computed value
      */
     public static float parseLengthUnits(String text, boolean defaultAsDp, boolean roundDensity) {
-        if (text == null || text.length() == 0) {
+        // check text
+        if (text == null) {
             return 0;
-        } else if (text.endsWith("dp")) {
+        }
+        text = text.trim();
+        if (text.length() == 0) {
+            return 0;
+        }
+
+        // parse text
+        if (text.endsWith("dp")) {
             float value = Utils.getHandler().parseFloat(text.substring(0, text.length() - 2));
             return Utils.getHandler().getDpPixels(value, roundDensity);
         } else if (text.endsWith("dip")) {

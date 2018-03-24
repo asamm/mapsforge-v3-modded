@@ -1,4 +1,5 @@
 include ':mapsforge-v3'
+include ':sample'
 include ':theme-base'
 include ':theme-map4trip'
 include ':theme-world'
