@@ -1,0 +1,38 @@
+apply from: '../global.gradle'
+apply plugin: 'maven'
+
+def group = 'com.asamm.locus'
+def artifactId = 'mapsforge-v3-modded'
+def versionId = 1
+//version = '1.0-SNAPSHOT'
+def version = '0.93'
+
+android {
+    defaultConfig {
+        versionCode versionId
+        versionName version
+    }
+}
+
+// upload to repository
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            println "  group: $group"
+            repository(url: "${REPO_URL}/repository/maven-playground") {
+                authentication(userName: REPO_NAME, password: REPO_PASS)
+            }
+//            repository(url: "${REPO_URL}/repository/maven-releases") {
+//                authentication(userName: REPO_NAME, password: REPO_PASS)
+//            }
+//            snapshotRepository(url: "${REPO_URL}/repository/maven-snapshots") {
+//                authentication(userName: REPO_NAME, password: REPO_PASS)
+//            }
+
+            // update pom
+            pom.groupId = group
+            pom.artifactId = artifactId
+            pom.version = version
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 43363)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+	 id="postoffice" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:dc="http://purl.org/dc/elements/1.1/"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px"
+	 viewBox="-0.68 -0.68 20 20" enable-background="new -0.68 -0.68 20 20" xml:space="preserve">
+<g>
+	<path fill="#E80A0A" d="M9.32,19.14c-5.415,0-9.82-4.405-9.82-9.82S3.905-0.5,9.32-0.5s9.82,4.405,9.82,9.82
+		S14.735,19.14,9.32,19.14L9.32,19.14z"/>
+	<path fill="#F4F4F4" d="M9.32,0c5.147,0,9.32,4.173,9.32,9.32s-4.173,9.32-9.32,9.32S0,14.468,0,9.32S4.173,0,9.32,0 M9.32-1
+		C3.63-1-1,3.63-1,9.32S3.63,19.64,9.32,19.64s10.32-4.63,10.32-10.32S15.01-1,9.32-1L9.32-1z"/>
+</g>
+<path fill="#FFFF00" stroke="#FFFF00" stroke-width="0.75" d="M15.239,7.151v4.932H3.401V7.151l5.919,2.959L15.239,7.151z
+	 M3.401,6.164h11.838L9.321,9.124L3.401,6.164z M2.415,13.07h13.812V5.177H2.415V13.07z"/>
+</svg>

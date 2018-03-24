@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tag-mapping xmlns="http://mapsforge.org/tag-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://mapsforge.org/tag-mapping ../resources/tag-mapping.xsd" default-zoom-appear="14"
+	profile-name="default-profile">
+	
+	<!-- 
+	Tag mapping file for Asamm styles: world
+	
+	-->
+	<!-- ************* POIS *************** -->
+	<!-- PLACES TAGS -->
+	<pois>
+		<osm-tag key="place" value="ocean" zoom-appear="0" />
+		<osm-tag key="place" value="sea" zoom-appear="4" />
+		<osm-tag key="place" value="continent" zoom-appear="0" />
+		<osm-tag key="place" value="city" zoom-appear="5" />
+		<osm-tag key="place" value="country" zoom-appear="2" />
+		<osm-tag key="place" value="town" zoom-appear="8" />
+		
+		<!-- capital for country  -->
+		<osm-tag key="capital" value="yes" renderable="false"/>
+		<osm-tag key="capital" value="no" renderable="false"/>
+		<osm-tag key="capital" value="country" renderable="false"/>
+		
+		<!-- capital for state or province -->
+		<osm-tag key="capital" value="4" renderable="false"/>
+		<osm-tag key="is_capital" value="state" renderable="false"/>
+		<osm-tag key="state_capital" value="yes" renderable="false"/>
+		
+	</pois>
+
+	<!-- ************* WAYS *************** -->
+
+	<!-- HIGHWAY TAGS -->
+	<ways>
+		<osm-tag key="type" value="Major_Highway" zoom-appear="6" />
+		<osm-tag key="type" value="Secondary_Highway" zoom-appear="7" />
+		<osm-tag key="type" value="Unknown" zoom-appear="7" />
+		<osm-tag key="type" value="Road" zoom-appear="7" />
+		<osm-tag key="type" value="Ferry_Route" zoom-appear="6" />
+		
+		<osm-tag key="toll" value="0" renderable="false" />
+		<osm-tag key="toll" value="1" renderable="false" />
+		
+		<osm-tag key="continent" value="Asia" renderable="false" />
+		<osm-tag key="continent" value="Africa" renderable="false" />
+		<osm-tag key="continent" value="South_America" renderable="false" />
+		<osm-tag key="continent" value="North_America" renderable="false" />
+		<osm-tag key="continent" value="North_America_x-fade" renderable="false" />
+		<osm-tag key="continent" value="Oceania" renderable="false" />
+		
+		
+		
+		
+		
+	<!--	<osm-tag key="highway" value="motorway" zoom-appear="7" />
+		<osm-tag key="highway" value="trunk" zoom-appear="8" />-->
+		
+		
+		<!--<osm-tag key="highway" value="primary" zoom-appear="8" /> -->
+	</ways>
+
+
+	<!-- ADMINISTRATIVE AND NAURAL BOUNDARIES -->
+	<ways>
+		
+	<!--
+		<osm-tag key="boundary" value="administrative" force-polygon-line="true" zoom-appear="0" enabled="false" />
+	-->
+		<osm-tag key="admin_level" value="1" force-polygon-line="true" zoom-appear="3">
+			<zoom-override key="boundary" value="administrative" />
+		</osm-tag>
+		<osm-tag key="admin_level" value="2" force-polygon-line="true" zoom-appear="3">
+			<zoom-override key="boundary" value="administrative" />
+		</osm-tag>
+		<osm-tag key="admin_level" value="3" force-polygon-line="true" zoom-appear="4">
+			<zoom-override key="boundary" value="administrative" />
+		</osm-tag>
+		<osm-tag key="admin_level" value="4" force-polygon-line="true" zoom-appear="7">
+			<zoom-override key="boundary" value="administrative" />
+		</osm-tag>
+	
+		<osm-tag key="maritime" value="yes" renderable="false" />
+		<osm-tag key="maritime" value="no" renderable="false" />
+		
+		<osm-tag key="boundary" value="national_park"  zoom-appear="6" />
+		<osm-tag key="boundary" value="protected_area"  zoom-appear="6" />
+		
+		
+	</ways>
+	
+	<!-- NATURAL / WATERWAY TAGS -->
+	<ways>
+		
+		<osm-tag key="natural" value="sea" zoom-appear="0" />
+		<osm-tag key="natural" value="nosea" zoom-appear="0" />
+		
+		<!--<osm-tag key="waterway" value="riverbank" zoom-appear="6" />
+		<osm-tag key="waterway" value="river" zoom-appear="7" /> -->
+		
+		<osm-tag key="featurecla" value="River" zoom-appear="5" /> 
+		<osm-tag key="featurecla" value="Glaciated_areas" zoom-appear="0" /> 
+		<osm-tag key="featurecla" value="Lake" zoom-appear="5" /> 
+		<osm-tag key="featurecla" value="Reservoir" zoom-appear="5" />
+		<osm-tag key="featurecla" value="Alkaline_Lake" zoom-appear="5" />
+		
+		
+		
+		
+		
+    </ways>
+
+</tag-mapping>

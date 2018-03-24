@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+]>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="42px" height="28px" viewBox="-439.5 583.7 42 28" enable-background="new -439.5 583.7 42 28"
+	 xml:space="preserve">
+<defs>
+</defs>
+<line fill="#99CC99" stroke="#99CC99" stroke-linecap="round" x1="0.6" y1="14.7" x2="4.5" y2="22.5"/>
+<line fill="#99CC99" stroke="#99CC99" stroke-linecap="round" x1="4.5" y1="22.5" x2="8.3" y2="14.7"/>
+<rect x="0.1" y="22" fill="#99CC99" stroke="#99CC99" stroke-width="0.25" stroke-linejoin="round" width="1" height="1"/>
+<rect x="7.8" y="22" fill="#99CC99" stroke="#99CC99" stroke-width="0.25" stroke-linejoin="round" width="1" height="1"/>
+<line fill="#99CC99" stroke="#99CC99" stroke-linecap="round" x1="29" y1="0.5" x2="32.8" y2="8.3"/>
+<line fill="#99CC99" stroke="#99CC99" stroke-linecap="round" x1="32.8" y1="8.3" x2="36.7" y2="0.5"/>
+<rect x="28.5" y="7.8" fill="#99CC99" stroke="#99CC99" stroke-width="0.25" stroke-linejoin="round" width="1" height="1"/>
+<rect x="36.2" y="7.8" fill="#99CC99" stroke="#99CC99" stroke-width="0.25" stroke-linejoin="round" width="1" height="1"/>
+</svg>
