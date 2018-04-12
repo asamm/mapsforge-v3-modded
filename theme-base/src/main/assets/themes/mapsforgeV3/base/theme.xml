@@ -3979,7 +3979,9 @@ version 2.4.0
 			
 			<!-- TOPO AMENITIES > 16-->
 			<rule cat="base_topo" e="any" k="amenity" v="*" >
-				
+				<rule e="any" k="amenity" v="bbq" >
+					<symbol src="file:/symbols/db_poi_bbq_osm.svg" render-db-only="1" symbol-color="#755741" symbol-width="12dp" scale-icon-size="17,1.15"/>
+				</rule>	
 				<rule e="any" k="amenity" v="drinking_water" >
 					<symbol src="file:/symbols/db_poi_drinking_water.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="12dp"  scale-icon-size="18,1.15"/>
 				</rule>
@@ -4015,6 +4017,9 @@ version 2.4.0
 			
 			<!--  CITY amenities > 17 --> 
 			<rule cat="city" e="any" k="amenity" v="*" zoom-min="17">
+				<rule e="any" k="amenity" v="bbq" >
+					<symbol src="file:/symbols/db_poi_bbq_osm.svg" render-db-only="1" symbol-color="#755741" symbol-width="12dp" scale-icon-size="17,1.15"/>
+				</rule>	
 				<rule e="any" k="amenity" v="police" >
 					<symbol src="file:/symbols/db_poi_police.svg" render-db-only="1" symbol-color="#8763ba" symbol-width="10dp" scale-icon-size="18,1.15"  />
 				</rule>	
@@ -4051,7 +4056,9 @@ version 2.4.0
 			
 			<!--  TOPO amenities > 17 --> 
 			<rule cat="base_topo" e="any" k="amenity" v="*" zoom-min="17">
-					
+				<rule e="any" k="amenity" v="bbq" >
+					<symbol src="file:/symbols/db_poi_bbq_osm.svg" render-db-only="1" symbol-color="#755741" symbol-width="12dp" scale-icon-size="17,1.15"/>
+				</rule>	
 				<rule e="any" k="amenity" v="pharmacy" >
 					<symbol src="file:/symbols/db_poi_pharmacy_cross.svg" render-db-only="1" symbol-color="#00ad10" symbol-width="14dp" scale-icon-size="17,1.15"/>
 				</rule>
@@ -4287,6 +4294,9 @@ version 2.4.0
 			<rule e="any" k="leisure" v="marina" zoom-min="16">
 				<caption k="name" font-style="bold_italic" font-size="9dp" scale-font-size="17,1.1" fill="#4f9cbf" stroke="#ffffff" stroke-width="2dp" />
 			</rule>	
+			<rule e="any" k="leisure" v="firepit" zoom-min="16">
+				<symbol src="file:/symbols/db_poi_firepit_osm.svg" render-db-only="1" symbol-color="#755741" symbol-width="12dp" scale-icon-size="17,1.15"/>
+			</rule>
 		</rule>	
 		<!-- leisure for car -->
 		<rule cat="base_car" e="any" k="*" v="*" >
@@ -4349,7 +4359,7 @@ version 2.4.0
 			<rule e="any" k="tourism" v="hotel" >
 				<symbol src="file:/symbols/db_poi_hotel_hostel.svg" render-db-only="1" symbol-color="#af5724" symbol-width="14dp" scale-icon-size="18,1.15" />
 			</rule>			
-			<rule e="any" k="tourism" v="hostel|guest_house|motel">
+			<rule e="any" k="tourism" v="hostel|guest_house|motel|apartment">
 				<symbol src="file:/symbols/db_poi_hotel_hostel.svg" render-db-only="1" symbol-color="#af5724" symbol-width="12dp" scale-icon-size="18,1.15" />
 			</rule>			
 		</rule>
@@ -4359,7 +4369,7 @@ version 2.4.0
 			<rule e="any" k="tourism" v="hotel" >
 				<symbol src="file:/symbols/db_poi_hotel_hostel.svg" render-db-only="1" symbol-color="#af5724" symbol-width="14dp" scale-icon-size="18,1.15" />
 			</rule>			
-			<rule e="any" k="tourism" v="hostel|guest_house">
+			<rule e="any" k="tourism" v="hostel|guest_house|motel|apartment">
 				<symbol src="file:/symbols/db_poi_hotel_hostel.svg" render-db-only="1" symbol-color="#af5724" symbol-width="12dp" scale-icon-size="18,1.15" />
 			</rule>
 		</rule>
@@ -4369,7 +4379,7 @@ version 2.4.0
 			<rule e="any" k="tourism" v="hotel" zoom-min="17" >
 				<symbol src="file:/symbols/db_poi_hotel_hostel.svg" render-db-only="1" symbol-color="#af5724" symbol-width="14dp" scale-icon-size="17,1.15" />
 			</rule>
-			<rule e="any" k="tourism" v="hostel|guest_house" zoom-min="17">
+			<rule e="any" k="tourism" v="hostel|guest_house|apartment" zoom-min="17">
 				<symbol src="file:/symbols/db_poi_hotel_hostel.svg" render-db-only="1" symbol-color="#af5724" symbol-width="12dp" scale-icon-size="17,1.15" />
 			</rule>
 			

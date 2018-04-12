@@ -52,12 +52,7 @@
 		
 		
 		
-		
-	<!--	<osm-tag key="highway" value="motorway" zoom-appear="7" />
-		<osm-tag key="highway" value="trunk" zoom-appear="8" />-->
-		
-		
-		<!--<osm-tag key="highway" value="primary" zoom-appear="8" /> -->
+
 	</ways>
 
 
@@ -104,9 +99,33 @@
 		<osm-tag key="featurecla" value="Reservoir" zoom-appear="5" />
 		<osm-tag key="featurecla" value="Alkaline_Lake" zoom-appear="5" />
 		
+		<osm-tag key="landtype" value="trop_moist_forest" zoom-appear="0" />    
+		<osm-tag key="landtype" value="trop_dry_forest" zoom-appear="0" />      
+		<osm-tag key="landtype" value="trop_conif_forest" zoom-appear="0" />    
+		<osm-tag key="landtype" value="tempr_mixed_forest" zoom-appear="0" />   
+		<osm-tag key="landtype" value="tempr_conifer_forest" zoom-appear="0" /> 
+		<osm-tag key="landtype" value="taiga" zoom-appear="0" />                
+		<osm-tag key="landtype" value="savannas" zoom-appear="0" />             
+		<osm-tag key="landtype" value="grassland" zoom-appear="0" />            
+		<osm-tag key="landtype" value="flooded_grassland" zoom-appear="0" />    
+		<osm-tag key="landtype" value="montane_grassland" zoom-appear="0" />    
+		<osm-tag key="landtype" value="tundra" zoom-appear="0" />               
+		<osm-tag key="landtype" value="mediter_forest" zoom-appear="0" />       
+		<osm-tag key="landtype" value="desert" zoom-appear="0" />               
+		<osm-tag key="landtype" value="mangrove" zoom-appear="0" />             
+		<osm-tag key="landtype" value="ice" zoom-appear="0" /> 	
 		
-		
-		
+		<osm-tag key="sea_depth" value="200" zoom-appear="0" />  
+		<osm-tag key="sea_depth" value="1000" zoom-appear="0" />  
+		<osm-tag key="sea_depth" value="2000" zoom-appear="0" />  
+		<osm-tag key="sea_depth" value="3000" zoom-appear="0" />  
+		<osm-tag key="sea_depth" value="4000" zoom-appear="0" />  
+		<osm-tag key="sea_depth" value="5000" zoom-appear="0" />  
+		<osm-tag key="sea_depth" value="6000" zoom-appear="0" />  
+		<osm-tag key="sea_depth" value="7000" zoom-appear="0" />  
+		<osm-tag key="sea_depth" value="8000" zoom-appear="0" />  
+		<osm-tag key="sea_depth" value="9000" zoom-appear="0" />  
+		<osm-tag key="sea_depth" value="10000" zoom-appear="0" />  
 		
     </ways>
 

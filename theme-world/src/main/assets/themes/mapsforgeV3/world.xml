@@ -4,24 +4,120 @@
 	<rule e="way" k="*" v="*" style="world" >
 	</rule>
 	
-	<!-- Render sea -->
+	<!-- Render sea and lands -->
  	<rule e="way" k="*" v="*" >
-		<rule e="way" k="natural" v="sea">
-			<area fill="#b2daff" />
+	
+		<rule e="way" k="natural" v="sea" zoom-max="6"> 
+			<rule e="way" k="sea_depth" v="~" >
+				<area fill="#d5e6f2" /> <!-- fallback for old world map -->
+			</rule>
 		</rule>
+		<rule e="way" k="natural" v="sea" zoom-min="7" zoom-max="10"> 
+			<area fill="#9CC9E8" />
+		</rule>
+
 		<rule e="way" k="natural" v="nosea" zoom-max="6">
 			<area fill="#b5d6aa" stroke="#b5d6aa" stroke-width="1.0" />
 		</rule>
-		<rule e="way" k="natural" v="nosea" zoom-min="7" zoom-max="7">
+		<rule e="way" k="natural" v="nosea" zoom-min="7" zoom-max="10">
 			<area fill="#f4f2e9" stroke="#f4f2e9" stroke-width="1.0" />
 		</rule>
-		<rule e="way" k="natural" v="nosea" zoom-min="8" zoom-max="8">
-			<area fill="#f4f3f2" stroke="#f4f3f2" stroke-width="1.0" />
+		<rule e="way" k="sea_depth" v="*" zoom-max="6">
+			
+			<area fill="#50d5e6f2" />
+			
+			<rule e="way" k="sea_depth" v="200" >
+				<area fill="#50c9dfef"   />
+			</rule>
+			<rule e="way" k="sea_depth" v="1000" >
+				<area fill="#50a0cbe2"  /> <!--<area fill="#5098c7e0"  />-->
+			</rule>
+			<rule e="way" k="sea_depth" v="2000" >
+				<area fill="#5086bddc"  />
+			</rule>
+			<rule e="way" k="sea_depth" v="3000" >
+				<area fill="#5073b3d8"  />
+			</rule>
+			<rule e="way" k="sea_depth" v="4000" >
+				<area fill="#5060a6d2"  />
+			</rule>
+			<rule e="way" k="sea_depth" v="5000" >
+				<area fill="#504b99ca"  />
+			</rule>
+			<rule e="way" k="sea_depth" v="6000" >
+				<area fill="#503a8ac2"  />
+			</rule>
+			<rule e="way" k="sea_depth" v="7000" >
+				<area fill="#502a7aba"  />
+			</rule>
+			<rule e="way" k="sea_depth" v="8000" >
+				<area fill="#501967ad"  />
+			</rule>
+			<rule e="way" k="sea_depth" v="9000" >
+				<area fill="#50084e98"  />
+			</rule>
+			<rule e="way" k="sea_depth" v="10000" >
+				<area fill="#500b3d87"  />
+			</rule>
+		
 		</rule>
+		
+		<rule e="way" k="landtype" v="*" zoom-max="6">
+		
+			<rule e="way" k="landtype" v="desert" >
+				<area fill="#f6f1d8"  />
+			</rule>
+			<rule e="way" k="landtype" v="savannas" >
+				<area fill="#efe8c3"  />
+			</rule>
+			<rule e="way" k="landtype" v="grassland" >
+				<area fill="#c9dba5"  />
+			</rule>
+			<rule e="way" k="landtype" v="flooded_grassland" >
+				<area fill="#bcdeac"  />
+			</rule>
+			<rule e="way" k="landtype" v="montane_grassland" >
+				<area fill="#c9dba5"  />
+			</rule>
+			
+			<rule e="way" k="landtype" v="mediter_forest" >
+				<area fill="#efe7c3"  />
+			</rule>
+			<rule e="way" k="landtype" v="tempr_mixed_forest" >
+				<area fill="#d2e1be"  />
+			</rule>
+			<rule e="way" k="landtype" v="tempr_conifer_forest" >
+				<area fill="#b1d2ac"  />
+			</rule>
+			<rule e="way" k="landtype" v="tundra" >
+				<area fill="#dfe8c7" />
+			</rule>
+						
+			<rule e="way" k="landtype" v="taiga" >
+				<area fill="#b1d2ac"  />
+			</rule>	
+			
+			<rule e="way" k="landtype" v="trop_moist_forest" >
+				<area fill="#a7ca84"  /> <!--<area fill="#a1ca84"  />-->
+			</rule>
+			<rule e="way" k="landtype" v="trop_dry_forest" >
+				<area fill="#b8c894"  />
+			</rule>
+			<rule e="way" k="landtype" v="trop_conif_forest" >
+				<area fill="#82b77a"  />
+			</rule>			
+			<rule e="way" k="landtype" v="mangrove" >
+				<area fill="#70bf94"  />
+			</rule>
+			<rule e="way" k="landtype" v="ice" >
+				<area fill="#fdfdfd"  />
+			</rule>
+		</rule>
+		
 	</rule>
 		
 	<!-- ways -->
-	<rule e="way" k="*" v="*">
+	<rule e="way" k="*" v="*" zoom-max="10"> 
 		<rule e="way" k="natural" v="coastline">
 			<rule e="way" k="*" v="*" closed="no">
 				<line stroke="#699FC4" stroke-width="1.5" />
@@ -47,7 +143,7 @@
 		</rule>	
 		
 		<!-- waterways -->
-		<rule e="way" k="featurecla" v="*">
+		<rule e="way" k="featurecla" v="*" zoom-max="10">
 			<rule e="way" k="featurecla" v="Glaciated_areas">
 				<area fill="#DCE6EA" stroke="#BDDAF5" stroke-width="0.8" />
 			</rule>
@@ -55,7 +151,7 @@
 				<rule e="way" k="featurecla" v="*" zoom-min="5" zoom-max="6" >
 					<line stroke="#99bfff" stroke-width="1dp" curve="cubic" />
 				</rule>
-				<rule e="way" k="featurecla" v="*" zoom-min="7" zoom-max="8">
+				<rule e="way" k="featurecla" v="*" zoom-min="7" zoom-max="10">
 					<line stroke="#99bfff" stroke-width="1.2dp"  curve="cubic" />
 				</rule>
 				<pathText k="name"  font-style="italic" font-size="8dp" scale-font-size="5,1.15"  dy="-7" fill="#2271e5" stroke="#ffffff" stroke-width="3" />
@@ -82,7 +178,7 @@
 					<line stroke="#707070" stroke-width="1.5dp" stroke-linecap="butt" curve="cubic"/>
 				</rule>
 			</rule>
-			<rule e="way" k="*" v="*" zoom-min="8" zoom-max="8" >	
+			<rule e="way" k="*" v="*" zoom-min="8" zoom-max="10" >	
 				<rule e="way" k="type" v="Major_Highway">
 					<line stroke="#707070" stroke-width="3dp" stroke-linecap="butt" curve="cubic"/>
 				</rule>					
@@ -97,21 +193,22 @@
 			<!-- cores -->			
 			<rule e="way" k="*" v="*" zoom-min="6" zoom-max="6" >
 				<rule e="way" k="type" v="Major_Highway">
-					<line stroke="#e39c50" stroke-width="1.2dp" stroke-linecap="butt" />
+					<line stroke="#90f4f6fb" stroke-width="2.5dp" stroke-linecap="butt" />
+					<line stroke="#f26606" stroke-width="0.8dp" stroke-linecap="butt" />
 				</rule>
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="7" zoom-max="7" >	
 				<rule e="way" k="type" v="Major_Highway">
-					<line stroke="#ef9813" stroke-width="1.6dp" stroke-linecap="butt" curve="cubic"/>
+					<line stroke="#90f4f6fb" stroke-width="2.5dp" stroke-linecap="butt" />
+					<line stroke="#f26606" stroke-width="01dp" stroke-linecap="butt" />
 				</rule>					
 				<rule e="way" k="type" v="Secondary_Highway">
-					<line stroke="#eec859" stroke-width="1.2dp" stroke-linecap="butt" curve="cubic"/>
+					<line stroke="#90f4f6fb" stroke-width="1.8dp" stroke-linecap="butt" />
+					<line stroke="#f7a109" stroke-width="0.7dp" stroke-linecap="butt" curve="cubic"/>
 				</rule>
-				<rule e="way" k="type" v="Unknown|Road">
-					<line stroke="#d5c8a3" stroke-width="0.8dp" stroke-linecap="butt" curve="cubic"/>
-				</rule>
+	
 			</rule>	
-			<rule e="way" k="*" v="*" zoom-min="8" zoom-max="8" >	
+			<rule e="way" k="*" v="*" zoom-min="8" zoom-max="10" >	
 				<rule e="way" k="toll" v="1|0">	
 					<rule e="way" k="type" v="Major_Highway">
 						<line stroke="#ef9813" stroke-width="2.8dp" stroke-linecap="butt" curve="cubic" />
@@ -141,53 +238,32 @@
 			<rule e="way" k="*" v="*" zoom-min="6" zoom-max="7" >
 				<line stroke="#637dd1" stroke-width="1.2" stroke-dasharray="17,11" stroke-linecap="butt" />
 			</rule>
-			<rule e="way" k="*" v="*" zoom-min="8" zoom-max="8" >
+			<rule e="way" k="*" v="*" zoom-min="8" zoom-max="10" >
 				<line stroke="#637dd1" stroke-width="1.7" stroke-dasharray="22,14" stroke-linecap="butt" />
 			</rule>
 		</rule>
-		
-	
-		
-		
+			
 		<rule e="way" k="maritime" v="~|false|no"> <!-- is not maritime boundary-->
 			
-			<rule e="way" k="boundary" v="administrative">
-				<rule e="way" k="admin_level" v="*">
-					
-					<rule e="way" k="admin_level" v="4">
-						<line stroke="#f9574b" stroke-width="0.25" stroke-dasharray="15, 5, 5, 5" />
-					</rule>
-					<rule e="way" k="admin_level" v="3">
-						<line stroke="#f9574b" stroke-width="0.25" />
-					</rule>
-					<rule e="way" k="admin_level" v="2">
-						<line stroke="#80fbf8ed" stroke-width="0.75" />
-						<line stroke="#969591" stroke-width="0.25" stroke-dasharray="15, 15" />
-					</rule>
-					<rule e="way" k="admin_level" v="1">
-						<line stroke="#80ffff00" stroke-width="1.75" />
-						<line stroke="#f9574b" stroke-width="0.25" stroke-dasharray="15, 5, 5, 5" />
-					</rule>
+			<rule e="way" k="admin_level" v="*" zoom-min="3" zoom-max="6">
+				
+				<rule e="way" k="admin_level" v="2">
+					<line stroke="#cc167b" stroke-width="0.5dp"  />
 				</rule>
 			</rule>
-		</rule>
-		
-		<rule e="way" k="maritime" v="~|false|no"> <!-- is not maritime boundary-->
-		
-			<rule e="way" k="admin_level" v="*">
+				
+			<rule e="way" k="admin_level" v="*" zoom-min="7">	
 				<rule e="way" k="admin_level" v="4|5|6">
 					<line stroke="#60FC81DF" stroke-width="2" stroke-linecap="butt" />
 				</rule>
+				
 				<rule e="way" k="admin_level" v="2">
-					<line stroke="#FC81DF" stroke-width="1" stroke-dasharray="23, 8, 3, 8" />
-					<line stroke="#60FC81DF" stroke-width="2dp" stroke-linecap="butt" />
+					<line stroke="#90cc167b" stroke-width="1dp" stroke-dasharray="23, 8, 3, 8" />
+					<line stroke="#40FC81DF" stroke-width="2dp" stroke-linecap="butt" />
 				</rule>
 			</rule>	
 		</rule>
-		
-	
 	</rule>
-
 
 	<!-- nodes -->
 	<rule e="node" k="*" v="*">
@@ -195,51 +271,52 @@
 		<rule e="node" k="place" v="*">
 			<rule e="node" k="place" v="ocean" zoom-min="2" zoom-max="4" >
 				<caption k="name" upper-case="false" font-style="bold_italic"  
-				font-size="12dp" scale-font-size="2,1.2" fill="#517EBF" stroke="#ffffff" stroke-width="1dp" />
+				font-size="10dp" scale-font-size="2,1.2" fill="#517EBF" stroke="#ffffff" stroke-width="1dp" />
 			</rule>
 			<rule e="node" k="place" v="sea" zoom-min="4" zoom-max="6" >
 				<caption k="name" upper-case="false" font-style="bold_italic"  
-				font-size="10dp" scale-font-size="4,1.15" fill="#517EBF" stroke="#ffffff" stroke-width="1.5dp" />
+				font-size="8dp" scale-font-size="4,1.15" fill="#517EBF" stroke="#ffffff" stroke-width="1.5dp" />
 			</rule>
 			
 			<rule e="node" k="place" v="continent" zoom-min="2" zoom-max="3" >
 				<caption k="name" upper-case="true" font-style="bold"  font-size="10dp" scale-font-size="2,1.3" fill="#444444" stroke="#ffffff" stroke-width="2.0" />
 			</rule>
 			
-			<rule e="node" k="place" v="country" zoom-min="3" zoom-max="5" >
-				<caption k="name" upper-case="false" font-style="bold"  font-size="9dp" scale-font-size="3,1.3" fill="#000000" stroke="#ffffff" stroke-width="2.0" />
+			<rule e="node" k="place" v="country" zoom-min="4" zoom-max="4" >
+				<caption k="name" upper-case="true" font-style="bold"  font-size="8dp" scale-font-size="3,1.3" fill="#80000000" stroke="#80ffffff" stroke-width="2.0" />
 			</rule>			
-			<rule e="node" k="place" v="country" zoom-min="6" zoom-max="6" >
-				<caption k="name" upper-case="false" font-style="bold"  font-size="16dp" fill="#80000000" stroke="#80ffffff" stroke-width="2.0" />
+			<rule e="node" k="place" v="country" zoom-min="5" zoom-max="6" >
+				<caption k="name" upper-case="false" font-style="bold"  font-size="14dp" fill="#80000000" stroke="#80ffffff" stroke-width="2.0" />
 			</rule>	
 			
 			<rule e="node" k="place" v="city" zoom-min="5" zoom-max="6" >
 				<rule e="node" k="capital" v="yes|country" >
-					<caption k="name" upper-case="true" font-size="19" dy="-14" scale-font-size="5,1.3" fill="#000000" stroke="#ffffff" stroke-width="1.5" />
+					<caption k="name" upper-case="true" font-size="8dp" dy="-14" scale-font-size="6,1.2" fill="#000000" stroke="#ffffff" stroke-width="0.5dp" />
 					<circle r="7.5" stroke="#414141" fill="#eeeeee" stroke-width="2.5" />
 				</rule>	
 			</rule>
-			<rule e="node" k="place" v="city" zoom-min="7" zoom-max="8" >
+			<rule e="node" k="place" v="city" zoom-min="7" zoom-max="10" >
 				
 				<!-- NORMAL CITY -->
-				<rule e="node" k="place" v="city" zoom-min="8" zoom-max="8" >
+				<rule e="node" k="place" v="city" zoom-min="8" zoom-max="10" >
 					<caption k="name" dy="-11" 	font-size="13dp" fill="#000000" stroke="#ffffff" stroke-width="2dp" />
 					<circle r="3dp" stroke="#414141" fill="#eeeeee" stroke-width="1.5" />
 				</rule>
+		
 				
 				<!-- COUNTRY CAPITAL -->
 				<rule e="node" k="capital" v="yes|country" >
-					<caption k="name" dy="-10dp" upper-case="true" font-size="15dp" scale-font-size="7,1.3" font-style="bold" fill="#000000" stroke="#ffffff" stroke-width="2.3dp" />
+					<caption k="name" dy="-10dp" upper-case="true" font-size="12dp" scale-font-size="7,1.3" font-style="bold" fill="#000000" stroke="#ffffff" stroke-width="2.3dp" />
 					<circle r="4dp" stroke="#414141" fill="#eeeeee" stroke-width="3" />
 				</rule>
 				
 				<!-- province capital -->
 				<rule e="node" k="capital" v="4" >
-					<caption k="name" dy="-12" font-size="13dp" scale-font-size="7,1.3" fill="#000000" stroke="#ffffff" stroke-width="3" />
+					<caption k="name" dy="-12" font-size="12dp" scale-font-size="7,1.3" fill="#000000" stroke="#ffffff" stroke-width="3" />
 					<circle r="3dp" stroke="#414141" fill="#eeeeee" stroke-width="2.5" />
 				</rule>
 				<rule e="node" k="is_capital" v="state" >
-					<caption k="name" dy="-12" font-size="13dp" scale-font-size="7,1.3" fill="#000000" stroke="#ffffff" stroke-width="3" />
+					<caption k="name" dy="-12" font-size="12dp" scale-font-size="7,1.3" fill="#000000" stroke="#ffffff" stroke-width="3" />
 					<circle r="3dp" stroke="#414141" fill="#eeeeee" stroke-width="2.5" />
 				</rule>
 				<rule e="node" k="state_capital" v="yes" >
