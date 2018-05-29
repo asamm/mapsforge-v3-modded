@@ -42,6 +42,7 @@
 		<osm-tag key="amenity" value="post_box" zoom-appear="17" />
 		<osm-tag key="amenity" value="post_office" zoom-appear="17" />
 		<osm-tag key="amenity" value="pub" zoom-appear="16" />
+		<osm-tag key="amenity" value="public_bath" zoom-appear="14" />
 		<osm-tag key="amenity" value="recycling" zoom-appear="17" />
 		<osm-tag key="amenity" value="restaurant" zoom-appear="15" />
 		<osm-tag key="amenity" value="school" zoom-appear="15" />
@@ -52,14 +53,20 @@
 		<osm-tag key="amenity" value="university" zoom-appear="17" />
 		<osm-tag key="amenity" value="vending_machine" zoom-appear="16" />
 	
-
 		<osm-tag key="emergency" value="phone" zoom-appear="16" />
 		
 		<osm-tag key="leisure" value="firepit" zoom-appear="15" />
 		<osm-tag key="leisure" value="marina" zoom-appear="14" />
 		<osm-tag key="leisure" value="playground" zoom-appear="17" />
 		<osm-tag key="leisure" value="slipway" zoom-appear="17" />
-
+		<osm-tag key="leisure" value="stadium" zoom-appear="14" />
+		<osm-tag key="leisure" value="sports_centre" zoom-appear="14" />
+		<osm-tag key="leisure" value="swimming_pool" zoom-appear="14" />
+		<osm-tag key="leisure" value="swimming_area" zoom-appear="14" />
+		<osm-tag key="leisure" value="water_park" zoom-appear="14" />
+		
+		<osm-tag key="sport" value="swimming" zoom-appear="14" />
+		
 		<osm-tag key="religion" value="christian" renderable="false" />
 		<osm-tag key="religion" value="jewish" renderable="false" />
 		<osm-tag key="religion" value="muslim" renderable="false" />
@@ -170,6 +177,7 @@
 		<osm-tag key="access" value="no" renderable="false" />e
 	
 		<osm-tag key="barrier" value="bollard" zoom-appear="17" />
+		<osm-tag key="barrier" value="ditch" zoom-appear="15" />
 		<osm-tag key="barrier" value="cycle_barrier" zoom-appear="17" />
 		<osm-tag key="barrier" value="gate" zoom-appear="14" />
 		<osm-tag key="barrier" value="lift_gate" zoom-appear="15" />
@@ -272,6 +280,8 @@
 		<osm-tag key="natural" value="bare_rock" zoom-appear="14" />		
 		<osm-tag key="natural" value="coastline" zoom-appear="0" force-polygon-line="true" />
 		<osm-tag key="natural" value="desert" zoom-appear="13" />
+		<osm-tag key="natural" value="earth_bank" zoom-appear="14" />
+		<osm-tag key="natural" value="gully" zoom-appear="14" />
 		
 		<osm-tag key="natural" value="glacier" zoom-appear="8" />
 		<osm-tag key="natural" value="grassland" zoom-appear="14" />
@@ -345,23 +355,25 @@
 		
 		<osm-tag key="leisure" value="common" zoom-appear="12" />
 		<osm-tag key="leisure" value="dog_park" zoom-appear="12" />
-		<osm-tag key="leisure" value="garden" zoom-appear="12" />
+		<osm-tag key="leisure" value="garden" zoom-appear="14" />
 		<osm-tag key="leisure" value="golf_course" zoom-appear="12" />
 		<osm-tag key="leisure" value="marina" zoom-appear="14" />
 		<osm-tag key="leisure" value="nature_reserve" zoom-appear="12" />
 		<osm-tag key="leisure" value="park" zoom-appear="12" />
-		<osm-tag key="leisure" value="pitch" zoom-appear="12" />
-		<osm-tag key="leisure" value="playground" zoom-appear="12" />
-		<osm-tag key="leisure" value="sports_centre" zoom-appear="12" />
-		<osm-tag key="leisure" value="stadium" zoom-appear="12" />
-		<osm-tag key="leisure" value="track" zoom-appear="12" />
-		<osm-tag key="leisure" value="water_park" zoom-appear="12" />
+		<osm-tag key="leisure" value="pitch" zoom-appear="14" />
+		<osm-tag key="leisure" value="playground" zoom-appear="14" />
+		<osm-tag key="leisure" value="sports_centre" zoom-appear="14" />
+		<osm-tag key="leisure" value="swimming_pool" zoom-appear="14" />
+		<osm-tag key="leisure" value="swimming_area" zoom-appear="14" />
+		<osm-tag key="leisure" value="stadium" zoom-appear="14" />
+		<osm-tag key="leisure" value="track" zoom-appear="14" />
+		<osm-tag key="leisure" value="water_park" zoom-appear="14" />
 
-		<osm-tag key="sport" value="golf" zoom-appear="12" />
-		<osm-tag key="sport" value="shooting" zoom-appear="12" />
-		<osm-tag key="sport" value="soccer" zoom-appear="12" />
-		<osm-tag key="sport" value="swimming" zoom-appear="12" />
-		<osm-tag key="sport" value="tennis" zoom-appear="12" />
+		<osm-tag key="sport" value="golf" zoom-appear="14" />
+		<osm-tag key="sport" value="shooting" zoom-appear="14" />
+		<osm-tag key="sport" value="soccer" zoom-appear="14" />
+		<osm-tag key="sport" value="swimming" zoom-appear="14" />
+		<osm-tag key="sport" value="tennis" zoom-appear="14" />
 	</ways>
 
 	<!-- PUBLIC AMENITIES -->
@@ -380,6 +392,7 @@
 		<osm-tag key="amenity" value="toilets" zoom-appear="16" />
 		<osm-tag key="amenity" value="university" zoom-appear="13" />
 		<osm-tag key="amenity" value="place_of_worship" zoom-appear="13" />
+		<osm-tag key="amenity" value="public_bath" zoom-appear="14" />
 		<osm-tag key="amenity" value="shelter" zoom-appear="14" />
 
 		<osm-tag key="tourism" value="apartment" zoom-appear="14" />
@@ -583,6 +596,7 @@
 		<osm-tag key="man_made" value="pier" zoom-appear="15" />
 		<osm-tag key="man_made" value="watermill" zoom-appear="14" />
 		<osm-tag key="man_made" value="windmill" zoom-appear="14" />
+		<osm-tag key="man_made" value="mineshaft" zoom-appear="14" />
 
 		<osm-tag key="military" value="airfield" zoom-appear="12" />
 		<osm-tag key="military" value="barracks" zoom-appear="12" />
@@ -602,11 +616,15 @@
 		<osm-tag key="religion" value="christian" renderable="false" />
 		<osm-tag key="religion" value="jewish" renderable="false" />
 		<osm-tag key="religion" value="muslim" renderable="false" />
-		<osm-tag key="religion" value="buddhist" renderable="false" />
-		
-		<osm-tag key="man_made" value="mineshaft" zoom-appear="14" />
+		<osm-tag key="religion" value="buddhist" renderable="false" />		
 		
 		<osm-tag key="area" value="yes" zoom-appear="12" />
+		
+		<!-- embankments -->
+		<osm-tag key="embankment" value="yes" zoom-appear="14" />
+		<osm-tag key="man_made" value="embankment" zoom-appear="14" />
+		
+		<osm-tag key="bridge" value="boardwalk"  />
 		
 	</ways>
 	
@@ -627,7 +645,7 @@
 		<osm-tag key="access" value="no" renderable="false" />
 
 		<osm-tag key="bridge" value="yes" renderable="false" />
-		
+			
 		<osm-tag key="bicycle" value="yes" renderable="false" />
 		<osm-tag key="car" value="yes" renderable="false" />
 		<osm-tag key="truck" value="yes" renderable="false" />

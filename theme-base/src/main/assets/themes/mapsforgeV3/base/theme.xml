@@ -488,6 +488,12 @@ version 2.4.0
 			<area fill="#d6bfa2" />
 		</rule>
 		
+		<rule e="way" k="leisure" v="swimming_pool" zoom-min="16">
+			<rule e="any" k="access" v="~|yes|customers|permissive|public" zoom-min="16">
+				<area fill="#9CC9E8" stroke="#6060ff" stroke-width="0.15dp" />
+			</rule>
+		</rule>
+		
 		<!-- leisure -->
 		<rule cat="base_topo" e="way" k="leisure" v="*" zoom-min="13">
 			
@@ -540,11 +546,7 @@ version 2.4.0
 					<caption k="name" font-style="bold_italic" font-size="9dp" scale-font-size="17,1.15" fill="#4f9cbf" stroke="#ffffff" stroke-width="2dp" />
 				</rule>
 			</rule>
-			
-			<rule e="way" k="leisure" v="swimming_pool" zoom-min="14">
-				<area fill="#9CC9E8" stroke="#6060ff" stroke-width="0.15dp" />
-			</rule>
-
+		
 			<rule e="way" k="leisure" v="stadium|sports_centre|water_park|golf_course|playing_fields|pitch|" zoom-min="16">
 				<caption k="name" font-style="italic" font-family="serif" font-size="8dp" scale-font-size="17,1.15" fill="#333333" stroke="#ffffff" stroke-width="2.5dp" />
 			</rule>
@@ -649,6 +651,23 @@ version 2.4.0
 			   </rule>
 			</rule>		
 		</rule>	
+		
+		<!-- EMBANKMENT -->
+		<rule cat="base_topo" e="way" k="natural" v="earth_bank"  zoom-min="17">
+			<line stroke="#797979" stroke-width="0.15dp" curve="cubic" />
+			<rule e="way" k="*" v="*"  zoom-min="17" zoom-max="17">
+				<line stroke="#797979" dy="3.5dp" stroke-width="1dp" stroke-dasharray="0.5,3" stroke-linecap="butt" curve="cubic"/>
+			</rule>
+			<rule e="way" k="*" v="*"  zoom-min="18" zoom-max="18">
+				<line stroke="#797979" dy="4.3dp" stroke-width="1dp" stroke-dasharray="0.5,3" stroke-linecap="butt" curve="cubic" />
+			</rule>
+			<rule e="way" k="*" v="*"  zoom-min="19" >
+				<line stroke="#797979" dy="5.6dp" stroke-width="1.1dp" stroke-dasharray="0.5,4" stroke-linecap="butt" curve="cubic" />
+			</rule>
+		</rule>
+		<rule cat="base_topo" e="way" k="barrier|natural" v="ditch|gully"  zoom-min="16">
+			<line stroke="#797979" stroke-width="0.15dp" curve="cubic" />
+		</rule>
 		
 		<!-- WATERS -->
 		<rule e="way" k="landuse|natural" v="reservoir|basin|water" zoom-min="8">
@@ -3985,7 +4004,7 @@ version 2.4.0
 				<rule e="any" k="amenity" v="drinking_water" >
 					<symbol src="file:/symbols/db_poi_drinking_water.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="12dp"  scale-icon-size="18,1.15"/>
 				</rule>
-				
+							
 				<rule e="any" k="amenity" v="parking" >
 					<rule e="any" k="access" v="~|yes|public"> 
 						<symbol src="file:/symbols/db_poi_parking.svg" symbol-color="#488bc2" symbol-width="10dp" scale-icon-size="17,1.15" /> 
@@ -3995,6 +4014,10 @@ version 2.4.0
 				<rule e="any" k="amenity" v="post_office">
 					<symbol src="file:/symbols/db_poi_post_office.svg" render-db-only="1" symbol-color="#755741"  symbol-width="12dp" scale-icon-size="17,1.15" />
 				</rule>	
+				
+				<rule e="any" k="amenity" v="public_bath" zoom-min="16">
+					<symbol src="file:/symbols/db_poi_swimming.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="14dp" scale-icon-size="17,1.15"/>
+				</rule>
 				
 				<rule cat="pub_rest_topo"  e="any" k="*" v="*" >
 					<rule e="any" k="amenity" v="restaurant" >
@@ -4026,6 +4049,9 @@ version 2.4.0
 				<rule e="any" k="amenity" v="pharmacy" >
 					<symbol src="file:/symbols/db_poi_pharmacy_cross.svg" render-db-only="1" symbol-color="#00ad10" symbol-width="14dp" scale-icon-size="18,1.15" />
 				</rule>	
+				<rule e="any" k="amenity" v="public_bath" >
+					<symbol src="file:/symbols/db_poi_swimming.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="14dp" scale-icon-size="17,1.15"/>
+				</rule>
 				<rule e="any" k="amenity" v="theatre" >
 					<symbol src="file:/symbols/db_poi_theatre.svg" render-db-only="1" symbol-color="#755741" symbol-width="17dp" scale-icon-size="18,1.15"/>
 				</rule>
@@ -4117,7 +4143,10 @@ version 2.4.0
 				</rule>										
 				<rule e="any" k="amenity" v="post_office" >
 					<symbol src="file:/symbols/db_poi_post_office.svg" render-db-only="1"  symbol-color="#755741" symbol-width="12dp" scale-icon-size="17,1.15" />
-				</rule>					
+				</rule>	
+				<rule e="any" k="amenity" v="public_bath" >
+					<symbol src="file:/symbols/db_poi_swimming.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="14dp" scale-icon-size="17,1.15"/>
+				</rule>				
 				<rule e="any" k="amenity" v="theatre" >
 					<symbol src="file:/symbols/db_poi_theatre.svg" render-db-only="1" symbol-color="#755741" symbol-width="17dp" scale-icon-size="17,1.15" />
 				</rule>				
@@ -4297,6 +4326,14 @@ version 2.4.0
 			<rule e="any" k="leisure" v="firepit" zoom-min="16">
 				<symbol src="file:/symbols/db_poi_firepit_osm.svg" render-db-only="1" symbol-color="#755741" symbol-width="12dp" scale-icon-size="17,1.15"/>
 			</rule>
+			<rule e="any" k="leisure" v="swimming_pool" zoom-min="16">
+				<symbol src="file:/symbols/db_poi_swimming.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="14dp" scale-icon-size="17,1.15"/>
+			</rule>
+			<rule e="any" k="leisure" v="sports_centre" zoom-min="16">
+				<rule e="any" k="sport" v="swimming" >
+					<symbol src="file:/symbols/db_poi_swimming.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="14dp" scale-icon-size="17,1.15"/>
+				</rule>
+			</rule>
 		</rule>	
 		<!-- leisure for car -->
 		<rule cat="base_car" e="any" k="*" v="*" >
@@ -4305,6 +4342,14 @@ version 2.4.0
 			</rule>	
 			<rule e="any" k="leisure" v="marina" zoom-min="16">
 				<caption k="name" font-style="bold_italic" font-size="9dp" scale-font-size="17,1.1" fill="#4f9cbf" stroke="#ffffff" stroke-width="2dp" />
+			</rule>
+			<rule e="any" k="leisure" v="swimming_pool" zoom-min="17">
+				<symbol src="file:/symbols/db_poi_swimming.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="14dp" scale-icon-size="17,1.15"/>
+			</rule>
+			<rule e="any" k="leisure" v="sports_centre" zoom-min="17">
+				<rule e="any" k="sport" v="swimming" >
+					<symbol src="file:/symbols/db_poi_swimming.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="14dp" scale-icon-size="17,1.15"/>
+				</rule>
 			</rule>	
 		</rule>
 		<!-- leisure for city -->
@@ -4315,9 +4360,18 @@ version 2.4.0
 			<rule e="any" k="leisure" v="playground" zoom-min="18">
 				<symbol src="file:/symbols/db_poi_playground.svg"  symbol-color="#8763ba" symbol-width="14dp" scale-icon-size="17,1.15" />
 			</rule>
+			<rule e="any" k="leisure" v="swimming_pool" zoom-min="17">
+				<symbol src="file:/symbols/db_poi_swimming.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="14dp" scale-icon-size="17,1.15"/>
+			</rule>
+			<rule e="any" k="leisure" v="sports_centre" zoom-min="17">
+				<rule e="any" k="sport" v="swimming" >
+					<symbol src="file:/symbols/db_poi_swimming.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="14dp" scale-icon-size="17,1.15"/>
+				</rule>
+			</rule>	
+			
 			<rule e="any" k="leisure" v="marina" zoom-min="16">
 				<caption k="name" font-style="bold_italic" font-size="9dp" scale-font-size="17,1.1" fill="#4f9cbf" stroke="#ffffff" stroke-width="2dp" />
-			</rule>		
+			</rule>				
 		</rule>	
 	</rule>
 	
@@ -4511,7 +4565,7 @@ version 2.4.0
 		</rule>
 	</rule>
 	
-	<!-- OTHER POIS -->
+	<!-- OTHER 	 -->
 	<rule e="any" k="*" v="*" zoom-min="14">
 		
 		<!-- aeroway -->
