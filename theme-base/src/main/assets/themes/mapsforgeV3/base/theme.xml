@@ -485,13 +485,7 @@ version 2.4.0
 		
 		<!-- sport -->
 		<rule cat="no_car" e="way" k="sport" v="*" zoom-min="15"> <!-- fill sport areas as institute areas like school, etc. -->
-			<area fill="#d6bfa2" />
-		</rule>
-		
-		<rule e="way" k="leisure" v="swimming_pool" zoom-min="16">
-			<rule e="any" k="access" v="~|yes|customers|permissive|public" zoom-min="16">
-				<area fill="#9CC9E8" stroke="#6060ff" stroke-width="0.15dp" />
-			</rule>
+			<!--<area fill="#d6bfa2" />-->
 		</rule>
 		
 		<!-- leisure -->
@@ -500,7 +494,7 @@ version 2.4.0
 			<!-- Golf, playground summer -->
 			<rule cat="base_summer" e="way" k="leisure" v="*" zoom-min="14" closed="yes">
 				<rule e="way" k="leisure" v="stadium|sports_centre|water_park">
-					<area fill="#d6bfa2" />
+					<area fill="#e1d5b6" />
 				</rule>	
 				<rule e="way" k="leisure" v="golf_course|common|green" >
 					<area fill="#dbe5b2" />
@@ -518,7 +512,7 @@ version 2.4.0
 			<!-- Golf, playground winter -->
 			<rule cat="base_winter" e="way" k="leisure" v="*" zoom-min="14" closed="yes">
 				<rule e="way" k="leisure" v="stadium|sports_centre|water_park">
-					<area fill="#d6bfa2" />
+					<area fill="#e1d5b6" />
 				</rule>	
 				<rule e="way" k="leisure" v="golf_course|common|green" >
 					<area fill="#c7dcdb" />
@@ -670,6 +664,14 @@ version 2.4.0
 		</rule>
 		
 		<!-- WATERS -->
+		
+		<rule e="way" k="leisure" v="swimming_pool" zoom-min="16">
+			<rule e="any" k="access" v="~|yes|customers|permissive|public" zoom-min="16">
+				<area fill="#9CC9E8" stroke="#6060ff" stroke-width="0.15dp" />
+			</rule>
+			<area fill="#9CC9E8" stroke="#6060ff" stroke-width="0.15dp" />
+		</rule>
+		
 		<rule e="way" k="landuse|natural" v="reservoir|basin|water" zoom-min="8">
 			<area fill="#9CC9E8" />
 			<rule e="way" k="*" v="*" zoom-min="14">
@@ -4363,7 +4365,7 @@ version 2.4.0
 			<rule e="any" k="leisure" v="swimming_pool" zoom-min="17">
 				<symbol src="file:/symbols/db_poi_swimming.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="14dp" scale-icon-size="17,1.15"/>
 			</rule>
-			<rule e="any" k="leisure" v="sports_centre" zoom-min="17">
+			<rule e="any" k="leisure" v="	" zoom-min="17">
 				<rule e="any" k="sport" v="swimming" >
 					<symbol src="file:/symbols/db_poi_swimming.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="14dp" scale-icon-size="17,1.15"/>
 				</rule>
