@@ -649,6 +649,7 @@
 		<osm-tag key="bridge" value="yes" renderable="false" />
 			
 		<osm-tag key="bicycle" value="yes" renderable="false" />
+		<osm-tag key="bicycle" value="designated" renderable="false" />
 		<osm-tag key="car" value="yes" renderable="false" />
 		<osm-tag key="truck" value="yes" renderable="false" />
 

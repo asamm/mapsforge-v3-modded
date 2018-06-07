@@ -1459,10 +1459,8 @@ version 2.4.0
 					</rule>
 					<pathText k="ref"  font-style="bold" font-size="8dp" scale-font-size="14,1.1" dy="6dp" fill="#B11BB9" stroke="#ffffff" stroke-width="2dp" />
 				</rule>
-								
-				<!-- MTB scales -->
 				
-				<rule cat="cyc_mtb_routes" e="way" k="mtb:scale" v="*" zoom-min="13" >					
+				<rule cat="cyc_mtb_routes" e="way" k="route|bicycle" v="mtb|yes|designated" zoom-min="13" >					
 					<rule e="way" k="mtb:scale" v="0" zoom-min="14" >					
 						<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
 							<line  dy="2.3dp" stroke="#E588ED" stroke-width="1dp"  /> 
@@ -1532,7 +1530,6 @@ version 2.4.0
 						</rule>
 					</rule>					
 				</rule>
-				
 				
 				<!-- Basic cycleway -->
 				<rule cat="cyc_routes" e="way" k="highway" v="cycleway">
