@@ -181,6 +181,8 @@
 		<osm-tag key="barrier" value="cycle_barrier" zoom-appear="17" />
 		<osm-tag key="barrier" value="gate" zoom-appear="14" />
 		<osm-tag key="barrier" value="lift_gate" zoom-appear="15" />
+		<osm-tag key="barrier" value="kissing_gate" zoom-appear="15" />
+		<osm-tag key="barrier" value="swing_gate" zoom-appear="15" />
 		
 		<osm-tag key="place" value="locality" zoom-appear="16" />
 		

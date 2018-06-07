@@ -1461,6 +1461,7 @@ version 2.4.0
 				</rule>
 								
 				<!-- MTB scales -->
+				
 				<rule cat="cyc_mtb_routes" e="way" k="mtb:scale" v="*" zoom-min="13" >					
 					<rule e="way" k="mtb:scale" v="0" zoom-min="14" >					
 						<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
@@ -1531,6 +1532,7 @@ version 2.4.0
 						</rule>
 					</rule>					
 				</rule>
+				
 				
 				<!-- Basic cycleway -->
 				<rule cat="cyc_routes" e="way" k="highway" v="cycleway">
@@ -4218,15 +4220,18 @@ version 2.4.0
 		<rule e="any" k="barrier" v="bollard">
 			<circle r="1.5" fill="#707070" />
 		</rule>
-		<rule e="any" k="barrier" v="gate|lift_gate"  zoom-min="16">
+		<rule e="any" k="barrier" v="gate|lift_gate|swing_gate"  zoom-min="16">
 			<symbol src="file:/symbols/db_poi_barrier_liftgate.svg" symbol-color="#333333" symbol-width="12dp" scale-icon-size="17,1.15" />
+		</rule>
+		<rule e="any" k="barrier" v="kissing_gate"  zoom-min="16">
+			<symbol src="file:/symbols/db_poi_barrier_kissing_gate.svg" symbol-color="#333333" symbol-width="12dp" scale-icon-size="17,1.15" />
 		</rule>
 	</rule>	
 	<rule cat="base_car" e="any" k="barrier" v="*" zoom-min="18">
 		<rule e="any" k="barrier" v="bollard">
 			<circle r="1.5" fill="#488bc2" />
 		</rule>
-		<rule e="any" k="barrier" v="gate|lift_gate"  zoom-min="16">
+		<rule e="any" k="barrier" v="gate|lift_gate|swing_gate"  zoom-min="16">
 			<symbol src="file:/symbols/db_poi_barrier_liftgate.svg" symbol-color="#488bc2" symbol-width="12dp" scale-icon-size="17,1.15" />
 		</rule>
 	</rule>
