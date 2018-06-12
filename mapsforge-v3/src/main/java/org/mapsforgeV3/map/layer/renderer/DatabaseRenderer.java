@@ -93,7 +93,9 @@ public class DatabaseRenderer implements MapGenerator {
 	private List<MapDatabase> mMapDatabases;
 	// path to current "base" map
 	private File mMapFile;
-	
+    // path to current "world" map
+	private MapDatabase mMapDbWorld;
+
 	// currently used render theme
 	private RenderTheme mRenderTheme;
 	private RenderThemeDefinition mPreviousJobTheme;
@@ -146,6 +148,7 @@ public class DatabaseRenderer implements MapGenerator {
 		
 		// remove all map databases
 		setMapDatabaseMain(null);
+		setMapDatabaseWorld(null);
 	}
 
     /**
@@ -220,9 +223,21 @@ public class DatabaseRenderer implements MapGenerator {
             }
 
 			// if still empty, close tasks
-			if (tr.isEmpty()) {
-				tr.setRequestToEmpty();
-			}
+            boolean empty = tr.isEmpty();
+
+            // handle world map
+            if (mMapDbWorld != null) {
+                mMapDbWorld.readMapData(mapGeneratorJob.tile, tr);
+            }
+
+            // finalize
+            if (empty) {
+                if (!tr.isEmpty()) {
+                    tr.setRequestToWorldOnly();
+                } else {
+                    tr.setRequestToEmpty();
+                }
+            }
 		}
 
 		// return request
@@ -402,6 +417,21 @@ public class DatabaseRenderer implements MapGenerator {
 			return newAdded;
 		}
 	}
+
+    public void setMapDatabaseWorld(MapDatabase mapDatabase) {
+        synchronized (lock) {
+            // close existing file
+            if (mMapDbWorld != null) {
+                mMapDbWorld.closeFile();
+            }
+            mMapDbWorld = null;
+
+            // set new map
+            if (mapDatabase != null) {
+                mMapDbWorld = mapDatabase;
+            }
+        }
+    }
 	
 	public boolean existsMapDatabase(File file) {
 		for (int i = 0, n = mMapDatabases.size(); i < n; i++) {
@@ -485,6 +515,8 @@ public class DatabaseRenderer implements MapGenerator {
 		private boolean renderingComplete;
 		// is renderer still valid
 		private boolean isStillValid;
+		// world map only
+        private boolean isWorldDataOnly;
 
 		// current tile values
 		private byte cZoomLevel;
@@ -545,6 +577,7 @@ public class DatabaseRenderer implements MapGenerator {
 			
 			// basic parameters
 			this.isWater = false;
+			this.isWorldDataOnly = false;
 			this.renderingComplete = false;
 			this.isStillValid = true;
 			this.cZoomLevel = currentMapTile.zoomLevel;
@@ -584,6 +617,12 @@ public class DatabaseRenderer implements MapGenerator {
 		 * @return {@code true} if tile is background only
 		 */
 		public boolean isResultOnlyBg() {
+		    // true for "world map" only
+		    if (isWorldDataOnly) {
+		        return true;
+            }
+
+            // check data
 			return mCounterRenderAreaBg != 0 &&
 					mCounterRenderAreaCaption == 0 &&
 					mCounterRenderAreaSymbol == 0 &&
@@ -599,6 +638,10 @@ public class DatabaseRenderer implements MapGenerator {
 			this.renderingComplete = true;
 			this.bitmap = Utils.getHandler().getEmptyImage();
 		}
+
+		private void setRequestToWorldOnly() {
+		    this.isWorldDataOnly = true;
+        }
 		
 		/**
 		 * Finally start rendering. This method is already called from separate thread

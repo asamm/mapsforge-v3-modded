@@ -46,14 +46,21 @@ class MainActivity : AppCompatActivity() {
 
     // current map path
     private val mapPath = "/storage/4245-AD86/Locus SD/mapsVector/europe/czech_republic.osm.map"
-    // default zoom level
-    private var zoomLevel: Byte = 14
     // current map tileSize
     private var tileSize = 0
+
     // starting longitude coordinate
-    private val baseLongitude = 14.42974
+    private val baseLongitude = 15.04328
     // starting latitude coordinate
-    private val baseLatitude = 50.07978
+    private val baseLatitude = 50.18848
+    // default zoom level
+    private var zoomLevel: Byte = 13
+//    // starting longitude coordinate
+//    private val baseLongitude = 14.42974
+//    // starting latitude coordinate
+//    private val baseLatitude = 50.07978
+//    // default zoom level
+//    private var zoomLevel: Byte = 14
 
     // visible images
     private val mapTiles = arrayListOf<MapTile>()
