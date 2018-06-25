@@ -1,7 +1,7 @@
 android {
     // defaults
     compileSdkVersion Integer.valueOf(PARAM_COMPILE_SDK_VERSION)
-    buildToolsVersion PARAM_BUILD_TOOLS_VERSION
+    buildToolsVersion ANDROID_BUILD_TOOLS
 
     defaultConfig {
         minSdkVersion Integer.valueOf(PARAM_MIN_SDK_VERSION)
