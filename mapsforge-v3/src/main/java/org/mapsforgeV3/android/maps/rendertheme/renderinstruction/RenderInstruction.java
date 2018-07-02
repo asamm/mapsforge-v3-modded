@@ -45,6 +45,8 @@ public abstract class RenderInstruction {
     public static final String KEY_BORDER_WIDTH = "border-width";
     public static final String KEY_CAT = "cat";
     public static final String KEY_CURVE = "curve";
+    public static final String KEY_DB_OUTLINE_COLOR = "db-outline-color";
+    public static final String KEY_DB_OUTLINE_WIDTH = "db-outline-width";
     public static final String KEY_DX = "dx";
     public static final String KEY_DY = "dy";
     public static final String KEY_FONT_FAMILY = "font-family";
