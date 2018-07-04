@@ -16,7 +16,6 @@ package org.mapsforgeV3.android.maps.rendertheme.renderinstruction;
 
 import android.graphics.Color;
 import com.asamm.locus.mapsforge.utils.Utils;
-
 import org.mapsforgeV3.android.maps.rendertheme.RenderCallback;
 import org.mapsforgeV3.android.maps.rendertheme.RenderTheme;
 import org.mapsforgeV3.android.maps.rendertheme.tools.ImageSymbol;
@@ -41,11 +40,11 @@ public final class Symbol extends RenderInstruction {
      * @return a new Symbol with the given rendering attributes.
      * @throws IOException if an I/O error occurs while reading a resource.
      */
-    public static Symbol create(int indexInRules, String elementName, HashMap<String, String> attrs,
-            String relativePathPrefix) throws IOException {
+    public static Symbol create(int indexInRules, String elementName,
+            HashMap<String, String> attrs, String relativePathPrefix) {
         String category = null;
         int dbOutlineColor = Color.WHITE;
-        float dbOutlineWidth = Utils.getHandler().getDpPixels(1.0f, true);
+        float dbOutlineWidth = Utils.getHandler().getDpPixels(2.0f, true);
         boolean forceDraw = false;
         boolean renderDbOnly = false;
 
@@ -77,7 +76,7 @@ public final class Symbol extends RenderInstruction {
 
         // create instruction
         return new Symbol(indexInRules, category, forceDraw, is, renderDbOnly,
-                Math.max(1, (int) dbOutlineWidth), dbOutlineColor);
+                Math.max(0, (int) dbOutlineWidth), dbOutlineColor);
     }
 
     /**
