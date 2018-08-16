@@ -17,65 +17,57 @@ package org.mapsforgeV3.map.layer.renderer;
 import android.graphics.Bitmap;
 
 class PaintContainerSymbol implements Comparable<PaintContainerSymbol> {
-	
-	final boolean alignCenter;
-	final float rotation;
-	final Bitmap symbol;
-	final float x;
-	final float y;
-	final float scale;
-	final int priority;
-	final boolean forceDraw;
 
-	/**
-	 * Creates a new symbol container. The symbol will not be centered.
-	 * 
-	 * @param symbol
-	 *            the symbol to render at the point
-	 * @param x
-	 *            the x coordinate of the point.
-	 * @param y
-	 *            the y coordinate of the point.
-	 */
-	PaintContainerSymbol(Bitmap symbol, float x, float y,
-						 float scale, int priority, boolean forceDraw) {
-		this(symbol, x, y, false, 0, scale, priority, forceDraw);
-	}
+    final boolean alignCenter;
+    final float rotation;
+    final Bitmap symbol;
+    final float x;
+    final float y;
+    final float scale;
+    final int priority;
+    final boolean forceDraw;
 
-	/**
-	 * Creates a new symbol container.
-	 * 
-	 * @param symbol
-	 *            the symbol to render at the point
-	 * @param x
-	 *            the x coordinate of the point.
-	 * @param y
-	 *            the y coordinate of the point.
-	 * @param alignCenter
-	 *            true if the symbol should be centered, false otherwise.
-	 * @param rotation
-	 *            the rotation of the symbol.
-	 */
-	PaintContainerSymbol(Bitmap symbol, float x, float y, boolean alignCenter,
-						 float rotation, float scale, int priority, boolean forceDraw) {
-		this.symbol = symbol;
-		this.x = x;
-		this.y = y;
-		this.alignCenter = alignCenter;
-		this.rotation = rotation;
-		this.scale = scale;
-		this.priority = priority;
-		this.forceDraw = forceDraw;
-	}
+    /**
+     * Creates a new symbol container. The symbol will not be centered.
+     *
+     * @param symbol the symbol to render at the point
+     * @param x      the x coordinate of the point.
+     * @param y      the y coordinate of the point.
+     */
+    PaintContainerSymbol(Bitmap symbol, float x, float y,
+            float scale, int priority, boolean forceDraw) {
+        this(symbol, x, y, false, 0, scale, priority, forceDraw);
+    }
 
-	@Override
-	public int compareTo(PaintContainerSymbol another) {
-		if (priority < another.priority) {
-			return -1;
-		} else if (priority > another.priority) {
-			return 1;
-		} else {
-			return 0;
-		}
-	}
+    /**
+     * Creates a new symbol container.
+     *
+     * @param symbol      the symbol to render at the point
+     * @param x           the x coordinate of the point.
+     * @param y           the y coordinate of the point.
+     * @param alignCenter true if the symbol should be centered, false otherwise.
+     * @param rotation    the rotation of the symbol.
+     */
+    PaintContainerSymbol(Bitmap symbol, float x, float y, boolean alignCenter,
+            float rotation, float scale, int priority, boolean forceDraw) {
+        this.symbol = symbol;
+        this.x = x;
+        this.y = y;
+        this.alignCenter = alignCenter;
+        this.rotation = rotation;
+        this.scale = scale;
+        this.priority = priority;
+        this.forceDraw = forceDraw;
+    }
+
+    @Override
+    public int compareTo(PaintContainerSymbol another) {
+        if (priority < another.priority) {
+            return -1;
+        } else if (priority > another.priority) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
 }

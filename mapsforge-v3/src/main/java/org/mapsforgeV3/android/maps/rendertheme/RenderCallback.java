@@ -56,7 +56,7 @@ public interface RenderCallback {
     void renderAreaCaption(String caption,
             float horOffset, float verOffset,
             Paint paintFill, Paint paintStroke,
-            BgRectangle bgRect, int priority);
+            BgRectangle bgRect, int priority, boolean forceDraw);
 
     /**
      * Renders an area symbol with the given bitmap.
@@ -77,7 +77,7 @@ public interface RenderCallback {
     void renderPointOfInterestCaption(String caption,
             float horOffset, float verOffset,
             Paint paintFill, Paint paintStroke,
-            BgRectangle bgRect, int priority);
+            BgRectangle bgRect, int priority, boolean forceDraw);
 
     /**
      * Renders a point of interest circle with the given parameters.

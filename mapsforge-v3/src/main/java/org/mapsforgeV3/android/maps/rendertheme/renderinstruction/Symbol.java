@@ -91,6 +91,7 @@ public final class Symbol extends RenderInstruction {
         }
     }
 
+    // force drawing of symbol
     private final boolean mForceDraw;
     // symbol for a object
     private final ImageSymbol mImageSymbol;

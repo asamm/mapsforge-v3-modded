@@ -986,13 +986,13 @@ public class DatabaseRenderer implements MapGenerator {
         public void renderAreaCaption(String caption,
                 float horOffset, float verOffset,
                 Paint paintFill, Paint paintStroke,
-                BgRectangle bgRect, int priority) {
+                BgRectangle bgRect, int priority, boolean forceDraw) {
             mCounterRenderAreaCaption++;
             float[] centerPosition = GeometryUtils.
                     computeAreaCenterPosition(mCoordinatesClosed, coordinates);
             this.areaLabels.add(new PaintContainerPointText(
                     caption, centerPosition[0] + horOffset, centerPosition[1] + verOffset,
-                    paintFill, paintStroke, bgRect, priority));
+                    paintFill, paintStroke, bgRect, priority, forceDraw));
         }
 
         @Override
@@ -1019,11 +1019,11 @@ public class DatabaseRenderer implements MapGenerator {
         public void renderPointOfInterestCaption(String caption,
                 float horOffset, float verOffset,
                 Paint paintFill, Paint paintStroke,
-                BgRectangle bgRect, int priority) {
+                BgRectangle bgRect, int priority, boolean forceDraw) {
             mCounterRenderPoiCaption++;
             this.nodes.add(new PaintContainerPointText(
                     caption, this.poiX + horOffset, this.poiY + verOffset,
-                    paintFill, paintStroke, bgRect, priority));
+                    paintFill, paintStroke, bgRect, priority, forceDraw));
         }
 
         @Override
