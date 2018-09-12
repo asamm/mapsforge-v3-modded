@@ -105,7 +105,7 @@ public final class LineSymbol extends RenderInstruction {
 	
 	private LineSymbol(int indexInRules, String category,
             boolean alignCenter, boolean repeat, float repeatGap,
-            float horOffset, float verOffset, ImageSymbol is) throws IOException {
+            float horOffset, float verOffset, ImageSymbol is) {
 		super(indexInRules, category);
 
 		// generate container for symbol
@@ -123,12 +123,12 @@ public final class LineSymbol extends RenderInstruction {
 	}
 
 	@Override
-	public void renderNode(RenderCallback renderCallback, List<Tag> tags) {
+	public void renderNode(RenderCallback renderCallback, Tag[] tags) {
 		// do nothing
 	}
 
 	@Override
-	public void renderWay(RenderCallback renderCallback, List<Tag> tags) {
+	public void renderWay(RenderCallback renderCallback, Tag[] tags) {
 		renderCallback.renderWaySymbol(mImageSymbol.getBitmap(), this.alignCenter,
 				this.repeat, mImageSymbol.getScale(), repeatGap, horOffset, verOffset);
 	}

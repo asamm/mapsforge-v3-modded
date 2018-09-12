@@ -40,9 +40,9 @@ class NegativeMatcher implements AttributeMatcher {
 		return Utils.contains(mValues, value);
 	}
 
-	public boolean keyListDoesNotContainKeys(List<Tag> tags) {
-		for (int i = 0, n = tags.size(); i < n; ++i) {
-			if (Utils.contains(mKeys, tags.get(i).key)) {
+	public boolean keyListDoesNotContainKeys(Tag[] tags) {
+		for (int i = 0, n = tags.length; i < n; ++i) {
+			if (Utils.contains(mKeys, tags[i].key)) {
 				return false;
 			}
 		}

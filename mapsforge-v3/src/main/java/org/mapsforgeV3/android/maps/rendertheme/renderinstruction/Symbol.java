@@ -127,7 +127,7 @@ public final class Symbol extends RenderInstruction {
     }
 
     @Override
-    public void renderNode(RenderCallback renderCallback, List<Tag> tags) {
+    public void renderNode(RenderCallback renderCallback, Tag[] tags) {
         renderCallback.renderPointOfInterestSymbol(
                 mImageSymbol.getBitmap(), mImageSymbol.getScale(),
                 this.indexInRules, this.mForceDraw, this.mRenderDbOnly,
@@ -135,7 +135,7 @@ public final class Symbol extends RenderInstruction {
     }
 
     @Override
-    public void renderWay(RenderCallback renderCallback, List<Tag> tags) {
+    public void renderWay(RenderCallback renderCallback, Tag[] tags) {
         renderCallback.renderAreaSymbol(
                 mImageSymbol.getBitmap(), mImageSymbol.getScale(),
                 this.indexInRules, this.mForceDraw, this.mRenderDbOnly);

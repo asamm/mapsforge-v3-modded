@@ -28,7 +28,6 @@ import org.mapsforgeV3.core.model.Tag;
 
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.List;
 
 /**
  * Represents a closed polygon on the map.
@@ -44,7 +43,7 @@ public final class Area extends RenderInstruction {
 	 *             if an I/O error occurs while reading a resource.
 	 */
 	public static Area create(int indexInRules, HashMap<String, String> attrs,
-            int level, String relativePathPrefix) throws IOException {
+            int level, String relativePathPrefix) {
         String category = null;
 		int fill = Color.BLACK;
 		int stroke = Color.TRANSPARENT;
@@ -90,7 +89,7 @@ public final class Area extends RenderInstruction {
 
 	private Area(int indexInRules, String category,
                  int fill, int stroke, float strokeWidth,
-                 ImageSymbol is, int level) throws IOException {
+                 ImageSymbol is, int level) {
 		super(indexInRules, category);
 
         // set data
@@ -126,12 +125,12 @@ public final class Area extends RenderInstruction {
 	}
 
 	@Override
-	public void renderNode(RenderCallback renderCallback, List<Tag> tags) {
+	public void renderNode(RenderCallback renderCallback, Tag[] tags) {
 		// do nothing
 	}
 
 	@Override
-	public void renderWay(RenderCallback renderCallback, List<Tag> tags) {
+	public void renderWay(RenderCallback renderCallback, Tag[] tags) {
         // add outline
 		if (this.outline != null) {
 			renderCallback.renderArea(this.outline, this.level);

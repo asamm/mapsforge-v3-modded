@@ -127,7 +127,7 @@ public final class Circle extends RenderInstruction {
 	}
 
 	@Override
-	public void renderNode(RenderCallback renderCallback, List<Tag> tags) {
+	public void renderNode(RenderCallback renderCallback, Tag[] tags) {
 		if (this.outline != null) {
 			renderCallback.renderPointOfInterestCircle(this.renderRadius, this.outline, this.level);
 		}
@@ -137,7 +137,7 @@ public final class Circle extends RenderInstruction {
 	}
 
 	@Override
-	public void renderWay(RenderCallback renderCallback, List<Tag> tags) {
+	public void renderWay(RenderCallback renderCallback, Tag[] tags) {
 		// do nothing
 	}
 

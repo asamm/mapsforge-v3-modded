@@ -29,7 +29,7 @@ class NegativeRule extends Rule {
 	}
 
 	@Override
-	boolean matchesNode(List<Tag> tags, byte zoomLevel) {
+	boolean matchesNode(Tag[] tags, byte zoomLevel) {
 		// basic checks
 		if (zoomLevel == Byte.MIN_VALUE) {
 			// do not test zoom level
@@ -49,9 +49,9 @@ class NegativeRule extends Rule {
 		};
 		
 		// check key/values
-		int size = tags.size();
+		int size = tags.length;
 		for (int i = 0; i < size; i++) {
-			Tag tag = tags.get(i);
+			Tag tag = tags[i];
 			if (this.negativeMatcher.matches(tag.key, tag.value)) {
 				return true;
 			}
@@ -60,7 +60,7 @@ class NegativeRule extends Rule {
 	}
 
 	@Override
-	boolean matchesWay(List<Tag> tags, byte zoomLevel, Closed closed) {
+	boolean matchesWay(Tag[] tags, byte zoomLevel, Closed closed) {
 		// basic checks
 		if (this.zoomMin > zoomLevel || 
 				this.zoomMax < zoomLevel ||
@@ -74,9 +74,9 @@ class NegativeRule extends Rule {
 			return true;
 		};
 
-		int size = tags.size();
+		int size = tags.length;
 		for (int i = 0; i < size; i++) {
-			Tag tag = tags.get(i);
+			Tag tag = tags[i];
 			if (this.negativeMatcher.matches(tag.key, tag.value)) {
 				return true;
 			}

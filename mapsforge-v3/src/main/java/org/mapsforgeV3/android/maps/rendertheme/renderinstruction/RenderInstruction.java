@@ -106,13 +106,13 @@ public abstract class RenderInstruction {
      * @param renderCallback a reference to the receiver of all render callbacks.
      * @param tags           the tags of the node.
      */
-    public abstract void renderNode(RenderCallback renderCallback, List<Tag> tags);
+    public abstract void renderNode(RenderCallback renderCallback, Tag[] tags);
 
     /**
      * @param renderCallback a reference to the receiver of all render callbacks.
      * @param tags           the tags of the way.
      */
-    public abstract void renderWay(RenderCallback renderCallback, List<Tag> tags);
+    public abstract void renderWay(RenderCallback renderCallback, Tag[] tags);
 
     /**
      * Prepare rule before next usage.

@@ -184,12 +184,12 @@ public final class PathText extends RenderInstruction {
 	}
 
 	@Override
-	public void renderNode(RenderCallback renderCallback, List<Tag> tags) {
+	public void renderNode(RenderCallback renderCallback, Tag[] tags) {
 		// do nothing
 	}
 
 	@Override
-	public void renderWay(RenderCallback renderCallback, List<Tag> tags) {
+	public void renderWay(RenderCallback renderCallback, Tag[] tags) {
 		String caption = mTextKey.getValue(tags, mUpperCase);
 		if (caption == null) {
 			return;

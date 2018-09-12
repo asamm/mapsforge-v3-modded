@@ -184,7 +184,7 @@ public final class Caption extends RenderInstruction {
 	}
 
 	@Override
-	public void renderNode(RenderCallback renderCallback, List<Tag> tags) {
+	public void renderNode(RenderCallback renderCallback, Tag[] tags) {
         String caption = mTextKey.getValue(tags, mUpperCase);
         if (caption == null) {
             return;
@@ -196,7 +196,7 @@ public final class Caption extends RenderInstruction {
 	}
 
 	@Override
-	public void renderWay(RenderCallback renderCallback, List<Tag> tags) {
+	public void renderWay(RenderCallback renderCallback, Tag[] tags) {
         String caption = mTextKey.getValue(tags, mUpperCase);
 		if (caption == null) {
 			return;

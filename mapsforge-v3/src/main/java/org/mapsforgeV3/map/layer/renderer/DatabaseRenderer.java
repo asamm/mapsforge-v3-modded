@@ -20,7 +20,9 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff.Mode;
 import android.os.Build;
+
 import com.asamm.locus.mapsforge.utils.Utils;
+
 import org.mapsforgeV3.android.maps.mapgenerator.JobParameters;
 import org.mapsforgeV3.android.maps.mapgenerator.MapGenerator;
 import org.mapsforgeV3.android.maps.mapgenerator.MapGeneratorJob;
@@ -823,7 +825,7 @@ public class DatabaseRenderer implements MapGenerator {
         /**
          * Basic call to render point data (call from data loader).
          */
-        public void renderNode(byte layer, List<Tag> tags, int latitudeE6, int longitudeE6) {
+        public void renderNode(byte layer, Tag[] tags, int latitudeE6, int longitudeE6) {
             mCounterLoadedPoi++;
 
             // quick coordinates test on place
@@ -885,17 +887,14 @@ public class DatabaseRenderer implements MapGenerator {
          * Prepare way (and add for rendering), that works as water background.
          */
         private void renderWaterBackground() {
-            // list of tags used for water areas
-            List<Tag> tagList = new ArrayList<>(2);
-            tagList.add(TAG_NATURAL_WATER);
-
             // set parameters
             this.coordinates = new float[][]{{
                     0, 0, mTileSize, 0, mTileSize, mTileSize, 0, mTileSize, 0, 0}};
             this.mShapeContainer = new ContainerWay(this.coordinates);
 
             // generate tile
-            mRenderTheme.matchClosedWay(this, tagList, cZoomLevel);
+            mRenderTheme.matchClosedWay(this,
+                    new Tag[] {TAG_NATURAL_WATER}, cZoomLevel);
         }
 
         private void clearLists() {

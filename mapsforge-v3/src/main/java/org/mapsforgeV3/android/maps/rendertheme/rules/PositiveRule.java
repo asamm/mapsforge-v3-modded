@@ -34,7 +34,7 @@ class PositiveRule extends Rule {
 	}
 
 	@Override
-	boolean matchesNode(List<Tag> tags, byte zoomLevel) {
+	boolean matchesNode(Tag[] tags, byte zoomLevel) {
 //Utils.getHandler().logW("PositiveRule", "matchNode(" + tags + ", " + zoomLevel + "), " + 
 //		", keyMatcher:" + keyMatcher + 
 //		", valueMatcher:" + valueMatcher + 
@@ -53,9 +53,9 @@ class PositiveRule extends Rule {
 		}
 		
 		// check key/values
-		int size = tags.size();
+		int size = tags.length;
 		for (int i = 0; i < size; i++) {
-			Tag tag = tags.get(i);
+			Tag tag = tags[i];
 			if (keyMatcher.matches(tag.key, tag.value) && 
 					valueMatcher.matches(tag.key, tag.value)) {
 				return true;
@@ -65,7 +65,7 @@ class PositiveRule extends Rule {
 	}
 
 	@Override
-	boolean matchesWay(List<Tag> tags, byte zoomLevel, Closed closed) {
+	boolean matchesWay(Tag[] tags, byte zoomLevel, Closed closed) {
 //Utils.getHandler().logW("PositiveRule", "matchesWay(" + tags + ", " + zoomLevel + ", " + closed + "), " + 
 //		", keyMatcher:" + keyMatcher + 
 //		", valueMatcher:" + valueMatcher +
@@ -80,9 +80,9 @@ class PositiveRule extends Rule {
 		}
 		
 		// check key/values
-		int size = tags.size();
+		int size = tags.length;
 		for (int i = 0; i < size; i++) {
-			Tag tag = tags.get(i);
+			Tag tag = tags[i];
 			if (keyMatcher.matches(tag.key, tag.value) &&
 					valueMatcher.matches(tag.key, tag.value)) {
 				return true;

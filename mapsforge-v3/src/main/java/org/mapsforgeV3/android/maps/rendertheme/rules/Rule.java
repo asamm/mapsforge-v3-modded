@@ -144,11 +144,11 @@ public abstract class Rule {
 		this.mSubRulesLoad.add(rule);
 	}
 
-	abstract boolean matchesNode(List<Tag> tags, byte zoomLevel);
+	abstract boolean matchesNode(Tag[] tags, byte zoomLevel);
 
-	abstract boolean matchesWay(List<Tag> tags, byte zoomLevel, Closed closed);
+	abstract boolean matchesWay(Tag[] tags, byte zoomLevel, Closed closed);
 
-	public void matchNode(RenderCallback renderCallback, List<Tag> tags, byte zoomLevel) {
+	public void matchNode(RenderCallback renderCallback, Tag[] tags, byte zoomLevel) {
 		RenderTheme.countTestNodes++;
 		if (matchesNode(tags, zoomLevel)) {
 			for (RenderInstruction instr : mInstr) {
@@ -160,7 +160,7 @@ public abstract class Rule {
 		}
 	}
 
-	public void matchWay(RenderCallback renderCallback, List<Tag> tags,
+	public void matchWay(RenderCallback renderCallback, Tag[] tags,
                          byte zoomLevel, Closed closed, List<RenderInstruction> matchingList) {
 		RenderTheme.countTestWays++;
 		if (matchesWay(tags, zoomLevel, closed)) {
