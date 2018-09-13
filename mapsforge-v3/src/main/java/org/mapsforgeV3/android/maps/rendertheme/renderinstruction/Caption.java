@@ -52,7 +52,8 @@ public final class Caption extends RenderInstruction {
 		float dx = 0;
 		float dy = 0;
         ScalableParameter dyScale = null;
-		
+        boolean forceDraw = false;
+
 		// FONT
 		FontFamily fontFamily = FontFamily.DEFAULT;
 		FontStyle fontStyle = FontStyle.NORMAL;
@@ -80,6 +81,10 @@ public final class Caption extends RenderInstruction {
         }
         if (attrs.containsKey(KEY_SCALE_DY_SIZE)) {
             dyScale = ScalableParameter.create(attrs.remove(KEY_SCALE_DY_SIZE));
+        }
+        if (attrs.containsKey(KEY_FORCE_DRAW)) {
+            forceDraw = Utils.getHandler().parseBoolean(
+                    attrs.remove(KEY_FORCE_DRAW));
         }
 
         // FONT
@@ -117,7 +122,7 @@ public final class Caption extends RenderInstruction {
 		validate(elementName, textKey, fontSize, strokeWidth);
 		Typeface typeface = Typeface.create(fontFamily.toTypeface(), fontStyle.toInt());
 		
-		return new Caption(indexInRules, category,
+		return new Caption(indexInRules, category, forceDraw,
                 textKey, fontSize, fontSizeScale,
                 dx, dy, dyScale, upperCase,
 				generatePaintFill(Align.LEFT, typeface, fill),
@@ -139,6 +144,8 @@ public final class Caption extends RenderInstruction {
     private final ScalableParameter mFontSizeScale;
     private final float mDx;
     private final float mDy;
+    // force drawing of symbol
+    private final boolean mForceDraw;
     private final ScalableParameter mDyScale;
     private final boolean mUpperCase;
 
@@ -152,11 +159,12 @@ public final class Caption extends RenderInstruction {
     // computed vertical offset for current
     private float mDyComputed;
 
-	private Caption(int indexInRules, String category,
+	private Caption(int indexInRules, String category, boolean forceDraw,
             TextKey textKey, float fontSize, ScalableParameter fontSizeScale,
             float dx, float dy, ScalableParameter dyScale, boolean upperCase,
             Paint paintFill, Paint paintStroke, BgRectangle bgRect) {
 		super(indexInRules, category);
+		this.mForceDraw = forceDraw;
         this.mTextKey = textKey;
         this.mFontSize = fontSize;
         this.mFontSizeScale = fontSizeScale;
@@ -176,7 +184,7 @@ public final class Caption extends RenderInstruction {
 	}
 
 	@Override
-	public void renderNode(RenderCallback renderCallback, List<Tag> tags) {
+	public void renderNode(RenderCallback renderCallback, Tag[] tags) {
         String caption = mTextKey.getValue(tags, mUpperCase);
         if (caption == null) {
             return;
@@ -184,11 +192,11 @@ public final class Caption extends RenderInstruction {
 		renderCallback.renderPointOfInterestCaption(caption,
 				this.mDx, this.mDyComputed,
 				this.paintFill, this.paintStroke, this.bgRect,
-				this.indexInRules);
+				this.indexInRules, this.mForceDraw);
 	}
 
 	@Override
-	public void renderWay(RenderCallback renderCallback, List<Tag> tags) {
+	public void renderWay(RenderCallback renderCallback, Tag[] tags) {
         String caption = mTextKey.getValue(tags, mUpperCase);
 		if (caption == null) {
 			return;
@@ -196,7 +204,7 @@ public final class Caption extends RenderInstruction {
 		renderCallback.renderAreaCaption(caption, 
 				this.mDx, this.mDyComputed,
 				this.paintFill, this.paintStroke, this.bgRect,
-				this.indexInRules);
+				this.indexInRules, this.mForceDraw);
 	}
 
 	@Override

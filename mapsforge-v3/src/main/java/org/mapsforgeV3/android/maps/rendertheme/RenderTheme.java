@@ -15,6 +15,7 @@
 package org.mapsforgeV3.android.maps.rendertheme;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -277,7 +278,7 @@ public class RenderTheme {
 	 * @param zoomLevel
 	 *            the zoom level at which the way should be matched.
 	 */
-	public void matchClosedWay(RenderCallback renderCallback, List<Tag> tags, byte zoomLevel) {
+	public void matchClosedWay(RenderCallback renderCallback, Tag[] tags, byte zoomLevel) {
 		matchWay(renderCallback, tags, zoomLevel, Closed.YES);
 	}
 
@@ -291,7 +292,7 @@ public class RenderTheme {
 	 * @param zoomLevel
 	 *            the zoom level at which the way should be matched.
 	 */
-	public void matchLinearWay(RenderCallback renderCallback, List<Tag> tags, byte zoomLevel) {
+	public void matchLinearWay(RenderCallback renderCallback, Tag[] tags, byte zoomLevel) {
 		matchWay(renderCallback, tags, zoomLevel, Closed.NO);
 	}
 
@@ -305,7 +306,7 @@ public class RenderTheme {
 	 * @param zoomLevel
 	 *            the zoom level at which the node should be matched.
 	 */
-	public void matchNode(RenderCallback renderCallback, List<Tag> tags, byte zoomLevel) {
+	public void matchNode(RenderCallback renderCallback, Tag[] tags, byte zoomLevel) {
 		// use optimized theme
 		if (mThemeOptimized != null) {
 			mThemeOptimized.matchNode(renderCallback, tags, zoomLevel);
@@ -323,7 +324,7 @@ public class RenderTheme {
 		}
 	}
 
-	private void matchWay(RenderCallback renderCallback, List<Tag> tags, byte zoomLevel, Closed closed) {
+	private void matchWay(RenderCallback renderCallback, Tag[] tags, byte zoomLevel, Closed closed) {
 		if (mThemeOptimized != null) {
 			mThemeOptimized.matchWay(renderCallback, tags, zoomLevel, closed);
 			return;
@@ -358,10 +359,10 @@ public class RenderTheme {
 		}
 	}
 
-	private int calculateMatchKey(List<Tag> tags, byte zoomLevel, Closed closed) {
+	private int calculateMatchKey(Tag[] tags, byte zoomLevel, Closed closed) {
 		int result = 7;
 		result = 31 * result + ((closed == null) ? 0 : closed.hashCode());
-		result = 31 * result + ((tags == null) ? 0 : tags.hashCode());
+		result = 31 * result + ((tags == null) ? 0 : Arrays.hashCode(tags));
 		result = 31 * result + zoomLevel;
 		return result;
 	}

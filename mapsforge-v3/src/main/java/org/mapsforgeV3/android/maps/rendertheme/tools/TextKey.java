@@ -59,11 +59,11 @@ public final class TextKey {
 		this.mKey = key;
 	}
 
-    public String getValue(List<Tag> tags, boolean upperCase) {
+    public String getValue(Tag[] tags, boolean upperCase) {
         String result = null;
-        for (int i = 0, n = tags.size(); i < n; ++i) {
-            if (mKey == tags.get(i).key) {
-                result = tags.get(i).getValueAsString();
+        for (int i = 0, n = tags.length; i < n; ++i) {
+            if (mKey == tags[i].key) {
+                result = tags[i].getValueAsString();
                 break;
             }
         }

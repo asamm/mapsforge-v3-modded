@@ -37,7 +37,7 @@ public class Way {
 	/**
 	 * The tags of this way.
 	 */
-	public final List<Tag> tags;
+	public Tag[] tags;
 
 	/**
 	 * The geographical coordinates of the way nodes in the order longitude/latitude.
@@ -60,7 +60,6 @@ public class Way {
      * Default constructor.
      */
 	Way() {
-        tags = new ArrayList<>();
         prepareToNewStep();
 	}
 	
@@ -77,7 +76,7 @@ public class Way {
         latitudeE6 = 0;
         longitudeE6 = 0;
         layer = 0;
-        tags.clear();
+        tags = null;
 
         // clear data with coordinates
         clearNodesData();
