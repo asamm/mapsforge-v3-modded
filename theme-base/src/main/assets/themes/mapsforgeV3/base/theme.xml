@@ -4391,6 +4391,9 @@ version 2.4.0
 			<rule e="any" k="man_made" v="mineshaft" zoom-min="14">
 				<symbol src="file:/symbols/db_poi_mineshaft.svg" render-db-only="1" symbol-color="#755741" symbol-width="14dp" scale-icon-size="17,1.15" />
 			</rule>		
+			<rule e="any" k="man_made" v="lighthouse" >
+				<symbol src="file:/symbols/db_poi_lighthouse_on.svg" symbol-color="#755741" symbol-width="14dp" scale-icon-size="17,1.15" />
+			</rule>
 			<rule e="any" k="man_made" v="watermill" >
 				<symbol src="file:/symbols/db_poi_watermill.svg" symbol-color="#755741" symbol-width="14dp" scale-icon-size="17,1.15" />
 			</rule>
@@ -4404,7 +4407,7 @@ version 2.4.0
 				<symbol src="file:/symbols/db_poi_tower_observation.svg" symbol-color="#755741" symbol-width="14dp" scale-icon-size="17,1.15" />
 			</rule>
 				<!-- captions -->
-			<rule e="any" k="man_made" v="adit|observation|communication" zoom-min="15">
+			<rule e="any" k="man_made" v="adit|observation|communication|lighthouse" zoom-min="16">
 				<caption k="name" dy="15dp" scale-dy-size="16,1.1" font-style="bold_italic"  font-family="serif" font-size="8dp"  scale-font-size="15,1.15" fill="#333333" stroke="#F1D581" stroke-width="1.5dp" />
 			</rule>
 		</rule>

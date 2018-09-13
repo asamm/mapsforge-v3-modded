@@ -137,7 +137,7 @@
 		<osm-tag key="place" value="city" zoom-appear="6" />
 		<osm-tag key="place" value="country" zoom-appear="3" />
 		<osm-tag key="place" value="hamlet" zoom-appear="13" />
-		<osm-tag key="place" value="island" zoom-appear="12" />
+		<osm-tag key="place" value="island" zoom-appear="10" />
 		<osm-tag key="place" value="suburb" zoom-appear="12" />
 		<osm-tag key="place" value="town" zoom-appear="9" />
 		<osm-tag key="place" value="village" zoom-appear="11" />
@@ -599,6 +599,7 @@
 		<osm-tag key="man_made" value="watermill" zoom-appear="14" />
 		<osm-tag key="man_made" value="windmill" zoom-appear="14" />
 		<osm-tag key="man_made" value="mineshaft" zoom-appear="14" />
+		<osm-tag key="man_made" value="lighthouse" zoom-appear="13" />
 
 		<osm-tag key="military" value="airfield" zoom-appear="12" />
 		<osm-tag key="military" value="barracks" zoom-appear="12" />
@@ -608,7 +609,15 @@
 	
 
 		<osm-tag key="place" value="locality" zoom-appear="16" />
-		
+	<!--	
+		<osm-tag key="place" value="city" zoom-appear="6" />
+		<osm-tag key="place" value="country" zoom-appear="3" />
+		<osm-tag key="place" value="hamlet" zoom-appear="13" />
+		<osm-tag key="place" value="island" zoom-appear="10" />
+		<osm-tag key="place" value="suburb" zoom-appear="12" />
+		<osm-tag key="place" value="town" zoom-appear="9" />
+		<osm-tag key="place" value="village" zoom-appear="11" />
+	-->	
 		<osm-tag key="power" value="line" zoom-appear="14" />
 		<osm-tag key="power" value="generator" zoom-appear="13" />
 		<osm-tag key="power" value="station" zoom-appear="13" />
