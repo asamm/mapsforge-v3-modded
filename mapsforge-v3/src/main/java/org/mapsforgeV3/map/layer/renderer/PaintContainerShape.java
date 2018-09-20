@@ -15,33 +15,32 @@
 package org.mapsforgeV3.map.layer.renderer;
 
 import android.graphics.Paint;
-
 import org.mapsforgeV3.android.maps.rendertheme.tools.CurveStyle;
 
 class PaintContainerShape {
 
-	// main paint object
-	final Paint paint;
-	//
-	final Paint paintBorder;
-	final ContainerShape shape;
-	final float vOffset;
-	final CurveStyle curveStyle;
+    // main paint object
+    final Paint paint;
+    //
+    final Paint paintBorder;
+    final ContainerShape shape;
+    final float vOffset;
+    final CurveStyle curveStyle;
 
-	PaintContainerShape(ContainerShape shape, Paint paint) {
-		this.shape = shape;
-		this.paint = paint;
-		this.paintBorder = null;
-		this.vOffset = 0.0f;
-		this.curveStyle = null;
-	}
-	
-	PaintContainerShape(ContainerShape shape, Paint paint, Paint paintBorder,
-						float vOffset, CurveStyle curveStyle) {
-		this.shape = shape;
-		this.paint = paint;
-		this.paintBorder = paintBorder;
-		this.vOffset = vOffset;
-		this.curveStyle = curveStyle;
-	}
+    PaintContainerShape(ContainerShape shape, Paint paint) {
+        this.shape = shape;
+        this.paint = paint;
+        this.paintBorder = null;
+        this.vOffset = 0.0f;
+        this.curveStyle = null;
+    }
+
+    PaintContainerShape(ContainerShape shape, Paint paint, Paint paintBorder,
+            float vOffset, CurveStyle curveStyle) {
+        this.shape = shape;
+        this.paint = paint;
+        this.paintBorder = paintBorder;
+        this.vOffset = vOffset;
+        this.curveStyle = curveStyle;
+    }
 }

@@ -18,9 +18,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Paint.Align;
 import android.graphics.Typeface;
-
 import com.asamm.locus.mapsforge.utils.Utils;
-
 import org.mapsforgeV3.android.maps.rendertheme.RenderCallback;
 import org.mapsforgeV3.android.maps.rendertheme.RenderTheme;
 import org.mapsforgeV3.android.maps.rendertheme.tools.BgRectangle;
@@ -31,7 +29,6 @@ import org.mapsforgeV3.android.maps.rendertheme.tools.TextKey;
 import org.mapsforgeV3.core.model.Tag;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Locale;
 
 /**

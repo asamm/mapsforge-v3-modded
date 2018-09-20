@@ -1,6 +1,5 @@
 package com.asamm.locus.mapsforge.utils;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class Utils {

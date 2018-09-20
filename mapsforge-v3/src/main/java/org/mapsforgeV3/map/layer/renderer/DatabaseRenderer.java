@@ -20,9 +20,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff.Mode;
 import android.os.Build;
-
 import com.asamm.locus.mapsforge.utils.Utils;
-
 import org.mapsforgeV3.android.maps.mapgenerator.JobParameters;
 import org.mapsforgeV3.android.maps.mapgenerator.MapGenerator;
 import org.mapsforgeV3.android.maps.mapgenerator.MapGeneratorJob;
