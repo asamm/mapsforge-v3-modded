@@ -591,17 +591,17 @@ public class DatabaseRenderer implements MapGenerator {
             this.cZoomLevel = currentMapTile.zoomLevel;
             this.cPixelX = currentMapTile.tileX * mTileSize;
             this.cPixelY = currentMapTile.tileY * mTileSize;
-            this.mapSize = MercatorProjection.getMapSize(cZoomLevel);
+            this.mapSize = MercatorProjection.getMapSize(cZoomLevel, mTileSize);
 
             // prepare tile BBOX
             bboxTopE6 = (int) (MercatorProjection.pixelYToLatitude(
-                    cPixelY - mTileSize / 4, cZoomLevel, false) * 1000000.0);
+                    cPixelY - mTileSize / 4, cZoomLevel, mTileSize,false) * 1000000.0);
             bboxBottomE6 = (int) (MercatorProjection.pixelYToLatitude(
-                    cPixelY + mTileSize + mTileSize / 4, cZoomLevel, false) * 1000000.0);
+                    cPixelY + mTileSize + mTileSize / 4, cZoomLevel, mTileSize, false) * 1000000.0);
             bboxLeftE6 = (int) (MercatorProjection.pixelXToLongitude(
-                    cPixelX - mTileSize / 4, cZoomLevel, false) * 1000000.0);
+                    cPixelX - mTileSize / 4, cZoomLevel, mTileSize, false) * 1000000.0);
             bboxRightE6 = (int) (MercatorProjection.pixelXToLongitude(
-                    cPixelX + mTileSize + mTileSize / 4, cZoomLevel, false) * 1000000.0);
+                    cPixelX + mTileSize + mTileSize / 4, cZoomLevel, mTileSize, false) * 1000000.0);
         }
 
         /**

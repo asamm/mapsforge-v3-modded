@@ -76,11 +76,12 @@ public final class MercatorProjection {
 	 * @throws IllegalArgumentException
 	 *             if the given zoom level is negative.
 	 */
-	public static long getMapSize(byte zoomLevel) {
+	public static long getMapSize(byte zoomLevel, int tileSize) {
 		if (zoomLevel < 0) {
 			throw new IllegalArgumentException("zoom level must not be negative: " + zoomLevel);
 		}
 		return (long) Math.pow(2, zoomLevel + 8);
+		//return (long) tileSize << zoomLevel;
 	}
 
 	/**
@@ -117,7 +118,7 @@ public final class MercatorProjection {
 	 */
 	public static long latitudeToTileY(double latitude, byte zoomLevel, int tileSize) {
 		return pixelYToTileY(latitudeToPixelY(latitude, 
-				getMapSize(zoomLevel)), zoomLevel, tileSize);
+				getMapSize(zoomLevel, tileSize)), zoomLevel, tileSize);
 	}
 
 	/**
@@ -144,7 +145,7 @@ public final class MercatorProjection {
 	 */
 	public static long longitudeToTileX(double longitude, byte zoomLevel, int tileSize) {
 		return pixelXToTileX(longitudeToPixelX(longitude, 
-				getMapSize(zoomLevel)), zoomLevel, tileSize);
+				getMapSize(zoomLevel, tileSize)), zoomLevel, tileSize);
 	}
 
 	/**
@@ -158,8 +159,8 @@ public final class MercatorProjection {
 	 * @throws IllegalArgumentException
 	 *             if the given pixelX coordinate is invalid.
 	 */
-	public static double pixelXToLongitude(double pixelX, byte zoomLevel, boolean checkDim) {
-		long mapSize = getMapSize(zoomLevel);
+	public static double pixelXToLongitude(double pixelX, byte zoomLevel, int tileSize, boolean checkDim) {
+		long mapSize = getMapSize(zoomLevel, tileSize);
 		if (checkDim && (pixelX < 0 || pixelX > mapSize)) {
 			throw new IllegalArgumentException("invalid pixelX coordinate at zoom level " + zoomLevel + ": " + pixelX);
 		}
@@ -190,8 +191,8 @@ public final class MercatorProjection {
 	 * @throws IllegalArgumentException
 	 *             if the given pixelY coordinate is invalid.
 	 */
-	public static double pixelYToLatitude(double pixelY, byte zoomLevel, boolean checkDim) {
-		long mapSize = getMapSize(zoomLevel);
+	public static double pixelYToLatitude(double pixelY, byte zoomLevel, int tileSize, boolean checkDim) {
+		long mapSize = getMapSize(zoomLevel, tileSize);
 		if (checkDim && (pixelY < 0 || pixelY > mapSize)) {
 			throw new IllegalArgumentException("invalid pixelY coordinate at zoom level " + zoomLevel + ": " + pixelY);
 		}
@@ -222,7 +223,7 @@ public final class MercatorProjection {
 	 * @return the longitude value of the tile X number.
 	 */
 	public static double tileXToLongitude(long tileX, byte zoomLevel, int tileSize) {
-		return pixelXToLongitude(tileX * tileSize, zoomLevel, false);
+		return pixelXToLongitude(tileX * tileSize, zoomLevel, tileSize, false);
 	}
 
 	/**
@@ -235,7 +236,7 @@ public final class MercatorProjection {
 	 * @return the latitude value of the tile Y number.
 	 */
 	public static double tileYToLatitude(long tileY, byte zoomLevel, int tileSize) {
-		return pixelYToLatitude(tileY * tileSize, zoomLevel, false);
+		return pixelYToLatitude(tileY * tileSize, zoomLevel, tileSize, false);
 	}
 
 	private MercatorProjection() {

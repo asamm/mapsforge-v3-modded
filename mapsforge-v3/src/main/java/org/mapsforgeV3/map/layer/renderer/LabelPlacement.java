@@ -14,6 +14,9 @@
  */
 package org.mapsforgeV3.map.layer.renderer;
 
+import android.graphics.Paint.Align;
+import org.mapsforgeV3.core.model.Tile;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -21,10 +24,6 @@ import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.PriorityQueue;
-
-import org.mapsforgeV3.core.model.Tile;
-
-import android.graphics.Paint.Align;
 
 /**
  * This class place the labels for POIs, area labels and normal labels. The main target is avoiding collisions of these
