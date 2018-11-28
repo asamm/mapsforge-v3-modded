@@ -20,7 +20,9 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff.Mode;
 import android.os.Build;
+
 import com.asamm.locus.mapsforge.utils.Utils;
+
 import org.mapsforgeV3.android.maps.mapgenerator.JobParameters;
 import org.mapsforgeV3.android.maps.mapgenerator.MapGenerator;
 import org.mapsforgeV3.android.maps.mapgenerator.MapGeneratorJob;
@@ -100,6 +102,8 @@ public class DatabaseRenderer implements MapGenerator {
     private LabelPlacement mLabelPlacement;
 
     // last requested zoom level
+    private byte mLastZoomLevel;
+    // last requested zoom level
     private byte mCurrentZoomLevel;
     // last used text scale
     private float mCurrentTextScale;
@@ -132,6 +136,7 @@ public class DatabaseRenderer implements MapGenerator {
             this.maxMapDatabases = Utils.getHandler().getScreenCategory() > 1 ? 5 : 3;
             this.mLabelPlacement = new LabelPlacement(mTileSize);
             this.mPreviousJobTheme = null;
+            this.mLastZoomLevel = 0;
             this.mCurrentZoomLevel = 0;
             this.mCurrentTextScale = 1.0f;
             this.mCurrentLang = "";
@@ -188,25 +193,35 @@ public class DatabaseRenderer implements MapGenerator {
                     preparedImg + ", " + renderingHandler + ")");
         }
 
-        // set render theme
-        if (!prepareRenderTheme(mapGeneratorJob.jobParameters,
-                mapGeneratorJob.tile.zoomLevel)) {
-            return null;
-        }
+        // store last request zoom before request will stuck on "lock"
+        mLastZoomLevel = mapGeneratorJob.tile.zoomLevel;
 
-        // return empty image if no database is available
-        int size = mMapDatabases.size();
-        if (size == 0) {
-            return new TileRenderer(mapGeneratorJob);
-        }
-
-        // create renderer
-        TileRenderer tr = new TileRenderer(mapGeneratorJob,
-                preparedImg, renderingHandler,
-                mMapDatabases.get(0).getDbPoiVersion() > 0);
-
-        // prepare builder
+        // wait in queue and prepare renderer
         synchronized (lock) {
+            // check zoom
+            if (mapGeneratorJob.tile.zoomLevel != mLastZoomLevel) {
+                Utils.getHandler().logW(TAG, "executeJob(), " +
+                        "request no longer valid (zoom-diff)");
+                return null;
+            }
+
+            // set render theme
+            if (!prepareRenderTheme(mapGeneratorJob.jobParameters,
+                    mapGeneratorJob.tile.zoomLevel)) {
+                return null;
+            }
+
+            // return empty image if no database is available
+            int size = mMapDatabases.size();
+            if (size == 0) {
+                return new TileRenderer(mapGeneratorJob);
+            }
+
+            // create renderer
+            TileRenderer tr = new TileRenderer(mapGeneratorJob,
+                    preparedImg, renderingHandler,
+                    mMapDatabases.get(0).getDbPoiVersion() > 0);
+
             // store current main map file
             mMapFile = mMapDatabases.get(0).getMapFile();
 
@@ -240,10 +255,10 @@ public class DatabaseRenderer implements MapGenerator {
                     tr.setRequestToEmpty();
                 }
             }
-        }
 
-        // return request
-        return tr;
+            // return request
+            return tr;
+        }
     }
 
     /**
@@ -252,7 +267,7 @@ public class DatabaseRenderer implements MapGenerator {
      * @param jobParameters parameters for job
      * @return {@code true} if theme was correctly set
      */
-    public boolean prepareRenderTheme(JobParameters jobParameters, byte zoomLevel) {
+    private boolean prepareRenderTheme(JobParameters jobParameters, byte zoomLevel) {
         RenderThemeDefinition jobTheme = jobParameters.jobTheme;
         internalTheme = jobTheme.isInternalTheme();
 
@@ -271,6 +286,7 @@ public class DatabaseRenderer implements MapGenerator {
             // test loaded theme
             if (mRenderTheme == null) {
                 mPreviousJobTheme = null;
+                Utils.getHandler().logW("DatabaseRenderer", "prepareRenderTheme(), theme 'null'");
                 return false;
             }
 
@@ -285,11 +301,11 @@ public class DatabaseRenderer implements MapGenerator {
                 mCurrentZoomLevel != zoomLevel ||
                 mCurrentTextScale != jobParameters.textScale ||
                 !mCurrentLang.equals(getFirstMapDatabaseCountryCode())) {
-            if (DEBUG) {
+//            if (DEBUG) {
                 Utils.getHandler().logW(TAG, "prepareRenderTheme(), " +
                         "new zoom: " + mCurrentZoomLevel + " vs " + zoomLevel + ", " +
                         "text scale: " + mCurrentTextScale + " vs " + jobParameters.textScale);
-            }
+//            }
             // store new values
             mCurrentZoomLevel = zoomLevel;
             mCurrentTextScale = jobParameters.textScale;
@@ -693,6 +709,8 @@ public class DatabaseRenderer implements MapGenerator {
             if (isStillValid && mCurrentZoomLevel == cZoomLevel) {
                 return true;
             } else {
+                Utils.getHandler().logW("DatabaseRenderer",
+                        "isStillValid(), no longer valid for " + isStillValid + ", " + mCurrentZoomLevel + ", " + cZoomLevel);
                 bitmap = null;
                 return false;
             }
