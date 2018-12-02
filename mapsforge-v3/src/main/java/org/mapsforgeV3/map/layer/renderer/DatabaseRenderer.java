@@ -201,7 +201,7 @@ public class DatabaseRenderer implements MapGenerator {
             // check zoom
             if (mapGeneratorJob.tile.zoomLevel != mLastZoomLevel) {
                 Utils.getHandler().logW(TAG, "executeJob(), " +
-                        "request no longer valid (zoom-diff)");
+                        "request no longer valid (zoom-diff), tile: " + (mapGeneratorJob.tile.zoomLevel) + ", lastZoom: " + mLastZoomLevel);
                 return null;
             }
 
@@ -267,7 +267,7 @@ public class DatabaseRenderer implements MapGenerator {
      * @param jobParameters parameters for job
      * @return {@code true} if theme was correctly set
      */
-    private boolean prepareRenderTheme(JobParameters jobParameters, byte zoomLevel) {
+    public boolean prepareRenderTheme(JobParameters jobParameters, byte zoomLevel) {
         RenderThemeDefinition jobTheme = jobParameters.jobTheme;
         internalTheme = jobTheme.isInternalTheme();
 
