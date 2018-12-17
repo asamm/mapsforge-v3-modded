@@ -385,6 +385,9 @@ version 2.4.0
 				<!-- meadow  -->
 				<rule e="way" k="landuse" v="meadow|grass" >
 					<area src="file:/patterns/medow.svg" scale-icon-size="17,1.15" symbol-width="16dp" />
+					<rule e="way" k="*" v="*" zoom-min="16" >
+						<caption k="name" font-style="bold_italic" font-size="12dp" cale-font-size="17,1.15"  fill="#34972D" stroke="#FFFFFF" stroke-width="1dp" />
+					</rule>
 				</rule>	
 
 				<rule cat="base_summer" e="way" k="landuse" v="cemetery"  >

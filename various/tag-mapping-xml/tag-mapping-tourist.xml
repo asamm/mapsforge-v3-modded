@@ -88,6 +88,10 @@
 		<osm-tag key="vending" value="fuel" zoom-appear="16" />
 		<osm-tag key="vending" value="parking_tickets" zoom-appear="16" />
 		
+		<osm-tag key="wheelchair" value="yes" zoom-appear="14" />
+		<osm-tag key="wheelchair" value="no" zoom-appear="14" />
+		<osm-tag key="wheelchair" value="limited" zoom-appear="14" />
+		<osm-tag key="wheelchair" value="designated" zoom-appear="14" />		
 		
 	</pois>
 
