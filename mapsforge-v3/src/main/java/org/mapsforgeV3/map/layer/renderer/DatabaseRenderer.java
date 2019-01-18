@@ -116,10 +116,27 @@ public class DatabaseRenderer implements MapGenerator {
      * @param tileSize size of tiles
      */
     public DatabaseRenderer(int tileSize) {
+        this(tileSize, null, null);
+    }
+
+    /**
+     * Constructs a new DatabaseRenderer.
+     *
+     * @param tileSize size of tiles
+     * @param renderThemeDef theme definition
+     * @param theme pre-prepared render theme, may be null
+     */
+    public DatabaseRenderer(int tileSize,
+            RenderThemeDefinition renderThemeDef,
+            RenderTheme theme) {
         this.lock = new Object();
         this.mTileSize = tileSize;
         this.mMapDatabases = new ArrayList<>();
+
+        // set preselected render theme
         cleanup();
+        this.mPreviousJobTheme = renderThemeDef;
+        this.mRenderTheme = theme;
 
         PAINT_WATER_TILE_HIGHTLIGHT.setStyle(Paint.Style.FILL);
         PAINT_WATER_TILE_HIGHTLIGHT.setColor(Color.CYAN);
@@ -128,14 +145,8 @@ public class DatabaseRenderer implements MapGenerator {
     @Override
     public void cleanup() {
         synchronized (lock) {
-            // destroy theme
-            if (this.mRenderTheme != null) {
-                this.mRenderTheme.destroy();
-            }
-            this.mRenderTheme = null;
             this.maxMapDatabases = Utils.getHandler().getScreenCategory() > 1 ? 5 : 3;
             this.mLabelPlacement = new LabelPlacement(mTileSize);
-            this.mPreviousJobTheme = null;
             this.mLastZoomLevel = 0;
             this.mCurrentZoomLevel = 0;
             this.mCurrentTextScale = 1.0f;
@@ -149,6 +160,13 @@ public class DatabaseRenderer implements MapGenerator {
     public void destroy() {
         // clean content
         cleanup();
+
+        // destroy theme
+        if (this.mRenderTheme != null) {
+            this.mRenderTheme.destroy();
+        }
+        this.mPreviousJobTheme = null;
+        this.mRenderTheme = null;
 
         // remove all map databases
         setMapDatabaseMain(null);
