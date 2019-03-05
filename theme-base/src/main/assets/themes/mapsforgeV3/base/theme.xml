@@ -690,9 +690,14 @@ version 2.4.0
 					<line stroke="#9CC9E8" stroke-width="0.6dp" />
 				</rule>		
 				<rule e="way" k="waterway" v="canal">
-					<line stroke="#9CC9E8" stroke-width="0.9dp" />
+					<rule e="way" k="*" v="*" zoom-min="10" zoom-max="13">
+						<line stroke="#9CC9E8" stroke-width="0.8dp" />
+					</rule>
+					<rule e="way" k="*" v="*" zoom-min="14">
+						<line stroke="#9CC9E8" stroke-width="1dp" />
+						<pathText k="name" font-style="bold_italic" font-size="9dp" scale-font-size="15,1.15" fill="#4f9cbf" stroke="#ffffff" stroke-width="2.5dp" />
+					</rule>
 				</rule>
-				
 				<rule e="way" k="waterway" v="stream" zoom-min="13">
 					<rule e="way" k="*" v="*" zoom-min="13" zoom-max="14">
 						<line stroke="#9CC9E8" stroke-width="0.5dp" curve="cubic" />
@@ -708,7 +713,7 @@ version 2.4.0
 					</rule>
 					<rule e="way" k="*" v="*" zoom-min="14">
 						<line stroke="#9CC9E8" stroke-width="1.3dp" />
-						<pathText k="name" font-style="bold_italic" font-size="11dp" scale-font-size="15,1.15" fill="#4f9cbf" stroke="#ffffff" stroke-width="2dp" />
+						<pathText k="name" font-style="bold_italic" font-size="11dp" scale-font-size="15,1.15" fill="#4f9cbf" stroke="#ffffff" stroke-width="2.5dp" />
 					</rule>
 				</rule>
 			</rule>
