@@ -595,7 +595,7 @@ version 2.4.0
 		<rule cat="base_topo" e="way" k="tourism" v="*" closed="yes">
 			<rule e="way" k="tourism" v="*" zoom-min="14">
 				<rule e="way" k="tourism" v="camp_site|caravan_site|attraction" >
-					<area fill="#d6bfa2"  />
+					<area fill="#e1d5b6"  />
 				</rule>	
 			</rule>		
 			<rule e="way" k="tourism" v="*" zoom-min="16">
@@ -669,10 +669,7 @@ version 2.4.0
 		<!-- WATERS -->
 		
 		<rule e="way" k="leisure" v="swimming_pool" zoom-min="16">
-			<rule e="any" k="access" v="~|yes|customers|permissive|public" zoom-min="16">
-				<area fill="#9CC9E8" stroke="#6060ff" stroke-width="0.15dp" />
-			</rule>
-			<area fill="#9CC9E8" stroke="#6060ff" stroke-width="0.15dp" />
+			<area fill="#9CC9E8" stroke="#2797DD" stroke-width="0.1dp" />
 		</rule>
 		
 		<rule e="way" k="landuse|natural" v="reservoir|basin|water" zoom-min="8">
@@ -4377,8 +4374,15 @@ version 2.4.0
 			<rule e="any" k="leisure" v="firepit" zoom-min="16">
 				<symbol src="file:/symbols/db_poi_firepit_osm.svg" render-db-only="1" symbol-color="#755741" symbol-width="12dp" scale-icon-size="17,1.15"/>
 			</rule>
+			<rule e="any" k="leisure" v="water_park" zoom-min="16">
+				<rule e="any" k="access" v="~|yes|customers|permissive|public">
+					<symbol src="file:/symbols/db_poi_swimming.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="14dp" scale-icon-size="17,1.15"/>
+				</rule>
+			</rule>
 			<rule e="any" k="leisure" v="swimming_pool" zoom-min="16">
-				<symbol src="file:/symbols/db_poi_swimming.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="14dp" scale-icon-size="17,1.15"/>
+				<rule e="any" k="access" v="yes|customers|permissive|public" >
+					<symbol src="file:/symbols/db_poi_swimming.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="14dp" scale-icon-size="17,1.15"/>
+				</rule>
 			</rule>
 			<rule e="any" k="leisure" v="sports_centre" zoom-min="16">
 				<rule e="any" k="sport" v="swimming" >
@@ -4394,8 +4398,15 @@ version 2.4.0
 			<rule e="any" k="leisure" v="marina" zoom-min="16">
 				<caption k="name" font-style="bold_italic" font-size="9dp" scale-font-size="17,1.1" fill="#4f9cbf" stroke="#ffffff" stroke-width="2dp" />
 			</rule>
+			<rule e="any" k="leisure" v="water_park" zoom-min="17">
+				<rule e="any" k="access" v="~|yes|customers|permissive|public" >
+					<symbol src="file:/symbols/db_poi_swimming.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="14dp" scale-icon-size="17,1.15"/>
+				</rule>
+			</rule>
 			<rule e="any" k="leisure" v="swimming_pool" zoom-min="17">
-				<symbol src="file:/symbols/db_poi_swimming.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="14dp" scale-icon-size="17,1.15"/>
+				<rule e="any" k="access" v="yes|customers|permissive|public" >
+					<symbol src="file:/symbols/db_poi_swimming.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="14dp" scale-icon-size="17,1.15"/>
+				</rule>
 			</rule>
 			<rule e="any" k="leisure" v="sports_centre" zoom-min="17">
 				<rule e="any" k="sport" v="swimming" >
@@ -4411,10 +4422,17 @@ version 2.4.0
 			<rule e="any" k="leisure" v="playground" zoom-min="18">
 				<symbol src="file:/symbols/db_poi_playground.svg"  symbol-color="#8763ba" symbol-width="14dp" scale-icon-size="17,1.15" />
 			</rule>
-			<rule e="any" k="leisure" v="swimming_pool" zoom-min="17">
-				<symbol src="file:/symbols/db_poi_swimming.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="14dp" scale-icon-size="17,1.15"/>
+			<rule e="any" k="leisure" v="water_park" zoom-min="17">
+				<rule e="any" k="access" v="~|yes|customers|permissive|public" >
+					<symbol src="file:/symbols/db_poi_swimming.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="14dp" scale-icon-size="17,1.15"/>
+				</rule>
 			</rule>
-			<rule e="any" k="leisure" v="	" zoom-min="17">
+			<rule e="any" k="leisure" v="swimming_pool" zoom-min="17">
+				<rule e="any" k="access" v="yes|customers|permissive|public" >
+					<symbol src="file:/symbols/db_poi_swimming.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="14dp" scale-icon-size="17,1.15"/>
+				</rule>
+			</rule>
+			<rule e="any" k="leisure" v="sports_centre" zoom-min="17">
 				<rule e="any" k="sport" v="swimming" >
 					<symbol src="file:/symbols/db_poi_swimming.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="14dp" scale-icon-size="17,1.15"/>
 				</rule>
