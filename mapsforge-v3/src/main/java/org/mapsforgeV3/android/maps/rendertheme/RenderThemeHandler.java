@@ -68,6 +68,17 @@ public final class RenderThemeHandler extends DefaultHandler {
 
     // STATIC TOOLS
 
+    public interface OnThemePreparationListener {
+
+        /**
+         * Handler for styling vector themes. Allows to define which categories will be visible
+         * and which hidden.
+         * @param menuStyle style from theme
+         * @return list of allowed categories
+         */
+        Set<String> getThemeCategories(XmlRenderThemeStyleMenu menuStyle);
+    }
+
 	/**
      * Generate render theme from XML configuration.
 	 * @param jobTheme the JobTheme to create a RenderTheme from
@@ -76,10 +87,10 @@ public final class RenderThemeHandler extends DefaultHandler {
 	 * @throws ParserConfigurationException if an error occurs while creating the XML parser.
 	 * @throws IOException if an I/O error occurs while reading from the input stream.
 	 */
-	public static RenderTheme getRenderTheme(RenderThemeDefinition jobTheme)
+	public static RenderTheme getRenderTheme(RenderThemeDefinition jobTheme, OnThemePreparationListener listener)
 			throws SAXException, ParserConfigurationException, IOException {
 		RenderThemeHandler renderThemeHandler = new RenderThemeHandler(
-				jobTheme.getRelativePathPrefix(), jobTheme.getThemeStyle());
+				jobTheme.getRelativePathPrefix(), jobTheme.getThemeStyle(), listener);
 		XMLReader xmlReader = SAXParserFactory.newInstance().
 				newSAXParser().getXMLReader();
 		xmlReader.setContentHandler(renderThemeHandler);
@@ -115,6 +126,8 @@ public final class RenderThemeHandler extends DefaultHandler {
 	private final String mRelativePathPrefix;
 	// special theme argument
 	private final String mThemeStyle;
+	// listener for parsing
+    private OnThemePreparationListener themePrepareListener;
 
     // PARAMETERS FOR RENDERING
 
@@ -154,11 +167,12 @@ public final class RenderThemeHandler extends DefaultHandler {
      * @param relativePathPrefix relative path to theme
      * @param themeStyle name of theme style (optional)
      */
-	private RenderThemeHandler(String relativePathPrefix, String themeStyle) {
+	private RenderThemeHandler(String relativePathPrefix, String themeStyle, OnThemePreparationListener listener) {
 		super();
         Log.d(TAG, "RenderThemeHandler(" + relativePathPrefix + ", " + themeStyle + ")");
         this.mRelativePathPrefix = relativePathPrefix;
 		this.mThemeStyle = themeStyle;
+        this.themePrepareListener = listener;
         this.mTagIndex = 0;
         this.mCountRulesAll = 0;
         this.mCountRulesAdded = 0;
@@ -342,7 +356,7 @@ public final class RenderThemeHandler extends DefaultHandler {
             // when we are finished parsing the menu part of the file, we can get the
             // categories to render from the initiator. This allows the creating action
             // to select which of the menu options to choose
-            this.mCategories = Utils.getHandler().getThemeCategories(mRenderThemeStyleMenu);
+            this.mCategories = themePrepareListener.getThemeCategories(mRenderThemeStyleMenu);
         }
     }
 

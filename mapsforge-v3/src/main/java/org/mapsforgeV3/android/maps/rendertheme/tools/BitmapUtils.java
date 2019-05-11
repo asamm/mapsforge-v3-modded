@@ -38,7 +38,7 @@ public final class BitmapUtils {
     private static final float ICON_DEFAULT_SIZE = Utils.getHandler().getDpPixels(16.0f, false);
 
     private static InputStream createInputStream(String relativePathPrefix, String src) throws FileNotFoundException {
-		if (DatabaseRenderer.internalTheme) {
+		if (DatabaseRenderer.internalTheme || relativePathPrefix.startsWith("/assets/themes/mapsforge")) {
 			String absoluteName = getAbsoluteName(relativePathPrefix,
 					src.substring("file:/".length()));
 			InputStream inputStream = BitmapUtils.class.getResourceAsStream(absoluteName);

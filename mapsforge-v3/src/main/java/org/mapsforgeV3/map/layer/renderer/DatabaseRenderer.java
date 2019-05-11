@@ -122,9 +122,9 @@ public class DatabaseRenderer implements MapGenerator {
     /**
      * Constructs a new DatabaseRenderer.
      *
-     * @param tileSize size of tiles
+     * @param tileSize       size of tiles
      * @param renderThemeDef theme definition
-     * @param theme pre-prepared render theme, may be null
+     * @param theme          pre-prepared render theme, may be null
      */
     public DatabaseRenderer(int tileSize,
             RenderThemeDefinition renderThemeDef,
@@ -293,7 +293,9 @@ public class DatabaseRenderer implements MapGenerator {
         // equals, because jobTheme is singleton and in case of changed layers (MapsForge 0.5), we
         // need to reload whole theme again
         boolean forceRefreshTheme = false;
-        if (mPreviousJobTheme == null || jobTheme != mPreviousJobTheme) {
+        if (mPreviousJobTheme == null
+                || jobTheme != mPreviousJobTheme
+                || mRenderTheme == null) {
             cleanup();
             this.mRenderTheme = getRenderTheme(jobTheme);
             if (DEBUG) {
@@ -320,9 +322,9 @@ public class DatabaseRenderer implements MapGenerator {
                 mCurrentTextScale != jobParameters.textScale ||
                 !mCurrentLang.equals(getFirstMapDatabaseCountryCode())) {
 //            if (DEBUG) {
-                Utils.getHandler().logW(TAG, "prepareRenderTheme(), " +
-                        "new zoom: " + mCurrentZoomLevel + " vs " + zoomLevel + ", " +
-                        "text scale: " + mCurrentTextScale + " vs " + jobParameters.textScale);
+            Utils.getHandler().logW(TAG, "prepareRenderTheme(), " +
+                    "new zoom: " + mCurrentZoomLevel + " vs " + zoomLevel + ", " +
+                    "text scale: " + mCurrentTextScale + " vs " + jobParameters.textScale);
 //            }
             // store new values
             mCurrentZoomLevel = zoomLevel;
@@ -348,7 +350,8 @@ public class DatabaseRenderer implements MapGenerator {
      */
     private RenderTheme getRenderTheme(RenderThemeDefinition jobTheme) {
         try {
-            return RenderThemeHandler.getRenderTheme(jobTheme);
+            return RenderThemeHandler.getRenderTheme(jobTheme,
+                    menuStyle -> Utils.getHandler().getThemeCategories(menuStyle));
         } catch (Exception e) {
             Utils.getHandler().logE(TAG, "getRenderTheme(" + jobTheme + ")", e);
         }
@@ -627,7 +630,7 @@ public class DatabaseRenderer implements MapGenerator {
 
             // prepare tile BBOX
             bboxTopE6 = (int) (MercatorProjection.pixelYToLatitude(
-                    cPixelY - mTileSize / 4, cZoomLevel, mTileSize,false) * 1000000.0);
+                    cPixelY - mTileSize / 4, cZoomLevel, mTileSize, false) * 1000000.0);
             bboxBottomE6 = (int) (MercatorProjection.pixelYToLatitude(
                     cPixelY + mTileSize + mTileSize / 4, cZoomLevel, mTileSize, false) * 1000000.0);
             bboxLeftE6 = (int) (MercatorProjection.pixelXToLongitude(
@@ -928,7 +931,7 @@ public class DatabaseRenderer implements MapGenerator {
 
             // generate tile
             mRenderTheme.matchClosedWay(this,
-                    new Tag[] {TAG_NATURAL_WATER}, cZoomLevel);
+                    new Tag[]{TAG_NATURAL_WATER}, cZoomLevel);
         }
 
         private void clearLists() {
