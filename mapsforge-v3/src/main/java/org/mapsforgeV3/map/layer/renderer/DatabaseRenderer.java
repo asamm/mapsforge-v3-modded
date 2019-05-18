@@ -93,8 +93,6 @@ public class DatabaseRenderer implements MapGenerator {
     private List<MapDatabase> mMapDatabases;
     // path to current "base" map
     private File mMapFile;
-    // path to current "world" map
-    private MapDatabase mMapDbWorld;
 
     // currently used render theme
     private RenderTheme mRenderTheme;
@@ -170,7 +168,6 @@ public class DatabaseRenderer implements MapGenerator {
 
         // remove all map databases
         setMapDatabaseMain(null);
-        setMapDatabaseWorld(null);
     }
 
     /**
@@ -260,11 +257,6 @@ public class DatabaseRenderer implements MapGenerator {
             // if still empty, close tasks
             boolean empty = tr.isEmpty();
 
-            // handle world map
-            if (mMapDbWorld != null) {
-                mMapDbWorld.readMapData(mapGeneratorJob.tile, tr);
-            }
-
             // finalize
             if (empty) {
                 if (!tr.isEmpty()) {
@@ -286,6 +278,10 @@ public class DatabaseRenderer implements MapGenerator {
      * @return {@code true} if theme was correctly set
      */
     public boolean prepareRenderTheme(JobParameters jobParameters, byte zoomLevel) {
+        Utils.getHandler().logW(TAG, "prepareRenderTheme(), " +
+                "new zoom: " + mCurrentZoomLevel + " vs " + zoomLevel + ", " +
+                "text scale: " + mCurrentTextScale + " vs " + jobParameters.textScale + ", " +
+                "renderTheme: " + mRenderTheme);
         RenderThemeDefinition jobTheme = jobParameters.jobTheme;
         internalTheme = jobTheme.isInternalTheme();
 
@@ -317,26 +313,32 @@ public class DatabaseRenderer implements MapGenerator {
         }
 
         // refresh theme if needed
-        if (forceRefreshTheme ||
-                mCurrentZoomLevel != zoomLevel ||
-                mCurrentTextScale != jobParameters.textScale ||
-                !mCurrentLang.equals(getFirstMapDatabaseCountryCode())) {
+        if (forceRefreshTheme
+                || mCurrentZoomLevel != zoomLevel
+                || mCurrentTextScale != jobParameters.textScale
+                || !mCurrentLang.equals(getFirstMapDatabaseCountryCode())) {
 //            if (DEBUG) {
-            Utils.getHandler().logW(TAG, "prepareRenderTheme(), " +
-                    "new zoom: " + mCurrentZoomLevel + " vs " + zoomLevel + ", " +
-                    "text scale: " + mCurrentTextScale + " vs " + jobParameters.textScale);
+//            Utils.getHandler().logW(TAG, "prepareRenderTheme(), " +
+//                    "new zoom: " + mCurrentZoomLevel + " vs " + zoomLevel + ", " +
+//                    "text scale: " + mCurrentTextScale + " vs " + jobParameters.textScale);
 //            }
             // store new values
             mCurrentZoomLevel = zoomLevel;
             mCurrentTextScale = jobParameters.textScale;
             mCurrentLang = getFirstMapDatabaseCountryCode();
+            Utils.getHandler().logW(TAG, "  set values " +
+                    "new zoom: " + mCurrentZoomLevel + ", " +
+                    "text scale: " + mCurrentTextScale + ", " +
+                    "lang: " + mCurrentLang);
+
 
             // set Locus extended flag
             mFillSeaAreas = mRenderTheme.isFillSeaAreas();
-
-            // scale theme
-            mRenderTheme.prepareTheme(mCurrentZoomLevel, mCurrentTextScale, mCurrentLang);
         }
+
+        // check theme setup. Because we may use same renderTheme in different places, it is
+        // required to check theme parameters before every rendering
+        mRenderTheme.prepareTheme(mCurrentZoomLevel, mCurrentTextScale, mCurrentLang);
 
         // valid result
         return true;
@@ -448,6 +450,8 @@ public class DatabaseRenderer implements MapGenerator {
                 if (!mMapDatabases.contains(map)) {
                     mMapDatabases.add(map);
                     newAdded = true;
+                } else {
+                    map.closeFile();
                 }
 
                 // limit number of loaded maps
@@ -456,21 +460,6 @@ public class DatabaseRenderer implements MapGenerator {
                 }
             }
             return newAdded;
-        }
-    }
-
-    public void setMapDatabaseWorld(MapDatabase mapDatabase) {
-        synchronized (lock) {
-            // close existing file
-            if (mMapDbWorld != null) {
-                mMapDbWorld.closeFile();
-            }
-            mMapDbWorld = null;
-
-            // set new map
-            if (mapDatabase != null) {
-                mMapDbWorld = mapDatabase;
-            }
         }
     }
 
