@@ -25,7 +25,6 @@ import org.mapsforgeV3.android.maps.rendertheme.RenderCallback;
 import org.mapsforgeV3.android.maps.rendertheme.RenderTheme;
 import org.mapsforgeV3.core.model.Tag;
 
-import java.util.List;
 import java.util.regex.Pattern;
 
 /**
@@ -70,7 +69,7 @@ public abstract class RenderInstruction {
     public static final String KEY_STROKE_DASHARRAY = "stroke-dasharray";
     public static final String KEY_STROKE_LINECAP = "stroke-linecap";
     public static final String KEY_STROKE_WIDTH = "stroke-width";
-	public static final String KEY_SYMBOL_COLOR = "symbol-color";
+    public static final String KEY_SYMBOL_COLOR = "symbol-color";
     public static final String KEY_SYMBOL_HEIGHT = "symbol-height";
     public static final String KEY_SYMBOL_WIDTH = "symbol-width";
     public static final String KEY_UPPER_CASE = "upper-case";
@@ -91,6 +90,7 @@ public abstract class RenderInstruction {
 
     /**
      * Get current defined category.
+     *
      * @return defined category (may be null)
      */
     public String getCategory() {
@@ -117,10 +117,10 @@ public abstract class RenderInstruction {
     /**
      * Prepare rule before next usage.
      *
-	 * @param theme reference to main theme, that may supply theme metadata
+     * @param theme       reference to main theme, that may supply theme metadata
      * @param scaleStroke the factor by which stroke widths should be scaled
-     * @param scaleText the factor by which the text size should be scaled
-     * @param zoomLevel new zoom level
+     * @param scaleText   the factor by which the text size should be scaled
+     * @param zoomLevel   new zoom level
      */
     public abstract void prepare(RenderTheme theme, float scaleStroke, float scaleText, byte zoomLevel);
 
@@ -144,6 +144,7 @@ public abstract class RenderInstruction {
 
     /**
      * Parse units based on "length" attribute.
+     *
      * @param text text value
      * @return parsed units
      */
@@ -153,13 +154,14 @@ public abstract class RenderInstruction {
 
     /**
      * Parse units based on "length" attribute.
-     * @param text text value
+     *
+     * @param text        text value
      * @param defaultAsDp <code>true</code> if value without units will be consider as DP
      * @return computed value
      */
     public static float parseLengthUnits(String text, boolean defaultAsDp, boolean roundDensity) {
         // check text
-        if (text == null) {
+        if (text == null || Utils.getHandler() == null) {
             return 0;
         }
         text = text.trim();

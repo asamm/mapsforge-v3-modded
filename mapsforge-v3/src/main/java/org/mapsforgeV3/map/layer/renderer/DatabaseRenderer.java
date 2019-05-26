@@ -278,10 +278,10 @@ public class DatabaseRenderer implements MapGenerator {
      * @return {@code true} if theme was correctly set
      */
     public boolean prepareRenderTheme(JobParameters jobParameters, byte zoomLevel) {
-        Utils.getHandler().logW(TAG, "prepareRenderTheme(), " +
-                "new zoom: " + mCurrentZoomLevel + " vs " + zoomLevel + ", " +
-                "text scale: " + mCurrentTextScale + " vs " + jobParameters.textScale + ", " +
-                "renderTheme: " + mRenderTheme);
+//        Utils.getHandler().logW(TAG, "prepareRenderTheme(), " +
+//                "new zoom: " + mCurrentZoomLevel + " vs " + zoomLevel + ", " +
+//                "text scale: " + mCurrentTextScale + " vs " + jobParameters.textScale + ", " +
+//                "renderTheme: " + mRenderTheme);
         RenderThemeDefinition jobTheme = jobParameters.jobTheme;
         internalTheme = jobTheme.isInternalTheme();
 
@@ -352,6 +352,7 @@ public class DatabaseRenderer implements MapGenerator {
      */
     private RenderTheme getRenderTheme(RenderThemeDefinition jobTheme) {
         try {
+            Utils.getHandler().logD(TAG, "getRenderTheme(" + jobTheme + ")");
             return RenderThemeHandler.getRenderTheme(jobTheme,
                     menuStyle -> Utils.getHandler().getThemeCategories(menuStyle));
         } catch (Exception e) {
