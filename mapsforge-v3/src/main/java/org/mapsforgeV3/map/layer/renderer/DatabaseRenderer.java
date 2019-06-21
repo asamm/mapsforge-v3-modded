@@ -149,6 +149,7 @@ public class DatabaseRenderer implements MapGenerator {
             this.mCurrentZoomLevel = 0;
             this.mCurrentTextScale = 1.0f;
             this.mCurrentLang = "";
+            mCacheWayContainers.clear();
         }
     }
 
@@ -1205,7 +1206,7 @@ public class DatabaseRenderer implements MapGenerator {
     // CACHE WAYS CONTAINERS
 
     private static List<List<PaintContainerShape>[][]> mCacheWayContainers =
-            Collections.synchronizedList(new ArrayList<List<PaintContainerShape>[][]>());
+            Collections.synchronizedList(new ArrayList<>());
 
     private static void addWayContainerCache(List<PaintContainerShape>[][] container) {
         // add item to cache
