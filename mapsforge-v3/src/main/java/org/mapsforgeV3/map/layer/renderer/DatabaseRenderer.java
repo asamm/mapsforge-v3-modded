@@ -86,9 +86,6 @@ public class DatabaseRenderer implements MapGenerator {
     // flag is fill or not, sea areas
     private boolean mFillSeaAreas;
 
-    // maximum number of loaded maps at once
-    private int maxMapDatabases;
-
     // container for map databases
     private List<MapDatabase> mMapDatabases;
     // path to current "base" map
@@ -143,13 +140,11 @@ public class DatabaseRenderer implements MapGenerator {
     @Override
     public void cleanup() {
         synchronized (lock) {
-            this.maxMapDatabases = Utils.getHandler().getScreenCategory() > 1 ? 5 : 3;
             this.mLabelPlacement = new LabelPlacement(mTileSize);
             this.mLastZoomLevel = 0;
             this.mCurrentZoomLevel = 0;
             this.mCurrentTextScale = 1.0f;
             this.mCurrentLang = "";
-            mCacheWayContainers.clear();
         }
     }
 
@@ -457,6 +452,8 @@ public class DatabaseRenderer implements MapGenerator {
                 }
 
                 // limit number of loaded maps
+                // maximum number of loaded maps at once
+                int maxMapDatabases = 5;
                 if (mMapDatabases.size() >= maxMapDatabases) {
                     break;
                 }
