@@ -160,11 +160,8 @@ public class SubFileParameter {
 			return false;
 		} else if (this.subFileSize != other.subFileSize) {
 			return false;
-		} else if (this.baseZoomLevel != other.baseZoomLevel) {
-			return false;
-		}
-		return true;
-	}
+		} else return this.baseZoomLevel == other.baseZoomLevel;
+    }
 
 	@Override
 	public int hashCode() {

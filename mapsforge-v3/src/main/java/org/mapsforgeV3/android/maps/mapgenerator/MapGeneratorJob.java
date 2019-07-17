@@ -88,14 +88,9 @@ public class MapGeneratorJob implements Serializable {
 			return false;
 		}
 		if (this.tile == null) {
-			if (other.tile != null) {
-				return false;
-			}
-		} else if (!this.tile.equals(other.tile)) {
-			return false;
-		}
-		return true;
-	}
+            return other.tile == null;
+		} else return this.tile.equals(other.tile);
+    }
 
 	@Override
 	public int hashCode() {

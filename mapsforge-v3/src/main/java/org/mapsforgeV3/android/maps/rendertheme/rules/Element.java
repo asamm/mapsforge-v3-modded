@@ -15,5 +15,5 @@
 package org.mapsforgeV3.android.maps.rendertheme.rules;
 
 enum Element {
-	ANY, NODE, WAY;
+	ANY, NODE, WAY
 }

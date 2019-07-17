@@ -50,11 +50,8 @@ class IndexCacheEntryKey {
 			return false;
 		} else if (this.subFileParameter != null && !this.subFileParameter.equals(other.subFileParameter)) {
 			return false;
-		} else if (this.indexBlockNumber != other.indexBlockNumber) {
-			return false;
-		}
-		return true;
-	}
+		} else return this.indexBlockNumber == other.indexBlockNumber;
+    }
 
 	@Override
 	public int hashCode() {

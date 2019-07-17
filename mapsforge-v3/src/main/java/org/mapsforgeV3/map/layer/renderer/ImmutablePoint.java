@@ -82,11 +82,8 @@ class ImmutablePoint implements Comparable<ImmutablePoint> {
 		ImmutablePoint other = (ImmutablePoint) obj;
 		if (this.pointX != other.pointX) {
 			return false;
-		} else if (this.pointY != other.pointY) {
-			return false;
-		}
-		return true;
-	}
+		} else return this.pointY == other.pointY;
+    }
 
 	@Override
 	public int hashCode() {

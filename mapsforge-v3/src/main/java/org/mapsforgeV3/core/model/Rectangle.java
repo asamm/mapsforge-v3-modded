@@ -65,10 +65,7 @@ public class Rectangle implements Serializable {
             return false;
         } else if (Double.doubleToLongBits(this.right) != Double.doubleToLongBits(other.right)) {
             return false;
-        } else if (Double.doubleToLongBits(this.bottom) != Double.doubleToLongBits(other.bottom)) {
-            return false;
-        }
-        return true;
+        } else return Double.doubleToLongBits(this.bottom) == Double.doubleToLongBits(other.bottom);
     }
 
     /**

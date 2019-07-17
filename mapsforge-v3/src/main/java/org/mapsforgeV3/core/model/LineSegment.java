@@ -121,11 +121,8 @@ public final class LineSegment {
 			return false;
 		}
 		LineSegment other = (LineSegment) obj;
-		if (other.start.equals(this.start) && other.end.equals(this.end)) {
-			return true;
-		}
-		return false;
-	}
+        return other.start.equals(this.start) && other.end.equals(this.end);
+    }
 
 	@Override
 	public int hashCode() {

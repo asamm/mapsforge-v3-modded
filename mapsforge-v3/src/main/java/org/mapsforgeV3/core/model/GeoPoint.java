@@ -132,11 +132,8 @@ public class GeoPoint implements Comparable<GeoPoint>, Serializable {
 		GeoPoint other = (GeoPoint) obj;
 		if (this.latitudeE6 != other.latitudeE6) {
 			return false;
-		} else if (this.longitudeE6 != other.longitudeE6) {
-			return false;
-		}
-		return true;
-	}
+		} else return this.longitudeE6 == other.longitudeE6;
+    }
 
 	/**
 	 * @return the latitude coordinate of this GeoPoint in degrees.

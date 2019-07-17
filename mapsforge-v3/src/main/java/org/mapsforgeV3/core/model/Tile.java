@@ -67,11 +67,8 @@ public class Tile {
 			return false;
 		} else if (this.tileY != other.tileY) {
 			return false;
-		} else if (this.zoomLevel != other.zoomLevel) {
-			return false;
-		}
-		return true;
-	}
+		} else return this.zoomLevel == other.zoomLevel;
+    }
 
 	@Override
 	public int hashCode() {

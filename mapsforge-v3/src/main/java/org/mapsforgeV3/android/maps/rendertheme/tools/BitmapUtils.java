@@ -108,6 +108,13 @@ public final class BitmapUtils {
 
         // create stream and load icon with correct size
 		InputStream inputStream = createInputStream(relativePathPrefix, src);
+		if (inputStream == null) {
+            Utils.getHandler().logW(TAG, "createBitmap(" + relativePathPrefix + ", " + src + "), " +
+                    "unable to load for: " + relativePathPrefix + ", " + src);
+		    return null;
+        }
+
+		// load image
 		Bitmap bitmap;
 		if (isSvg(src)) {
             bitmap = Utils.getHandler().

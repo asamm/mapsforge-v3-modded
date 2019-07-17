@@ -861,16 +861,16 @@ class DependencyCache {
         boolean down;
 
         this.tmp = this.dependencyTable.get(lefttmp);
-        left = this.tmp == null ? false : this.tmp.drawn;
+        left = this.tmp != null && this.tmp.drawn;
 
         this.tmp = this.dependencyTable.get(righttmp);
-        right = this.tmp == null ? false : this.tmp.drawn;
+        right = this.tmp != null && this.tmp.drawn;
 
         this.tmp = this.dependencyTable.get(uptmp);
-        up = this.tmp == null ? false : this.tmp.drawn;
+        up = this.tmp != null && this.tmp.drawn;
 
         this.tmp = this.dependencyTable.get(downtmp);
-        down = this.tmp == null ? false : this.tmp.drawn;
+        down = this.tmp != null && this.tmp.drawn;
 
         LabelPlacement.ReferencePosition ref;
 
@@ -961,16 +961,16 @@ class DependencyCache {
         boolean down;
 
         this.tmp = this.dependencyTable.get(lefttmp);
-        left = this.tmp == null ? false : this.tmp.drawn;
+        left = this.tmp != null && this.tmp.drawn;
 
         this.tmp = this.dependencyTable.get(righttmp);
-        right = this.tmp == null ? false : this.tmp.drawn;
+        right = this.tmp != null && this.tmp.drawn;
 
         this.tmp = this.dependencyTable.get(uptmp);
-        up = this.tmp == null ? false : this.tmp.drawn;
+        up = this.tmp != null && this.tmp.drawn;
 
         this.tmp = this.dependencyTable.get(downtmp);
-        down = this.tmp == null ? false : this.tmp.drawn;
+        down = this.tmp != null && this.tmp.drawn;
 
         PaintContainerSymbol ref;
 

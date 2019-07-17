@@ -15,5 +15,5 @@
 package org.mapsforgeV3.android.maps.rendertheme.rules;
 
 public enum Closed {
-	ANY, NO, YES;
+	ANY, NO, YES
 }

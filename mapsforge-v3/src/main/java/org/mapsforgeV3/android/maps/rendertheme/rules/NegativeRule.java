@@ -46,9 +46,9 @@ class NegativeRule extends Rule {
 		// check key/values
 		if (negativeMatcher.keyListDoesNotContainKeys(tags)) {
 			return true;
-		};
-		
-		// check key/values
+		}
+
+        // check key/values
 		int size = tags.length;
 		for (int i = 0; i < size; i++) {
 			Tag tag = tags[i];
@@ -72,9 +72,9 @@ class NegativeRule extends Rule {
 		// check key/values
 		if (negativeMatcher.keyListDoesNotContainKeys(tags)) {
 			return true;
-		};
+		}
 
-		int size = tags.length;
+        int size = tags.length;
 		for (int i = 0; i < size; i++) {
 			Tag tag = tags[i];
 			if (this.negativeMatcher.matches(tag.key, tag.value)) {

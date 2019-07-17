@@ -77,10 +77,7 @@ public abstract class MapElementContainer implements Comparable<MapElementContai
         MapElementContainer other = (MapElementContainer) obj;
         if (this.priority != other.priority) {
             return false;
-        } else if (!this.xy.equals(other.xy)) {
-            return false;
-        }
-        return true;
+        } else return this.xy.equals(other.xy);
     }
 
     /**

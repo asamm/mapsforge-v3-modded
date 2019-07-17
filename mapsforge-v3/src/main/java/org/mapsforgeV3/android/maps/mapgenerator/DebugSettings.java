@@ -69,11 +69,8 @@ public class DebugSettings implements Serializable {
 		if (this.drawTileFrames != other.drawTileFrames) {
 			return false;
 		}
-		if (this.highlightWaterTiles != other.highlightWaterTiles) {
-			return false;
-		}
-		return true;
-	}
+        return this.highlightWaterTiles == other.highlightWaterTiles;
+    }
 
 	@Override
 	public int hashCode() {

@@ -133,11 +133,8 @@ public class BoundingBox implements Serializable {
 			return false;
 		} else if (this.minLatitudeE6 != other.minLatitudeE6) {
 			return false;
-		} else if (this.minLongitudeE6 != other.minLongitudeE6) {
-			return false;
-		}
-		return true;
-	}
+		} else return this.minLongitudeE6 == other.minLongitudeE6;
+    }
 
 	/**
 	 * @return a new GeoPoint at the horizontal and vertical center of this BoundingBox.

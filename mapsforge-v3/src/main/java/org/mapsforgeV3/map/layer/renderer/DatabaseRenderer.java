@@ -139,32 +139,30 @@ public class DatabaseRenderer implements MapGenerator {
 
     @Override
     public void cleanup() {
-        synchronized (lock) {
-            this.mLabelPlacement = new LabelPlacement(mTileSize);
-            this.mLastZoomLevel = 0;
-            this.mCurrentZoomLevel = 0;
-            this.mCurrentTextScale = 1.0f;
-            this.mCurrentLang = "";
-        }
+        this.mLabelPlacement = new LabelPlacement(mTileSize);
+        this.mLastZoomLevel = 0;
+        this.mCurrentZoomLevel = 0;
+        this.mCurrentTextScale = 1.0f;
+        this.mCurrentLang = "";
     }
 
-    /**
-     * Destroy instance of renderer.
-     */
-    public void destroy() {
-        // clean content
-        cleanup();
-
-        // destroy theme
-        if (this.mRenderTheme != null) {
-            this.mRenderTheme.destroy();
-        }
-        this.mPreviousJobTheme = null;
-        this.mRenderTheme = null;
-
-        // remove all map databases
-        setMapDatabaseMain(null);
-    }
+//    /**
+//     * Destroy instance of renderer.
+//     */
+//    public void destroy() {
+//        // clean content
+//        cleanup();
+//
+//        // destroy theme
+//        if (this.mRenderTheme != null) {
+//            this.mRenderTheme.destroy();
+//        }
+//        this.mPreviousJobTheme = null;
+//        this.mRenderTheme = null;
+//
+//        // remove all map databases
+//        setMapDatabaseMain(null);
+//    }
 
     /**
      * Get current loaded map theme.
@@ -273,7 +271,7 @@ public class DatabaseRenderer implements MapGenerator {
      * @param jobParameters parameters for job
      * @return {@code true} if theme was correctly set
      */
-    public boolean prepareRenderTheme(JobParameters jobParameters, byte zoomLevel) {
+    private boolean prepareRenderTheme(JobParameters jobParameters, byte zoomLevel) {
 //        Utils.getHandler().logW(TAG, "prepareRenderTheme(), " +
 //                "new zoom: " + mCurrentZoomLevel + " vs " + zoomLevel + ", " +
 //                "text scale: " + mCurrentTextScale + " vs " + jobParameters.textScale + ", " +

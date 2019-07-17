@@ -29,12 +29,12 @@ public interface RenderCallback {
      *
      * @return
      */
-    public boolean isRenderingCompleted();
+    boolean isRenderingCompleted();
 
     /**
      * @return
      */
-    public Bitmap getRenderedBitmap();
+    Bitmap getRenderedBitmap();
 
     /**
      * Renders an area with the given parameters.

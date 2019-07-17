@@ -48,11 +48,8 @@ class MatchingCacheKey {
 			return false;
 		} else if (this.tags == null && other.tags != null) {
 			return false;
-		} else if (this.tags != null && !this.tags.equals(other.tags)) {
-			return false;
-		}
-		return true;
-	}
+		} else return this.tags == null || this.tags.equals(other.tags);
+    }
 
 	@Override
 	public int hashCode() {
