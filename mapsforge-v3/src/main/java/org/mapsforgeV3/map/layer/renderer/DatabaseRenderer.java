@@ -249,15 +249,8 @@ public class DatabaseRenderer implements MapGenerator {
             }
 
             // if still empty, close tasks
-            boolean empty = tr.isEmpty();
-
-            // finalize
-            if (empty) {
-                if (!tr.isEmpty()) {
-                    tr.setRequestToWorldOnly();
-                } else {
-                    tr.setRequestToEmpty();
-                }
+            if (tr.isEmpty()) {
+                tr.setRequestToEmpty();
             }
 
             // return request
@@ -642,36 +635,9 @@ public class DatabaseRenderer implements MapGenerator {
                     mCounterRenderWayText == 0;
         }
 
-        /**
-         * Check if rendered tile is really only background tile.
-         *
-         * @return {@code true} if tile is background only
-         */
-        public boolean isResultOnlyBg() {
-            // true for "world map" only
-            if (isWorldDataOnly) {
-                return true;
-            }
-
-            // check data
-            return mCounterRenderAreaBg != 0 &&
-                    mCounterRenderAreaCaption == 0 &&
-                    mCounterRenderAreaSymbol == 0 &&
-                    mCounterRenderPoiCaption == 0 &&
-                    mCounterRenderPoiCircle == 0 &&
-                    mCounterRenderPoiSymbol == 0 &&
-                    mCounterRenderWay == 0 &&
-                    mCounterRenderWaySymbol == 0 &&
-                    mCounterRenderWayText == 0;
-        }
-
         private void setRequestToEmpty() {
             this.renderingComplete = true;
             this.bitmap = Utils.getHandler().getEmptyImage();
-        }
-
-        private void setRequestToWorldOnly() {
-            this.isWorldDataOnly = true;
         }
 
         /**

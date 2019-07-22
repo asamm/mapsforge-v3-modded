@@ -305,7 +305,7 @@ class CanvasRasterer {
      * Computes a polyline with distance dy parallel to given coordinates.
      * http://objectmix.com/graphics/132987-draw-parallel-polyline-algorithm-needed.html
      */
-    static float[] computeParallelPath(float[] p, float dy) {
+    private static float[] computeParallelPath(float[] p, float dy) {
         int n = p.length - 2;
         float[] u = new float[n];
         float[] h = new float[p.length];
