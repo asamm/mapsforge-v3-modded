@@ -137,7 +137,8 @@ public class ImageSymbol {
 
             // finally create an image
             try {
-                mBitmap = BitmapUtils.createBitmap(relativePathPrefix, src, mScaleCurrent,
+                mBitmap = BitmapUtils.createBitmap(relativePathPrefix, src,
+                        mScaleCurrent <= 0 ? mScale : mScaleCurrent,
                         mDefWidth, mDefHeight, mDefColor);
             } catch (Exception e) {
                 Utils.getHandler().logE(TAG, "getBitmap()", e);

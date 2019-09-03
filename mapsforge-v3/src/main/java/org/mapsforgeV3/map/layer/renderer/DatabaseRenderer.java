@@ -442,8 +442,7 @@ public class DatabaseRenderer implements MapGenerator {
                     map.closeFile();
                 }
 
-                // limit number of loaded maps
-                // maximum number of loaded maps at once
+                // limit maximum number of loaded maps at once
                 int maxMapDatabases = 5;
                 if (mMapDatabases.size() >= maxMapDatabases) {
                     break;
@@ -609,11 +608,11 @@ public class DatabaseRenderer implements MapGenerator {
 
             // prepare tile BBOX
             bboxTopE6 = (int) (MercatorProjection.pixelYToLatitude(
-                    cPixelY - mTileSize / 4, cZoomLevel, mTileSize, false) * 1000000.0);
+                    cPixelY - mTileSize / 4.0, cZoomLevel, mTileSize, false) * 1000000.0);
             bboxBottomE6 = (int) (MercatorProjection.pixelYToLatitude(
                     cPixelY + mTileSize + mTileSize / 4, cZoomLevel, mTileSize, false) * 1000000.0);
             bboxLeftE6 = (int) (MercatorProjection.pixelXToLongitude(
-                    cPixelX - mTileSize / 4, cZoomLevel, mTileSize, false) * 1000000.0);
+                    cPixelX - mTileSize / 4.0, cZoomLevel, mTileSize, false) * 1000000.0);
             bboxRightE6 = (int) (MercatorProjection.pixelXToLongitude(
                     cPixelX + mTileSize + mTileSize / 4, cZoomLevel, mTileSize, false) * 1000000.0);
         }
