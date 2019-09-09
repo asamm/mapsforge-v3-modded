@@ -108,8 +108,8 @@ public class RenderTheme {
 	private final Map<Integer, List<RenderInstruction>> mMatchingCache;
 	
 	// list of active rules
-	private Rule[] mRulesList;
-	private List<Rule> mRulesListLoad;
+	private Rule[] rulesList;
+	private List<Rule> rulesListLoad;
 
 	// private parameters
 	private int levels;
@@ -118,7 +118,7 @@ public class RenderTheme {
 	private float lastZoomLevel;
 
 	// optimized version of theme
-	private RenderTheme mThemeOptimized;
+	private RenderTheme themeOptimized;
 	
 	// basic constructor
 	private RenderTheme(int mapBackground, float baseStrokeWidth, float baseTextSize,
@@ -129,7 +129,7 @@ public class RenderTheme {
 		this.locusExtended = locusExtended;
 		this.fillSeaAreas = fillSeaAreas;
 		this.scaleLineDyByZoom = scaleLineDyByZoom;
-		this.mRulesListLoad = new ArrayList<>();
+		this.rulesListLoad = new ArrayList<>();
 
 		// extra parameters
 		this.mMatchingCache = Collections.synchronizedMap(
@@ -162,7 +162,9 @@ public class RenderTheme {
 	 */
 	public void destroy() {
 		this.mMatchingCache.clear();
-        for (Rule rule : mRulesList) {
+		Rule[] oldRules = rulesList;
+		rulesList = null;
+        for (Rule rule : oldRules) {
             rule.onDestroy();
         }
 	}
@@ -218,23 +220,23 @@ public class RenderTheme {
 		
 		// prepare optimized theme
 		if (generateOptimizedTheme) {
-			mThemeOptimized = new RenderTheme(mapBackground,
+			themeOptimized = new RenderTheme(mapBackground,
 					baseStrokeWidth, baseTextSize, locusExtended, fillSeaAreas, scaleLineDyByZoom);
-            for (Rule aRulesList : mRulesList) {
+            for (Rule aRulesList : rulesList) {
                 Rule rule = aRulesList.createOptimized(zoomLevel, mapCountryCode);
                 if (rule != null) {
-                    mThemeOptimized.addRule(rule);
+                    themeOptimized.addRule(rule);
                 }
             }
 			
-			mThemeOptimized.setLevels(levels);
-			mThemeOptimized.complete();
-			mThemeOptimized.prepareTheme(scaleStroke, scaleText, zoomLevel, false, mapCountryCode);
+			themeOptimized.setLevels(levels);
+			themeOptimized.complete();
+			themeOptimized.prepareTheme(scaleStroke, scaleText, zoomLevel, false, mapCountryCode);
 		} else {
-			mThemeOptimized = null;
+			themeOptimized = null;
 			
 			// prepare theme
-            for (Rule aRulesList : mRulesList) {
+            for (Rule aRulesList : rulesList) {
                 aRulesList.prepareRule(
                         scaleStroke * this.baseStrokeWidth,
                         scaleText * this.baseTextSize,
@@ -250,7 +252,7 @@ public class RenderTheme {
      * @return <code>true</code> if ready
      */
     public boolean isPrepared() {
-        return mRulesList != null;
+        return rulesList != null;
     }
 	
 	/**
@@ -308,14 +310,14 @@ public class RenderTheme {
 	 */
 	public void matchNode(RenderCallback renderCallback, Tag[] tags, byte zoomLevel) {
 		// use optimized theme
-		if (mThemeOptimized != null) {
-			mThemeOptimized.matchNode(renderCallback, tags, zoomLevel);
+		if (themeOptimized != null) {
+			themeOptimized.matchNode(renderCallback, tags, zoomLevel);
 			return;
 		}
 
 		// match nodes
 		if (isPrepared()) {
-			for (Rule rule : mRulesList) {
+			for (Rule rule : rulesList) {
 				rule.matchNode(renderCallback, tags, zoomLevel);
 			}
 		} else {
@@ -325,8 +327,8 @@ public class RenderTheme {
 	}
 
 	private void matchWay(RenderCallback renderCallback, Tag[] tags, byte zoomLevel, Closed closed) {
-		if (mThemeOptimized != null) {
-			mThemeOptimized.matchWay(renderCallback, tags, zoomLevel, closed);
+		if (themeOptimized != null) {
+			themeOptimized.matchWay(renderCallback, tags, zoomLevel, closed);
 			return;
 		}
 //        if (countMatchWay % 10000 == 0) {
@@ -349,7 +351,7 @@ public class RenderTheme {
 		// cache miss
 		if (isPrepared()) {
 			matchingList = new ArrayList<>();
-			for (Rule aRulesList : mRulesList) {
+			for (Rule aRulesList : rulesList) {
 				aRulesList.matchWay(renderCallback, tags, zoomLevel, closed, matchingList);
 			}
 			this.mMatchingCache.put(matchingKey, matchingList);
@@ -372,7 +374,7 @@ public class RenderTheme {
 	 * @param rule created rule
 	 */
 	void addRule(Rule rule) {
-		this.mRulesListLoad.add(rule);
+		this.rulesListLoad.add(rule);
 	}
 
 	/**
@@ -380,15 +382,16 @@ public class RenderTheme {
 	 */
 	void complete() {
 		// complete list of rules
-		mRulesList = new Rule[mRulesListLoad.size()];
-		mRulesListLoad.toArray(mRulesList);
-		for (Rule rule : mRulesList) {
+		Rule[] rules = new Rule[rulesListLoad.size()];
+		rulesListLoad.toArray(rules);
+		for (Rule rule : rules) {
 			rule.onComplete(this);
 		}
 
 		// clear temp list
-		mRulesListLoad.clear();
-		mRulesListLoad = null;
+		rulesList = rules;
+		rulesListLoad.clear();
+		rulesListLoad = null;
 	}
 
 	void setLevels(int levels) {
@@ -398,6 +401,6 @@ public class RenderTheme {
 	// HELPING TOOLS
 
 	public Rule[] getRulesList() {
-		return mRulesList;
+		return rulesList;
 	}
 }
