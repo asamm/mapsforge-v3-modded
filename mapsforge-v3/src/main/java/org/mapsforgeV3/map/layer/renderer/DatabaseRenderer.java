@@ -294,7 +294,7 @@ public class DatabaseRenderer implements MapGenerator {
             }
 
             // notify about new theme and set theme for usage
-            Utils.getHandler().onNewThemeReadyToUse(mRenderTheme);
+            Utils.getHandler().onNewThemeReadyToUse(jobTheme, mRenderTheme);
             mPreviousJobTheme = jobTheme;
             forceRefreshTheme = true;
         }
@@ -610,11 +610,11 @@ public class DatabaseRenderer implements MapGenerator {
             bboxTopE6 = (int) (MercatorProjection.pixelYToLatitude(
                     cPixelY - mTileSize / 4.0, cZoomLevel, mTileSize, false) * 1000000.0);
             bboxBottomE6 = (int) (MercatorProjection.pixelYToLatitude(
-                    cPixelY + mTileSize + mTileSize / 4, cZoomLevel, mTileSize, false) * 1000000.0);
+                    cPixelY + mTileSize + mTileSize / 4.0f, cZoomLevel, mTileSize, false) * 1000000.0);
             bboxLeftE6 = (int) (MercatorProjection.pixelXToLongitude(
                     cPixelX - mTileSize / 4.0, cZoomLevel, mTileSize, false) * 1000000.0);
             bboxRightE6 = (int) (MercatorProjection.pixelXToLongitude(
-                    cPixelX + mTileSize + mTileSize / 4, cZoomLevel, mTileSize, false) * 1000000.0);
+                    cPixelX + mTileSize + mTileSize / 4.0f, cZoomLevel, mTileSize, false) * 1000000.0);
         }
 
         /**

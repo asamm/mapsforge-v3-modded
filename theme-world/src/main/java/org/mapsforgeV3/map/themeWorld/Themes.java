@@ -2,13 +2,12 @@ package org.mapsforgeV3.map.themeWorld;
 
 import org.mapsforgeV3.android.maps.mapgenerator.RenderThemeDefinition;
 
-import java.io.IOException;
 import java.io.InputStream;
 
 public class Themes {
 
 	// default prefix/path for internal themes
-    static final String DEFAULT_PREFIX = "/assets/themes/mapsforgeV3/";
+    private static final String DEFAULT_PREFIX = "/assets/themes/mapsforgeV3/";
 
     /**
      * Internal theme included in Locus application.
@@ -29,7 +28,7 @@ public class Themes {
 		}
 		
 		@Override
-		public InputStream getAsStream() throws IOException {
+		public InputStream getAsStream() {
 			return Themes.class.getResourceAsStream(DEFAULT_PREFIX + mName + ".xml");
 		}
 

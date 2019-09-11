@@ -3,6 +3,7 @@ package com.asamm.locus.mapsforge.utils;
 import android.content.Context;
 import android.graphics.Bitmap;
 
+import org.mapsforgeV3.android.maps.mapgenerator.RenderThemeDefinition;
 import org.mapsforgeV3.android.maps.rendertheme.RenderTheme;
 import org.mapsforgeV3.android.maps.rendertheme.XmlRenderThemeStyleMenu;
 
@@ -53,7 +54,7 @@ public interface MapsForgeHandler {
      * Notification in case, new theme is parsed and ready to use.
      * @param newTheme new theme for use
      */
-    void onNewThemeReadyToUse(RenderTheme newTheme);
+    void onNewThemeReadyToUse(RenderThemeDefinition def, RenderTheme newTheme);
 
     /**
      * Handler for styling vector themes. Allows to define which categories will be visible
