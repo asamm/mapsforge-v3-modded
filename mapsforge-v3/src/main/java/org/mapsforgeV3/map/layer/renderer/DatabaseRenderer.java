@@ -108,15 +108,6 @@ public class DatabaseRenderer implements MapGenerator {
     /**
      * Constructs a new DatabaseRenderer.
      *
-     * @param tileSize size of tiles
-     */
-    public DatabaseRenderer(int tileSize) {
-        this(tileSize, null, null);
-    }
-
-    /**
-     * Constructs a new DatabaseRenderer.
-     *
      * @param tileSize       size of tiles
      * @param renderThemeDef theme definition
      * @param theme          pre-prepared render theme, may be null
