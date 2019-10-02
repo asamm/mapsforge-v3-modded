@@ -19,7 +19,6 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff.Mode;
-import android.os.Build;
 
 import com.asamm.locus.mapsforge.utils.Utils;
 
@@ -710,14 +709,10 @@ public class DatabaseRenderer implements MapGenerator {
             if (!isStillValid()) return;
 
             // prepare bitmap itself
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                bitmap = Utils.getHandler().getValidImage(bitmap, mTileSize, mTileSize);
-                Canvas canvas = new Canvas(bitmap);
-                clearCanvas(canvas);
-                canvasRasterer.setCustomCanvas(canvas);
-            } else {
-                // nothing to do, canvas is already ready
-            }
+            bitmap = Utils.getHandler().getValidImage(bitmap, mTileSize, mTileSize);
+            Canvas canvas = new Canvas(bitmap);
+            clearCanvas(canvas);
+            canvasRasterer.setCustomCanvas(canvas);
 
             // check validity
             if (!isStillValid()) return;
@@ -763,21 +758,6 @@ public class DatabaseRenderer implements MapGenerator {
 
             // check validity
             if (!isStillValid()) return;
-
-            // prepare bitmap itself
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                // nothing to do, map tile ready
-            } else {
-                // prepare bitmap itself
-                bitmap = Utils.getHandler().getValidImage(bitmap, mTileSize, mTileSize);
-                Canvas canvas = new Canvas(bitmap);
-
-                // finally draw items
-                clearCanvas(canvas);
-
-                // finally draw canvas to bitmap
-                canvasRasterer.finish(canvas);
-            }
 
             // do some special actions if required
             if (extraRenderingHandler != null) {
