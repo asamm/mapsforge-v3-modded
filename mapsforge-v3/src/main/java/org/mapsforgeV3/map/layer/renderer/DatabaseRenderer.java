@@ -283,8 +283,7 @@ public class DatabaseRenderer implements MapGenerator {
                 return false;
             }
 
-            // notify about new theme and set theme for usage
-            Utils.getHandler().onNewThemeReadyToUse(jobTheme, mRenderTheme);
+            // set theme for usage
             mPreviousJobTheme = jobTheme;
             forceRefreshTheme = true;
         }

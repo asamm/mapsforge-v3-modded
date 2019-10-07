@@ -51,12 +51,6 @@ public interface MapsForgeHandler {
     // HANDLER FOR THEMES
 
     /**
-     * Notification in case, new theme is parsed and ready to use.
-     * @param newTheme new theme for use
-     */
-    void onNewThemeReadyToUse(RenderThemeDefinition def, RenderTheme newTheme);
-
-    /**
      * Handler for styling vector themes. Allows to define which categories will be visible
      * and which hidden.
      * @param menuStyle style from theme
