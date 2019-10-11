@@ -73,14 +73,6 @@ public interface MapsForgeHandler {
     Bitmap createSVGBitmap(InputStream inputStream, float scale,
             float requestedWidth, float requestedHeight, int color) throws Exception;
 
-	// PARSING VALUES
-	
-	boolean parseBoolean(String value);
-
-	int parseInt(String string);
-
-	float parseFloat(String string);
-
 	// LOGGER
 	
 	void logI(String tag, String msg);

@@ -60,12 +60,10 @@ public final class Symbol extends RenderInstruction {
                     .parseLengthUnits(attrs.remove(KEY_DB_OUTLINE_WIDTH), true, true);
         }
         if (attrs.containsKey(KEY_FORCE_DRAW)) {
-            forceDraw = Utils.getHandler().parseBoolean(
-                    attrs.remove(KEY_FORCE_DRAW));
+            forceDraw = Utils.parseBoolean(attrs.remove(KEY_FORCE_DRAW));
         }
         if (attrs.containsKey(KEY_RENDER_DB_ONLY)) {
-            renderDbOnly = Utils.getHandler().parseBoolean(
-                    attrs.remove(KEY_RENDER_DB_ONLY));
+            renderDbOnly = Utils.parseBoolean(attrs.remove(KEY_RENDER_DB_ONLY));
         }
 
         // read image

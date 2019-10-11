@@ -80,8 +80,7 @@ public final class Caption extends RenderInstruction {
             dyScale = ScalableParameter.create(attrs.remove(KEY_SCALE_DY_SIZE));
         }
         if (attrs.containsKey(KEY_FORCE_DRAW)) {
-            forceDraw = Utils.getHandler().parseBoolean(
-                    attrs.remove(KEY_FORCE_DRAW));
+            forceDraw = Utils.parseBoolean(attrs.remove(KEY_FORCE_DRAW));
         }
 
         // FONT
@@ -106,7 +105,7 @@ public final class Caption extends RenderInstruction {
             strokeWidth = parseLengthUnits(attrs.remove(KEY_STROKE_WIDTH));
         }
         if (attrs.containsKey(KEY_UPPER_CASE)) {
-            upperCase = Utils.getHandler().parseBoolean(attrs.remove(KEY_UPPER_CASE));
+            upperCase = Utils.parseBoolean(attrs.remove(KEY_UPPER_CASE));
         }
         if (attrs.containsKey(KEY_SCALE_FONT_SIZE)) {
             fontSizeScale = ScalableParameter.create(attrs.remove(KEY_SCALE_FONT_SIZE));

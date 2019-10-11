@@ -59,8 +59,7 @@ public class ImageSymbol {
 
         // ICON SCALE
         if (attrs.containsKey(KEY_SCALE)) {
-            scale = Utils.getHandler().parseFloat(
-                    attrs.remove(KEY_SCALE));
+            scale = Utils.parseFloat(attrs.remove(KEY_SCALE));
         }
         if (attrs.containsKey(KEY_SCALE_ICON_SIZE)) {
             scaleIcon = ScalableParameter.create(attrs.remove(KEY_SCALE_ICON_SIZE));

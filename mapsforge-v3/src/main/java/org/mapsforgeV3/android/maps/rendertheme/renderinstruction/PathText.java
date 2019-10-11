@@ -81,7 +81,7 @@ public final class PathText extends RenderInstruction {
             dy = parseLengthUnits(attrs.remove(KEY_DY));
         }
 		if (attrs.containsKey(KEY_ROTATE_UP)) {
-			rotateUp = Utils.getHandler().parseBoolean(attrs.remove(KEY_ROTATE_UP));
+			rotateUp = Utils.parseBoolean(attrs.remove(KEY_ROTATE_UP));
 		}
         if (attrs.containsKey(KEY_SCALE_DY_SIZE)) {
             dyScale = ScalableParameter.create(attrs.remove(KEY_SCALE_DY_SIZE));
@@ -109,7 +109,7 @@ public final class PathText extends RenderInstruction {
             strokeWidth = parseLengthUnits(attrs.remove(KEY_STROKE_WIDTH));
         }
         if (attrs.containsKey(KEY_UPPER_CASE)) {
-            upperCase = Utils.getHandler().parseBoolean(attrs.remove(KEY_UPPER_CASE));
+            upperCase = Utils.parseBoolean(attrs.remove(KEY_UPPER_CASE));
         }
         if (attrs.containsKey(KEY_SCALE_FONT_SIZE)) {
             fontSizeScale = ScalableParameter.create(attrs.remove(KEY_SCALE_FONT_SIZE));

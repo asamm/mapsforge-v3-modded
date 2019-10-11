@@ -17,8 +17,8 @@ public class ScalableParameter {
 
         // construct parameter
         if (scaleEntries.length == 2) {
-            byte baseZoom = (byte) Utils.getHandler().parseInt(scaleEntries[0]);
-            float increment = Utils.getHandler().parseFloat(scaleEntries[1]);
+            byte baseZoom = (byte) Utils.parseInt(scaleEntries[0]);
+            float increment = Utils.parseFloat(scaleEntries[1]);
             return new ScalableParameter(baseZoom, increment);
         }
         return null;

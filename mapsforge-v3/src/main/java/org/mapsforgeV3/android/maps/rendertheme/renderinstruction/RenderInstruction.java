@@ -171,17 +171,17 @@ public abstract class RenderInstruction {
 
         // parse text
         if (text.endsWith("dp")) {
-            float value = Utils.getHandler().parseFloat(text.substring(0, text.length() - 2));
+            float value = Utils.parseFloat(text.substring(0, text.length() - 2));
             return Utils.getHandler().getDpPixels(value, roundDensity);
         } else if (text.endsWith("dip")) {
-            float value = Utils.getHandler().parseFloat(text.substring(0, text.length() - 3));
+            float value = Utils.parseFloat(text.substring(0, text.length() - 3));
             return Utils.getHandler().getDpPixels(value, roundDensity);
         } else if (text.endsWith("px")) {
-            return Utils.getHandler().parseFloat(text.substring(0, text.length() - 2));
+            return Utils.parseFloat(text.substring(0, text.length() - 2));
         } else if (text.endsWith("sp")) {
-            return convertSpToPx(Utils.getHandler().parseFloat(text.substring(0, text.length() - 2)));
+            return convertSpToPx(Utils.parseFloat(text.substring(0, text.length() - 2)));
         } else {
-            float value = Utils.getHandler().parseFloat(text);
+            float value = Utils.parseFloat(text);
             if (defaultAsDp) {
                 return Utils.getHandler().getDpPixels(value, roundDensity);
             }
