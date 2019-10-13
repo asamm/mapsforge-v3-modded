@@ -120,9 +120,17 @@ public final class PathText extends RenderInstruction {
 
 		// validate data
 		validate(elementName, textKey, fontSize, strokeWidth);
-		
+
+		// prepare typeface
+		Typeface typeface = null;
+		try {
+			typeface = Typeface.create(fontFamily.toTypeface(), fontStyle.toInt());
+		} catch (Exception e) {
+			Utils.getHandler().logW("PathText", "create typeface: " + fontFamily + ", " + fontStyle);
+			Typeface.create(FontFamily.DEFAULT.toTypeface(), FontStyle.NORMAL.toInt());
+		}
+
 		// construct instructions
-		Typeface typeface = Typeface.create(fontFamily.toTypeface(), fontStyle.toInt());
 		return new PathText(indexInRules, category,
                 textKey, fontSize, fontSizeScale,
                 dx, dy, dyScale, rotateUp, upperCase,
