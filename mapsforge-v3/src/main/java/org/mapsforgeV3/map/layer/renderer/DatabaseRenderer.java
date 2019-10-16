@@ -86,7 +86,7 @@ public class DatabaseRenderer implements MapGenerator {
     private boolean mFillSeaAreas;
 
     // container for map databases
-    private List<MapDatabase> mMapDatabases;
+    private List<MapDatabase> mapDatabases;
     // path to current "base" map
     private File mMapFile;
 
@@ -116,7 +116,7 @@ public class DatabaseRenderer implements MapGenerator {
             RenderTheme theme) {
         this.lock = new Object();
         this.mTileSize = tileSize;
-        this.mMapDatabases = new ArrayList<>();
+        this.mapDatabases = new ArrayList<>();
 
         // set preselected render theme
         cleanup();
@@ -136,23 +136,16 @@ public class DatabaseRenderer implements MapGenerator {
         this.mCurrentLang = "";
     }
 
-//    /**
-//     * Destroy instance of renderer.
-//     */
-//    public void destroy() {
-//        // clean content
-//        cleanup();
-//
-//        // destroy theme
-//        if (this.mRenderTheme != null) {
-//            this.mRenderTheme.destroy();
-//        }
-//        this.mPreviousJobTheme = null;
-//        this.mRenderTheme = null;
-//
-//        // remove all map databases
-//        setMapDatabaseMain(null);
-//    }
+    /**
+     * Destroy instance of renderer.
+     */
+    public void destroy() {
+        // clean content
+        cleanup();
+
+        // remove all map databases
+        setMapDatabaseMain(null);
+    }
 
     /**
      * Get current loaded map theme.
@@ -211,7 +204,7 @@ public class DatabaseRenderer implements MapGenerator {
             }
 
             // return empty image if no database is available
-            int size = mMapDatabases.size();
+            int size = mapDatabases.size();
             if (size == 0) {
                 return new TileRenderer(mapGeneratorJob);
             }
@@ -219,22 +212,22 @@ public class DatabaseRenderer implements MapGenerator {
             // create renderer
             TileRenderer tr = new TileRenderer(mapGeneratorJob,
                     preparedImg, renderingHandler,
-                    mMapDatabases.get(0).getDbPoiVersion() > 0);
+                    mapDatabases.get(0).getDbPoiVersion() > 0);
 
             // store current main map file
-            mMapFile = mMapDatabases.get(0).getMapFile();
+            mMapFile = mapDatabases.get(0).getMapFile();
 
             // read all data
             for (int i = size - 1; i >= 0; i--) {
-                MapDatabase md = mMapDatabases.get(i);
+                MapDatabase md = mapDatabases.get(i);
                 if (md.hasOpenFile()) {
                     md.readMapData(mapGeneratorJob.tile, tr);
                 }
 
                 // remove file if not required and at least one more file will remain
-                if (!md.isFileRequired() && mMapDatabases.size() > 1) {
+                if (!md.isFileRequired() && mapDatabases.size() > 1) {
                     md.closeFile();
-                    mMapDatabases.remove(md);
+                    mapDatabases.remove(md);
                 }
             }
 
@@ -365,7 +358,7 @@ public class DatabaseRenderer implements MapGenerator {
 
     private MapDatabase getFirstMapDatabase() {
         synchronized (lock) {
-            for (MapDatabase md : mMapDatabases) {
+            for (MapDatabase md : mapDatabases) {
                 if (md.hasOpenFile()) {
                     return md;
                 }
@@ -406,15 +399,15 @@ public class DatabaseRenderer implements MapGenerator {
     public void setMapDatabaseMain(MapDatabase mapDatabase) {
         synchronized (lock) {
             // remove extra maps
-            for (int i = 0, n = mMapDatabases.size(); i < n; i++) {
-                mMapDatabases.get(i).closeFile();
+            for (int i = 0, n = mapDatabases.size(); i < n; i++) {
+                mapDatabases.get(i).closeFile();
             }
-            mMapDatabases.clear();
+            mapDatabases.clear();
 
             // set base map
             if (mapDatabase != null) {
                 mMapFile = mapDatabase.getMapFile();
-                mMapDatabases.add(mapDatabase);
+                mapDatabases.add(mapDatabase);
             }
         }
     }
@@ -424,8 +417,8 @@ public class DatabaseRenderer implements MapGenerator {
             boolean newAdded = false;
             for (int i = 0, n = maps.size(); i < n; i++) {
                 MapDatabase map = maps.get(i);
-                if (!mMapDatabases.contains(map)) {
-                    mMapDatabases.add(map);
+                if (!mapDatabases.contains(map)) {
+                    mapDatabases.add(map);
                     newAdded = true;
                 } else {
                     map.closeFile();
@@ -433,7 +426,7 @@ public class DatabaseRenderer implements MapGenerator {
 
                 // limit maximum number of loaded maps at once
                 int maxMapDatabases = 5;
-                if (mMapDatabases.size() >= maxMapDatabases) {
+                if (mapDatabases.size() >= maxMapDatabases) {
                     break;
                 }
             }
@@ -442,8 +435,8 @@ public class DatabaseRenderer implements MapGenerator {
     }
 
     public boolean existsMapDatabase(File file) {
-        for (int i = 0, n = mMapDatabases.size(); i < n; i++) {
-            MapDatabase map = mMapDatabases.get(i);
+        for (int i = 0, n = mapDatabases.size(); i < n; i++) {
+            MapDatabase map = mapDatabases.get(i);
             if (map.getMapFile().getAbsolutePath().equals(file.getAbsolutePath())) {
                 return true;
             }
@@ -457,7 +450,7 @@ public class DatabaseRenderer implements MapGenerator {
      * @return number of databases
      */
     public int getMapDatabasesSize() {
-        return mMapDatabases.size();
+        return mapDatabases.size();
     }
 
     /**************************************************/
