@@ -18,7 +18,9 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Paint.Align;
 import android.graphics.Typeface;
+
 import com.asamm.locus.mapsforge.utils.Utils;
+
 import org.mapsforgeV3.android.maps.rendertheme.RenderCallback;
 import org.mapsforgeV3.android.maps.rendertheme.RenderTheme;
 import org.mapsforgeV3.android.maps.rendertheme.tools.BgRectangle;
@@ -35,33 +37,33 @@ import java.util.Locale;
  * Represents a text label on the map.
  */
 public final class Caption extends RenderInstruction {
-	
-	/**
+
+    /**
      * @param indexInRules index
-	 * @param elementName the name of the XML element.
-     * @param attrs the attributes of the XML element.
+     * @param elementName  the name of the XML element.
+     * @param attrs        the attributes of the XML element.
      * @return a new Caption with the given rendering attributes.
-	 */
-	public static Caption create(int indexInRules, String elementName, HashMap<String, String> attrs) {
-		// BASIC
+     */
+    public static Caption create(int indexInRules, String elementName, HashMap<String, String> attrs) {
+        // BASIC
         String category = null;
-		TextKey textKey = null;
-		float dx = 0;
-		float dy = 0;
+        TextKey textKey = null;
+        float dx = 0;
+        float dy = 0;
         ScalableParameter dyScale = null;
         boolean forceDraw = false;
 
-		// FONT
-		FontFamily fontFamily = FontFamily.DEFAULT;
-		FontStyle fontStyle = FontStyle.NORMAL;
+        // FONT
+        FontFamily fontFamily = FontFamily.DEFAULT;
+        FontStyle fontStyle = FontStyle.NORMAL;
         float fontSize = 0;
         ScalableParameter fontSizeScale = null;
 
-		// PAINT
-		int fill = Color.BLACK;
-		int stroke = Color.BLACK;
-		float strokeWidth = 0;
-		boolean upperCase = false;
+        // PAINT
+        int fill = Color.BLACK;
+        int stroke = Color.BLACK;
+        float strokeWidth = 0;
+        boolean upperCase = false;
 
         // BASIC
         if (attrs.containsKey(KEY_CAT)) {
@@ -85,10 +87,12 @@ public final class Caption extends RenderInstruction {
 
         // FONT
         if (attrs.containsKey(KEY_FONT_FAMILY)) {
-            fontFamily = FontFamily.valueOf(attrs.remove(KEY_FONT_FAMILY).toUpperCase(Locale.ENGLISH));
+            fontFamily = FontFamily.valueOf(attrs.remove(KEY_FONT_FAMILY)
+                    .toUpperCase(Locale.ENGLISH));
         }
         if (attrs.containsKey(KEY_FONT_STYLE)) {
-            fontStyle = FontStyle.valueOf(attrs.remove(KEY_FONT_STYLE).toUpperCase(Locale.ENGLISH));
+            fontStyle = FontStyle.valueOf(attrs.remove(KEY_FONT_STYLE)
+                    .toUpperCase(Locale.ENGLISH));
         }
         if (attrs.containsKey(KEY_FONT_SIZE)) {
             fontSize = parseLengthUnits(attrs.remove(KEY_FONT_SIZE));
@@ -114,26 +118,26 @@ public final class Caption extends RenderInstruction {
         // parse background rectangle
         BgRectangle bgRect = BgRectangle.create(attrs);
 
-		// validate data
-		validate(elementName, textKey, fontSize, strokeWidth);
-		Typeface typeface = Typeface.create(fontFamily.toTypeface(), fontStyle.toInt());
-		
-		return new Caption(indexInRules, category, forceDraw,
+        // validate data
+        validate(elementName, textKey, fontSize, strokeWidth);
+        Typeface typeface = RenderInstruction.createTypeFace(fontFamily, fontStyle);
+
+        return new Caption(indexInRules, category, forceDraw,
                 textKey, fontSize, fontSizeScale,
                 dx, dy, dyScale, upperCase,
-				generatePaintFill(Align.LEFT, typeface, fill),
-				generatePaintStroke(Align.LEFT, typeface, stroke, strokeWidth), bgRect);
-	}
+                generatePaintFill(Align.LEFT, typeface, fill),
+                generatePaintStroke(Align.LEFT, typeface, stroke, strokeWidth), bgRect);
+    }
 
-	private static void validate(String elementName, TextKey textKey, float fontSize, float strokeWidth) {
-		if (textKey == null) {
-			throw new IllegalArgumentException("missing attribute k for element: " + elementName);
-		} else if (fontSize < 0) {
-			throw new IllegalArgumentException("font-size must not be negative: " + fontSize);
-		} else if (strokeWidth < 0) {
-			throw new IllegalArgumentException("stroke-width must not be negative: " + strokeWidth);
-		}
-	}
+    private static void validate(String elementName, TextKey textKey, float fontSize, float strokeWidth) {
+        if (textKey == null) {
+            throw new IllegalArgumentException("missing attribute k for element: " + elementName);
+        } else if (fontSize < 0) {
+            throw new IllegalArgumentException("font-size must not be negative: " + fontSize);
+        } else if (strokeWidth < 0) {
+            throw new IllegalArgumentException("stroke-width must not be negative: " + strokeWidth);
+        }
+    }
 
     private final TextKey mTextKey;
     private final float mFontSize;
@@ -145,22 +149,22 @@ public final class Caption extends RenderInstruction {
     private final ScalableParameter mDyScale;
     private final boolean mUpperCase;
 
-	// paint for text
-	private final Paint paintFill;
-	private final Paint paintStroke;
-	
-	// paint for background
-	private final BgRectangle bgRect;
+    // paint for text
+    private final Paint paintFill;
+    private final Paint paintStroke;
+
+    // paint for background
+    private final BgRectangle bgRect;
 
     // computed vertical offset for current
     private float mDyComputed;
 
-	private Caption(int indexInRules, String category, boolean forceDraw,
+    private Caption(int indexInRules, String category, boolean forceDraw,
             TextKey textKey, float fontSize, ScalableParameter fontSizeScale,
             float dx, float dy, ScalableParameter dyScale, boolean upperCase,
             Paint paintFill, Paint paintStroke, BgRectangle bgRect) {
-		super(indexInRules, category);
-		this.mForceDraw = forceDraw;
+        super(indexInRules, category);
+        this.mForceDraw = forceDraw;
         this.mTextKey = textKey;
         this.mFontSize = fontSize;
         this.mFontSizeScale = fontSizeScale;
@@ -169,42 +173,42 @@ public final class Caption extends RenderInstruction {
         this.mDyScale = dyScale;
         this.mUpperCase = upperCase;
 
-		this.paintFill = paintFill;
-		this.paintStroke = paintStroke;
-		this.bgRect = bgRect;
-	}
+        this.paintFill = paintFill;
+        this.paintStroke = paintStroke;
+        this.bgRect = bgRect;
+    }
 
-	@Override
-	public void destroy() {
-		// do nothing
-	}
+    @Override
+    public void destroy() {
+        // do nothing
+    }
 
-	@Override
-	public void renderNode(RenderCallback renderCallback, Tag[] tags) {
+    @Override
+    public void renderNode(RenderCallback renderCallback, Tag[] tags) {
         String caption = mTextKey.getValue(tags, mUpperCase);
         if (caption == null) {
             return;
         }
-		renderCallback.renderPointOfInterestCaption(caption,
-				this.mDx, this.mDyComputed,
-				this.paintFill, this.paintStroke, this.bgRect,
-				this.indexInRules, this.mForceDraw);
-	}
+        renderCallback.renderPointOfInterestCaption(caption,
+                this.mDx, this.mDyComputed,
+                this.paintFill, this.paintStroke, this.bgRect,
+                this.indexInRules, this.mForceDraw);
+    }
 
-	@Override
-	public void renderWay(RenderCallback renderCallback, Tag[] tags) {
+    @Override
+    public void renderWay(RenderCallback renderCallback, Tag[] tags) {
         String caption = mTextKey.getValue(tags, mUpperCase);
-		if (caption == null) {
-			return;
-		}
-		renderCallback.renderAreaCaption(caption, 
-				this.mDx, this.mDyComputed,
-				this.paintFill, this.paintStroke, this.bgRect,
-				this.indexInRules, this.mForceDraw);
-	}
+        if (caption == null) {
+            return;
+        }
+        renderCallback.renderAreaCaption(caption,
+                this.mDx, this.mDyComputed,
+                this.paintFill, this.paintStroke, this.bgRect,
+                this.indexInRules, this.mForceDraw);
+    }
 
-	@Override
-	public void prepare(RenderTheme theme, float scaleStroke, float scaleText, byte zoomLevel) {
+    @Override
+    public void prepare(RenderTheme theme, float scaleStroke, float scaleText, byte zoomLevel) {
         // compute vertical offset
         if (mDyScale != null) {
             mDyComputed = mDyScale.computeValue(mDy, zoomLevel);
@@ -223,5 +227,5 @@ public final class Caption extends RenderInstruction {
         // set paint
         this.paintFill.setTextSize(size);
         this.paintStroke.setTextSize(size);
-	}
+    }
 }

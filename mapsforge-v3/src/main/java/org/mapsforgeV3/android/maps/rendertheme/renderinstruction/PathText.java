@@ -86,10 +86,12 @@ public final class PathText extends RenderInstruction {
 
         // FONT
         if (attrs.containsKey(KEY_FONT_FAMILY)) {
-            fontFamily = FontFamily.valueOf(attrs.remove(KEY_FONT_FAMILY).toUpperCase(Locale.ROOT));
+            fontFamily = FontFamily.valueOf(attrs.remove(KEY_FONT_FAMILY)
+                    .toUpperCase(Locale.ROOT));
         }
         if (attrs.containsKey(KEY_FONT_STYLE)) {
-            fontStyle = FontStyle.valueOf(attrs.remove(KEY_FONT_STYLE).toUpperCase(Locale.ROOT));
+            fontStyle = FontStyle.valueOf(attrs.remove(KEY_FONT_STYLE)
+                    .toUpperCase(Locale.ROOT));
         }
         if (attrs.containsKey(KEY_FONT_SIZE)) {
             fontSize = parseLengthUnits(attrs.remove(KEY_FONT_SIZE));
@@ -119,13 +121,7 @@ public final class PathText extends RenderInstruction {
         validate(elementName, textKey, fontSize, strokeWidth);
 
         // prepare typeface
-        Typeface typeface = null;
-        try {
-            typeface = Typeface.create(fontFamily.toTypeface(), fontStyle.toInt());
-        } catch (Exception e) {
-            Utils.getHandler().logW("PathText", "create typeface: " + fontFamily + ", " + fontStyle);
-            Typeface.create(FontFamily.DEFAULT.toTypeface(), FontStyle.NORMAL.toInt());
-        }
+        Typeface typeface = RenderInstruction.createTypeFace(fontFamily, fontStyle);
 
         // construct instructions
         return new PathText(indexInRules, category,

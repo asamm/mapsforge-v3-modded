@@ -23,6 +23,8 @@ import com.asamm.locus.mapsforge.utils.Utils;
 
 import org.mapsforgeV3.android.maps.rendertheme.RenderCallback;
 import org.mapsforgeV3.android.maps.rendertheme.RenderTheme;
+import org.mapsforgeV3.android.maps.rendertheme.tools.FontFamily;
+import org.mapsforgeV3.android.maps.rendertheme.tools.FontStyle;
 import org.mapsforgeV3.core.model.Tag;
 
 import java.util.regex.Pattern;
@@ -193,5 +195,15 @@ public abstract class RenderInstruction {
         float scaledDensity = Utils.getHandler().getContext().getResources().
                 getDisplayMetrics().scaledDensity;
         return sp / scaledDensity;
+    }
+
+    static Typeface createTypeFace(FontFamily fontFamily, FontStyle fontStyle) {
+        try {
+            return Typeface.create(fontFamily.toTypeface(), fontStyle.toInt());
+        } catch (Exception e) {
+            Utils.getHandler().logW("RenderInstructions",
+                    "createTypeFace(" + fontFamily + ", " + fontStyle + ")");
+            return null;
+        }
     }
 }
