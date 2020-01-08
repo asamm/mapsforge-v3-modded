@@ -28,7 +28,6 @@ import org.mapsforgeV3.android.maps.mapgenerator.MapGeneratorJob;
 import org.mapsforgeV3.android.maps.mapgenerator.RenderThemeDefinition;
 import org.mapsforgeV3.android.maps.rendertheme.RenderCallback;
 import org.mapsforgeV3.android.maps.rendertheme.RenderTheme;
-import org.mapsforgeV3.android.maps.rendertheme.RenderThemeHandler;
 import org.mapsforgeV3.android.maps.rendertheme.tools.BgRectangle;
 import org.mapsforgeV3.android.maps.rendertheme.tools.CurveStyle;
 import org.mapsforgeV3.core.model.GeoPoint;
@@ -148,24 +147,6 @@ public class DatabaseRenderer implements MapGenerator {
     }
 
     /**
-     * Get current loaded map theme.
-     *
-     * @return current theme
-     */
-    public RenderTheme getTheme() {
-        return mRenderTheme;
-    }
-
-    /**
-     * Get current used size of tiles in pixels.
-     *
-     * @return size of tiles
-     */
-    public int getTileSize() {
-        return mTileSize;
-    }
-
-    /**
      * Return draw color
      *
      * @return color for background
@@ -263,7 +244,7 @@ public class DatabaseRenderer implements MapGenerator {
                 || jobTheme != mPreviousJobTheme
                 || mRenderTheme == null) {
             cleanup();
-            this.mRenderTheme = getRenderTheme(jobTheme);
+            this.mRenderTheme = Utils.getHandler().getRenderTheme();
             if (DEBUG) {
                 Utils.getHandler().logW(TAG, "prepareRenderTheme(), " +
                         "loaded theme:" + mRenderTheme);
@@ -311,23 +292,6 @@ public class DatabaseRenderer implements MapGenerator {
 
         // valid result
         return true;
-    }
-
-    /**
-     * Parse new render theme based on defined parameters.
-     *
-     * @param jobTheme parameter for job
-     * @return parsed theme
-     */
-    private RenderTheme getRenderTheme(RenderThemeDefinition jobTheme) {
-        try {
-            Utils.getHandler().logD(TAG, "getRenderTheme(" + jobTheme + ")");
-            return RenderThemeHandler.getRenderTheme(jobTheme,
-                    menuStyle -> Utils.getHandler().getThemeCategories(menuStyle));
-        } catch (Exception e) {
-            Utils.getHandler().logE(TAG, "getRenderTheme(" + jobTheme + ")", e);
-        }
-        return null;
     }
 
     @Override

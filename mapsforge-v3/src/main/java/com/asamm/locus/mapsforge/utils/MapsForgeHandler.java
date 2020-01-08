@@ -53,10 +53,9 @@ public interface MapsForgeHandler {
     /**
      * Handler for styling vector themes. Allows to define which categories will be visible
      * and which hidden.
-     * @param menuStyle style from theme
-     * @return list of allowed categories
+     * @return render theme or null if not yet ready
      */
-    Set<String> getThemeCategories(XmlRenderThemeStyleMenu menuStyle);
+    RenderTheme getRenderTheme();
 
     // GRAPHICS
 
