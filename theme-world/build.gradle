@@ -19,7 +19,7 @@ android {
 
 dependencies {
     // MapsForge API
-    api project(':mapsforge-v3:mapsforge-v3')
+    api project(':libMapsForgeV3:mapsforge-v3')
 }
 
 // upload to repository
