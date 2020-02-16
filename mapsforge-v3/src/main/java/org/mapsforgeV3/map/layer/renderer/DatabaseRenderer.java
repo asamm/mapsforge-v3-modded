@@ -276,10 +276,10 @@ public class DatabaseRenderer implements MapGenerator {
             mCurrentZoomLevel = zoomLevel;
             mCurrentTextScale = jobParameters.textScale;
             mCurrentLang = getFirstMapDatabaseCountryCode();
-            Utils.getHandler().logW(TAG, "  set values " +
-                    "new zoom: " + mCurrentZoomLevel + ", " +
-                    "text scale: " + mCurrentTextScale + ", " +
-                    "lang: " + mCurrentLang);
+//            Utils.getHandler().logW(TAG, "  set values " +
+//                    "new zoom: " + mCurrentZoomLevel + ", " +
+//                    "text scale: " + mCurrentTextScale + ", " +
+//                    "lang: " + mCurrentLang);
 
 
             // set Locus extended flag
