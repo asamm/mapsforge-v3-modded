@@ -1,14 +1,11 @@
 apply plugin: 'com.android.library'
 apply from: '../global.gradle'
-apply plugin: 'maven'
 
-//ext {
 def group = 'com.asamm.locus'
 def artifactId = 'mapsforge-v3-theme-base'
 def versionId = 1
 //version = '1.0-SNAPSHOT'
 def version = '0.94'
-//}
 
 android {
     defaultConfig {
@@ -20,27 +17,4 @@ android {
 dependencies {
     // MapsForge API
     api project(':libMapsForgeV3:mapsforge-v3')
-}
-
-// upload to repository
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            println "  group: $group"
-            repository(url: "${REPO_URL}/repository/maven-playground") {
-                authentication(userName: REPO_NAME, password: REPO_PASS)
-            }
-//            repository(url: "${REPO_URL}/repository/maven-releases") {
-//                authentication(userName: REPO_NAME, password: REPO_PASS)
-//            }
-//            snapshotRepository(url: "${REPO_URL}/repository/maven-snapshots") {
-//                authentication(userName: REPO_NAME, password: REPO_PASS)
-//            }
-
-            // update pom
-            pom.groupId = group
-            pom.artifactId = artifactId
-            pom.version = version
-        }
-    }
 }
