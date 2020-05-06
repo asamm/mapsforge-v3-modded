@@ -980,10 +980,9 @@ public class MapDatabase {
                 // check if way is just a empty background
                 if (tags.size() == 1) {
                     Tag tag = tags.get(0);
-                    way.isFillBackground =
-                            tag.equals(DatabaseRenderer.TAG_NATURAL_WATER) ||
-                                    tag.equals(DatabaseRenderer.TAG_NATURAL_NOSEA) ||
-                                    tag.equals(DatabaseRenderer.TAG_NATURAL_SEA);
+                    way.isFillBackground = tag.equals(DatabaseRenderer.TAG_NATURAL_WATER)
+                            || tag.equals(DatabaseRenderer.TAG_NATURAL_NOSEA)
+                            || tag.equals(DatabaseRenderer.TAG_NATURAL_SEA);
                 }
 
                 // finally render way

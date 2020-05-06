@@ -482,8 +482,6 @@ public class DatabaseRenderer implements MapGenerator {
         private boolean renderingComplete;
         // is renderer still valid
         private boolean isStillValid;
-        // world map only
-        private boolean isWorldDataOnly;
 
         // current tile values
         private byte cZoomLevel;
@@ -544,7 +542,6 @@ public class DatabaseRenderer implements MapGenerator {
 
             // basic parameters
             this.isWater = false;
-            this.isWorldDataOnly = false;
             this.renderingComplete = false;
             this.isStillValid = true;
             this.cZoomLevel = currentMapTile.zoomLevel;
@@ -569,15 +566,15 @@ public class DatabaseRenderer implements MapGenerator {
          * @return {@code true} if really no data were rendered
          */
         public boolean isEmpty() {
-            return mCounterRenderArea == 0 &&
-                    mCounterRenderAreaCaption == 0 &&
-                    mCounterRenderAreaSymbol == 0 &&
-                    mCounterRenderPoiCaption == 0 &&
-                    mCounterRenderPoiCircle == 0 &&
-                    mCounterRenderPoiSymbol == 0 &&
-                    mCounterRenderWay == 0 &&
-                    mCounterRenderWaySymbol == 0 &&
-                    mCounterRenderWayText == 0;
+            return mCounterRenderArea == mCounterRenderAreaBg
+                    && mCounterRenderAreaCaption == 0
+                    && mCounterRenderAreaSymbol == 0
+                    && mCounterRenderPoiCaption == 0
+                    && mCounterRenderPoiCircle == 0
+                    && mCounterRenderPoiSymbol == 0
+                    && mCounterRenderWay == 0
+                    && mCounterRenderWaySymbol == 0
+                    && mCounterRenderWayText == 0;
         }
 
         private void setRequestToEmpty() {
