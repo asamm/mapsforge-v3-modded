@@ -25,14 +25,17 @@ import org.mapsforgeV3.android.maps.rendertheme.tools.CurveStyle;
 public interface RenderCallback {
 
     /**
-     * Return if rendering of this tile is completed
-     *
-     * @return
+     * Flag if rendering of this tile is completed.
      */
     boolean isRenderingCompleted();
 
     /**
-     * @return
+     * Flag if rendering of this tile is completed, but only background coverage is visible.
+     */
+    boolean isRenderingCompletedOnlyBg();
+
+    /**
+     * Rendered bitmap image.
      */
     Bitmap getRenderedBitmap();
 

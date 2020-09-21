@@ -991,9 +991,7 @@ public class MapDatabase {
                 tr.renderWay(way);
 
                 // add valid way to counter
-                if (!way.isFillBackground) {
-                    validWays += 1;
-                }
+                validWays += 1;
             }
         }
         return validWays;

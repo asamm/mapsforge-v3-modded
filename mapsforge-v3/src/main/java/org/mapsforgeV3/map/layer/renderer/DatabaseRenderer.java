@@ -213,7 +213,7 @@ public class DatabaseRenderer implements MapGenerator {
             }
 
             // if still empty, close tasks
-            if (tr.isEmpty()) {
+            if (tr.isEmpty(true)) {
                 tr.setRequestToEmpty();
             }
 
@@ -480,6 +480,8 @@ public class DatabaseRenderer implements MapGenerator {
         public boolean isWater;
         // rendering completed
         private boolean renderingComplete;
+        // flag if rendering was completed but only with background map
+        private boolean renderingCompleteOnlyBg;
         // is renderer still valid
         private boolean isStillValid;
 
@@ -543,6 +545,7 @@ public class DatabaseRenderer implements MapGenerator {
             // basic parameters
             this.isWater = false;
             this.renderingComplete = false;
+            this.renderingCompleteOnlyBg = false;
             this.isStillValid = true;
             this.cZoomLevel = currentMapTile.zoomLevel;
             this.cPixelX = currentMapTile.tileX * mTileSize;
@@ -561,13 +564,11 @@ public class DatabaseRenderer implements MapGenerator {
         }
 
         /**
-         * Check if at least some data were loaded and rendered.
-         *
-         * @return {@code true} if really no data were rendered
+         * Check if at least some data were loaded and rendered. Return `true` if tile is
+         * completely empty (or filled by single background).
          */
-        public boolean isEmpty() {
-            return mCounterRenderArea == mCounterRenderAreaBg
-                    && mCounterRenderAreaCaption == 0
+        private boolean isEmpty(boolean alsoNoBackground) {
+            boolean contentEmpty = mCounterRenderAreaCaption == 0
                     && mCounterRenderAreaSymbol == 0
                     && mCounterRenderPoiCaption == 0
                     && mCounterRenderPoiCircle == 0
@@ -575,6 +576,12 @@ public class DatabaseRenderer implements MapGenerator {
                     && mCounterRenderWay == 0
                     && mCounterRenderWaySymbol == 0
                     && mCounterRenderWayText == 0;
+            if (alsoNoBackground) {
+                return mCounterRenderArea == 0
+                        && mCounterRenderAreaBg == 0;
+            } else {
+                return contentEmpty;
+            }
         }
 
         private void setRequestToEmpty() {
@@ -608,11 +615,17 @@ public class DatabaseRenderer implements MapGenerator {
 
             // set completed
             renderingComplete = true;
+            renderingCompleteOnlyBg = isEmpty(false);
         }
 
         @Override
         public boolean isRenderingCompleted() {
             return renderingComplete;
+        }
+
+        @Override
+        public boolean isRenderingCompletedOnlyBg() {
+            return renderingCompleteOnlyBg;
         }
 
         @Override
