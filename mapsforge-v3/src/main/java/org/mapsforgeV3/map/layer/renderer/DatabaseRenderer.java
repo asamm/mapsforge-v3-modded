@@ -244,7 +244,7 @@ public class DatabaseRenderer implements MapGenerator {
                 || jobTheme != mPreviousJobTheme
                 || mRenderTheme == null) {
             cleanup();
-            this.mRenderTheme = Utils.getHandler().getRenderTheme();
+            this.mRenderTheme = Utils.getHandler().getRenderTheme(jobTheme);
             if (DEBUG) {
                 Utils.getHandler().logW(TAG, "prepareRenderTheme(), " +
                         "loaded theme:" + mRenderTheme);

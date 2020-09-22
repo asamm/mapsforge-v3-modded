@@ -55,7 +55,7 @@ public interface MapsForgeHandler {
      * and which hidden.
      * @return render theme or null if not yet ready
      */
-    RenderTheme getRenderTheme();
+    RenderTheme getRenderTheme(RenderThemeDefinition jobTheme);
 
     // GRAPHICS
 
