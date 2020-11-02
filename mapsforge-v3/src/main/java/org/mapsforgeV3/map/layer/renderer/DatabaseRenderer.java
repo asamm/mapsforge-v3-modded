@@ -576,7 +576,7 @@ public class DatabaseRenderer implements MapGenerator {
                     && mCounterRenderWay == 0
                     && mCounterRenderWaySymbol == 0
                     && mCounterRenderWayText == 0;
-            if (alsoNoBackground) {
+            if (contentEmpty && alsoNoBackground) {
                 return mCounterRenderArea == 0
                         && mCounterRenderAreaBg == 0;
             } else {
