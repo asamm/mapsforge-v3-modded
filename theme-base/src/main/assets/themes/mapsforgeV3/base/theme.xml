@@ -817,7 +817,7 @@ version 2.4.0
 				<area fill="#25E57A7A"   />
 			</rule>	
 			<rule e="way" k="*" v="*" zoom-min="16">
-				<caption k="name" dy="15dp" font-style="bold" font-size="10dp" scale-font-size="16,1.15" fill="#E57A7A" stroke="#ffffff" stroke-width="1dp"   />
+				<caption k="name" dy="15dp" font-style="bold" font-size="10dp" scale-font-size="16,1.15" fill="#925e5a" stroke="#ffffff" stroke-width="1dp"   />
 			</rule>	
 		</rule>
 		
@@ -1730,7 +1730,7 @@ version 2.4.0
 							<line dy="2.5dp" stroke="#dac11a" stroke-width="1.2dp" stroke-linecap="butt"/> 
 						</rule>
 						<rule e="way" k="osmc_color" v="green">
-							<rule e="way" k="osmc_foreground" v=	"green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x">
+							<rule e="way" k="osmc_foreground" v=	"~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x">
 								<line dy="-2.5dp" stroke="#267f00" stroke-width="1dp" stroke-linecap="butt"/> 
 							</rule>
 							<rule e="way" k="osmc_foreground" v="green_backslash">
@@ -1770,7 +1770,7 @@ version 2.4.0
 							<line dy="3dp" stroke="#dac11a" stroke-width="0.8dp" stroke-linecap="butt"/> 
 						</rule>
 						<rule e="way" k="osmc_color" v="green">
-							<rule e="way" k="osmc_foreground" v=	"green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x">
+							<rule e="way" k="osmc_foreground" v=	"~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x">
 								<line dy="-3dp" stroke="#267f00" stroke-width="0.7dp" stroke-linecap="butt"/> 
 							</rule>
 							<rule e="way" k="osmc_foreground" v="green_backslash">
@@ -1810,7 +1810,7 @@ version 2.4.0
 							<line dy="3.7dp" stroke="#dac11a" stroke-width="0.7dp" stroke-linecap="butt"/> 
 						</rule>
 						<rule e="way" k="osmc_color" v="green">
-							<rule e="way" k="osmc_foreground" v=	"green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x">
+							<rule e="way" k="osmc_foreground" v=	"~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x">
 								<line dy="-3.7dp" stroke="#267f00" stroke-width="0.6dp" stroke-linecap="butt"/> 
 							</rule>
 							<rule e="way" k="osmc_foreground" v="green_backslash">
@@ -1850,7 +1850,7 @@ version 2.4.0
 							<line dy="4.5dp" stroke="#dac11a" stroke-width="0.7dp" stroke-linecap="butt"/> 
 						</rule>
 						<rule e="way" k="osmc_color" v="green">
-							<rule e="way" k="osmc_foreground" v=	"green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x">
+							<rule e="way" k="osmc_foreground" v=	"~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x">
 								<line dy="-4.5dp" stroke="#267f00" stroke-width="0.6dp" stroke-linecap="butt"/> 
 							</rule>
 							<rule e="way" k="osmc_foreground" v="green_backslash">
@@ -1889,7 +1889,7 @@ version 2.4.0
 							<line dy="5.5dp" stroke="#dac11a" stroke-width="0.7dp" stroke-linecap="butt"/> 
 						</rule>
 						<rule e="way" k="osmc_color" v="green">
-							<rule e="way" k="osmc_foreground" v=	"green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x">
+							<rule e="way" k="osmc_foreground" v=	"~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x">
 								<line dy="-5.5dp" stroke="#267f00" stroke-width="0.6dp" stroke-linecap="butt"/> 
 							</rule>
 							<rule e="way" k="osmc_foreground" v="green_backslash">
@@ -1929,7 +1929,7 @@ version 2.4.0
 							<line dy="8dp" stroke="#dac11a" stroke-width="0.6dp" stroke-linecap="butt"/> 
 						</rule>
 						<rule e="way" k="osmc_color" v="green">
-							<rule e="way" k="osmc_foreground" v=	"green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x">
+							<rule e="way" k="osmc_foreground" v=	"~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x">
 								<line dy="-8dp" stroke="#267f00" stroke-width="0.6dp" stroke-linecap="butt"/> 
 							</rule>
 							<rule e="way" k="osmc_foreground" v="green_backslash">
@@ -2059,7 +2059,7 @@ version 2.4.0
 							<line stroke="#B4B4B4" stroke-width="0.8dp" /> <!-- tertiary in level=12 without outline -->
 						</rule>						
 						<rule e="way" k="highway" v="secondary">
-							<line stroke="#FFEE54" stroke-width="2.9dp" stroke-linecap="butt" />							
+							<line stroke="#ffee54" stroke-width="2.9dp" stroke-linecap="butt" />							
 						</rule>
 						
 						<rule e="way" k="highway" v="primary">
@@ -3154,11 +3154,11 @@ version 2.4.0
 		<rule cat="base_topo" e="way" k="aerialway" v="*" zoom-min="13">
 			
 			<rule e="way" k="*" v="*" zoom-min="12" zoom-max="13">
-				<rule e="way" k="aerialway" v="cable_car">
+				<rule e="way" k="aerialway" v="chair_lift">
 					<line stroke="#202020" stroke-width="0.5dp" stroke-linecap="butt" />
 					<line stroke="#202020" stroke-width="2dp" stroke-dasharray="15,20" stroke-linecap="butt" />
 				</rule>
-				<rule e="way" k="aerialway" v="chair_lift">
+				<rule e="way" k="aerialway" v="cable_car">
 					<line stroke="#202020" stroke-width="0.6dp" stroke-linecap="butt" />
 					<line stroke="#202020" stroke-width="2.4dp" stroke-dasharray="1,20"  />
 					<line stroke="#FFFFFF" stroke-width="1.7dp" stroke-dasharray="1,20"  />
@@ -3177,7 +3177,7 @@ version 2.4.0
 				</rule>
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="14" zoom-max="16" >
-				<rule e="way" k="aerialway" v="cable_car">
+				<rule e="way" k="aerialway" v="chair_lift">
 					<line stroke="#202020" stroke-width="0.55dp" stroke-linecap="butt" />
 					<line stroke="#202020" stroke-width="1.5dp" stroke-dasharray="25,30" stroke-linecap="butt" />
 				</rule>
@@ -3186,7 +3186,7 @@ version 2.4.0
 					<line stroke="#202020" stroke-width="0.45dp" stroke-linecap="butt" />
 					<line stroke="#202020" stroke-width="2.1dp" stroke-dasharray="1,26"  />
 				</rule>
-				<rule e="way" k="aerialway" v="chair_lift">
+				<rule e="way" k="aerialway" v="cable_car">
 					<line stroke="#202020" stroke-width="0.42dp" stroke-linecap="butt" />
 					<line stroke="#202020" stroke-width="1.9dp" stroke-dasharray="1,26"  />
 					<line stroke="#FFFFFF" stroke-width="1.2dp" stroke-dasharray="1,26"  />
@@ -3203,7 +3203,7 @@ version 2.4.0
 			</rule>
 			
 			<rule e="way" k="*" v="*" zoom-min="17" >
-				<rule e="way" k="aerialway" v="cable_car">
+				<rule e="way" k="aerialway" v="chair_lift">
 					<line stroke="#202020" stroke-width="0.36dp" stroke-linecap="butt" />
 					<line stroke="#202020" stroke-width="1dp" stroke-dasharray="25,30" stroke-linecap="butt" />
 				</rule>
@@ -3212,7 +3212,7 @@ version 2.4.0
 					<line stroke="#202020" stroke-width="0.3dp" stroke-linecap="butt" />
 					<line stroke="#202020" stroke-width="1.4dp" stroke-dasharray="1,32"  />
 				</rule>
-				<rule e="way" k="aerialway" v="chair_lift">
+				<rule e="way" k="aerialway" v="cable_car">
 					<line stroke="#202020" stroke-width="0.27dp" stroke-linecap="butt" />
 					<line stroke="#202020" stroke-width="1.3dp" stroke-dasharray="1,32"  />
 					<line stroke="#FFFFFF" stroke-width="0.8dp" stroke-dasharray="1,32"  />
@@ -3950,16 +3950,16 @@ version 2.4.0
 			<!-- church or cathedral for topo --> 
 			<rule  cat="base_topo" e="any" k="amenity" v="place_of_worship" >
 				<rule e="any" k="religion" v="christian" >
-					<symbol src="file:/symbols/db_poi_church.svg" render-db-only="1" symbol-color="#755741" symbol-width="14dp" scale-icon-size="17,1.15"  /> 
+					<symbol src="file:/symbols/db_poi_church.svg" render-db-only="1" symbol-color="#654b38" symbol-width="14dp" scale-icon-size="17,1.15"  /> 
 				</rule>
 				<rule e="any" k="religion" v="jewish">
-					<symbol src="file:/symbols/db_poi_jewish_star.svg" render-db-only="1" symbol-color="#755741" symbol-width="14dp" scale-icon-size="17,1.15"  /> 
+					<symbol src="file:/symbols/db_poi_jewish_star.svg" render-db-only="1" symbol-color="#654b38" symbol-width="14dp" scale-icon-size="17,1.15"  /> 
 				</rule>
 				<rule e="any" k="religion" v="muslim" >
-					<symbol src="file:/symbols/db_poi_muslim_symbol.svg" render-db-only="1" symbol-color="#755741" symbol-width="14dp" scale-icon-size="17,1.15"  /> 
+					<symbol src="file:/symbols/db_poi_muslim_symbol.svg" render-db-only="1" symbol-color="#654b38" symbol-width="14dp" scale-icon-size="17,1.15"  /> 
 				</rule>
 				<rule e="any" k="religion" v="buddhist" >
-					<symbol src="file:/symbols/db_poi_buddhist.svg" render-db-only="1" symbol-color="#755741" symbol-width="14dp" scale-icon-size="17,1.15"  /> 
+					<symbol src="file:/symbols/db_poi_buddhist.svg" render-db-only="1" symbol-color="#654b38" symbol-width="14dp" scale-icon-size="17,1.15"  /> 
 				</rule>	
 				<!-- captions > 16 --> 
 				<rule e="any" k="amenity" v="place_of_worship" zoom-min="17" >
@@ -4008,16 +4008,16 @@ version 2.4.0
 				<!-- worships for CITY > 16 --> 
 				<rule  cat="religion_city" e="any" k="amenity" v="place_of_worship" >
 					<rule e="any" k="religion" v="christian" >
-						<symbol src="file:/symbols/db_poi_church.svg" render-db-only="1" symbol-color="#755741" symbol-width="14dp" scale-icon-size="18,1.15" /> 
+						<symbol src="file:/symbols/db_poi_church.svg" render-db-only="1" symbol-color="#654b38" symbol-width="14dp" scale-icon-size="18,1.15" /> 
 					</rule>
 					<rule e="any" k="religion" v="jewish">
-						<symbol src="file:/symbols/db_poi_jewish_star.svg" render-db-only="1" symbol-color="#755741" symbol-width="14dp" scale-icon-size="18,1.15" /> 
+						<symbol src="file:/symbols/db_poi_jewish_star.svg" render-db-only="1" symbol-color="#654b38" symbol-width="14dp" scale-icon-size="18,1.15" /> 
 					</rule>
 					<rule e="any" k="religion" v="muslim" >
-						<symbol src="file:/symbols/db_poi_muslim_symbol.svg" render-db-only="1" symbol-color="#755741" symbol-width="14dp" scale-icon-size="18,1.15" /> 
+						<symbol src="file:/symbols/db_poi_muslim_symbol.svg" render-db-only="1" symbol-color="#654b38" symbol-width="14dp" scale-icon-size="18,1.15" /> 
 					</rule>
 					<rule e="any" k="religion" v="buddhist" >
-						<symbol src="file:/symbols/db_poi_buddhist.svg" render-db-only="1" symbol-color="#755741" symbol-width="14dp" scale-icon-size="18,1.15" /> 
+						<symbol src="file:/symbols/db_poi_buddhist.svg" render-db-only="1" symbol-color="#654b38" symbol-width="14dp" scale-icon-size="18,1.15" /> 
 					</rule>	
 					<!-- captions > 17 --> 
 					<rule e="any" k="*" v="*" zoom-min="18" >
@@ -4026,7 +4026,7 @@ version 2.4.0
 				</rule>			
 												
 				<rule e="any" k="amenity" v="post_office">
-					<symbol src="file:/symbols/db_poi_post_office.svg" render-db-only="1"  symbol-color="#755741" symbol-width="12dp" scale-icon-size="18,1.15"/>
+					<symbol src="file:/symbols/db_poi_post_office.svg" render-db-only="1"  symbol-color="#8763ba" symbol-width="12dp" scale-icon-size="18,1.15"/>
 				</rule>					
 								
 				<rule e="any" k="amenity" v="university|theatre" zoom-min="17" >
@@ -4046,12 +4046,12 @@ version 2.4.0
 							
 				<rule e="any" k="amenity" v="parking" >
 					<rule e="any" k="access" v="~|yes|public"> 
-						<symbol src="file:/symbols/db_poi_parking.svg" symbol-color="#488bc2" symbol-width="10dp" scale-icon-size="17,1.15" /> 
+						<symbol src="file:/symbols/db_poi_parking.svg" symbol-color="#4477AA" symbol-width="10dp" scale-icon-size="17,1.15" /> 
 					</rule>	
 				</rule>
 									
 				<rule e="any" k="amenity" v="post_office">
-					<symbol src="file:/symbols/db_poi_post_office.svg" render-db-only="1" symbol-color="#755741"  symbol-width="12dp" scale-icon-size="17,1.15" />
+					<symbol src="file:/symbols/db_poi_post_office.svg" render-db-only="1" symbol-color="#8763ba"  symbol-width="12dp" scale-icon-size="17,1.15" />
 				</rule>	
 				
 				<rule e="any" k="amenity" v="public_bath" zoom-min="16">
@@ -4187,7 +4187,7 @@ version 2.4.0
 					</rule>	
 				</rule>										
 				<rule e="any" k="amenity" v="post_office" >
-					<symbol src="file:/symbols/db_poi_post_office.svg" render-db-only="1"  symbol-color="#755741" symbol-width="12dp" scale-icon-size="17,1.15" />
+					<symbol src="file:/symbols/db_poi_post_office.svg" render-db-only="1"  symbol-color="#8763ba" symbol-width="12dp" scale-icon-size="17,1.15" />
 				</rule>	
 				<rule e="any" k="amenity" v="public_bath" >
 					<symbol src="file:/symbols/db_poi_swimming.svg" render-db-only="1" symbol-color="#488bc2" symbol-width="14dp" scale-icon-size="17,1.15"/>
@@ -4243,7 +4243,7 @@ version 2.4.0
 				<symbol src="file:/symbols/db_poi_library.svg" render-db-only="1" symbol-color="#755741" symbol-width="14dp" scale-icon-size="18,1.15" />
 			</rule>			
 			<rule e="any" k="amenity" v="post_box">
-				<symbol src="file:/symbols/db_poi_post_box.svg" render-db-only="1" symbol-color="#755741" symbol-width="10dp" scale-icon-size="18,1.15"/>
+				<symbol src="file:/symbols/db_poi_post_box.svg" render-db-only="1" symbol-color="#8763ba" symbol-width="10dp" scale-icon-size="18,1.15"/>
 			</rule>	
 			<rule e="any" k="amenity" v="university|college" >
 				<symbol src="file:/symbols/db_poi_education.svg" render-db-only="1" symbol-color="#755741" symbol-width="14dp" scale-icon-size="18,1.15" />
@@ -4510,7 +4510,7 @@ version 2.4.0
 			</rule>
 			
 			<rule e="any" k="tourism" v="alpine_hut" >
-				<symbol src="file:/symbols/db_poi_alpine_hut.svg" render-db-only="1" symbol-color="#af5724" symbol-width="18dp" scale-icon-size="17,1.15" />
+				<symbol src="file:/symbols/db_poi_alpine_hut.svg" render-db-only="1" symbol-color="#af4024" symbol-width="18dp" scale-icon-size="17,1.15" />
 				<rule e="any" k="tourism" v="alpine_hut" zoom-min="16">	
 					<caption k="ele" dy="-15dp" scale-dy-size="16,1.15"  font-style="bold" font-size="7dp"  scale-font-size="16,1.15" fill="#333333" stroke="#ffffff" stroke-width="2dp" />
 					<caption k="name" dy="15dp" scale-dy-size="16,1.15"  font-style="bold_italic" font-size="8dp"  scale-font-size="16,1.15" fill="#333333" stroke="#ffffff" stroke-width="2dp" />
@@ -4694,7 +4694,7 @@ version 2.4.0
 			
 		</rule>			
 		<rule e="any" k="natural" v="volcano" zoom-min="14">
-			<symbol src="file:/symbols/db_poi_vulcan.svg" symbol-width="6dp" symbol-color="#e0052a" scale-icon-size="17,1.15" />
+			<symbol src="file:/symbols/db_poi_vulcan.svg" symbol-width="6dp" symbol-color="#db0529" scale-icon-size="17,1.15" />
 		</rule>	
 		<rule e="any" k="natural" v="tree" zoom-min="16" >
 			<symbol src="file:/symbols/db_poi_tree.svg" symbol-color="#3c7d00"  symbol-width="0.7dp" scale-icon-size="17,1.15" />
@@ -4969,7 +4969,7 @@ version 2.4.0
 	<!-- PLACE  -->
 	
 	<rule e="any" k="place" v="*">				
-		
+			
 		<rule e="any" k="place" v="town" zoom-min="10" zoom-max="10" >
 			<rule e="any" k="*" v="*" zoom-min="10" zoom-max="10" >
 				<circle r="3dp" fill="#f4f3e9" stroke="#9B9B9B" stroke-width="1dp" />
