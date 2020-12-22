@@ -15,11 +15,11 @@ public class Themes {
 	public static class LocusThemeDefinition implements RenderThemeDefinition {
 
         // prefix for map path
-        private String mPathPrefix;
+        private final String mPathPrefix;
         // name of theme
-		private String mName;
+		private final String mName;
         // type of theme
-        private String mType;
+        private final String mType;
 		
 		public LocusThemeDefinition(String pathPrefix, String name, String type) {
             this.mPathPrefix = pathPrefix;

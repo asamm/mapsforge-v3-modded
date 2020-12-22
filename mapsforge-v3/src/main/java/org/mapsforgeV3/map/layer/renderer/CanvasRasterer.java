@@ -58,7 +58,7 @@ class CanvasRasterer {
 	private final Matrix symbolMatrix;
 
 	// main picture
-	private Picture picture;
+	private final Picture picture;
 	// canvas generated from picture
 	private Canvas canvas;
 

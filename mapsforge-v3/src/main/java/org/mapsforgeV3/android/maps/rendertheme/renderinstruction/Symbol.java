@@ -94,11 +94,11 @@ public final class Symbol extends RenderInstruction {
     // symbol for a object
     private final ImageSymbol mImageSymbol;
     // flag if we wants to draw symbol only over POI DB
-    private boolean mRenderDbOnly;
+    private final boolean mRenderDbOnly;
     // width of outline of active points
-    private int dbOutlineWidth;
+    private final int dbOutlineWidth;
     // color of outline of active points
-    private int dbOutlineColor;
+    private final int dbOutlineColor;
 
     private Symbol(int indexInRules, String category,
             boolean forceDraw, ImageSymbol is, boolean renderDbOnly,

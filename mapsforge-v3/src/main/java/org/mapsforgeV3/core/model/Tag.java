@@ -40,7 +40,7 @@ public class Tag {
 	 */
 	private final String valueText;
 
-	private transient int hashCodeValue;
+	private final transient int hashCodeValue;
 
     public Tag(String tag) {
         this(tag, tag.indexOf(KEY_VALUE_SEPARATOR));

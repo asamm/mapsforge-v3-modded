@@ -19,11 +19,11 @@ package org.mapsforgeV3.core.model;
  */
 public final class LineSegment {
 
-	private static int INSIDE = 0; // 0000
-	private static int LEFT = 1;   // 0001
-	private static int RIGHT = 2;  // 0010
-	private static int BOTTOM = 4; // 0100
-	private static int TOP = 8;    // 1000
+	private static final int INSIDE = 0; // 0000
+	private static final int LEFT = 1;   // 0001
+	private static final int RIGHT = 2;  // 0010
+	private static final int BOTTOM = 4; // 0100
+	private static final int TOP = 8;    // 1000
 
 	public final Point start;
 	public final Point end;

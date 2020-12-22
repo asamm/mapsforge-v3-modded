@@ -85,7 +85,7 @@ public class DatabaseRenderer implements MapGenerator {
     private boolean mFillSeaAreas;
 
     // container for map databases
-    private List<MapDatabase> mapDatabases;
+    private final List<MapDatabase> mapDatabases;
     // path to current "base" map
     private File mMapFile;
 
@@ -427,7 +427,7 @@ public class DatabaseRenderer implements MapGenerator {
         // DEFINITION
 
         // current generator job
-        private MapGeneratorJob mapGeneratorJob;
+        private final MapGeneratorJob mapGeneratorJob;
         // current handled tile
         private Tile currentMapTile;
         // handler for special events after rendering
@@ -1102,7 +1102,7 @@ public class DatabaseRenderer implements MapGenerator {
 
     // CACHE WAYS CONTAINERS
 
-    private static List<List<PaintContainerShape>[][]> mCacheWayContainers =
+    private static final List<List<PaintContainerShape>[][]> mCacheWayContainers =
             Collections.synchronizedList(new ArrayList<>());
 
     private static void addWayContainerCache(List<PaintContainerShape>[][] container) {

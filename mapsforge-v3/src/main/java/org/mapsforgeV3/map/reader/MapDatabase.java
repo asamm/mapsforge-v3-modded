@@ -254,7 +254,7 @@ public class MapDatabase {
     // POI database version, or '0' if not exists
     private int mDbPoiVersion;
     // container for loaded tags
-    private List<Tag> tags = new ArrayList<>();
+    private final List<Tag> tags = new ArrayList<>();
 
     /**
      * Base constructor.
@@ -842,7 +842,7 @@ public class MapDatabase {
     // HANDLE WAYS
 
     // comparator for tags
-    private static Comparator<Tag> tagsComparator
+    private static final Comparator<Tag> tagsComparator
             = (lhs, rhs) -> Integer.compare(lhs.hashCode(), rhs.hashCode());
 
     /**

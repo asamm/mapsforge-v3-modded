@@ -37,7 +37,7 @@ public class Tile {
 	 */
 	public final byte zoomLevel;
 
-	private transient int hashCodeValue;
+	private final transient int hashCodeValue;
 	
 	/**
 	 * @param tileX

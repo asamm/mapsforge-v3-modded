@@ -127,7 +127,7 @@ public final class RenderThemeHandler extends DefaultHandler {
 	// special theme argument
 	private final String mThemeStyle;
 	// listener for parsing
-    private OnThemePreparationListener themePrepareListener;
+    private final OnThemePreparationListener themePrepareListener;
 
     // PARAMETERS FOR RENDERING
 
@@ -151,7 +151,7 @@ public final class RenderThemeHandler extends DefaultHandler {
     // index counter used as ID
     private int mTagIndex;
     // reusable attribute container
-    private HashMap<String, String> mAttrs = new HashMap<>();
+    private final HashMap<String, String> mAttrs = new HashMap<>();
 
     // amount of all instructions
     private int mCountRulesAll;

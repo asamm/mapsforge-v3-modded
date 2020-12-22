@@ -114,10 +114,10 @@ class LabelPlacement {
         }
     }
 
-    private int labelDistanceToLabel = 2;
-    private int labelDistanceToSymbol = 2;
-    private int startDistanceToSymbols = 4;
-    private int symbolDistanceToSymbol = 2;
+    private final int labelDistanceToLabel = 2;
+    private final int labelDistanceToSymbol = 2;
+    private final int startDistanceToSymbols = 4;
+    private final int symbolDistanceToSymbol = 2;
 
     // size of tiles
     private final int mTileSize;
@@ -632,7 +632,7 @@ class LabelPlacement {
         this.dependencyCache.removeReferencePointsFromDependencyCache(refPos);
     }
 
-    private ArrayList<String> usedAreaLabels = new ArrayList<>();
+    private final ArrayList<String> usedAreaLabels = new ArrayList<>();
 
     private static boolean intersects(float r1x1, float r1y1, float r1x2, float r1y2,
             float r2x1, float r2y1, float r2x2, float r2y2) {
