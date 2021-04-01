@@ -2751,6 +2751,12 @@ version 2.4.0
 					<line stroke="#EDEDED" stroke-width="1" stroke-linecap="butt" />
 					<line stroke="#4C4C4C" stroke-width="1" stroke-dasharray="8,13" stroke-linecap="butt" />
 				</rule>
+				<rule e="way" k="railway" v="disused" zoom-min="13">
+					<line stroke="#707070" stroke-width="1.4" stroke-linecap="butt" />
+					<line stroke="#EDEDED" stroke-width="1" stroke-linecap="butt" />
+					<line stroke="#707070" stroke-width="1" stroke-dasharray="8,13" stroke-linecap="butt" />
+				</rule>
+				
 				<rule e="way" k="railway" v="rail">
 					<rule e="way" k="usage" v="branch|main" >
 						<rule e="way" k="*" v="*" zoom-max="11">						
