@@ -279,12 +279,9 @@ version 2.4.0
 			<area fill="#f4f3e9" />
 		</rule>
 		
+		
 		<!-- natural -->
 		<rule cat="base_topo" e="way" k="natural" v="*">
-			
-			<rule e="way" k="natural" v="land" closed="yes">
-				<area fill="#f4f3e9" />
-			</rule>
 			
 			<rule e="way" k="natural" v="*" zoom-min="8" closed="yes">
 				<rule e="way" k="natural" v="glacier">
@@ -301,9 +298,7 @@ version 2.4.0
 						<area fill="#F1F2E9" />
 						<area src="file:/patterns/heath.svg"/>
 				</rule>		
-				<rule e="way" k="natural" v="marsh|wetland">
-					<area src="file:/patterns/marsh.png"  scale-icon-size="17,1.15"/>
-				</rule>
+
 				<rule e="way" k="natural" v="scree|shingle">
 					<area fill="#80dddfe5" />
 					<area src="file:/patterns/beach.png" symbol-width="64dp" scale-icon-size="16,1.15" />
@@ -761,6 +756,26 @@ version 2.4.0
 			</rule>	
 		</rule>	 <!-- end of water -->	
 		
+
+				
+		<!-- wetland -->
+		<rule cat="base_topo" e="way" k="natural|wetland" v="*" zoom-min="13">	
+			
+			<rule e="way" k="wetland" v="~">
+				<rule e="way" k="natural" v="wetland">
+					<area src="file:/patterns/marsh.png" symbol-width="32dp"  scale-icon-size="17,1.15"/>
+				</rule>
+			</rule>
+			
+			<rule e="way" k="wetland" v="marsh|swamp|bog|fen" >
+
+				<area src="file:/patterns/marsh.png" symbol-width="32dp" scale-icon-size="17,1.15"/>
+			</rule>
+		
+			<rule e="way" k="wetland" v="tidalflat" >
+				<area src="file:/patterns/tidalflat_64.svg" symbol-width="64dp" scale-icon-size="13,1.1"/>
+			</rule>		
+		</rule>	
 		
 		<!-- runways casings and areas TODO terminal based -->
 		<rule e="way" k="aeroway" v="*" zoom-min="13">		
