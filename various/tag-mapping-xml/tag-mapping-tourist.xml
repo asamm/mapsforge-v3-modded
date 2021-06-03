@@ -785,6 +785,7 @@
 		
 		<osm-tag key="man_made" value="adit" zoom-appear="14" />
 		<osm-tag key="man_made" value="cross" zoom-appear="14" />
+		 <osm-tag key="man_made" value="cutline" zoom-appear="14" />
 		<osm-tag key="man_made" value="lighthouse" zoom-appear="13" />
 		<osm-tag key="man_made" value="mineshaft" zoom-appear="14" />
 		<osm-tag key="man_made" value="pier" zoom-appear="15" />

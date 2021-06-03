@@ -2984,6 +2984,9 @@ version 2.4.0
 					<area fill="#ebeade" />
 				</rule>
 			</rule>
+			<rule cat="base_topo" e="way" k="man_made" v="cutline" zoom_min="15">
+				<line stroke="#b38d5d" stroke-width="0.3dp" stroke-dasharray="7,5" stroke-linecap="butt" />
+			</rule>
 		</rule>		
 		
 		<!-- walls barries-->
