@@ -419,6 +419,7 @@
 		
 		<!-- more detailed natural=wetland -->
 		<osm-tag key="wetland" value="bog" zoom-appear="13" />
+		<osm-tag key="wetland" value="fen" zoom-appear="13" />
 		<osm-tag key="wetland" value="marsh" zoom-appear="13" />
 		<osm-tag key="wetland" value="swamp" zoom-appear="13" />
 		<osm-tag key="wetland" value="tidalflat" zoom-appear="13" />
@@ -666,6 +667,7 @@
 		<osm-tag key="building" value="service" zoom-appear="15" />
 		<osm-tag key="building" value="shed" zoom-appear="15" />
 		<osm-tag key="building" value="sports" zoom-appear="15" />
+		<osm-tag key="building" value="sports_hall" zoom-appear="15" />
 		<osm-tag key="building" value="stadium" zoom-appear="15" />
 		<osm-tag key="building" value="static_caravan" zoom-appear="15" />
 		<osm-tag key="building" value="store" zoom-appear="15" />
