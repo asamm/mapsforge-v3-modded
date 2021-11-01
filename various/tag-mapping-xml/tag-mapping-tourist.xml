@@ -786,6 +786,8 @@
 		<osm-tag key="aerialway" value="rope_tow" zoom-appear="12" />
 		<osm-tag key="aerialway" value="t-bar" zoom-appear="12" />
 		
+		<osm-tag key="aerialway" value="zip_line" zoom-appear="14" />
+		
 		<osm-tag key="aerialway" value="goods" zoom-appear="12" />
 	</ways>
 
@@ -855,7 +857,10 @@
 		<osm-tag key="embankment" value="yes" zoom-appear="14" />
 		<osm-tag key="man_made" value="embankment" zoom-appear="14" />
 		
-		<osm-tag key="bridge" value="boardwalk"  />		
+		<osm-tag key="bridge" value="boardwalk"  />				
+		<osm-tag key="ladder" value="yes"  />		
+		<osm-tag key="rungs" value="yes"  />		
+		
 	</ways>
 	
 	<!-- ASAMM transformed data -->
