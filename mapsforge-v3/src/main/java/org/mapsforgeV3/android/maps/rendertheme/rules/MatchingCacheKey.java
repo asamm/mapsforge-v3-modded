@@ -14,9 +14,9 @@
  */
 package org.mapsforgeV3.android.maps.rendertheme.rules;
 
-import java.util.List;
-
 import org.mapsforgeV3.core.model.Tag;
+
+import java.util.List;
 
 class MatchingCacheKey {
 	

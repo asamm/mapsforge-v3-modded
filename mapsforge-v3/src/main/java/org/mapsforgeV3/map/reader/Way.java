@@ -14,9 +14,6 @@
  */
 package org.mapsforgeV3.map.reader;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.mapsforgeV3.core.model.Tag;
 
 /**

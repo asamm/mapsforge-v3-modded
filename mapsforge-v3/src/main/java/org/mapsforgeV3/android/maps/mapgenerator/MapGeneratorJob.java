@@ -14,11 +14,11 @@
  */
 package org.mapsforgeV3.android.maps.mapgenerator;
 
+import org.mapsforgeV3.core.model.Tile;
+
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.Serializable;
-
-import org.mapsforgeV3.core.model.Tile;
 
 /**
  * A MapGeneratorJob holds all immutable rendering parameters for a single map image together with a mutable priority

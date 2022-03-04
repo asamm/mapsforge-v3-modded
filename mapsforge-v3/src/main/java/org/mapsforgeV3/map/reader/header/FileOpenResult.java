@@ -14,9 +14,9 @@
  */
 package org.mapsforgeV3.map.reader.header;
 
-import java.io.File;
-
 import org.mapsforgeV3.map.reader.MapDatabase;
+
+import java.io.File;
 
 /**
  * A FileOpenResult is a simple DTO which is returned by {@link MapDatabase#openFile(File)}.

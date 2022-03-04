@@ -15,6 +15,7 @@
 package org.mapsforgeV3.map.layer.renderer;
 
 import android.graphics.Paint.Align;
+
 import org.mapsforgeV3.core.model.Tile;
 
 import java.io.Serializable;

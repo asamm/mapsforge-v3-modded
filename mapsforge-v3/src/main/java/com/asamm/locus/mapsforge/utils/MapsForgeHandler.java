@@ -5,10 +5,8 @@ import android.graphics.Bitmap;
 
 import org.mapsforgeV3.android.maps.mapgenerator.RenderThemeDefinition;
 import org.mapsforgeV3.android.maps.rendertheme.RenderTheme;
-import org.mapsforgeV3.android.maps.rendertheme.XmlRenderThemeStyleMenu;
 
 import java.io.InputStream;
-import java.util.Set;
 
 public interface MapsForgeHandler {
 

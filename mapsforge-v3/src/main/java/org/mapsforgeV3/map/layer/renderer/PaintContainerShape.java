@@ -15,6 +15,7 @@
 package org.mapsforgeV3.map.layer.renderer;
 
 import android.graphics.Paint;
+
 import org.mapsforgeV3.android.maps.rendertheme.tools.CurveStyle;
 
 class PaintContainerShape {

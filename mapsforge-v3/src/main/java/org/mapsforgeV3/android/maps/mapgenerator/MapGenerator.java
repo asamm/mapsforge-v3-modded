@@ -14,12 +14,12 @@
  */
 package org.mapsforgeV3.android.maps.mapgenerator;
 
-import org.mapsforgeV3.android.maps.rendertheme.RenderCallback;
-import org.mapsforgeV3.core.model.GeoPoint;
-
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Path;
+
+import org.mapsforgeV3.android.maps.rendertheme.RenderCallback;
+import org.mapsforgeV3.core.model.GeoPoint;
 
 /**
  * A MapGenerator provides map tiles either by downloading or rendering them.

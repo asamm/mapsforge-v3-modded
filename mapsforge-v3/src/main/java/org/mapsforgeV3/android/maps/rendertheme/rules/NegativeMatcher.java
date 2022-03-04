@@ -14,11 +14,11 @@
  */
 package org.mapsforgeV3.android.maps.rendertheme.rules;
 
-import java.util.List;
+import com.asamm.locus.mapsforge.utils.Utils;
 
 import org.mapsforgeV3.core.model.Tag;
 
-import com.asamm.locus.mapsforge.utils.Utils;
+import java.util.List;
 
 class NegativeMatcher implements AttributeMatcher {
 	

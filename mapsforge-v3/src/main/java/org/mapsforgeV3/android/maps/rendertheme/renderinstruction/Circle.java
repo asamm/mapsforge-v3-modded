@@ -23,7 +23,6 @@ import org.mapsforgeV3.android.maps.rendertheme.RenderTheme;
 import org.mapsforgeV3.core.model.Tag;
 
 import java.util.HashMap;
-import java.util.List;
 
 /**
  * Represents a round area on the map.

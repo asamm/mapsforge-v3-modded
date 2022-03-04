@@ -14,10 +14,10 @@
  */
 package org.mapsforgeV3.map.layer.renderer;
 
-import org.mapsforgeV3.android.maps.rendertheme.tools.BgRectangle;
-
 import android.graphics.Paint;
 import android.graphics.Rect;
+
+import org.mapsforgeV3.android.maps.rendertheme.tools.BgRectangle;
 
 public class PaintContainerPointText implements Comparable<PaintContainerPointText> {
 

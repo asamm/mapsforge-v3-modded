@@ -15,7 +15,9 @@
 package org.mapsforgeV3.android.maps.rendertheme.renderinstruction;
 
 import android.graphics.Color;
+
 import com.asamm.locus.mapsforge.utils.Utils;
+
 import org.mapsforgeV3.android.maps.rendertheme.RenderCallback;
 import org.mapsforgeV3.android.maps.rendertheme.RenderTheme;
 import org.mapsforgeV3.android.maps.rendertheme.tools.ImageSymbol;
@@ -23,7 +25,6 @@ import org.mapsforgeV3.core.model.Tag;
 
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.List;
 
 /**
  * Represents an icon on the map.

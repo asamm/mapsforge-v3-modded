@@ -14,9 +14,9 @@
  */
 package org.mapsforgeV3.map.reader.header;
 
-import java.io.IOException;
-
 import org.mapsforgeV3.map.reader.ReadBuffer;
+
+import java.io.IOException;
 
 /**
  * Reads and validates the header data from a binary map file.

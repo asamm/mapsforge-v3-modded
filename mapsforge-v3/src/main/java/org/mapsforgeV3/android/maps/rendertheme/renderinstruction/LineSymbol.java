@@ -14,17 +14,14 @@
  */
 package org.mapsforgeV3.android.maps.rendertheme.renderinstruction;
 
-import com.asamm.locus.mapsforge.utils.Utils;
-
-import org.mapsforgeV3.android.maps.rendertheme.RenderTheme;
-import org.mapsforgeV3.map.layer.renderer.WayDecorator;
 import org.mapsforgeV3.android.maps.rendertheme.RenderCallback;
+import org.mapsforgeV3.android.maps.rendertheme.RenderTheme;
 import org.mapsforgeV3.android.maps.rendertheme.tools.ImageSymbol;
 import org.mapsforgeV3.core.model.Tag;
+import org.mapsforgeV3.map.layer.renderer.WayDecorator;
 
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.List;
 
 /**
  * Represents an icon along a polyline on the map.

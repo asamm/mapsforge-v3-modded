@@ -17,6 +17,7 @@ package org.mapsforgeV3.map.layer.renderer;
 import android.graphics.Bitmap;
 import android.graphics.Paint;
 import android.graphics.Rect;
+
 import org.mapsforgeV3.android.maps.rendertheme.tools.BgRectangle;
 import org.mapsforgeV3.core.model.Tile;
 

@@ -14,14 +14,14 @@
  */
 package org.mapsforgeV3.map.layer.renderer;
 
-import java.util.List;
-
-import org.mapsforgeV3.android.maps.rendertheme.tools.BgRectangle;
+import android.graphics.Bitmap;
+import android.graphics.Paint;
 
 import com.asamm.locus.mapsforge.utils.Utils;
 
-import android.graphics.Bitmap;
-import android.graphics.Paint;
+import org.mapsforgeV3.android.maps.rendertheme.tools.BgRectangle;
+
+import java.util.List;
 
 public final class WayDecorator {
 	/**

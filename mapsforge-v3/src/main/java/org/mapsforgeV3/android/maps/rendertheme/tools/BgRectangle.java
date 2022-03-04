@@ -4,15 +4,19 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Paint.Align;
-import android.graphics.RectF;
 import android.graphics.Paint.Style;
+import android.graphics.RectF;
 
-import org.mapsforgeV3.map.layer.renderer.PaintContainerPointText;
 import org.mapsforgeV3.android.maps.rendertheme.renderinstruction.RenderInstruction;
+import org.mapsforgeV3.map.layer.renderer.PaintContainerPointText;
 
 import java.util.HashMap;
 
-import static org.mapsforgeV3.android.maps.rendertheme.renderinstruction.RenderInstruction.*;
+import static org.mapsforgeV3.android.maps.rendertheme.renderinstruction.RenderInstruction.KEY_BG_RECT_FILL;
+import static org.mapsforgeV3.android.maps.rendertheme.renderinstruction.RenderInstruction.KEY_BG_RECT_OVER;
+import static org.mapsforgeV3.android.maps.rendertheme.renderinstruction.RenderInstruction.KEY_BG_RECT_ROUNDED;
+import static org.mapsforgeV3.android.maps.rendertheme.renderinstruction.RenderInstruction.KEY_BG_RECT_STROKE;
+import static org.mapsforgeV3.android.maps.rendertheme.renderinstruction.RenderInstruction.KEY_BG_RECT_STROKE_WIDTH;
 
 public class BgRectangle {
 

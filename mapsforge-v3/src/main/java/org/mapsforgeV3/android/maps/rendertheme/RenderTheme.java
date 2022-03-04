@@ -14,11 +14,9 @@
  */
 package org.mapsforgeV3.android.maps.rendertheme;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import android.graphics.Color;
+
+import com.asamm.locus.mapsforge.utils.Utils;
 
 import org.mapsforgeV3.android.maps.rendertheme.renderinstruction.RenderInstruction;
 import org.mapsforgeV3.android.maps.rendertheme.rules.Closed;
@@ -27,9 +25,11 @@ import org.mapsforgeV3.core.model.Tag;
 import org.mapsforgeV3.core.util.LRUCache;
 import org.xml.sax.Attributes;
 
-import android.graphics.Color;
-
-import com.asamm.locus.mapsforge.utils.Utils;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
 
 /**
  * A RenderTheme defines how ways and nodes are drawn.
