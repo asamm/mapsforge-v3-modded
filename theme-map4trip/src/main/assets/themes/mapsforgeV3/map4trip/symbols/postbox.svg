@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 43363)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1"
-	 id="postbox" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:dc="http://purl.org/dc/elements/1.1/"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13.98px" height="13.98px"
-	 viewBox="0 0 13.98 13.98" enable-background="new 0 0 13.98 13.98" xml:space="preserve">
-<g>
-	<path fill="#FF0000" d="M6.99,13.48c-3.579,0-6.49-2.911-6.49-6.49c0-3.579,2.912-6.49,6.49-6.49c3.579,0,6.49,2.912,6.49,6.49
-		C13.48,10.569,10.569,13.48,6.99,13.48L6.99,13.48z"/>
-	<path fill="#FF0000" d="M6.99,1c3.303,0,5.99,2.687,5.99,5.99c0,3.303-2.688,5.99-5.99,5.99C3.687,12.98,1,10.293,1,6.99
-		C1,3.687,3.687,1,6.99,1 M6.99,0C3.13,0,0,3.13,0,6.99s3.13,6.99,6.99,6.99s6.99-3.13,6.99-6.99S10.85,0,6.99,0L6.99,0z"/>
-</g>
-<ellipse fill="#FFFFFF" cx="6.99" cy="6.99" rx="6.213" ry="6.213"/>
-<path fill="#FF0000" stroke="#FF0000" stroke-width="0.5" d="M11.65,5.436V9.32H2.33V5.436l4.66,2.33L11.65,5.436z M2.33,4.66h9.32
-	L6.99,6.99L2.33,4.66z M1.553,10.096h10.873V3.884H1.553V10.096z"/>
-</svg>
+<svg enable-background="new 0 0 13.98 13.98" height="13.98" viewBox="0 0 13.98 13.98" width="13.98" xmlns="http://www.w3.org/2000/svg"><path d="m6.99 13.48c-3.579 0-6.49-2.911-6.49-6.49s2.912-6.49 6.49-6.49c3.579 0 6.49 2.912 6.49 6.49 0 3.579-2.911 6.49-6.49 6.49z" fill="#f00"/><path d="m6.99 1c3.303 0 5.99 2.687 5.99 5.99s-2.688 5.99-5.99 5.99c-3.303 0-5.99-2.687-5.99-5.99s2.687-5.99 5.99-5.99m0-1c-3.86 0-6.99 3.13-6.99 6.99s3.13 6.99 6.99 6.99 6.99-3.13 6.99-6.99-3.13-6.99-6.99-6.99z" fill="#f00"/><ellipse cx="6.99" cy="6.99" fill="#fff" rx="6.213" ry="6.213"/><path d="m11.65 5.436v3.884h-9.32v-3.884l4.66 2.33zm-9.32-.776h9.32l-4.66 2.33zm-.777 5.436h10.873v-6.212h-10.873z" fill="#f00" stroke="#f00" stroke-width=".5"/></svg>

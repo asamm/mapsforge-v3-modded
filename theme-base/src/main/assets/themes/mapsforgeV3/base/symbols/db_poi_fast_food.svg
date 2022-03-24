@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 43363)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-<g id="Vrstva_3">
-	<g>
-		<path d="M31.001,24C23.82,24,18,26.688,18,30h25.999C43.999,26.688,38.18,24,31.001,24z"/>
-		<path d="M30.999,44c7.181,0,13-2.688,13-6H18C18,41.313,23.821,44,30.999,44z"/>
-		<path d="M46,34c0,1.105-1.121,2-2.503,2H18.5c-1.38,0-2.5-0.895-2.5-2l0,0c0-1.105,1.12-2,2.5-2h24.997C44.879,32,46,32.895,46,34
-			L46,34z"/>
-	</g>
-	<polygon points="21.255,12 21.989,5.215 18.012,4.785 17.232,12 4,12 8,44 20,44 24,12 	"/>
-</g>
-<g id="Vrstva_2">
-</g>
-</svg>
+<svg enable-background="new 0 0 48 48" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="m31.001 24c-7.181 0-13.001 2.688-13.001 6h25.999c0-3.312-5.819-6-12.998-6z"/><path d="m30.999 44c7.181 0 13-2.688 13-6h-25.999c0 3.313 5.821 6 12.999 6z"/><path d="m46 34c0 1.105-1.121 2-2.503 2h-24.997c-1.38 0-2.5-.895-2.5-2 0-1.105 1.12-2 2.5-2h24.997c1.382 0 2.503.895 2.503 2z"/><path d="m21.255 12 .734-6.785-3.977-.43-.78 7.215h-13.232l4 32h12l4-32z"/></svg>

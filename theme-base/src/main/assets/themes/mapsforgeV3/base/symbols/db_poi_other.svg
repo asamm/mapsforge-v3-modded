@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Vrstva_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-<g>
-	<path d="M22,10.16V4C12,5,4,13.62,4,24s8,19,18,20v-6.16c-6-0.96-12-6.8-12-13.84S16,11.12,22,10.16z M37.939,22H44
-		C43.061,12,36,4.94,26,4v6.16C32,11.02,37.08,16,37.939,22z M26,37.84V44c10-0.939,17.061-8,18-18h-6.061
-		C37.08,32,32,36.98,26,37.84z"/>
-</g>
-</svg>
+<svg enable-background="new 0 0 48 48" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="m22 10.16v-6.16c-10 1-18 9.62-18 20s8 19 18 20v-6.16c-6-.96-12-6.8-12-13.84s6-12.88 12-13.84zm15.939 11.84h6.061c-.939-10-8-17.06-18-18v6.16c6 .86 11.08 5.84 11.939 11.84zm-11.939 15.84v6.16c10-.939 17.061-8 18-18h-6.061c-.859 6-5.939 10.98-11.939 11.84z"/></svg>

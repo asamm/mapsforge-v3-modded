@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Vrstva_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-<path d="M24,4C15.164,4,8,9.373,8,16h32C40,9.373,32.837,4,24,4z"/>
-<rect x="8" y="18" width="8" height="16"/>
-<rect x="32" y="18" width="8" height="16"/>
-<rect x="20" y="18" width="8" height="16"/>
-<rect x="4" y="40" width="40" height="4"/>
-<rect x="6" y="36" width="36" height="4"/>
-</svg>
+<svg enable-background="new 0 0 48 48" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="m24 4c-8.836 0-16 5.373-16 12h32c0-6.627-7.163-12-16-12z"/><path d="m8 18h8v16h-8z"/><path d="m32 18h8v16h-8z"/><path d="m20 18h8v16h-8z"/><path d="m4 40h40v4h-40z"/><path d="m6 36h36v4h-36z"/></svg>

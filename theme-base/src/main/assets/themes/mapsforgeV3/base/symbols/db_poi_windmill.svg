@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px"
-	 height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-<g id="Vrstva_3">
-	<polygon points="35.313,4 24,18.142 12.687,4 7.029,9.657 21.171,20.971 7.029,32.284 12.687,37.941 24,23.799 35.313,37.941 
-		40.971,32.284 26.828,20.971 40.971,9.657 	"/>
-	<circle cx="24" cy="21" r="6"/>
-	<rect x="18" y="21" width="12" height="23"/>
-</g>
-<g id="Vrstva_2">
-</g>
-</svg>
+<svg enable-background="new 0 0 48 48" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="m35.313 4-11.313 14.142-11.313-14.142-5.658 5.657 14.142 11.314-14.142 11.313 5.658 5.657 11.313-14.142 11.313 14.142 5.658-5.657-14.143-11.313 14.143-11.314z"/><circle cx="24" cy="21" r="6"/><path d="m18 21h12v23h-12z"/></svg>

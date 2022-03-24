@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 43363)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1"
-	 id="postoffice" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:dc="http://purl.org/dc/elements/1.1/"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px"
-	 viewBox="-0.68 -0.68 20 20" enable-background="new -0.68 -0.68 20 20" xml:space="preserve">
-<g>
-	<path fill="#E80A0A" d="M9.32,19.14c-5.415,0-9.82-4.405-9.82-9.82S3.905-0.5,9.32-0.5s9.82,4.405,9.82,9.82
-		S14.735,19.14,9.32,19.14L9.32,19.14z"/>
-	<path fill="#F4F4F4" d="M9.32,0c5.147,0,9.32,4.173,9.32,9.32s-4.173,9.32-9.32,9.32S0,14.468,0,9.32S4.173,0,9.32,0 M9.32-1
-		C3.63-1-1,3.63-1,9.32S3.63,19.64,9.32,19.64s10.32-4.63,10.32-10.32S15.01-1,9.32-1L9.32-1z"/>
-</g>
-<path fill="#FFFF00" stroke="#FFFF00" stroke-width="0.75" d="M15.239,7.151v4.932H3.401V7.151l5.919,2.959L15.239,7.151z
-	 M3.401,6.164h11.838L9.321,9.124L3.401,6.164z M2.415,13.07h13.812V5.177H2.415V13.07z"/>
-</svg>
+<svg enable-background="new -0.68 -0.68 20 20" height="20" viewBox="-.68 -.68 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="m9.32 19.14c-5.415 0-9.82-4.405-9.82-9.82s4.405-9.82 9.82-9.82 9.82 4.405 9.82 9.82-4.405 9.82-9.82 9.82z" fill="#e80a0a"/><path d="m9.32 0c5.147 0 9.32 4.173 9.32 9.32s-4.173 9.32-9.32 9.32-9.32-4.172-9.32-9.32 4.173-9.32 9.32-9.32m0-1c-5.69 0-10.32 4.63-10.32 10.32s4.63 10.32 10.32 10.32 10.32-4.63 10.32-10.32-4.63-10.32-10.32-10.32z" fill="#f4f4f4"/><path d="m15.239 7.151v4.932h-11.838v-4.932l5.919 2.959zm-11.838-.987h11.838l-5.918 2.96zm-.986 6.906h13.812v-7.893h-13.812z" fill="#ff0" stroke="#ff0" stroke-width=".75"/></svg>

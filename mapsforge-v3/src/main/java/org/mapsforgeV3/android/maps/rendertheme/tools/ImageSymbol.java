@@ -83,21 +83,21 @@ public class ImageSymbol {
 	private final String src;
 
     // default width of icon
-    private final float mDefWidth;
+    private final float defWidth;
     // default height of icon
-    private final float mDefHeight;
+    private final float defHeight;
 	// color used for SVG images
-	private final int mDefColor;
+	private final int defColor;
 
     // scale value
-	private final float mScale;
+	private final float scale;
     // level where scaling may start
-	private final ScalableParameter mScaleIcon;
+	private final ScalableParameter scaleIcon;
 
     // already rendered bitmap
-	private Bitmap mBitmap;
+	private Bitmap bitmap;
     // current set scale value for current bitmap
-    private float mScaleCurrent;
+    private float scaleCurrent;
 
     /**
      * Construct icon with all base parameters.
@@ -114,12 +114,12 @@ public class ImageSymbol {
         this.relativePathPrefix = relativePathPrefix == null ? "" : relativePathPrefix;
         this.src = src;
 
-        this.mDefWidth = defaultWidth;
-        this.mDefHeight = defaultHeight;
-		this.mDefColor = color;
+        this.defWidth = defaultWidth;
+        this.defHeight = defaultHeight;
+		this.defColor = color;
 
-        this.mScale = scale;
-        this.mScaleIcon = scaleIcon;
+        this.scale = scale;
+        this.scaleIcon = scaleIcon;
     }
 
     /**
@@ -130,26 +130,26 @@ public class ImageSymbol {
         // create image based on source
         synchronized (LOCK) {
             // return existing bitmap if it's already loaded
-            if (mBitmap != null) {
-                return mBitmap;
+            if (bitmap != null) {
+                return bitmap;
             }
 
             // finally create an image
             try {
-                mBitmap = BitmapUtils.createBitmap(relativePathPrefix, src,
-                        mScaleCurrent <= 0 ? mScale : mScaleCurrent,
-                        mDefWidth, mDefHeight, mDefColor);
+                bitmap = BitmapUtils.createBitmap(relativePathPrefix, src,
+                        scaleCurrent <= 0 ? scale : scaleCurrent,
+                        defWidth, defHeight, defColor);
             } catch (Exception e) {
-                Utils.getHandler().logE(TAG, "getBitmap()", e);
-                mBitmap = null;
+                Utils.getHandler().logE(TAG, "getBitmap(), problem with: " + src, e);
+                bitmap = null;
             }
 
 			// notify in case of any problem with bitmap loading
-			if (mBitmap == null) {
+			if (bitmap == null) {
 				Utils.getHandler().logW(TAG, "getBitmap(), problem with load, " +
 						"relPath:" + relativePathPrefix + ", src:" + src);
 			}
-			return mBitmap;
+			return bitmap;
         }
 	}
 
@@ -167,18 +167,18 @@ public class ImageSymbol {
      */
 	public void scaleSize(byte zoomLevel) {
         // prepare scale value
-        float newScale = mScale;
-        if (mScaleIcon != null) {
-            newScale = mScaleIcon.computeValue(mScale, zoomLevel);
+        float newScale = scale;
+        if (scaleIcon != null) {
+            newScale = scaleIcon.computeValue(scale, zoomLevel);
         }
 
         // store defined parameters
-        if (newScale != mScaleCurrent || mBitmap == null) {
+        if (newScale != scaleCurrent || bitmap == null) {
             // destroy previous image
             destroy();
 
             // set new parameters, image will be loaded in 'getBitmap()' later
-            mScaleCurrent = newScale;
+            scaleCurrent = newScale;
         }
     }
 
@@ -192,7 +192,7 @@ public class ImageSymbol {
 //            if (mBitmap != null) {
 //                this.mBitmap.recycle();
 //            }
-            mBitmap = null;
+            bitmap = null;
         }
 	}
 
@@ -201,9 +201,9 @@ public class ImageSymbol {
         return "ImageSymbol[" +
                 "relativePathPrefix:" + relativePathPrefix + ", " +
                 "src:" + src + ", " +
-                "mDefWidth:" + mDefWidth + ", " +
-                "mDefHeight:" + mDefHeight + ", " +
-                "mScale:" + mScale + ", " +
-                "mScaleIcon:" + mScaleIcon + "]";
+                "mDefWidth:" + defWidth + ", " +
+                "mDefHeight:" + defHeight + ", " +
+                "mScale:" + scale + ", " +
+                "mScaleIcon:" + scaleIcon + "]";
     }
 }

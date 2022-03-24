@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 43363)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="20px" height="20px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
-<circle id="wheel" cx="8.2" cy="10.8" r="2.5"/>
-<path id="wheel_1_" d="M15,11.5c1.4,0,2.5,1.1,2.5,2.5s-1.1,2.5-2.5,2.5c-1.4,0-2.5-1.1-2.5-2.5S13.6,11.5,15,11.5z"/>
-<path id="cab" d="M5.3,1l12.8,6.4c0.2,0.1,0.4,0.4,0.4,0.6v7.4c0,0.2-0.2,0.3-0.4,0.2L5.3,9.3C5.1,9.2,4.9,8.9,4.9,8.7V1.2
-	C4.9,1,5.1,0.9,5.3,1z"/>
-<path id="window" style="fill:#FFFFFF;" d="M6.3,2.6l2.5,1.2C8.9,3.9,9,4,9,4.1v3.7C9,7.9,8.9,8,8.8,7.9L6.3,6.7
-	C6.2,6.6,6.1,6.5,6.1,6.4V2.7C6.1,2.6,6.2,2.5,6.3,2.6z"/>
-<path id="window_1_" style="fill:#FFFFFF;" d="M10.5,4.6l2.5,1.2c0.1,0.1,0.2,0.2,0.2,0.3v3.7c0,0.1-0.1,0.2-0.2,0.1l-2.5-1.2
-	c-0.1-0.1-0.2-0.2-0.2-0.3V4.7C10.3,4.6,10.3,4.6,10.5,4.6z"/>
-<path id="window_2_" style="fill:#FFFFFF;" d="M14.6,6.7l2.5,1.2c0.1,0.1,0.2,0.2,0.2,0.3V12c0,0.1-0.1,0.2-0.2,0.1l-2.5-1.2
-	c-0.1-0.1-0.2-0.2-0.2-0.3V6.8C14.4,6.7,14.5,6.6,14.6,6.7z"/>
-<path id="rope" style="stroke:#000000;stroke-dasharray:1;" d="M0.8,5.5l8.7,4.3"/>
-<line style="fill:none;stroke:#000000;" x1="2.3" y1="11.5" x2="19.3" y2="19.5"/>
-</svg>
+<svg enable-background="new 0 0 20 20" height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><circle cx="8.2" cy="10.8" r="2.5"/><path d="m15 11.5c1.4 0 2.5 1.1 2.5 2.5s-1.1 2.5-2.5 2.5-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5z"/><path d="m5.3 1 12.8 6.4c.2.1.4.4.4.6v7.4c0 .2-.2.3-.4.2l-12.8-6.3c-.2-.1-.4-.4-.4-.6v-7.5c0-.2.2-.3.4-.2z"/><g fill="#fff"><path d="m6.3 2.6 2.5 1.2c.1.1.2.2.2.3v3.7c0 .1-.1.2-.2.1l-2.5-1.2c-.1-.1-.2-.2-.2-.3v-3.7c0-.1.1-.2.2-.1z"/><path d="m10.5 4.6 2.5 1.2c.1.1.2.2.2.3v3.7c0 .1-.1.2-.2.1l-2.5-1.2c-.1-.1-.2-.2-.2-.3v-3.7c0-.1 0-.1.2-.1z"/><path d="m14.6 6.7 2.5 1.2c.1.1.2.2.2.3v3.8c0 .1-.1.2-.2.1l-2.5-1.2c-.1-.1-.2-.2-.2-.3v-3.8c0-.1.1-.2.2-.1z"/></g><path d="m.8 5.5 8.7 4.3" stroke="#000" stroke-dasharray="1"/><path d="m2.3 11.5 17 8" fill="none" stroke="#000"/></svg>

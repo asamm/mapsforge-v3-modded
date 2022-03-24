@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px"
-	 height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-<g id="Vrstva_3">
-	<path d="M22,18h-4V4h-4v14h-4V4H6v14c0,4.24,3.32,7.68,7.5,7.939V44h5V25.939C22.68,25.68,26,22.24,26,18V4h-4V18z M32,12v16h5v16
-		h5V4C36.48,4,32,8.48,32,12z"/>
-</g>
-<g id="Vrstva_2">
-</g>
-</svg>
+<svg enable-background="new 0 0 48 48" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="m22 18h-4v-14h-4v14h-4v-14h-4v14c0 4.24 3.32 7.68 7.5 7.939v18.061h5v-18.061c4.18-.259 7.5-3.699 7.5-7.939v-14h-4zm10-6v16h5v16h5v-40c-5.52 0-10 4.48-10 8z"/></svg>
