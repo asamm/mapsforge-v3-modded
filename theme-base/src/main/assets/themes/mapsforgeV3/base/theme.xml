@@ -3178,7 +3178,7 @@ version 2.4.0
 		<rule cat="base_topo" e="way" k="aerialway" v="*" zoom-min="13">
 			
 			<rule e="way" k="*" v="*" zoom-min="12" zoom-max="13">
-				<rule e="way" k="aerialway" v="chair_lift">
+				<rule e="way" k="aerialway" v="chair_lift|mixed_lift">
 					<line stroke="#202020" stroke-width="0.5dp" stroke-linecap="butt" />
 					<line stroke="#202020" stroke-width="2dp" stroke-dasharray="15,20" stroke-linecap="butt" />
 				</rule>
@@ -3201,7 +3201,7 @@ version 2.4.0
 				</rule>
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="14" zoom-max="16" >
-				<rule e="way" k="aerialway" v="chair_lift">
+				<rule e="way" k="aerialway" v="chair_lift|mixed_lift">
 					<line stroke="#202020" stroke-width="0.55dp" stroke-linecap="butt" />
 					<line stroke="#202020" stroke-width="1.5dp" stroke-dasharray="25,30" stroke-linecap="butt" />
 				</rule>
@@ -3227,7 +3227,7 @@ version 2.4.0
 			</rule>
 			
 			<rule e="way" k="*" v="*" zoom-min="17" >
-				<rule e="way" k="aerialway" v="chair_lift">
+				<rule e="way" k="aerialway" v="chair_lift|mixed_lift">
 					<line stroke="#202020" stroke-width="0.36dp" stroke-linecap="butt" />
 					<line stroke="#202020" stroke-width="1dp" stroke-dasharray="25,30" stroke-linecap="butt" />
 				</rule>
