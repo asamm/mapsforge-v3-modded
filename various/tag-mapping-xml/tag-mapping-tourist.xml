@@ -833,6 +833,7 @@
 		<osm-tag key="military" value="barracks" zoom-appear="12" />
 		<osm-tag key="military" value="naval_base" zoom-appear="12" />
 		<osm-tag key="military" value="bunker" zoom-appear="14" />
+		<osm-tag key="military" value="danger_area" zoom-appear="14" />
 		<osm-tag key="bunker_type" value="pillbox" zoom-appear="14" />
 
 		<osm-tag key="generator:source" value="geothermal" zoom-appear="13" />
