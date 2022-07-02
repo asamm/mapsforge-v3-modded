@@ -3021,7 +3021,7 @@ version 2.4.0
 		
 		<!-- walls barries-->
 		<rule  cat="base_topo" e="way" k="barrier" v="*" zoom-min="14">
-			<rule e="way" k="barrier" v="fence|wall|chain|ditch">
+			<rule e="way" k="barrier" v="fence|wall|chain">
 				<line stroke="#4F4F4F" stroke-width="0.05dp" stroke-linecap="butt" />
 			</rule>
 			<rule e="way" k="barrier" v="hedge">
@@ -4323,6 +4323,10 @@ version 2.4.0
 		<rule e="any" k="barrier" v="kissing_gate"  zoom-min="16">
 			<symbol src="file:/symbols/db_poi_barrier_kissing_gate.svg" symbol-color="#333333" symbol-width="12dp" scale-icon-size="17,1.15" />
 		</rule>
+		<rule cat="base_topo" e="any" k="barrier" v="stile" zoom-min="16">		
+			<symbol src="file:/symbols/db_poi_ladder.svg" symbol-color="#4F4F4F" symbol-width="12dp" scale-icon-size="16,1.15"/>
+		</rule>
+		
 	</rule>	
 	<rule cat="base_car" e="any" k="barrier" v="*" zoom-min="18">
 		<rule e="any" k="barrier" v="bollard">
@@ -4428,7 +4432,7 @@ version 2.4.0
 				<caption k="name" font-style="bold_italic" font-size="9dp" scale-font-size="17,1.1" fill="#4f9cbf" stroke="#ffffff" stroke-width="2dp" />
 			</rule>	
 			<rule e="any" k="leisure" v="firepit" zoom-min="16">
-				<symbol src="file:/symbols/db_poi_firepit_osm.svg" render-db-only="1" symbol-color="#755741" symbol-width="12dp" scale-icon-size="17,1.15"/>
+				<symbol src="file:/symbols/db_poi_firepit.svg" render-db-only="1" symbol-color="#755741" symbol-width="12dp" scale-icon-size="17,1.15"/>
 			</rule>
 			<rule e="any" k="leisure" v="water_park" zoom-min="16">
 				<rule e="any" k="access" v="~|yes|customers|permissive|public">
