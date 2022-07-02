@@ -246,6 +246,7 @@
 		<osm-tag key="barrier" value="gate" zoom-appear="14" />
 		<osm-tag key="barrier" value="kissing_gate" zoom-appear="15" />
 		<osm-tag key="barrier" value="lift_gate" zoom-appear="15" />
+		<osm-tag key="barrier" value="stile" zoom-appear="15" />
 		<osm-tag key="barrier" value="swing_gate" zoom-appear="15" />
 
 		<osm-tag key="bunker_type" value="pillbox" zoom-appear="14" />
@@ -276,7 +277,22 @@
 		<osm-tag key="military" value="naval_base" zoom-appear="12" />
 		<osm-tag key="military" value="bunker" zoom-appear="14" />
 
-		<osm-tag key="mountain_pass" value="yes" zoom-appear="14" />		
+		<osm-tag key="mountain_pass" value="yes" zoom-appear="14" />
+		<osm-tag key="bridge" value="boardwalk" zoom-appear="14" />	
+		<osm-tag key="rungs" value="yes" zoom-appear="14" />		
+		<osm-tag key="assisted_trail" value="yes" zoom-appear="14" />		
+		<osm-tag key="safety_rope" value="yes" zoom-appear="14" />
+		<osm-tag key="ladder" value="yes" zoom-appear="14"/>
+		<osm-tag key="ladder" value="1" zoom-appear="14"/>
+		<osm-tag key="ladder" value="2" zoom-appear="14"/>
+		<osm-tag key="ladder" value="3" zoom-appear="14"/>
+		<osm-tag key="ladder" value="4" zoom-appear="14"/>
+		<osm-tag key="ladder" value="5" zoom-appear="14"/>
+		<osm-tag key="ladder" value="6" zoom-appear="14"/>
+		<osm-tag key="ladder" value="7" zoom-appear="14"/>
+		<osm-tag key="ladder" value="8" zoom-appear="14"/>
+		<osm-tag key="ladder" value="9" zoom-appear="14"/>
+		<osm-tag key="ladder" value="10" zoom-appear="14"/>
 		
 		<osm-tag key="generator:source" value="geothermal" zoom-appear="13" />
 		<osm-tag key="generator:source" value="hydro" zoom-appear="13" />
@@ -428,6 +444,8 @@
 		<osm-tag key="region:type" value="massif" zoom-appear="12" />
 		<osm-tag key="region:type" value="mountain_area" zoom-appear="12" />
 		<osm-tag key="region:type" value="mountain_range" zoom-appear="12" />
+		
+		<osm-tag key="place" value="island" zoom-appear="10" />
 	</ways>
 
 	<!-- LANDUSE TAGS -->
@@ -495,7 +513,6 @@
 		<osm-tag key="tourism" value="apartment" zoom-appear="14" />
 		<osm-tag key="tourism" value="attraction" zoom-appear="14" />
 		<osm-tag key="tourism" value="camp_site" zoom-appear="12" />
-		<osm-tag key="tourism" value="camp_site" zoom-appear="14" />
 		<osm-tag key="tourism" value="caravan_site" zoom-appear="14" />
 		<osm-tag key="tourism" value="guest_house" zoom-appear="14" />
 		<osm-tag key="tourism" value="hostel" zoom-appear="14" />
@@ -619,7 +636,6 @@
 	<ways>
 		<osm-tag key="building" value="apartments" zoom-appear="15" />
 		<osm-tag key="building" value="bakehouse" zoom-appear="15" />
-		<osm-tag key="building" value="barn" zoom-appear="15" />
 		<osm-tag key="building" value="barn" zoom-appear="15" />
 		<osm-tag key="building" value="basilica" zoom-appear="15" />
 		<osm-tag key="building" value="block" zoom-appear="15" />
@@ -796,14 +812,17 @@
 		<osm-tag key="barrier" value="bollard" zoom-appear="17" />
 		<osm-tag key="barrier" value="city_wall" zoom-appear="14" />
 		<osm-tag key="barrier" value="cycle_barrier" zoom-appear="17" />
+		<osm-tag key="barrier" value="chain" zoom-appear="16" />
 		<osm-tag key="barrier" value="ditch" zoom-appear="15" />
 		<osm-tag key="barrier" value="fence" zoom-appear="14" />
 		<osm-tag key="barrier" value="gate" zoom-appear="14" />
+		<osm-tag key="barrier" value="hedge" zoom-appear="14" />
 		<osm-tag key="barrier" value="kissing_gate" zoom-appear="15" />
 		<osm-tag key="barrier" value="lift_gate" zoom-appear="15" />
 		<osm-tag key="barrier" value="retaining_wall" zoom-appear="16" />
 		<osm-tag key="barrier" value="swing_gate" zoom-appear="15" />
-		<osm-tag key="barrier" value="wall" zoom-appear="16" />
+		<osm-tag key="barrier" value="stile" zoom-appear="15" />
+		<osm-tag key="barrier" value="wall" zoom-appear="15" />
 
 		<osm-tag key="boundary" value="administrative" force-polygon-line="true" zoom-appear="0" enabled="false" />
 		<osm-tag key="boundary" value="national_park" force-polygon-line="true" zoom-appear="12" />
@@ -858,9 +877,21 @@
 		<osm-tag key="embankment" value="yes" zoom-appear="14" />
 		<osm-tag key="man_made" value="embankment" zoom-appear="14" />
 		
-		<osm-tag key="bridge" value="boardwalk"  />				
-		<osm-tag key="ladder" value="yes"  />		
-		<osm-tag key="rungs" value="yes"  />		
+		<osm-tag key="bridge" value="boardwalk" zoom-appear="14" />				
+		<osm-tag key="rungs" value="yes" zoom-appear="14" />		
+		<osm-tag key="assisted_trail" value="yes" zoom-appear="14" />		
+		<osm-tag key="safety_rope" value="yes" zoom-appear="14" />	
+		<osm-tag key="ladder" value="yes" zoom-appear="14"/>
+		<osm-tag key="ladder" value="1" zoom-appear="14"/>
+		<osm-tag key="ladder" value="2" zoom-appear="14"/>
+		<osm-tag key="ladder" value="3" zoom-appear="14"/>
+		<osm-tag key="ladder" value="4" zoom-appear="14"/>
+		<osm-tag key="ladder" value="5" zoom-appear="14"/>
+		<osm-tag key="ladder" value="6" zoom-appear="14"/>
+		<osm-tag key="ladder" value="7" zoom-appear="14"/>
+		<osm-tag key="ladder" value="8" zoom-appear="14"/>
+		<osm-tag key="ladder" value="9" zoom-appear="14"/>
+		<osm-tag key="ladder" value="10" zoom-appear="14"/>
 		
 	</ways>
 	

@@ -37,6 +37,11 @@ version 2.4.0
 		<name lang="en" value="hiking_trails" />
 		<cat id="hik_routes" />
 	</layer>	
+	<layer id="via_ferrata" enabled="true" visible="false">
+		<name lang="en" value="via_ferrata" />
+		<cat id="via_ferrata_cat" />
+	</layer>	
+	
 	<layer id="pub_rest_topo" enabled="true" visible="false">
 		<name lang="en" value="food_drink" />
 		<cat id="pub_rest_topo" />
@@ -100,7 +105,8 @@ version 2.4.0
 		
 		<overlay id="cycling_routes" />
 		<overlay id="mtb_trails" />
-		<overlay id="hiking_trails" />		
+		<overlay id="hiking_trails" />
+		<overlay id="via_ferrata" />		
 		<overlay id="pub_rest_topo" />
 	</layer>
 	
@@ -1239,7 +1245,7 @@ version 2.4.0
 								<line stroke="#4F4F4F" stroke-width="0.4dp" />
 							</rule>
 							<!-- white outline for path-->
-							<rule e="way" k="highway" v="path" >
+							<rule e="way" k="highway" v="path|via_ferrata" >
 								<rule e="way" k="sac_scale" v="~">
 									<line stroke="#AAFFFFFF" stroke-width="0.5dp"	 />
 								</rule>
@@ -1458,26 +1464,28 @@ version 2.4.0
 
 				<!-- ============== OFFSET OF CYCLO TRACK  before highways due to DY param ===============  -->
 				
-				<rule cat="cyc_mtb_routes" e="way" k="route" v="mtb" zoom-min="13" >					
-					<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
-						<line  dy="2.3dp" stroke="#BE1DC6" stroke-width="1dp" stroke-dasharray="14,7" stroke-linecap="butt" /> 
+				<rule cat="cyc_mtb_routes" e="way" k="route" v="mtb" zoom-min="13" >
+					<rule e="way" k="mtb:scale" v="~" >	
+						<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
+							<line  dy="2.3dp" stroke="#BE1DC6" stroke-width="1dp" stroke-dasharray="14,7" stroke-linecap="butt" /> 
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16">
+							<line  dy="3.5dp" stroke="#BE1DC6" stroke-width="0.7dp"  stroke-dasharray="14,7" stroke-linecap="butt" /> 							
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17">
+							<line  dy="4.5dp" stroke="#BE1DC6" stroke-width="0.7dp"  stroke-dasharray="15,7" stroke-linecap="butt" /> 							
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="18" zoom-max="18">
+							<line  dy="5.2dp" stroke="#BE1DC6" stroke-width="0.7dp"  stroke-dasharray="15,7" stroke-linecap="butt" /> 							
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="19" zoom-max="19">
+							<line  dy="7dp" stroke="#BE1DC6" stroke-width="0.6dp"  stroke-dasharray="12,6" stroke-linecap="butt" /> 							
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="20">
+							<line  dy="9dp" stroke="#BE1DC6" stroke-width="0.6dp"  stroke-dasharray="12,6" stroke-linecap="butt" /> 							
+						</rule>
+						<pathText k="ref"  font-style="bold" font-size="8dp" scale-font-size="14,1.1" dy="6dp" fill="#B11BB9" stroke="#ffffff" stroke-width="2dp" />
 					</rule>
-					<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16">
-						<line  dy="3.5dp" stroke="#BE1DC6" stroke-width="0.7dp"  stroke-dasharray="14,7" stroke-linecap="butt" /> 							
-					</rule>
-					<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17">
-						<line  dy="4.5dp" stroke="#BE1DC6" stroke-width="0.7dp"  stroke-dasharray="15,7" stroke-linecap="butt" /> 							
-					</rule>
-					<rule e="way" k="*" v="*" zoom-min="18" zoom-max="18">
-						<line  dy="5.2dp" stroke="#BE1DC6" stroke-width="0.7dp"  stroke-dasharray="15,7" stroke-linecap="butt" /> 							
-					</rule>
-					<rule e="way" k="*" v="*" zoom-min="19" zoom-max="19">
-						<line  dy="7dp" stroke="#BE1DC6" stroke-width="0.6dp"  stroke-dasharray="12,6" stroke-linecap="butt" /> 							
-					</rule>
-					<rule e="way" k="*" v="*" zoom-min="20">
-						<line  dy="9dp" stroke="#BE1DC6" stroke-width="0.6dp"  stroke-dasharray="12,6" stroke-linecap="butt" /> 							
-					</rule>
-					<pathText k="ref"  font-style="bold" font-size="8dp" scale-font-size="14,1.1" dy="6dp" fill="#B11BB9" stroke="#ffffff" stroke-width="2dp" />
 				</rule>
 				
 				<rule cat="cyc_mtb_routes" e="way" k="route|bicycle" v="mtb|yes|designated" zoom-min="13" >			
@@ -1974,7 +1982,29 @@ version 2.4.0
 							<line dy="-8dp" stroke="#EA3200" stroke-width="0.5dp" stroke-dasharray="0,15,1,5" /> 
 						</rule>
 					</rule>
-				</rule> 			
+				</rule> 
+
+				<!-- OFFSET VIA FERRATA-->
+				<!-- via_ferrata-->
+				<rule cat="via_ferrata_cat" e="way" k="highway" v="via_ferrata" zoom-min="16" >
+					<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16" >
+						<line dy="3dp" stroke="#e47a00" stroke-width="0.6dp" stroke-dasharray="8,6" stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="*" v="*" zoom-min="17" zoom-max="18" >
+						<line dy="4dp" stroke="#e47a00" stroke-width="0.6dp" stroke-dasharray="8,6" stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="*" v="*" zoom-min="19" zoom-max="20" >
+						<line dy="6dp" stroke="#e47a00" stroke-width="0.4dp" stroke-dasharray="8,6" stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="*" v="*" zoom-min="21" >
+						<line dy="8dp" stroke="#e47a00" stroke-width="0.3dp" stroke-dasharray="8,6" stroke-linecap="butt" />
+					</rule>
+					<symbol src="file:/symbols/db_poi_climbing.svg" dy="32dp" dx="32dp" force-draw="1" symbol-color="#4F4F4F" symbol-width="16dp"   scale-icon-size="17,1.15" />
+				</rule>
+				
+				<rule cat="highways_topo" e="way" k="assisted_trail|safety_rope|rungs" v="yes" zoom-min="16" >
+					<lineSymbol src="file:/symbols/db_poi_chain.svg" symbol-color="#4F4F4F" symbol-width="16dp" dy="32dp"  scale-icon-size="17,1.15" align-center="true" repeat="true" repeat-gap="20dp"/>
+				</rule>
 				
 				<!-- =========================  Highways TOPO core =========================== -->	
 				<rule cat="highways_topo" e="way" k="area" v="~|no|false"> 
@@ -1998,7 +2028,7 @@ version 2.4.0
 							<line stroke="#747474" stroke-width="0.2dp" stroke-dasharray="0.5,3,2,3"  />
 						</rule>
 						
-						<rule e="way" k="highway" v="path" >						
+						<rule e="way" k="highway" v="path|via_ferrata" >						
 							<line stroke="#747474" stroke-width="0.3dp" stroke-dasharray="4,3" stroke-linecap="butt" />
 							<rule e="way" k="*" v="*" zoom-min="15">
 								<pathText k="name" dy="-10dp" font-style="bold" font-size="6dp" scale-font-size="15,1.15" stroke="#ffffff" stroke-width="1.5dp" />
@@ -2310,7 +2340,7 @@ version 2.4.0
 							<line stroke="#747474" stroke-width="0.4dp" stroke-dasharray="1,2" stroke-linecap="butt" />
 							<pathText dx="20" k="name"  font-style="bold" font-size="7dp" scale-font-size="17,1.15" stroke="#FFFFFF" stroke-width="2dp" />
 						</rule>
-						<rule e="way" k="highway" v="footway|path" zoom-min="16" >					
+						<rule e="way" k="highway" v="footway|path|via_ferrata" zoom-min="16" >					
 							<line stroke="#747474" stroke-width="0.2dp" stroke-dasharray="0.5,3,2,3"   />
 						</rule>
 						<rule e="way" k="highway" v="cycleway|pedestrian"  zoom-min="16">
@@ -2991,8 +3021,11 @@ version 2.4.0
 		
 		<!-- walls barries-->
 		<rule  cat="base_topo" e="way" k="barrier" v="*" zoom-min="14">
-			<rule e="way" k="barrier" v="fence|wall">
+			<rule e="way" k="barrier" v="fence|wall|chain|ditch">
 				<line stroke="#4F4F4F" stroke-width="0.05dp" stroke-linecap="butt" />
+			</rule>
+			<rule e="way" k="barrier" v="hedge">
+				<line stroke="#3FB637" stroke-width="0.15dp" stroke-linecap="butt" />
 			</rule>
 			<rule cat="base_topo" e="way" k="barrier" v="retaining_wall|city_wall">
 				<line stroke="#4F4F4F" stroke-width="0.15dp" stroke-linecap="butt" />
@@ -3256,7 +3289,6 @@ version 2.4.0
 				<pathText k="name" font-style="italic" font-family="serif" font-size="8dp" dy="-5dp" dx="30dp" scale-font-size="17,1.2" fill="#333333" stroke="#ffffff" stroke-width="2.5dp" />
 			</rule>
 		</rule>
-		
 		
 		<!-- OSMC SYMBOLS and hiking routes without color -->
 		<rule cat="hik_routes" e="way" k="route" v="hiking|foot" >				
@@ -4620,7 +4652,7 @@ version 2.4.0
 				<symbol src="file:/symbols/db_poi_zoo.svg" render-db-only="1" symbol-color="#755741" symbol-width="14dp" scale-icon-size="17,1.15" />
 			</rule>	
 		</rule>
-		
+	
 		<!-- guide post summer -->
 		<rule cat="base_summer" e="any" k="tourism" v="information" zoom-min="15" >
 			<rule e="any" k="information" v="guidepost" >
@@ -4663,6 +4695,12 @@ version 2.4.0
 	
 	<!-- OTHER 	 -->
 	<rule e="any" k="*" v="*" zoom-min="14">
+	
+		<!-- Ladders for via ferrata and other hiking -->		
+		<rule cat="base_topo" e="any" k="ladder" v="*" zoom-min="16">		
+			<symbol src="file:/symbols/db_poi_ladder.svg" symbol-color="#4F4F4F" symbol-width="14dp" dx="12dp" dy="12dp" scale-icon-size="17,1.15"/>
+		</rule>
+		
 		
 		<!-- aeroway -->
 		<rule e="any" k="aeroway" v="*" >
