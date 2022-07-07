@@ -478,12 +478,12 @@ version 2.4.0
 				<area fill="#DBD1C7"  />
 			</rule>
 			<rule e="any" k="amenity" v="parking" >
-				<area fill="#e7e7e7"  />
+				<area fill="#f4f4f4" stroke="#8a8a8a" stroke-width="0.15dp" />		
 			</rule>
 		</rule>
 		<rule cat="base_car" e="way" k="amenity" v="*" zoom-min="16" closed="yes">			
 			<rule e="any" k="amenity" v="parking" >
-				<area fill="#e7e7e7"  />
+				<area fill="#f4f4f4" stroke="#8a8a8a" stroke-width="0.15dp" />				
 			</rule>
 		</rule>			
 		
