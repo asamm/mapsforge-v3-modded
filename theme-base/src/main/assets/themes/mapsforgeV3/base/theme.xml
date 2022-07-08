@@ -4318,13 +4318,16 @@ version 2.4.0
 			<circle r="1.5" fill="#707070" />
 		</rule>
 		<rule e="any" k="barrier" v="gate|lift_gate|swing_gate"  zoom-min="16">
-			<symbol src="file:/symbols/db_poi_barrier_liftgate.svg" symbol-color="#333333" symbol-width="12dp" scale-icon-size="17,1.15" />
+			<symbol src="file:/symbols/db_poi_barrier_liftgate.svg" symbol-color="#222222" symbol-width="12dp" scale-icon-size="17,1.15" />
 		</rule>
 		<rule e="any" k="barrier" v="kissing_gate"  zoom-min="16">
-			<symbol src="file:/symbols/db_poi_barrier_kissing_gate.svg" symbol-color="#333333" symbol-width="12dp" scale-icon-size="17,1.15" />
+			<symbol src="file:/symbols/db_poi_barrier_kissing_gate.svg" symbol-color="#222222" symbol-width="12dp" scale-icon-size="17,1.15" />
+		</rule>
+		<rule e="any" k="barrier" v="turnstile|full-height_turnstile"  zoom-min="16">
+			<symbol src="file:/symbols/db_poi_barrier_turnstile.svg" symbol-color="#333333" symbol-width="12dp" scale-icon-size="17,1.15" />
 		</rule>
 		<rule cat="base_topo" e="any" k="barrier" v="stile" zoom-min="16">		
-			<symbol src="file:/symbols/db_poi_ladder.svg" symbol-color="#4F4F4F" symbol-width="12dp" scale-icon-size="16,1.15"/>
+			<symbol src="file:/symbols/db_poi_ladder.svg" symbol-color="#333333" symbol-width="12dp" scale-icon-size="16,1.15"/>
 		</rule>
 		
 	</rule>	
