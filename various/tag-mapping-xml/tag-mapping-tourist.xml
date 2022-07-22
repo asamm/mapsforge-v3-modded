@@ -437,8 +437,11 @@
 		<osm-tag key="wetland" value="bog" zoom-appear="13" />
 		<osm-tag key="wetland" value="fen" zoom-appear="13" />
 		<osm-tag key="wetland" value="marsh" zoom-appear="13" />
+		<osm-tag key="wetland" value="reedbed" zoom-appear="13" />
+		<osm-tag key="wetland" value="saltmarsh" zoom-appear="13" />
 		<osm-tag key="wetland" value="swamp" zoom-appear="13" />
-		<osm-tag key="wetland" value="tidalflat" zoom-appear="13" />
+		<osm-tag key="wetland" value="tidalflat" zoom-appear="13" />		
+		<osm-tag key="wetland" value="wet_meadow" zoom-appear="13" />
 		
 		<osm-tag key="mountain_pass" value="yes" zoom-appear="14" />
 		<osm-tag key="region:type" value="massif" zoom-appear="12" />
