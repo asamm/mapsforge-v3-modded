@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" version="1.0" viewBox="-432.3 583.9 32 32" xmlns="http://www.w3.org/2000/svg">
+ <g fill="none" stroke="#5790cd">
+  <path d="m-431.6 590.4 2.9 5.9"/>
+  <path d="m-428.7 596.3 2.9-5.9"/>
+  <path d="m-428.7 596.3v-8.5"/>
+  <path d="m-428 592.6 1.8 1.1" stroke-width=".75"/>
+  <path d="m-432 592.6 2.4-1" stroke-width=".75"/>
+ </g>
+ <g fill="none" stroke="#5790cd">
+  <path d="m-432.3 596.7h11.9"/>
+  <path d="m-413.2 594.9h7"/>
+  <path d="m-410.3 586.9h6.8"/>
+  <path d="m-426.2 602.3h6.9"/>
+  <path d="m-432.2 611.6h2.8"/>
+  <path d="m-426.2 611.6h10"/>
+  <path d="m-410.3 612.9h10"/>
+ </g>
+ <g fill="#5790cd" stroke="#5790cd">
+  <path d="m-406.8 606.9 2.9 5.9"/>
+  <path d="m-403.9 612.8 2.8-5.9"/>
+  <path d="m-403.9 612.8v-8.6"/>
+  <path d="m-403.3 609 1.8 1.1" stroke-width=".75"/>
+  <path d="m-407.3 609 2.5-1" stroke-width=".75"/>
+ </g>
+ <path d="m-432.3 583.9h32v32h-32z" fill="none"/>
+</svg>

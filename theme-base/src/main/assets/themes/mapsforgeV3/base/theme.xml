@@ -769,13 +769,12 @@ version 2.4.0
 			
 			<rule e="way" k="wetland" v="~">
 				<rule e="way" k="natural" v="wetland">
-					<area src="file:/patterns/marsh.png" symbol-width="32dp"  scale-icon-size="17,1.15"/>
+					<area src="file:/patterns/marsh.svg" symbol-width="32dp" scale-icon-size="17,1.15"/>
 				</rule>
 			</rule>
 			
-			<rule e="way" k="wetland" v="marsh|swamp|bog|fen" >
-
-				<area src="file:/patterns/marsh.png" symbol-width="32dp" scale-icon-size="17,1.15"/>
+			<rule e="way" k="wetland" v="marsh|swamp|bog|fen|wet_meadow|reedbed|saltmarsh" >
+				<area src="file:/patterns/marsh.svg" symbol-width="32dp" scale-icon-size="17,1.15"/>
 			</rule>
 		
 			<rule e="way" k="wetland" v="tidalflat" >
