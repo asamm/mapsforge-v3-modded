@@ -119,7 +119,8 @@ version 2.4.0
 		<cat id="accommodation_topo" />
 		<cat id="natural_topo" />
 		<cat id="highways_topo" />	
-		<cat id="pistes" />	
+		<cat id="pistes" />
+		<cat id="health_topo" />		
 		<cat id="shopping_topo" />
 		<cat id="tourism_topo" />
 		<cat id="transportation_topo" />
@@ -3089,6 +3090,25 @@ version 2.4.0
 					<pathText k="name" font-style="bold" font-size="6dp" scale-font-size="15,1.15" dy="5" fill="#004D66" stroke="#ffffff" stroke-width="2.0" />
 				</rule>
 			</rule>
+			
+			<!-- Ski Tours -->
+			<rule e="way" k="piste:type" v="skitour">
+				<rule e="way" k="*" v="*" zoom-min="15">
+					<line stroke="#BBFFFFFF" stroke-width="1.3dp" />
+				</rule>
+				
+				<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15">
+					<line stroke="#efa710" stroke-width="0.9dp" stroke-dasharray="9,9" />
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
+					<line stroke="#efa710" stroke-width="0.9dp" stroke-dasharray="10,10" />
+					<pathText k="name" font-style="bold_italic" font-size="9dp" scale-font-size="16,1.15" dy="12dp" fill="#d7960e" stroke="#ffffff" stroke-width="2dp" />
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="18">
+					<line stroke="#efa710" stroke-width="0.9dp" stroke-dasharray="12,12"/>
+				</rule>
+			</rule>
+			
 			<rule e="way" k="piste:type" v="sled">
 				<line stroke="#cdabde" stroke-width="2.5" />
 			</rule>
@@ -3113,19 +3133,19 @@ version 2.4.0
 					</rule>					
 					<rule e="way" k="piste:difficulty" v="advanced|expert">
 						<rule e="way" k="*" v="classic" >
-							<line stroke="#9311F0" stroke-width="0.7dp" />
+							<line stroke="#590992" stroke-width="0.7dp" />
 						</rule>
 						<rule e="way" k="*" v="classic+skating|classic;skating|skating">
 							<line stroke="#FFFFFF" stroke-width="1.9dp" />
-							<line stroke="#9311F0" stroke-width="1.3dp" />
+							<line stroke="#590992" stroke-width="1.3dp" />
 						</rule>
 						<rule e="way" k="*" v="backcountry" >
 							<line stroke="#90FFFFFF" stroke-width="1dp" />
-							<line stroke="#9311F0" stroke-width="0.7dp" stroke-dasharray="9,5" stroke-linecap="butt" />
+							<line stroke="#590992" stroke-width="0.7dp" stroke-dasharray="9,5" stroke-linecap="butt" />
 						</rule>
 						<!-- Fallback for openandromaps without tags -->
 						<rule e="way" k="piste:grooming" v	="~">						
-							<line stroke="#9311F0" stroke-width="0.7dp" />
+							<line stroke="#590992" stroke-width="0.7dp" />
 						</rule>
 					</rule>
 					<rule e="way" k="piste:difficulty" v="~">
@@ -3195,9 +3215,11 @@ version 2.4.0
 					<pathText k="name" font-style="bold_italic" font-size="9dp" scale-font-size="15,1.15" dy="4dp" fill="#333333" stroke="#ffffff" stroke-width="2.0" />
 				</rule>				
 			</rule>
-			<rule e="way" k="piste:type" v="skitour">
+			
+			
+			<rule e="way" k="piste:type" v="hike">
 				<rule e="way" k="*" v="*" zoom-max="15">
-					<line stroke="#FF1BAFFF" stroke-width="1dp" />
+					<line stroke="#90FFFFFF" stroke-width="1dp" />
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="16">
 					<line stroke="#8000A4F7" stroke-width="0.9dp" />
