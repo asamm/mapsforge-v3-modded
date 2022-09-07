@@ -2195,19 +2195,19 @@ version 2.4.0
 						<rule e="way" k="highway" v="track" >
 							<rule e="way" k="tracktype" v="grade1">
 								<line stroke="#ffffff" stroke-width="0.5dp" />
-								<rule e="way" k="*" v="*" zoom-min="15">
-									<pathText k="name" font-style="bold" font-size="7dp" scale-font-size="17,1.15" stroke="#ffffff" stroke-width="2.0dp" />
+								<rule cat="base_summer" e="way" k="*" v="*" zoom-min="15">
+									<pathText k="name" font-style="bold" font-size="28dp" scale-font-size="17,1.15" stroke="#ffffff" stroke-width="2.0dp" />
 								</rule>
 							</rule>							
-							<rule e="way" k="tracktype" v="grade2">
+							<rule  e="way" k="tracktype" v="grade2">
 								<line stroke="#747474" stroke-width="0.4dp"  />
-								<rule e="way" k="*" v="*" zoom-min="15">
+								<rule cat="base_summer"  e="way" k="*" v="*" zoom-min="15">
 									<pathText k="name" font-style="bold" font-size="7dp" scale-font-size="17,1.15" stroke="#ffffff" stroke-width="2.0dp" />
 								</rule>
 							</rule>
 							<rule e="way" k="tracktype" v="grade3|grade4">
 								<line stroke="#747474" stroke-width="0.3dp" stroke-dasharray="16,6" stroke-linecap="butt" />
-								<rule e="way" k="*" v="*" zoom-min="15">
+								<rule cat="base_summer" e="way" k="*" v="*" zoom-min="15">
 									<pathText k="name" font-style="bold" font-size="7dp" scale-font-size="17,1.15" stroke="#ffffff" stroke-width="2.0dp" />
 								</rule>
 							</rule>
@@ -2216,10 +2216,7 @@ version 2.4.0
 							</rule>
 							
 							<rule e="way" k="tracktype" v="~|no|false">
-								<line stroke="#747474" stroke-width="0.3dp" stroke-dasharray="16,6" stroke-linecap="butt" />
-								<rule e="way" k="*" v="*" zoom-min="15">
-									<pathText k="name" font-style="bold" font-size="7dp" scale-font-size="17,1.15" stroke="#ffffff" stroke-width="2.0dp" />
-								</rule>
+								<line stroke="#747474" stroke-width="0.3dp" stroke-dasharray="16,6" stroke-linecap="butt" />								
 							</rule>
 						</rule>					
 						<rule e="way" k="*" v="residential|living_street|service|unclassified|road"  >
@@ -3041,25 +3038,19 @@ version 2.4.0
 					<area fill="#6040ff40" />
 				</rule>
 				<rule e="way" k="piste:difficulty" v="easy">
-					<area fill="#607173FF"  />
+					<area fill="#6052c1fe"  />
 				</rule>
 				<rule e="way" k="piste:difficulty" v="intermediate">
 					<area fill="#60FF4A4A"  />
 				</rule>
-				<rule e="way" k="piste:difficulty" v="advanced">
+				<rule e="way" k="piste:difficulty" v="advanced|expert">
 					<area fill="#60000000"  />
-				</rule>
-				<rule e="way" k="piste:difficulty" v="expert">
-					<area fill="#60f6800a"  />
 				</rule>
 				<rule e="way" k="piste:difficulty" v="freeride">
 					<area fill="#60f6dd0a"  />
 				</rule>
 				<rule e="way" k="piste:difficulty" v="~">
 					<area fill="#307173FF"  />
-				</rule>
-				<rule e="way" k="*" v="*" zoom-min="16">
-					<pathText k="name" font-style="bold" font-size="6dp" scale-font-size="15,1.15" dy="5" fill="#004D66" stroke="#ffffff" stroke-width="2.0" />
 				</rule>
 			</rule>
 
@@ -3069,16 +3060,13 @@ version 2.4.0
 					<line stroke="#6040ff40" stroke-width="2dp" />
 				</rule>
 				<rule e="way" k="piste:difficulty" v="easy">
-					<line stroke="#607173FF" stroke-width="2dp" />
+					<line stroke="#6052c1fe" stroke-width="2dp" />
 				</rule>
 				<rule e="way" k="piste:difficulty" v="intermediate">
-					<line stroke="#60FF4A4A" stroke-width="2dp" />
+					<line stroke="#60FF4A4A" stroke-width="2dp" />				
 				</rule>
-				<rule e="way" k="piste:difficulty" v="advanced">
+				<rule e="way" k="piste:difficulty" v="advanced|expert">
 					<line stroke="#60000000" stroke-width="2dp" />
-				</rule>
-				<rule e="way" k="piste:difficulty" v="expert">
-					<line stroke="#60f6800a" stroke-width="2dp" />
 				</rule>
 				<rule e="way" k="piste:difficulty" v="freeride">
 					<line stroke="#60f6dd0a" stroke-width="2dp" />
@@ -3086,10 +3074,27 @@ version 2.4.0
 				<rule e="way" k="piste:difficulty" v="~">
 					<line stroke="#307173FF" stroke-width="2dp" />
 				</rule>
-				<rule e="way" k="*" v="*" zoom-min="16">
-					<pathText k="name" font-style="bold" font-size="6dp" scale-font-size="15,1.15" dy="5" fill="#004D66" stroke="#ffffff" stroke-width="2.0" />
+			</rule>
+			
+			<!-- Captions for downhill-->
+			<rule e="way" k="piste:type" v="downhill" zoom-min="16" >
+				<rule e="way" k="piste:difficulty" v="novice">
+					<pathText k="name" font-style="bold" font-size="7dp" scale-font-size="15,1.15" dy="5" fill="#00e900" stroke="#ffffff" stroke-width="2.5dp" />
+				</rule>
+				<rule e="way" k="piste:difficulty" v="easy">
+					<pathText k="name" font-style="bold" font-size="7dp" scale-font-size="15,1.15" dy="5" fill="#07a6fe" stroke="#ffffff" stroke-width="2.5dp" />
+				</rule>
+				<rule e="way" k="piste:difficulty" v="intermediate">
+					<pathText k="name" font-style="bold" font-size="7dp" scale-font-size="15,1.15" dy="5" fill="#ff4040" stroke="#ffffff" stroke-width="2.5dp" />
+				</rule>
+				<rule e="way" k="piste:difficulty" v="advanced|expert">
+					<pathText k="name" font-style="bold" font-size="7dp" scale-font-size="15,1.15" dy="5" fill="#000000" stroke="#ffffff" stroke-width="2.5dp" />
+				</rule>
+				<rule e="way" k="piste:difficulty" v="freeride">
+					<pathText k="name" font-style="bold" font-size="7dp" scale-font-size="15,1.15" dy="5" fill="#edd509" stroke="#ffffff" stroke-width="2.5dp" />
 				</rule>
 			</rule>
+			
 			
 			<!-- Ski Tours -->
 			<rule e="way" k="piste:type" v="skitour">
@@ -3118,15 +3123,12 @@ version 2.4.0
 			<rule cat="pistes_nordic" e="way" k="piste:type" v="nordic|alpine" >
 				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
 					<rule e="way" k="piste:difficulty" v="novice|easy|intermediate">					
-						<rule e="way" k="*" v="classic"  >
-							<line stroke="#006BD6" stroke-width="0.7dp" />
-						</rule>
-						<rule e="way" k="*" v="classic+skating|classic;skating|skating"  >
+						<rule e="way" k="*" v="classic|classic+skating|classic;skating|skating"  >
 							<line stroke="#FFFFFF" stroke-width="1.9dp" />
 							<line stroke="#006BD6" stroke-width="1.3dp" />
 						</rule>
 						<rule e="way" k="*" v="backcountry" >
-							<line stroke="#90FFFFFF" stroke-width="1dp" />
+							<line stroke="#90FFFFFF" stroke-width="1.2dp" />
 							<line stroke="#006BD6" stroke-width="0.7dp" stroke-dasharray="9,5" stroke-linecap="butt" />
 						</rule>	
 						<!-- Fallback for openandromaps without tags -->
@@ -3135,15 +3137,12 @@ version 2.4.0
 						</rule>
 					</rule>					
 					<rule e="way" k="piste:difficulty" v="advanced|expert">
-						<rule e="way" k="*" v="classic" >
-							<line stroke="#590992" stroke-width="0.7dp" />
-						</rule>
-						<rule e="way" k="*" v="classic+skating|classic;skating|skating">
+						<rule e="way" k="*" v="classic|classic+skating|classic;skating|skating">
 							<line stroke="#FFFFFF" stroke-width="1.9dp" />
 							<line stroke="#590992" stroke-width="1.3dp" />
 						</rule>
 						<rule e="way" k="*" v="backcountry" >
-							<line stroke="#90FFFFFF" stroke-width="1dp" />
+							<line stroke="#90FFFFFF" stroke-width="1.2dp" />
 							<line stroke="#590992" stroke-width="0.7dp" stroke-dasharray="9,5" stroke-linecap="butt" />
 						</rule>
 						<!-- Fallback for openandromaps without tags -->
@@ -3152,15 +3151,12 @@ version 2.4.0
 						</rule>
 					</rule>
 					<rule e="way" k="piste:difficulty" v="~">
-						<rule e="way" k="*" v="classic"  >
-							<line stroke="#006BD6" stroke-width="0.7dp" />
-						</rule>
-						<rule e="way" k="*" v="classic+skating|classic;skating|skating"  >
+						<rule e="way" k="*" v="classic|classic+skating|classic;skating|skating"  >
 							<line stroke="#FFFFFF" stroke-width="1.9dp" />
 							<line stroke="#006BD6" stroke-width="1.3dp" />
 						</rule>
 						<rule e="way" k="*" v="backcountry" >
-							<line stroke="#90FFFFFF" stroke-width="1dp" />
+							<line stroke="#90FFFFFF" stroke-width="1.2dp" />
 							<line stroke="#006BD6" stroke-width="0.7dp" stroke-dasharray="9,5" stroke-linecap="butt" />
 						</rule>	
 					</rule>
@@ -3172,51 +3168,53 @@ version 2.4.0
 				
 				<rule e="way" k="*" v="*" zoom-min="16" >
 					<rule e="way" k="piste:difficulty" v="novice|easy|intermediate">					
-						<rule e="way" k="*" v="classic"  >
-							<line stroke="#750059B3" stroke-width="0.8dp" />
-						</rule>
-						<rule e="way" k="*" v="classic+skating|classic;skating|skating"  >
-							<line stroke="#750059B3" stroke-width="1.2dp" />
+						<rule e="way" k="*" v="classic|classic+skating|classic;skating|skating"  >
+							<line stroke="#90FFFFFF" stroke-width="1.9dp" />
+							<line stroke="#006BD6" stroke-width="1.2dp" />
 						</rule>
 						<rule e="way" k="*" v="backcountry" >
-							<line stroke="#750059B3" stroke-width="0.8dp" stroke-dasharray="9,5" stroke-linecap="butt" />
+							<line stroke="#90FFFFFF" stroke-width="1.2dp" />
+							<line stroke="#006BD6" stroke-width="0.8dp" stroke-dasharray="9,5" stroke-linecap="butt" />
 						</rule>
 						<!-- Fallback for openandromaps without tags -->
 						<rule e="way" k="piste:grooming" v	="~">						
-							<line stroke="#750059B3" stroke-width="0.7dp" />
+							<line stroke="#006BD6" stroke-width="0.7dp" />
 						</rule>
 					</rule>					
 					<rule e="way" k="piste:difficulty" v="advanced|expert">
-						<rule e="way" k="*" v="classic"  >
-							<line stroke="#75810EDA" stroke-width="0.8dp" />
-						</rule>
-						<rule e="way" k="*" v="classic+skating|classic;skating|skating"  >
-							<line stroke="#75810EDA" stroke-width="1.2dp" />
+						<rule e="way" k="*" v="classic|classic+skating|classic;skating|skating"  >
+							<line stroke="#90FFFFFF" stroke-width="1.9dp" />
+							<line stroke="#590992" stroke-width="1.2dp" />
 						</rule>
 						<rule e="way" k="*" v="backcountry" >
-							<line stroke="#75810EDA" stroke-width="0.8dp" stroke-dasharray="9,5" stroke-linecap="butt" />
+							<line stroke="#90FFFFFF" stroke-width="1.2dp" />
+							<line stroke="#590992" stroke-width="0.8dp" stroke-dasharray="9,5" stroke-linecap="butt" />
 						</rule>
 						<!-- Fallback for openandromaps without tags -->
 						<rule e="way" k="piste:grooming" v	="~">						
-							<line stroke="#75810EDA" stroke-width="0.7dp" />
+							<line stroke="#590992" stroke-width="0.7dp" />
 						</rule>
 					</rule>
 					<rule e="way" k="piste:difficulty" v="~">
-						<rule e="way" k="*" v="classic+skating|classic;skating|skating|classic"  >
-							<line stroke="#750059B3" stroke-width="1.1dp" />
+						<rule e="way" k="*" v="classic|classic+skating|classic;skating|skating"  >
+							<line stroke="#90FFFFFF" stroke-width="1.9dp" />
+							<line stroke="#006BD6" stroke-width="1.2dp" />
 						</rule>
 						<rule e="way" k="*" v="backcountry" >
-							<line stroke="#750059B3" stroke-width="0.8dp" stroke-dasharray="9,5" stroke-linecap="butt" />
+							<line stroke="#90FFFFFF" stroke-width="1.2dp" />
+							<line stroke="#006BD6" stroke-width="0.8dp" stroke-dasharray="9,5" stroke-linecap="butt" />
 						</rule>
 					</rule>	
-					<!-- Fallback for old version of LoMaps  -->
-					<rule e="way" k="piste:difficulty" v="~">	
-						<line stroke="#750059B3" stroke-width="1.1dp" />
-					</rule>
 				</rule>
-				<rule e="way" k="*" v="*" zoom-min="15">
-					<pathText k="name" font-style="bold_italic" font-size="9dp" scale-font-size="15,1.15" dy="4dp" fill="#333333" stroke="#ffffff" stroke-width="2.0" />
-				</rule>				
+				<!-- Captions for nordic-->
+				<rule e="way" k="*" v="*" zoom-min="16" >
+					<rule e="way" k="piste:difficulty" v="novice|easy|intermediate">
+						<pathText k="name" font-style="bold" font-size="8dp" scale-font-size="15,1.15" dy="15dp" fill="#005ebd" stroke="#ffffff" stroke-width="2.5dp" />
+					</rule>
+					<rule e="way" k="piste:difficulty" v="advanced|expert">
+						<pathText k="name" font-style="bold" font-size="8dp" scale-font-size="15,1.15" dy="15dp" fill="#810EDA" stroke="#ffffff" stroke-width="2.5dp" />
+					</rule>
+				</rule>			
 			</rule>
 			
 			
