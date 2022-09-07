@@ -3110,7 +3110,10 @@ version 2.4.0
 			</rule>
 			
 			<rule e="way" k="piste:type" v="sled">
-				<line stroke="#cdabde" stroke-width="2.5" />
+				<rule e="way" k="*" v="*" zoom-min="15">
+					<line stroke="#BBFFFFFF" stroke-width="1.3dp" />
+					<line stroke="#77BF79" stroke-width="0.9dp" />
+				</rule>
 			</rule>
 			<rule cat="pistes_nordic" e="way" k="piste:type" v="nordic|alpine" >
 				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
