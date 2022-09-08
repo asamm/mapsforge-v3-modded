@@ -3099,18 +3099,18 @@ version 2.4.0
 			<!-- Ski Tours -->
 			<rule e="way" k="piste:type" v="skitour">
 				<rule e="way" k="*" v="*" zoom-min="15">
-					<line stroke="#BBFFFFFF" stroke-width="1.3dp" />
+					<line stroke="#BBFFFFFF" stroke-width="1.2dp" />
 				</rule>
 				
 				<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15">
 					<line stroke="#efa710" stroke-width="0.9dp" stroke-dasharray="9,9" />
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
-					<line stroke="#efa710" stroke-width="0.9dp" stroke-dasharray="10,10" />
+					<line stroke="#efa710" stroke-width="0.8dp" stroke-dasharray="10,10" />
 					<pathText k="name" font-style="bold_italic" font-size="9dp" scale-font-size="16,1.15" dy="12dp" fill="#d7960e" stroke="#ffffff" stroke-width="2dp" />
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="18">
-					<line stroke="#efa710" stroke-width="0.9dp" stroke-dasharray="12,12"/>
+					<line stroke="#efa710" stroke-width="0.8dp" stroke-dasharray="12,12"/>
 				</rule>
 			</rule>
 			
@@ -3218,13 +3218,23 @@ version 2.4.0
 			</rule>
 			
 			
-			<rule e="way" k="piste:type" v="hike">
-				<rule e="way" k="*" v="*" zoom-max="15">
-					<line stroke="#90FFFFFF" stroke-width="1dp" />
+			<rule e="way" k="piste:type" v="hike" zoom-min="14">
+				<rule e="way" k="*" v="*" zoom-min="14">
+					<line stroke="#90FFFFFF" stroke-width="1.7dp" />					
 				</rule>
+				
+				<rule e="way" k="*" v="*" zoom-min="14" zoom-max="16">
+					<line stroke="#326F9E" stroke-width="1.1dp" stroke-dasharray="1,8"/>
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="17" zoom-max="18">
+					<line stroke="#326F9E" stroke-width="1dp" stroke-dasharray="1,9"/>
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="19" >
+					<line stroke="#326F9E" stroke-width="1dp" stroke-dasharray="1,10"/>
+				</rule>
+				
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<line stroke="#8000A4F7" stroke-width="0.9dp" />
-					<pathText k="name" font-style="bold_italic" font-size="9dp" scale-font-size="15,1.15" dy="12dp" fill="#00A4F7" stroke="#ffffff" stroke-width="2dp" />
+					<pathText k="name" font-style="bold_italic" font-size="9dp" scale-font-size="15,1.15" dy="15dp" fill="#2c618b" stroke="#ffffff" stroke-width="2dp" />
 				</rule>
 			</rule>
 		</rule> <!-- end of pistes -->
