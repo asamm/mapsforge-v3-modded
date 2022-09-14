@@ -16,6 +16,8 @@ package org.mapsforgeV3.map.layer.renderer;
 
 import android.graphics.Paint.Align;
 
+import com.asamm.locus.mapsforge.utils.Utils;
+
 import org.mapsforgeV3.core.model.Tile;
 
 import java.io.Serializable;
@@ -31,6 +33,11 @@ import java.util.PriorityQueue;
  * different labels.
  */
 class LabelPlacement {
+
+    /**
+     * Tag for logger.
+     */
+    private static final String TAG = "LabelPlacement";
 
     /**
      * This class holds the reference positions for the two and four point greedy algorithms.
@@ -121,16 +128,17 @@ class LabelPlacement {
     private final int symbolDistanceToSymbol = 2;
 
     // size of tiles
-    private final int mTileSize;
+    private final int tileSize;
     // cache for dependency management
-    final DependencyCache dependencyCache;
+    private final DependencyCache dependencyCache;
+
     // cached link to current handled label
     PaintContainerPointText label;
     ReferencePosition referencePosition;
     PaintContainerSymbol symbolContainer;
 
     LabelPlacement(int tileSize) {
-        this.mTileSize = tileSize;
+        this.tileSize = tileSize;
         this.dependencyCache = new DependencyCache(tileSize);
     }
 
@@ -139,56 +147,58 @@ class LabelPlacement {
      * placement with the greedy strategy. The placement model is either the two fixed point or the four fixed point
      * model.
      *
-     * @param labels     labels from the current tile.
+     * @param nodes     labels from the current tile.
      * @param symbols    symbols of the current tile.
      * @param areaLabels area labels from the current tile.
      * @param cT         current tile with the x,y- coordinates and the zoom level.
      * @return the processed list of labels.
      */
-    List<PaintContainerPointText> placeLabels(List<PaintContainerPointText> labels,
+    List<PaintContainerPointText> placeLabels(List<PaintContainerPointText> nodes,
             List<PaintContainerSymbol> symbols, List<PaintContainerPointText> areaLabels, Tile cT) {
-        List<PaintContainerPointText> returnLabels = labels;
+        List<PaintContainerPointText> nodesFinal = nodes;
         this.dependencyCache.generateTileAndDependencyOnTile(cT);
 
         // sort data by priority
-        Collections.sort(returnLabels);
+        Collections.sort(nodesFinal);
         Collections.sort(symbols);
         Collections.sort(areaLabels);
+//        Utils.getHandler().logD(TAG, "placeLabels(" +
+//                nodes.size() + ", " + symbols.size() + ", " + areaLabels.size() + ", " + cT + ")");
 
         // handle Area labels
         preprocessAreaLabels(areaLabels);
 
         // handle single labels
-        preprocessLabels(returnLabels);
+        preprocessNodes(nodesFinal);
 
         // handle symbols
         preprocessSymbols(symbols);
 
         // remove labels that do not have drawn symbol
-        removeEmptySymbolReferences(returnLabels, symbols);
+        removeEmptySymbolReferences(nodesFinal, symbols);
 
         // remove symbols that goes over area symbols
         removeOverlappingSymbolsWithAreaLabels(symbols, areaLabels);
 
         // handle dependencyCache
-        this.dependencyCache.removeOverlappingObjectsWithDependencyOnTile(returnLabels, areaLabels, symbols);
-        if (!returnLabels.isEmpty()) {
-            returnLabels = processFourPointGreedy(returnLabels, symbols, areaLabels);
+        this.dependencyCache.removeOverlappingObjectsWithDependencyOnTile(nodesFinal, areaLabels, symbols);
+        if (!nodesFinal.isEmpty()) {
+            nodesFinal = processFourPointGreedy(nodesFinal, symbols, areaLabels);
         }
-        this.dependencyCache.fillDependencyOnTile(returnLabels, symbols, areaLabels);
-        return returnLabels;
+        this.dependencyCache.fillDependencyOnTile(nodesFinal, symbols, areaLabels);
+        return nodesFinal;
     }
 
-    /**************************************************/
-    /*                 AREA LABELS                    */
-    /**************************************************/
+    //*************************************************
+    // AREA LABELS
+    //*************************************************
 
     private void preprocessAreaLabels(List<PaintContainerPointText> areaLabels) {
-        // firstly center labels
+        // center labels
         centerLabels(areaLabels);
 
         // remove labels that are out of tile
-        removeOutOfTileTextContainers(areaLabels);
+        removeOutOfTileLabels(areaLabels);
 
         // remove labels that overlap areas
         removeOverlappingAreaLabels(areaLabels);
@@ -199,22 +209,11 @@ class LabelPlacement {
         }
     }
 
-    /**
-     * Centers the labels.
-     *
-     * @param labels labels to center
-     */
-    private void centerLabels(List<PaintContainerPointText> labels) {
-        for (int i = 0, n = labels.size(); i < n; i++) {
-            PaintContainerPointText label = labels.get(i);
-            label.x = label.x - label.boundary.width() / 2;
-        }
-    }
+    // temporary cache for testing area labels
+    private final ArrayList<String> usedAreaLabels = new ArrayList<>();
 
     /**
      * This method removes all the area labels, that overlap each other. So that the output is collision free
-     *
-     * @param areaLabels area labels from the actual tile
      */
     private void removeOverlappingAreaLabels(List<PaintContainerPointText> areaLabels) {
         int dis = this.labelDistanceToLabel;
@@ -257,17 +256,21 @@ class LabelPlacement {
         }
     }
 
-    private void preprocessLabels(List<PaintContainerPointText> labels) {
-        // only remove labels out of tile
-        removeOutOfTileTextContainers(labels);
+    //*************************************************
+    // NODES
+    //*************************************************
 
-        // firstly center labels
+    private void preprocessNodes(List<PaintContainerPointText> labels) {
+        // center labels
         centerLabels(labels);
+
+        // remove labels that are out of tile
+        removeOutOfTileLabels(labels);
     }
 
-    /**************************************************/
-    /*                    SYMBOLS                     */
-    /**************************************************/
+    //*************************************************
+    // SYMBOLS
+    //*************************************************
 
     private void preprocessSymbols(List<PaintContainerSymbol> symbols) {
         // remove symbols out of tile
@@ -289,9 +292,9 @@ class LabelPlacement {
         for (int i = symbols.size() - 1; i >= 0; i--) {
             this.symbolContainer = symbols.get(i);
 
-            if (this.symbolContainer.x > mTileSize) {
+            if (this.symbolContainer.x > tileSize) {
                 symbols.remove(i);
-            } else if (this.symbolContainer.y > mTileSize) {
+            } else if (this.symbolContainer.y > tileSize) {
                 symbols.remove(i);
             } else if (this.symbolContainer.x + this.symbolContainer.symbol.getWidth() < 0.0f) {
                 symbols.remove(i);
@@ -340,15 +343,75 @@ class LabelPlacement {
         }
     }
 
-    /**************************************************/
-    /*                     TOOLS                      */
-    /**************************************************/
+    //*************************************************
+    // TOOLS
+    //*************************************************
 
-    private void removeEmptySymbolReferences(List<PaintContainerPointText> nodes, List<PaintContainerSymbol> symbols) {
-        for (int i = 0, n = nodes.size(); i < n; i++) {
-            PaintContainerPointText node = nodes.get(i);
-            if (!symbols.contains(node.symbol)) {
-                node.symbol = null;
+    /**
+     * Centers the labels.
+     */
+    private void centerLabels(List<PaintContainerPointText> labels) {
+        for (int i = 0, n = labels.size(); i < n; i++) {
+            PaintContainerPointText label = labels.get(i);
+            label.x = label.x - label.boundary.width() / 2.0f;
+        }
+    }
+
+    /**
+     * This method removes the labels, that are not visible in the actual tile.
+     */
+    private void removeOutOfTileLabels(List<PaintContainerPointText> labels) {
+        for (int i = labels.size() - 1; i >= 0; i--) {
+            label = labels.get(i);
+
+            boolean valid = true;
+            if (label.paintFill.getTextAlign() == Align.LEFT) {
+                if (label.x > tileSize) {
+                    valid = false;
+                } else if (label.x + label.boundary.width() < 0.0f) {
+                    valid = false;
+                }
+            } else if (label.paintFill.getTextAlign() == Align.CENTER) {
+                if (label.x - label.boundary.width() / 2.0f > tileSize) {
+                    valid = false;
+                } else if (label.x + label.boundary.width() / 2.0f < 0.0f) {
+                    valid = false;
+                }
+            } else if (label.paintFill.getTextAlign() == Align.RIGHT) {
+                if (label.x - label.boundary.width() > tileSize) {
+                    valid = false;
+                } else if (label.x < 0.0f) {
+                    valid = false;
+                }
+            }
+
+            // check result
+            if (!valid) {
+                labels.remove(i);
+                continue;
+            }
+
+//			// test also Y axis - TODO not working perfectly
+//			if (this.label.y - this.label.boundary.height() > mTileSize) {
+//				labels.remove(i);
+//				Logger.d("XXX", "invalid Y");
+//			} else if (this.label.y < 0.0f) {
+//				labels.remove(i);
+//				Logger.d("XXX", "invalid Y");
+//			}
+//			} else if (label.y + label.boundary.top > mTileSize) {
+//				labels.remove(i);
+//			} else if (label.y - label.boundary.bottom < 0.0f) {
+//				labels.remove(i);
+//			}
+        }
+    }
+
+    private void removeEmptySymbolReferences(List<PaintContainerPointText> labels, List<PaintContainerSymbol> symbols) {
+        for (int i = 0, n = labels.size(); i < n; i++) {
+            PaintContainerPointText label = labels.get(i);
+            if (!symbols.contains(label.symbol)) {
+                label.symbol = null;
             }
         }
     }
@@ -390,61 +453,9 @@ class LabelPlacement {
         }
     }
 
-    /**
-     * This method removes the labels, that are not visible in the actual tile.
-     *
-     * @param labels Labels from the actual tile
-     */
-    private void removeOutOfTileTextContainers(List<PaintContainerPointText> labels) {
-        for (int i = labels.size() - 1; i >= 0; i--) {
-            label = labels.get(i);
-
-            boolean valid = true;
-            if (label.paintFill.getTextAlign() == Align.LEFT) {
-                if (label.x > mTileSize) {
-                    valid = false;
-                } else if (label.x + label.boundary.width() < 0.0f) {
-                    valid = false;
-                }
-            } else if (label.paintFill.getTextAlign() == Align.CENTER) {
-                if (label.x - label.boundary.width() / 2 > mTileSize) {
-                    valid = false;
-                } else if (label.x + label.boundary.width() / 2 < 0.0f) {
-                    valid = false;
-                }
-            } else if (label.paintFill.getTextAlign() == Align.RIGHT) {
-                if (label.x - label.boundary.width() > mTileSize) {
-                    valid = false;
-                } else if (label.x < 0.0f) {
-                    valid = false;
-                }
-            }
-
-            // check result
-            if (!valid) {
-                labels.remove(i);
-                continue;
-            }
-
-//			// test also Y axis - TODO not working perfectly
-//			if (this.label.y - this.label.boundary.height() > mTileSize) {
-//				labels.remove(i);
-//				Logger.d("XXX", "invalid Y");
-//			} else if (this.label.y < 0.0f) {
-//				labels.remove(i);
-//				Logger.d("XXX", "invalid Y");
-//			}
-//			} else if (label.y + label.boundary.top > mTileSize) {
-//				labels.remove(i);
-//			} else if (label.y - label.boundary.bottom < 0.0f) {
-//				labels.remove(i);
-//			}
-        }
-    }
-
-    /**************************************************/
-    /*                  FINAL TASK                    */
-    /**************************************************/
+    //*************************************************
+    // FINAL TASK
+    //*************************************************
 
     /**
      * This method uses an adapted greedy strategy for the fixed four position model, above, under left and right form
@@ -453,57 +464,56 @@ class LabelPlacement {
      * +k) runtime. To find the rectangle that has the top edge, I use also a minimum Heap. The rectangles are sorted by
      * their y coordinates.
      *
-     * @param labels     label positions and text
+     * @param nodes     label positions and text
      * @param symbols    symbol positions
      * @param areaLabels area label positions and text
      * @return list of labels without overlaps with symbols and other labels by the four fixed position greedy strategy
      */
-    private List<PaintContainerPointText> processFourPointGreedy(List<PaintContainerPointText> labels,
+    private List<PaintContainerPointText> processFourPointGreedy(List<PaintContainerPointText> nodes,
             List<PaintContainerSymbol> symbols, List<PaintContainerPointText> areaLabels) {
-//Log.d("XXX", "start - labels:" + labels.size() + ", first:" + labels.get(0));
         List<PaintContainerPointText> resolutionSet = new ArrayList<>();
 
         // Array for the generated reference positions around the points of interests
-        ReferencePosition[] refPos = new ReferencePosition[(labels.size()) * 4];
+        ReferencePosition[] refPos = new ReferencePosition[(nodes.size()) * 4];
 
         // lists that sorts the reference points after the minimum top edge y position
-        PriorityQueue<ReferencePosition> priorUp = new PriorityQueue<>(labels.size() * 4 * 2
-                + labels.size() / 10 * 2, ReferencePositionYComparator.INSTANCE);
+        PriorityQueue<ReferencePosition> priorUp = new PriorityQueue<>(nodes.size() * 4 * 2
+                + nodes.size() / 10 * 2, ReferencePositionYComparator.INSTANCE);
         // lists that sorts the reference points after the minimum bottom edge y position
-        PriorityQueue<ReferencePosition> priorDown = new PriorityQueue<>(labels.size() * 4 * 2
-                + labels.size() / 10 * 2, ReferencePositionHeightComparator.INSTANCE);
+        PriorityQueue<ReferencePosition> priorDown = new PriorityQueue<>(nodes.size() * 4 * 2
+                + nodes.size() / 10 * 2, ReferencePositionHeightComparator.INSTANCE);
 
         int dis = this.startDistanceToSymbols;
 
         // creates the reference positions
-        for (int z = 0, size = labels.size(); z < size; z++) {
-            PaintContainerPointText ptc = labels.get(z);
+        for (int z = 0, size = nodes.size(); z < size; z++) {
+            PaintContainerPointText ptc = nodes.get(z);
             if (ptc == null) {
                 continue;
             }
 
             if (ptc.symbol != null) {
                 // up
-                refPos[z * 4] = new ReferencePosition(ptc.x - ptc.boundary.width() / 2, ptc.y
-                        - ptc.symbol.symbol.getHeight() / 2 - dis, z, ptc.boundary.width(), ptc.boundary.height(),
+                refPos[z * 4] = new ReferencePosition(ptc.x - ptc.boundary.width() / 2.0f, ptc.y
+                        - ptc.symbol.symbol.getHeight() / 2.0f - dis, z, ptc.boundary.width(), ptc.boundary.height(),
                         ptc);
                 // down
-                refPos[z * 4 + 1] = new ReferencePosition(ptc.x - ptc.boundary.width() / 2, ptc.y
-                        + ptc.symbol.symbol.getHeight() / 2 + ptc.boundary.height() + dis, z, ptc.boundary.width(),
+                refPos[z * 4 + 1] = new ReferencePosition(ptc.x - ptc.boundary.width() / 2.0f, ptc.y
+                        + ptc.symbol.symbol.getHeight() / 2.0f + ptc.boundary.height() + dis, z, ptc.boundary.width(),
                         ptc.boundary.height(), ptc);
                 // left
-                refPos[z * 4 + 2] = new ReferencePosition(ptc.x - ptc.symbol.symbol.getWidth() / 2
-                        - ptc.boundary.width() - dis, ptc.y + ptc.boundary.height() / 2, z, ptc.boundary.width(),
+                refPos[z * 4 + 2] = new ReferencePosition(ptc.x - ptc.symbol.symbol.getWidth() / 2.0f
+                        - ptc.boundary.width() - dis, ptc.y + ptc.boundary.height() / 2.0f, z, ptc.boundary.width(),
                         ptc.boundary.height(), ptc);
                 // right
-                refPos[z * 4 + 3] = new ReferencePosition(ptc.x + ptc.symbol.symbol.getWidth() / 2 + dis, ptc.y
-                        + ptc.boundary.height() / 2 - 0.1f, z, ptc.boundary.width(), ptc.boundary.height(),
+                refPos[z * 4 + 3] = new ReferencePosition(ptc.x + ptc.symbol.symbol.getWidth() / 2.0f + dis, ptc.y
+                        + ptc.boundary.height() / 2.0f - 0.1f, z, ptc.boundary.width(), ptc.boundary.height(),
                         ptc);
             } else {
                 Align textAlign = ptc.paintFill.getTextAlign();
                 float x = ptc.x; // Align.LEFT
                 if (textAlign == Align.CENTER) {
-                    x = ptc.x - (ptc.boundary.width() / 2);
+                    x = ptc.x - (ptc.boundary.width() / 2.0f);
                 } else if (textAlign == Align.RIGHT) {
                     x = ptc.x - ptc.boundary.width();
                 }
@@ -530,7 +540,7 @@ class LabelPlacement {
         LinkedList<ReferencePosition> linkedRef = new LinkedList<>();
         while (priorUp.size() != 0) {
             this.referencePosition = priorUp.remove();
-            this.label = labels.get(this.referencePosition.nodeNumber);
+            this.label = nodes.get(this.referencePosition.nodeNumber);
             resolutionSet.add(referencePosition.ptc);
 
             // return result if no more data exits
@@ -571,7 +581,6 @@ class LabelPlacement {
             }
             priorDown.addAll(linkedRef);
         }
-//Log.d("XXX", "end - labels:" + resolutionSet.size() + ", first:" + resolutionSet.get(0));
         return resolutionSet;
     }
 
@@ -586,9 +595,8 @@ class LabelPlacement {
      */
     private void removeNonValidateReferencePosition(ReferencePosition[] refPos, List<PaintContainerSymbol> symbols,
             List<PaintContainerPointText> areaLabels) {
+        // remove node labels above symbols
         int dis = labelDistanceToSymbol;
-
-        // remove texts above symbols
         for (int i = 0, m = symbols.size(); i < m; i++) {
             this.symbolContainer = symbols.get(i);
 
@@ -607,8 +615,8 @@ class LabelPlacement {
             }
         }
 
+        // remove node labels above the area labels
         dis = labelDistanceToLabel;
-
         for (int i = 0, m = areaLabels.size(); i < m; i++) {
             PaintContainerPointText areaLabel = areaLabels.get(i);
 
@@ -630,10 +638,9 @@ class LabelPlacement {
             }
         }
 
+        // remove node labels that overlap already draw tiles
         this.dependencyCache.removeReferencePointsFromDependencyCache(refPos);
     }
-
-    private final ArrayList<String> usedAreaLabels = new ArrayList<>();
 
     private static boolean intersects(float r1x1, float r1y1, float r1x2, float r1y2,
             float r2x1, float r2y1, float r2x2, float r2y2) {

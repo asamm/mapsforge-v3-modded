@@ -143,11 +143,9 @@ class DependencyCache {
         /**
          * Creates a text dependency in the dependency cache.
          *
-         * @param paintFront paint element from the front.
-         * @param paintBack  paint element form the background of the text.
-         * @param text       the text of the element.
-         * @param boundary   the fixed boundary with width and height.
-         * @param tile       all tile in where the element has an influence.
+         * @param text     the text of the element.
+         * @param boundary the fixed boundary with width and height.
+         * @param tile     all tile in where the element has an influence.
          */
         DependencyText(String text, Rect boundary, Tile tile,
                 Paint paintFill, Paint paintStroke, BgRectangle bgRect,
@@ -723,20 +721,20 @@ class DependencyCache {
     /**
      * This method fills the entries in the dependency cache of the tiles, if their dependencies.
      *
-     * @param labels     current labels, that will be displayed.
+     * @param nodes      current labels, that will be displayed.
      * @param symbols    current symbols, that will be displayed.
      * @param areaLabels current areaLabels, that will be displayed.
      */
-    void fillDependencyOnTile(List<PaintContainerPointText> labels, List<PaintContainerSymbol> symbols,
+    void fillDependencyOnTile(List<PaintContainerPointText> nodes, List<PaintContainerSymbol> symbols,
             List<PaintContainerPointText> areaLabels) {
         this.currentDependencyOnTile.drawn = true;
 
-        if ((!labels.isEmpty()) || (!symbols.isEmpty()) || (!areaLabels.isEmpty())) {
-            fillDependencyOnTilePrivate(labels, symbols, areaLabels);
+        if ((!nodes.isEmpty()) || (!symbols.isEmpty()) || (!areaLabels.isEmpty())) {
+            fillDependencyOnTilePrivate(nodes, symbols, areaLabels);
         }
 
         if (this.currentDependencyOnTile.labels != null) {
-            addLabelsFromDependencyOnTile(labels);
+            addLabelsFromDependencyOnTile(nodes);
         }
         if (this.currentDependencyOnTile.symbols != null) {
             addSymbolsFromDependencyOnTile(symbols);
@@ -757,6 +755,7 @@ class DependencyCache {
             this.dependencyTable.put(this.currentTile, new DependencyOnTile());
             this.currentDependencyOnTile = this.dependencyTable.get(this.currentTile);
         }
+        //Utils.getHandler().logD("DependencyCache", "generateTileAndDependencyOnTile(" + tile + "), size: " + dependencyTable.size());
     }
 
     /**
@@ -903,7 +902,6 @@ class DependencyCache {
         }
 
         // removes all Reverence Points that intersects with Labels from the Dependency Cache
-
         int dis = 2;
         if (this.currentDependencyOnTile != null) {
             if (this.currentDependencyOnTile.labels != null) {

@@ -80,7 +80,7 @@ public class DatabaseRenderer implements MapGenerator {
     // lock for synchronization
     private final Object lock;
     // size of current tiles
-    private final int mTileSize;
+    private final int tileSize;
     // flag is fill or not, sea areas
     private boolean mFillSeaAreas;
 
@@ -90,18 +90,18 @@ public class DatabaseRenderer implements MapGenerator {
     private File mMapFile;
 
     // currently used render theme
-    private RenderTheme mRenderTheme;
-    private RenderThemeDefinition mPreviousJobTheme;
-    private LabelPlacement mLabelPlacement;
+    private RenderTheme renderTheme;
+    private RenderThemeDefinition previousJobTheme;
+    private LabelPlacement labelPlacement;
 
     // last requested zoom level
-    private byte mLastZoomLevel;
+    private byte lastZoomLevel;
     // last requested zoom level
-    private byte mCurrentZoomLevel;
+    private byte currentZoomLevel;
     // last used text scale
-    private float mCurrentTextScale;
+    private float currentTextScale;
     // last used language
-    private String mCurrentLang;
+    private String currentLang;
 
     /**
      * Constructs a new DatabaseRenderer.
@@ -114,13 +114,13 @@ public class DatabaseRenderer implements MapGenerator {
             RenderThemeDefinition renderThemeDef,
             RenderTheme theme) {
         this.lock = new Object();
-        this.mTileSize = tileSize;
+        this.tileSize = tileSize;
         this.mapDatabases = new ArrayList<>();
 
         // set preselected render theme
         cleanup();
-        this.mPreviousJobTheme = renderThemeDef;
-        this.mRenderTheme = theme;
+        this.previousJobTheme = renderThemeDef;
+        this.renderTheme = theme;
 
         PAINT_WATER_TILE_HIGHTLIGHT.setStyle(Paint.Style.FILL);
         PAINT_WATER_TILE_HIGHTLIGHT.setColor(Color.CYAN);
@@ -128,11 +128,11 @@ public class DatabaseRenderer implements MapGenerator {
 
     @Override
     public void cleanup() {
-        this.mLabelPlacement = new LabelPlacement(mTileSize);
-        this.mLastZoomLevel = 0;
-        this.mCurrentZoomLevel = 0;
-        this.mCurrentTextScale = 1.0f;
-        this.mCurrentLang = "";
+        this.labelPlacement = new LabelPlacement(tileSize);
+        this.lastZoomLevel = 0;
+        this.currentZoomLevel = 0;
+        this.currentTextScale = 1.0f;
+        this.currentLang = "";
     }
 
     /**
@@ -152,10 +152,10 @@ public class DatabaseRenderer implements MapGenerator {
      * @return color for background
      */
     public int getBackgroundColor() {
-        if (mRenderTheme == null) {
+        if (renderTheme == null) {
             return Color.TRANSPARENT;
         }
-        return mRenderTheme.getMapBackground();
+        return renderTheme.getMapBackground();
     }
 
     @Override
@@ -167,14 +167,14 @@ public class DatabaseRenderer implements MapGenerator {
         }
 
         // store last request zoom before request will stuck on "lock"
-        mLastZoomLevel = mapGeneratorJob.tile.zoomLevel;
+        lastZoomLevel = mapGeneratorJob.tile.zoomLevel;
 
         // wait in queue and prepare renderer
         synchronized (lock) {
             // check zoom
-            if (mapGeneratorJob.tile.zoomLevel != mLastZoomLevel) {
+            if (mapGeneratorJob.tile.zoomLevel != lastZoomLevel) {
                 Utils.getHandler().logW(TAG, "executeJob(), " +
-                        "request no longer valid (zoom-diff), tile: " + (mapGeneratorJob.tile.zoomLevel) + ", lastZoom: " + mLastZoomLevel);
+                        "request no longer valid (zoom-diff), tile: " + (mapGeneratorJob.tile.zoomLevel) + ", lastZoom: " + lastZoomLevel);
                 return null;
             }
 
@@ -240,42 +240,42 @@ public class DatabaseRenderer implements MapGenerator {
         // equals, because jobTheme is singleton and in case of changed layers (MapsForge 0.5), we
         // need to reload whole theme again
         boolean forceRefreshTheme = false;
-        if (mPreviousJobTheme == null
-                || jobTheme != mPreviousJobTheme
-                || mRenderTheme == null) {
+        if (previousJobTheme == null
+                || jobTheme != previousJobTheme
+                || renderTheme == null) {
             cleanup();
-            this.mRenderTheme = Utils.getHandler().getRenderTheme(jobTheme);
+            this.renderTheme = Utils.getHandler().getRenderTheme(jobTheme);
             if (DEBUG) {
                 Utils.getHandler().logW(TAG, "prepareRenderTheme(), " +
-                        "loaded theme:" + mRenderTheme);
+                        "loaded theme:" + renderTheme);
             }
 
             // test loaded theme
-            if (mRenderTheme == null) {
-                mPreviousJobTheme = null;
+            if (renderTheme == null) {
+                previousJobTheme = null;
                 Utils.getHandler().logW("DatabaseRenderer", "prepareRenderTheme(), theme 'null'");
                 return false;
             }
 
             // set theme for usage
-            mPreviousJobTheme = jobTheme;
+            previousJobTheme = jobTheme;
             forceRefreshTheme = true;
         }
 
         // refresh theme if needed
         if (forceRefreshTheme
-                || mCurrentZoomLevel != zoomLevel
-                || mCurrentTextScale != jobParameters.textScale
-                || !mCurrentLang.equals(getFirstMapDatabaseCountryCode())) {
+                || currentZoomLevel != zoomLevel
+                || currentTextScale != jobParameters.textScale
+                || !currentLang.equals(getFirstMapDatabaseCountryCode())) {
 //            if (DEBUG) {
 //            Utils.getHandler().logW(TAG, "prepareRenderTheme(), " +
 //                    "new zoom: " + mCurrentZoomLevel + " vs " + zoomLevel + ", " +
 //                    "text scale: " + mCurrentTextScale + " vs " + jobParameters.textScale);
 //            }
             // store new values
-            mCurrentZoomLevel = zoomLevel;
-            mCurrentTextScale = jobParameters.textScale;
-            mCurrentLang = getFirstMapDatabaseCountryCode();
+            currentZoomLevel = zoomLevel;
+            currentTextScale = jobParameters.textScale;
+            currentLang = getFirstMapDatabaseCountryCode();
 //            Utils.getHandler().logW(TAG, "  set values " +
 //                    "new zoom: " + mCurrentZoomLevel + ", " +
 //                    "text scale: " + mCurrentTextScale + ", " +
@@ -283,12 +283,12 @@ public class DatabaseRenderer implements MapGenerator {
 
 
             // set Locus extended flag
-            mFillSeaAreas = mRenderTheme.isFillSeaAreas();
+            mFillSeaAreas = renderTheme.isFillSeaAreas();
         }
 
         // check theme setup. Because we may use same renderTheme in different places, it is
         // required to check theme parameters before every rendering
-        mRenderTheme.prepareTheme(mCurrentZoomLevel, mCurrentTextScale, mCurrentLang);
+        renderTheme.prepareTheme(currentZoomLevel, currentTextScale, currentLang);
 
         // valid result
         return true;
@@ -353,9 +353,9 @@ public class DatabaseRenderer implements MapGenerator {
         return ZOOM_MAX;
     }
 
-    /**************************************************/
-    /*                  VARIOUS TOOLS                 */
-    /**************************************************/
+    //*************************************************
+    // VARIOUS TOOLS
+    //*************************************************
 
     /**
      * @param mapDatabase the MapDatabase from which the map data will be read.
@@ -417,10 +417,9 @@ public class DatabaseRenderer implements MapGenerator {
         return mapDatabases.size();
     }
 
-    /**************************************************/
-    /*                 RENDERING PART                 */
-
-    /**************************************************/
+    //*************************************************
+    // RENDERING PART
+    //*************************************************
 
     public class TileRenderer implements RenderCallback {
 
@@ -531,7 +530,7 @@ public class DatabaseRenderer implements MapGenerator {
             this.mExistsDbPoi = existDbPoi;
 
             // parameters
-            canvasRasterer = new CanvasRasterer(mTileSize);
+            canvasRasterer = new CanvasRasterer(tileSize);
             bitmap = preparedImg;
 
             // containers
@@ -540,7 +539,7 @@ public class DatabaseRenderer implements MapGenerator {
             pointSymbols = new ArrayList<>(16);
 
             // generate ways container
-            this.waysArray = getWayContainerFromCache(mRenderTheme.getLevels());
+            this.waysArray = getWayContainerFromCache(renderTheme.getLevels());
 
             // basic parameters
             this.isWater = false;
@@ -548,19 +547,19 @@ public class DatabaseRenderer implements MapGenerator {
             this.renderingCompleteOnlyBg = false;
             this.isStillValid = true;
             this.cZoomLevel = currentMapTile.zoomLevel;
-            this.cPixelX = currentMapTile.tileX * mTileSize;
-            this.cPixelY = currentMapTile.tileY * mTileSize;
-            this.mapSize = MercatorProjection.getMapSize(cZoomLevel, mTileSize);
+            this.cPixelX = currentMapTile.tileX * tileSize;
+            this.cPixelY = currentMapTile.tileY * tileSize;
+            this.mapSize = MercatorProjection.getMapSize(cZoomLevel, tileSize);
 
             // prepare tile BBOX
             bboxTopE6 = (int) (MercatorProjection.pixelYToLatitude(
-                    cPixelY - mTileSize / 4.0, cZoomLevel, mTileSize, false) * 1000000.0);
+                    cPixelY - tileSize / 4.0, cZoomLevel, tileSize, false) * 1000000.0);
             bboxBottomE6 = (int) (MercatorProjection.pixelYToLatitude(
-                    cPixelY + mTileSize + mTileSize / 4.0f, cZoomLevel, mTileSize, false) * 1000000.0);
+                    cPixelY + tileSize + tileSize / 4.0f, cZoomLevel, tileSize, false) * 1000000.0);
             bboxLeftE6 = (int) (MercatorProjection.pixelXToLongitude(
-                    cPixelX - mTileSize / 4.0, cZoomLevel, mTileSize, false) * 1000000.0);
+                    cPixelX - tileSize / 4.0, cZoomLevel, tileSize, false) * 1000000.0);
             bboxRightE6 = (int) (MercatorProjection.pixelXToLongitude(
-                    cPixelX + mTileSize + mTileSize / 4.0f, cZoomLevel, mTileSize, false) * 1000000.0);
+                    cPixelX + tileSize + tileSize / 4.0f, cZoomLevel, tileSize, false) * 1000000.0);
         }
 
         /**
@@ -634,11 +633,11 @@ public class DatabaseRenderer implements MapGenerator {
         }
 
         private boolean isStillValid() {
-            if (isStillValid && mCurrentZoomLevel == cZoomLevel) {
+            if (isStillValid && currentZoomLevel == cZoomLevel) {
                 return true;
             } else {
                 Utils.getHandler().logW("DatabaseRenderer",
-                        "isStillValid(), no longer valid for " + isStillValid + ", " + mCurrentZoomLevel + ", " + cZoomLevel);
+                        "isStillValid(), no longer valid for " + isStillValid + ", " + currentZoomLevel + ", " + cZoomLevel);
                 bitmap = null;
                 return false;
             }
@@ -666,7 +665,7 @@ public class DatabaseRenderer implements MapGenerator {
             // draw content
             synchronized (lock) {
                 // handle placement
-                this.nodes = mLabelPlacement.placeLabels(
+                this.nodes = labelPlacement.placeLabels(
                         this.nodes, this.pointSymbols,
                         this.areaLabels, this.currentMapTile);
             }
@@ -675,7 +674,7 @@ public class DatabaseRenderer implements MapGenerator {
             if (!isStillValid()) return;
 
             // prepare bitmap itself
-            bitmap = Utils.getHandler().getValidImage(bitmap, mTileSize, mTileSize);
+            bitmap = Utils.getHandler().getValidImage(bitmap, tileSize, tileSize);
             Canvas canvas = new Canvas(bitmap);
             clearCanvas(canvas);
             canvasRasterer.setCustomCanvas(canvas);
@@ -710,11 +709,12 @@ public class DatabaseRenderer implements MapGenerator {
             // check validity
             if (!isStillValid()) return;
 
+            // draw labels
             this.canvasRasterer.drawNodes(this.nodes, this.areaLabels);
 
             // draw frame in debug mode
             if (mapGeneratorJob.debugSettings.drawTileFrames) {
-                this.canvasRasterer.drawTileFrame(mTileSize);
+                this.canvasRasterer.drawTileFrame(tileSize);
             }
 
             // draw coordinate labels in debug mode
@@ -765,7 +765,7 @@ public class DatabaseRenderer implements MapGenerator {
             this.mCurrentLayer = waysArray[getValidLayer(layer)];
             this.poiX = scaleLongitude(longitudeE6);
             this.poiY = scaleLatitude(latitudeE6);
-            mRenderTheme.matchNode(this, tags, cZoomLevel);
+            renderTheme.matchNode(this, tags, cZoomLevel);
         }
 
         /**
@@ -802,9 +802,9 @@ public class DatabaseRenderer implements MapGenerator {
             mShapeContainerBg = way.isFillBackground;
             mCoordinatesClosed = GeometryUtils.isClosedWay(this.coordinates[0]);
             if (mCoordinatesClosed) {
-                mRenderTheme.matchClosedWay(this, way.tags, cZoomLevel);
+                renderTheme.matchClosedWay(this, way.tags, cZoomLevel);
             } else {
-                mRenderTheme.matchLinearWay(this, way.tags, cZoomLevel);
+                renderTheme.matchLinearWay(this, way.tags, cZoomLevel);
             }
         }
 
@@ -814,11 +814,11 @@ public class DatabaseRenderer implements MapGenerator {
         private void renderWaterBackground() {
             // set parameters
             this.coordinates = new float[][]{{
-                    0, 0, mTileSize, 0, mTileSize, mTileSize, 0, mTileSize, 0, 0}};
+                    0, 0, tileSize, 0, tileSize, tileSize, 0, tileSize, 0, 0}};
             this.mShapeContainer = new ContainerWay(this.coordinates);
 
             // generate tile
-            mRenderTheme.matchClosedWay(this,
+            renderTheme.matchClosedWay(this,
                     new Tag[]{TAG_NATURAL_WATER}, cZoomLevel);
         }
 
@@ -886,12 +886,12 @@ public class DatabaseRenderer implements MapGenerator {
                     mapSize) - cPixelX);
         }
 
-        /**************************************************/
+        //*************************************************
         // RENDER CALLBACK
-
-        /**************************************************/
+        //*************************************************
 
         // AREA
+
         @Override
         public void renderArea(Paint paint, int level) {
             // count rendered ways
@@ -945,6 +945,8 @@ public class DatabaseRenderer implements MapGenerator {
                 Paint paintFill, Paint paintStroke,
                 BgRectangle bgRect, int priority, boolean forceDraw) {
             mCounterRenderPoiCaption++;
+            Utils.getHandler().logD(TAG, "renderPointOfInterestCaption(" + caption + ", " + horOffset + ", " + verOffset +
+                    ", ..., " + priority + ", " + forceDraw + ")");
             this.nodes.add(new PaintContainerPointText(
                     caption, this.poiX + horOffset, this.poiY + verOffset,
                     paintFill, paintStroke, bgRect, priority, forceDraw));

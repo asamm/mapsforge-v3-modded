@@ -31,132 +31,128 @@ import java.util.List;
 
 /**
  * A CanvasRasterer uses a Canvas for drawing.
- * 
+ *
  * @see <a href="http://developer.android.com/reference/android/graphics/Canvas.html">Canvas</a>
  */
 class CanvasRasterer {
 
-	private static final Paint PAINT_BITMAP_FILTER = new Paint(Paint.FILTER_BITMAP_FLAG);
-	private static final Paint PAINT_TILE_COORDINATES = new Paint(Paint.ANTI_ALIAS_FLAG);
-	private static final Paint PAINT_TILE_COORDINATES_STROKE = new Paint(Paint.ANTI_ALIAS_FLAG);
-	private static final Paint PAINT_TILE_FRAME = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private static final Paint PAINT_BITMAP_FILTER = new Paint(Paint.FILTER_BITMAP_FLAG);
+    private static final Paint PAINT_TILE_COORDINATES = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private static final Paint PAINT_TILE_COORDINATES_STROKE = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private static final Paint PAINT_TILE_FRAME = new Paint(Paint.ANTI_ALIAS_FLAG);
 
-	static {
-		PAINT_TILE_COORDINATES.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
-		PAINT_TILE_COORDINATES.setTextSize(20);
+    static {
+        PAINT_TILE_COORDINATES.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+        PAINT_TILE_COORDINATES.setTextSize(20);
 
-		PAINT_TILE_COORDINATES_STROKE.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
-		PAINT_TILE_COORDINATES_STROKE.setStyle(Paint.Style.STROKE);
-		PAINT_TILE_COORDINATES_STROKE.setStrokeWidth(5);
-		PAINT_TILE_COORDINATES_STROKE.setTextSize(20);
-		PAINT_TILE_COORDINATES_STROKE.setColor(Color.WHITE);
-	}
+        PAINT_TILE_COORDINATES_STROKE.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+        PAINT_TILE_COORDINATES_STROKE.setStyle(Paint.Style.STROKE);
+        PAINT_TILE_COORDINATES_STROKE.setStrokeWidth(5);
+        PAINT_TILE_COORDINATES_STROKE.setTextSize(20);
+        PAINT_TILE_COORDINATES_STROKE.setColor(Color.WHITE);
+    }
 
-	// path object
-	private final Path path;
-	// matrix for transformations
-	private final Matrix symbolMatrix;
+    // path object
+    private final Path path;
+    // matrix for transformations
+    private final Matrix symbolMatrix;
 
-	// main picture
-	private final Picture picture;
-	// canvas generated from picture
-	private Canvas canvas;
+    // main picture
+    private final Picture picture;
+    // canvas generated from picture
+    private Canvas canvas;
 
-	CanvasRasterer(int tileSize) {
-		picture = new Picture();
-		canvas = picture.beginRecording(tileSize, tileSize);
-		symbolMatrix = new Matrix();
-		path = new Path();
-		path.setFillType(Path.FillType.EVEN_ODD);
-	}
+    CanvasRasterer(int tileSize) {
+        picture = new Picture();
+        canvas = picture.beginRecording(tileSize, tileSize);
+        symbolMatrix = new Matrix();
+        path = new Path();
+        path.setFillType(Path.FillType.EVEN_ODD);
+    }
 
     void setCustomCanvas(Canvas canvas) {
         this.canvas = canvas;
     }
 
-	void finish(Canvas canvas) {
-		picture.draw(canvas);
-	}
-	
-	private void drawTileCoordinate(String string, int offsetY) {
-		canvas.drawText(string, 20, offsetY, PAINT_TILE_COORDINATES_STROKE);
-		canvas.drawText(string, 20, offsetY, PAINT_TILE_COORDINATES);
-	}
+    void finish(Canvas canvas) {
+        picture.draw(canvas);
+    }
 
-	void drawNodes(List<PaintContainerPointText> nodes, List<PaintContainerPointText> areaLabels) {
-		// merge nodes and labels
-		nodes.addAll(areaLabels);
-		Collections.sort(areaLabels);
-		
-		for (int index = nodes.size() - 1; index >= 0; --index) {
-			PaintContainerPointText ptc = nodes.get(index);
+    private void drawTileCoordinate(String string, int offsetY) {
+        canvas.drawText(string, 20, offsetY, PAINT_TILE_COORDINATES_STROKE);
+        canvas.drawText(string, 20, offsetY, PAINT_TILE_COORDINATES);
+    }
 
-			// draw background rectangle
-			if (ptc.bgRect != null) {
-				ptc.bgRect.draw(canvas, ptc);
-			}
-			
-			// draw text
-			if (ptc.paintStroke != null) {
-				this.canvas.drawText(ptc.text,
-						ptc.x, ptc.y, ptc.paintStroke);
-			}
+    void drawNodes(List<PaintContainerPointText> nodes, List<PaintContainerPointText> areaLabels) {
+        // merge nodes and labels
+        nodes.addAll(areaLabels);
+        Collections.sort(areaLabels);
 
-			this.canvas.drawText(ptc.text,
-					ptc.x, ptc.y, ptc.paintFill);
-		}
-	}
+        for (int index = nodes.size() - 1; index >= 0; --index) {
+            PaintContainerPointText ptc = nodes.get(index);
 
-	void drawSymbols(List<PaintContainerSymbol> symbolContainers) {
-//Logger.d("CanvasRasterer", "drawSymbols(), size:" + symbolContainers.size());
-		for (int index = symbolContainers.size() - 1; index >= 0; --index) {
-			PaintContainerSymbol symbolContainer = symbolContainers.get(index);
-//Logger.d("CanvasRasterer", "  symbol:" + symbolContainer.symbol + ", " + symbolContainer.x + ", " +
-//			symbolContainer.y + ", " + symbolContainer.alignCenter + ", " + symbolContainer.priority +
-//			", scale:" + symbolContainer.scale + ", rotate:" + symbolContainer.rotation);
-			symbolMatrix.reset();
-			if (symbolContainer.alignCenter) {
-				int pivotX = symbolContainer.symbol.getWidth() >> 1;
-				int pivotY = symbolContainer.symbol.getHeight() >> 1;
-				this.symbolMatrix.setRotate(symbolContainer.rotation, pivotX, pivotY);
-				this.symbolMatrix.postScale(symbolContainer.scale, symbolContainer.scale);
-				this.symbolMatrix.postTranslate(symbolContainer.x - pivotX, symbolContainer.y - pivotY);
-			} else {
-				this.symbolMatrix.setRotate(symbolContainer.rotation);
-				this.symbolMatrix.postScale(symbolContainer.scale, symbolContainer.scale);
-				this.symbolMatrix.postTranslate(symbolContainer.x, symbolContainer.y);
-			}
-			
-			// finally draw image
-			canvas.drawBitmap(symbolContainer.symbol, this.symbolMatrix, PAINT_BITMAP_FILTER);
-		}
-	}
+            // draw background rectangle
+            if (ptc.bgRect != null) {
+                ptc.bgRect.draw(canvas, ptc);
+            }
 
-	void drawTileCoordinates(Tile tile) {
-		drawTileCoordinate("X: " + tile.tileX, 30);
-		drawTileCoordinate("Y: " + tile.tileY, 60);
-		drawTileCoordinate("Z: " + tile.zoomLevel, 90);
-	}
+            // draw text
+            if (ptc.paintStroke != null) {
+                this.canvas.drawText(ptc.text,
+                        ptc.x, ptc.y, ptc.paintStroke);
+            }
 
-	void drawTileFrame(int tileSize) {
-		this.canvas.drawLines(new float[] {
-				0, 0, 0, tileSize,
-				0, tileSize, tileSize, tileSize,
-				tileSize, tileSize, tileSize, 0},
-				PAINT_TILE_FRAME);
-	}
+            this.canvas.drawText(ptc.text,
+                    ptc.x, ptc.y, ptc.paintFill);
+        }
+    }
 
-	void drawWayNames(List<PaintContainerWayText> wayTextContainers) {
-		for (int index = wayTextContainers.size() - 1; index >= 0; --index) {
-			PaintContainerWayText wtc = wayTextContainers.get(index);
-			this.path.rewind();
+    void drawSymbols(List<PaintContainerSymbol> symbolContainers) {
+        for (int index = symbolContainers.size() - 1; index >= 0; --index) {
+            PaintContainerSymbol symbolContainer = symbolContainers.get(index);
+            symbolMatrix.reset();
+            if (symbolContainer.alignCenter) {
+                int pivotX = symbolContainer.symbol.getWidth() >> 1;
+                int pivotY = symbolContainer.symbol.getHeight() >> 1;
+                this.symbolMatrix.setRotate(symbolContainer.rotation, pivotX, pivotY);
+                this.symbolMatrix.postScale(symbolContainer.scale, symbolContainer.scale);
+                this.symbolMatrix.postTranslate(symbolContainer.x - pivotX, symbolContainer.y - pivotY);
+            } else {
+                this.symbolMatrix.setRotate(symbolContainer.rotation);
+                this.symbolMatrix.postScale(symbolContainer.scale, symbolContainer.scale);
+                this.symbolMatrix.postTranslate(symbolContainer.x, symbolContainer.y);
+            }
 
-			float[] textCoordinates = wtc.coordinates;
-			this.path.moveTo(textCoordinates[0], textCoordinates[1]);
-			for (int i = 2; i < textCoordinates.length; i += 2) {
-				this.path.lineTo(textCoordinates[i], textCoordinates[i + 1]);
-			}
-//Logger.w("XXX", "drawWayNames(), wtc:" + wtc.text + ", " + wtc.coordinates + ", bgRect:" + wtc.bgRect);
+            // finally draw image
+            canvas.drawBitmap(symbolContainer.symbol, this.symbolMatrix, PAINT_BITMAP_FILTER);
+        }
+    }
+
+    void drawTileCoordinates(Tile tile) {
+        drawTileCoordinate("X: " + tile.tileX, 30);
+        drawTileCoordinate("Y: " + tile.tileY, 60);
+        drawTileCoordinate("Z: " + tile.zoomLevel, 90);
+    }
+
+    void drawTileFrame(int tileSize) {
+        this.canvas.drawLines(new float[]{
+                        0, 0, 0, tileSize,
+                        0, tileSize, tileSize, tileSize,
+                        tileSize, tileSize, tileSize, 0},
+                PAINT_TILE_FRAME);
+    }
+
+    void drawWayNames(List<PaintContainerWayText> wayTextContainers) {
+        for (int index = wayTextContainers.size() - 1; index >= 0; --index) {
+            PaintContainerWayText wtc = wayTextContainers.get(index);
+            this.path.rewind();
+
+            float[] textCoordinates = wtc.coordinates;
+            this.path.moveTo(textCoordinates[0], textCoordinates[1]);
+            for (int i = 2; i < textCoordinates.length; i += 2) {
+                this.path.lineTo(textCoordinates[i], textCoordinates[i + 1]);
+            }
+
 //			// draw background rectangle
 //			if (wtc.bgRect != null) {
 //				wtc.bgRect.draw(canvas, PointTextContainer.
@@ -164,77 +160,77 @@ class CanvasRasterer {
 //								wtc.paintStroke));
 //			}
 
-			// draw text "stroke"
-			if (wtc.paintStroke != null) {
-				this.canvas.drawTextOnPath(wtc.text, this.path,
-						wtc.horOffset, wtc.verOffset, wtc.paintStroke);
-			}
+            // draw text "stroke"
+            if (wtc.paintStroke != null) {
+                this.canvas.drawTextOnPath(wtc.text, this.path,
+                        wtc.horOffset, wtc.verOffset, wtc.paintStroke);
+            }
 
             // draw text "fill"
-			this.canvas.drawTextOnPath(wtc.text, this.path,
+            this.canvas.drawTextOnPath(wtc.text, this.path,
                     wtc.horOffset, wtc.verOffset, wtc.paintFill);
         }
-	}
+    }
 
-	private static final Object drawWaysLock = new Object();
-	
-	void drawWays(int zoomLevel, List<PaintContainerShape>[][] ways,
-			ExtraRenderingHandler extraHandler) {
-		if (extraHandler == null || !extraHandler.drawWaysSynchronized()) {
-			drawWaysPrivate(zoomLevel, ways, extraHandler);
-		} else {
-			synchronized (drawWaysLock) {
-				drawWaysPrivate(zoomLevel, ways, extraHandler);
-			}
-		}
-	}
-	
-	private void drawWaysPrivate(int zoomLevel, List<PaintContainerShape>[][] drawWays,
-			ExtraRenderingHandler extraHandler) {
-		int levelsPerLayer = drawWays[0].length;
-		for (int layer = 0, layers = drawWays.length; layer < layers; ++layer) {
-			// get required parameters for certain level
-			List<PaintContainerShape>[] shapePaintContainers = drawWays[layer];
-			boolean extraDraw = extraHandler != null &&
-					extraHandler.handleRenderWay(zoomLevel, layer);
+    private static final Object drawWaysLock = new Object();
 
-			// iterate over data in level
-			for (int level = 0; level < levelsPerLayer; ++level) {
-				List<PaintContainerShape> wayList = shapePaintContainers[level];
+    void drawWays(int zoomLevel, List<PaintContainerShape>[][] ways,
+            ExtraRenderingHandler extraHandler) {
+        if (extraHandler == null || !extraHandler.drawWaysSynchronized()) {
+            drawWaysPrivate(zoomLevel, ways, extraHandler);
+        } else {
+            synchronized (drawWaysLock) {
+                drawWaysPrivate(zoomLevel, ways, extraHandler);
+            }
+        }
+    }
 
-				for (int index = wayList.size() - 1; index >= 0; --index) {
-					PaintContainerShape shapePaintContainer = wayList.get(index);
-					this.path.rewind();
+    private void drawWaysPrivate(int zoomLevel, List<PaintContainerShape>[][] drawWays,
+            ExtraRenderingHandler extraHandler) {
+        int levelsPerLayer = drawWays[0].length;
+        for (int layer = 0, layers = drawWays.length; layer < layers; ++layer) {
+            // get required parameters for certain level
+            List<PaintContainerShape>[] shapePaintContainers = drawWays[layer];
+            boolean extraDraw = extraHandler != null &&
+                    extraHandler.handleRenderWay(zoomLevel, layer);
+
+            // iterate over data in level
+            for (int level = 0; level < levelsPerLayer; ++level) {
+                List<PaintContainerShape> wayList = shapePaintContainers[level];
+
+                for (int index = wayList.size() - 1; index >= 0; --index) {
+                    PaintContainerShape shapePaintContainer = wayList.get(index);
+                    this.path.rewind();
 
                     // prepare path
-					switch (shapePaintContainer.shape.getShapeType()) {
+                    switch (shapePaintContainer.shape.getShapeType()) {
                         case CIRCLE:
                             prepareWayShapeCircle(shapePaintContainer);
-							break;
-						case WAY:
+                            break;
+                        case WAY:
                             prepareWayShapePolyline(shapePaintContainer);
-							break;
+                            break;
                     }
-					
-					// finally draw path
-					if (extraDraw) {
-						extraHandler.renderWay(canvas, path, layer, level);
-					} else {
+
+                    // finally draw path
+                    if (extraDraw) {
+                        extraHandler.renderWay(canvas, path, layer, level);
+                    } else {
 //                        this.canvas.drawLine();
-						if (shapePaintContainer.paintBorder != null) {
-							this.canvas.drawPath(this.path, shapePaintContainer.paintBorder);
-						}
-						this.canvas.drawPath(this.path, shapePaintContainer.paint);
-					}
-				}
-			}
-			
-			// notify about end of layer
-			if (extraDraw) {
-				extraHandler.renderWayFinished(canvas, zoomLevel, layer);
-			}
-		}
-	}
+                        if (shapePaintContainer.paintBorder != null) {
+                            this.canvas.drawPath(this.path, shapePaintContainer.paintBorder);
+                        }
+                        this.canvas.drawPath(this.path, shapePaintContainer.paint);
+                    }
+                }
+            }
+
+            // notify about end of layer
+            if (extraDraw) {
+                extraHandler.renderWayFinished(canvas, zoomLevel, layer);
+            }
+        }
+    }
 
     private void prepareWayShapeCircle(PaintContainerShape shapePaintContainer) {
         ContainerCircle circleContainer = (ContainerCircle) shapePaintContainer.shape;
@@ -249,56 +245,56 @@ class CanvasRasterer {
         float[][] coordinates = wayContainer.coordinates;
 
         // iterate over all coordinates
-		for (float[] coordinate : coordinates) {
-			// make sure that the coordinates sequence is not empty
-			float[] coords = coordinate;
-			if (coords == null || coords.length <= 2) {
-				continue;
-			}
+        for (float[] coordinate : coordinates) {
+            // make sure that the coordinates sequence is not empty
+            float[] coords = coordinate;
+            if (coords == null || coords.length <= 2) {
+                continue;
+            }
 
 //			if (coords.length != 8) {
 //				continue;
 //			}
 
-			// compute parallel path
-			if (shapePaintContainer.vOffset != 0.0f) {
-				coords = computeParallelPath(coords, shapePaintContainer.vOffset);
-			}
+            // compute parallel path
+            if (shapePaintContainer.vOffset != 0.0f) {
+                coords = computeParallelPath(coords, shapePaintContainer.vOffset);
+            }
 
-			// iterate over lines based on curveStyle
-			if (shapePaintContainer.curveStyle == CurveStyle.CUBIC) {
-				// prepare variables
-				float[] p1 = new float[]{coords[0], coords[1]};
-				float[] p2 = new float[]{0.0f, 0.0f};
-				float[] p3 = new float[]{0.0f, 0.0f};
+            // iterate over lines based on curveStyle
+            if (shapePaintContainer.curveStyle == CurveStyle.CUBIC) {
+                // prepare variables
+                float[] p1 = new float[]{coords[0], coords[1]};
+                float[] p2 = new float[]{0.0f, 0.0f};
+                float[] p3 = new float[]{0.0f, 0.0f};
 
-				// add first point
-				this.path.moveTo(p1[0], p1[1]);
-				for (int i = 1; i < coords.length / 2; i++) {
-					// get ending coordinates
-					p3[0] = coords[2 * i];
-					p3[1] = coords[2 * i + 1];
-					p2[0] = (p1[0] + p3[0]) / 2.0f;
-					p2[1] = (p1[1] + p3[1]) / 2.0f;
+                // add first point
+                this.path.moveTo(p1[0], p1[1]);
+                for (int i = 1; i < coords.length / 2; i++) {
+                    // get ending coordinates
+                    p3[0] = coords[2 * i];
+                    p3[1] = coords[2 * i + 1];
+                    p2[0] = (p1[0] + p3[0]) / 2.0f;
+                    p2[1] = (p1[1] + p3[1]) / 2.0f;
 
-					// add spline over middle point and end on 'end' point
-					this.path.quadTo(p1[0], p1[1], p2[0], p2[1]);
+                    // add spline over middle point and end on 'end' point
+                    this.path.quadTo(p1[0], p1[1], p2[0], p2[1]);
 
-					// store end point as start point for next section
-					p1[0] = p3[0];
-					p1[1] = p3[1];
-				}
+                    // store end point as start point for next section
+                    p1[0] = p3[0];
+                    p1[1] = p3[1];
+                }
 
-				// add last segment
-				this.path.quadTo(p2[0], p2[1], p3[0], p3[1]);
-			} else {
-				// construct line
-				this.path.moveTo(coords[0], coords[1]);
-				for (int i = 1; i < coords.length / 2; i++) {
-					this.path.lineTo(coords[2 * i], coords[2 * i + 1]);
-				}
-			}
-		}
+                // add last segment
+                this.path.quadTo(p2[0], p2[1], p3[0], p3[1]);
+            } else {
+                // construct line
+                this.path.moveTo(coords[0], coords[1]);
+                for (int i = 1; i < coords.length / 2; i++) {
+                    this.path.lineTo(coords[2 * i], coords[2 * i + 1]);
+                }
+            }
+        }
     }
 
     /**
@@ -332,14 +328,14 @@ class CanvasRasterer {
         for (int k = 2; k < n; k += 2) {
             float l = dy / (1 + u[k] * u[k - 2] + u[k + 1] * u[k - 1]);
 
-			// reduce huge values on angles close to 180°
-			if (l > 1000.0f) {
-				l = 1000.0f;
-			} else if (l < -1000.0f) {
-				l = -1000.0f;
-			}
+            // reduce huge values on angles close to 180°
+            if (l > 1000.0f) {
+                l = 1000.0f;
+            } else if (l < -1000.0f) {
+                l = -1000.0f;
+            }
 
-			// compute intersection values
+            // compute intersection values
             h[k] = p[k] - l * (u[k + 1] + u[k - 1]);
             h[k + 1] = p[k + 1] + l * (u[k] + u[k - 2]);
         }
