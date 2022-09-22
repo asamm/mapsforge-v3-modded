@@ -1270,7 +1270,14 @@ version 2.4.0
 						</rule>
 									
 						<rule e="way" k="*" v="*" zoom-min="13"  >
-							<rule e="way" k="highway" v="tertiary|raceway" zoom-max="15"  >
+							<rule e="way" k="highway" v="raceway" zoom-min="14" zoom-max="14"  >
+								<line stroke="#d5d5d5" stroke-width="1dp" stroke-linecap="butt" />
+							</rule>	
+							<rule e="way" k="highway" v="raceway" zoom-min="15" zoom-max="15"  >
+								<line stroke="#707070" stroke-width="1.5dp" stroke-linecap="butt" />
+							</rule>	
+							
+							<rule e="way" k="highway" v="tertiary" zoom-max="15"  >
 								<line stroke="#707070" stroke-width="1.8dp" stroke-linecap="butt" />
 							</rule>								
 							<rule e="way" k="highway" v="tertiary_link">
@@ -2101,7 +2108,7 @@ version 2.4.0
 					
 					<!-- === TOPO core highways for 12-13 -->
 					<rule e="way" k="*" v="*" zoom-min="12" zoom-max="13"  >
-						<rule e="way" k="highway" v="tertiary|raceway" zoom-max="12">
+						<rule e="way" k="highway" v="tertiary" zoom-max="12">
 							<line stroke="#B4B4B4" stroke-width="0.8dp" /> <!-- tertiary in level=12 without outline -->
 						</rule>						
 						<rule e="way" k="highway" v="secondary">
@@ -2124,9 +2131,9 @@ version 2.4.0
 						</rule>
 					</rule>	
 					
-					<rule e="way" k="*" v="*" zoom-min="13" >
+					<rule e="way" k="*" v="*" zoom-min="13" >					
 					
-						<rule e="way" k="highway" v="tertiary|raceway" zoom-max="13">
+						<rule e="way" k="highway" v="tertiary" zoom-max="13">
 							<line stroke="#FFFEE6" stroke-width="1dp" />
 						</rule>							
 						<rule e="way" k="highway" v="tertiary_link">
@@ -2164,8 +2171,11 @@ version 2.4.0
 							</rule>
 							<rule e="way" k="highway" v="motorway_link">
 								<line stroke="#F7F008" stroke-width="1.4dp" />
-							</rule>	
-							<rule e="way" k="highway" v="tertiary|raceway">
+							</rule>
+							<rule e="way" k="highway" v="raceway" zoom-min="15">
+								<line stroke="#fff6e6" stroke-width="0.8dp" />
+							</rule>								
+							<rule e="way" k="highway" v="tertiary">
 								<line stroke="#FFFEE6" stroke-width="1dp" />
 							</rule>														
 							<rule e="way" k="highway" v="secondary"  >
@@ -2230,7 +2240,12 @@ version 2.4.0
 						<rule e="way" k="highway" v="motorway_link">
 							<line stroke="#F7F008" stroke-width="1.2dp" />
 						</rule>	
-						<rule e="way" k="highway" v="tertiary|raceway">
+						
+						<rule e="way" k="highway" v="raceway">
+							<line stroke="#fff6e6" stroke-width="1dp" />
+							<pathText dx="20" k="name"  font-style="bold" font-size="6dp" scale-font-size="15,1.15" stroke="#FFFFFF" stroke-width="4.0dp" />
+						</rule>
+						<rule e="way" k="highway" v="tertiary">
 							<line stroke="#FFFEE6" stroke-width="1dp" />
 							<pathText dx="20" k="name"  font-style="bold" font-size="6dp" scale-font-size="15,1.15" stroke="#FFFFFF" stroke-width="4.0dp" />
 						</rule>
