@@ -773,6 +773,7 @@
 		<osm-tag key="piste:type" value="downhill" zoom-appear="13" />
 		<osm-tag key="piste:type" value="hike" zoom-appear="13" />
 		<osm-tag key="piste:type" value="nordic" zoom-appear="13" />
+		<osm-tag key="piste:type" value="nordic;skitour" zoom-appear="13" />
 		<osm-tag key="piste:type" value="skitour" zoom-appear="13" />
 		<osm-tag key="piste:type" value="sled" zoom-appear="13" />
 		
