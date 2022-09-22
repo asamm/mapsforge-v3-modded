@@ -208,6 +208,7 @@
 		<osm-tag key="natural" value="mountain_range" zoom-appear="12" />
 		<osm-tag key="natural" value="peak" zoom-appear="12" />
 		<osm-tag key="natural" value="rock" zoom-appear="14" />
+		<osm-tag key="natural" value="sinkhole" zoom-appear="14" />
 		<osm-tag key="natural" value="sand" zoom-appear="14" />
 		<osm-tag key="natural" value="sea" zoom-appear="0" />
 		<osm-tag key="natural" value="spring" zoom-appear="14" />
@@ -344,6 +345,7 @@
 		<osm-tag key="highway" value="bus_guideway" zoom-appear="13" />
 		<osm-tag key="highway" value="bus_stop" zoom-appear="15" />
 		<osm-tag key="highway" value="byway" zoom-appear="13" />
+		<osm-tag key="highway" value="corridor" zoom-appear="15" />
 		<osm-tag key="highway" value="construction" zoom-appear="13" />
 		<osm-tag key="highway" value="cycleway" zoom-appear="13" />
 		<osm-tag key="highway" value="footway" zoom-appear="13" />
@@ -414,6 +416,7 @@
 		<osm-tag key="natural" value="scree" zoom-appear="13" />
 		<osm-tag key="natural" value="scrub" zoom-appear="10" />
 		<osm-tag key="natural" value="sea" zoom-appear="0" />
+		<osm-tag key="natural" value="sinkhole" zoom-appear="14" />
 		<osm-tag key="natural" value="shingle" zoom-appear="13" />
 		<osm-tag key="natural" value="spring" zoom-appear="14" />
 		<osm-tag key="natural" value="stone" zoom-appear="14" />
@@ -450,7 +453,7 @@
 		<osm-tag key="region:type" value="mountain_area" zoom-appear="12" />
 		<osm-tag key="region:type" value="mountain_range" zoom-appear="12" />
 		
-		<osm-tag key="place" value="island" zoom-appear="10" />
+		<osm-tag key="place" value="island" zoom-appear="10" renderable="false" />
 	</ways>
 
 	<!-- LANDUSE TAGS -->
@@ -733,6 +736,11 @@
 		<osm-tag key="building" value="warehouse" zoom-appear="15" />
 		<osm-tag key="building" value="water_tower" zoom-appear="15" />
 		<osm-tag key="building" value="yes" zoom-appear="15" />
+		
+		<!-- INDOOR PATH -->
+		<osm-tag key="indoor" value="yes" zoom-appear="15" />
+		<osm-tag key="indoor" value="corridor" zoom-appear="15" />
+		
 	</ways>
 
 	<!-- 	ISTRATIVE BOUNDARIES -->
@@ -812,6 +820,12 @@
 		
 		<osm-tag key="aerialway" value="goods" zoom-appear="12" />
 	</ways>
+	
+	<!-- snow mobiles -->
+	<ways>
+		<osm-tag key="snowmobile" value="designated" zoom-appear="13" />
+		<osm-tag key="snowmobile" value="yes" zoom-appear="13" />		
+	</ways>
 
 	<!-- OTHER TAGS -->
 	<ways>
@@ -850,6 +864,7 @@
 		<osm-tag key="man_made" value="lighthouse" zoom-appear="13" />
 		<osm-tag key="man_made" value="mineshaft" zoom-appear="14" />
 		<osm-tag key="man_made" value="pier" zoom-appear="15" />
+		<osm-tag key="man_made" value="spoil_heap" zoom-appear="14" />
 		<osm-tag key="man_made" value="surveillance" zoom-appear="17" />
 		<osm-tag key="man_made" value="survey_point" zoom-appear="14" />
 		<osm-tag key="man_made" value="tower" zoom-appear="13" />
@@ -940,6 +955,7 @@
 		<osm-tag key="tunnel" value="yes" renderable="false" />
 		<osm-tag key="tunnel" value="no" renderable="false" />
 		<osm-tag key="tunnel" value="culvert" renderable="false" />
+		<osm-tag key="tunnel" value="building_passage" renderable="false" />
 		<!--   wood=coniferous/deciduous/mixed is already depricated but keep it for some time in the map -->
 		<osm-tag key="wood" value="coniferous" renderable="false" />
 		<osm-tag key="wood" value="deciduous" renderable="false" />
