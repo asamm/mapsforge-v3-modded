@@ -676,7 +676,7 @@ version 2.4.0
 		
 		<rule e="way" k="landuse|natural" v="reservoir|basin|water" zoom-min="8">
 			<area fill="#9CC9E8" />
-			<rule e="way" k="*" v="*" zoom-min="14">
+			<rule e="way" k="*" v="*" zoom-min="15">
 				<caption k="name" font-style="bold_italic" font-size="8dp" scale-font-size="17,1.2" fill="#4f9cbf" stroke="#ffffff" stroke-width="2dp"/>
 			</rule>					
 		</rule>
@@ -834,9 +834,10 @@ version 2.4.0
 			</rule>
 		</rule>					
 		<rule e="way" k="military" v="*" zoom-min="13">
-			<rule e="way" k="military" v="airfield|naval_base" >
+			<rule e="way" k="military" v="airfield|naval_base|danger_area" >
 				<area fill="#25E57A7A"   />
-			</rule>	
+			</rule>		
+			
 			<rule e="way" k="*" v="*" zoom-min="16">
 				<caption k="name" dy="15dp" font-style="bold" font-size="10dp" scale-font-size="16,1.15" fill="#925e5a" stroke="#ffffff" stroke-width="1dp"   />
 			</rule>	
