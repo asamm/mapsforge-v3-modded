@@ -52,6 +52,11 @@ version 2.4.0
 		<cat id="pistes_nordic" />
 	</layer>
 	
+	<layer id="snowmobiles" enabled="true" visible="false">
+		<name lang="en" value="snowmobile_trails" />
+		<cat id="snowmobiles" />
+	</layer>
+	
 	<!-- LAYER CAR -->
 	<layer id="pub_rest_car" enabled="true" visible="false">
 		<name lang="en" value="food_drink" />
@@ -122,12 +127,14 @@ version 2.4.0
 		<cat id="pistes" />
 		<cat id="health_topo" />		
 		<cat id="shopping_topo" />
+		<cat id="snowmobiles_cat" />
 		<cat id="tourism_topo" />
 		<cat id="transportation_topo" />
 		
 		
 		<overlay id="pub_rest_topo" />
 		<overlay id="pistes_nordic" />
+		<overlay id="snowmobiles" />
 	</layer>
 
 </stylemenu>	
@@ -1270,10 +1277,7 @@ version 2.4.0
 						</rule>
 									
 						<rule e="way" k="*" v="*" zoom-min="13"  >
-							<rule e="way" k="highway" v="raceway" zoom-min="14" zoom-max="14"  >
-								<line stroke="#d5d5d5" stroke-width="1dp" stroke-linecap="butt" />
-							</rule>	
-							<rule e="way" k="highway" v="raceway" zoom-min="15" zoom-max="15"  >
+							<rule e="way" k="highway" v="raceway" zoom-min="14" zoom-max="15"  >
 								<line stroke="#707070" stroke-width="1.5dp" stroke-linecap="butt" />
 							</rule>	
 							
@@ -2172,7 +2176,7 @@ version 2.4.0
 							<rule e="way" k="highway" v="motorway_link">
 								<line stroke="#F7F008" stroke-width="1.4dp" />
 							</rule>
-							<rule e="way" k="highway" v="raceway" zoom-min="15">
+							<rule e="way" k="highway" v="raceway" zoom-min="14">
 								<line stroke="#fff6e6" stroke-width="0.8dp" />
 							</rule>								
 							<rule e="way" k="highway" v="tertiary">
@@ -3044,7 +3048,45 @@ version 2.4.0
 				<line stroke="#4F4F4F" stroke-width="0.15dp" stroke-linecap="butt" />
 				<line stroke="#4F4F4F" dy="0.9dp" stroke-width="0.2dp" stroke-dasharray="0.6,3" stroke-linecap="butt" />
 			</rule>
-		</rule>		
+		</rule>	
+
+		<!-- Snowmobile for WINTER -->
+		<rule cat="snowmobiles" e="way" k="snowmobile" v="designated" zoom-min="13" >
+						
+			<lineSymbol src="file:/symbols/ic_snowmobile.svg" dy="16dp" repeat="true"  repeat-gap="400dp" symbol-width="18dp"   scale-icon-size="17,1.15" />
+			
+			<rule e="way" k="ice_road" v="yes" >
+			
+				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
+					<line stroke="#90ee7e00" stroke-width="1.2dp" stroke-dasharray="13,9" /> 
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16">
+					<line stroke="#90ee7e00" stroke-width="1.1dp"  stroke-dasharray="12,10" /> 							
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="17" zoom-max="18">
+					<line stroke="#90ee7e00" stroke-width="1dp"  stroke-dasharray="13,10" /> 							
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="19">
+					<line stroke="#90ee7e00" stroke-width="0.9dp"  stroke-dasharray="10,9" /> 							
+				</rule>
+			</rule>
+			
+			<rule e="way" k="ice_road" v="~" >
+			
+				<rule e="way" k="*" v="*" zoom-max="15">
+					<line stroke="#90ee7e00" stroke-width="1.2dp" /> 
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16">
+					<line stroke="#90ee7e00" stroke-width="1.1dp" /> 							
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="17" zoom-max="18">
+					<line stroke="#90ee7e00" stroke-width="1.0dp" /> 							
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="19">
+					<line stroke="#90ee7e00" stroke-width="0.9dp" /> 							
+				</rule>
+			</rule>
+		</rule>
 		
 		<!-- pistes for WINTER -->
 		<rule cat="pistes" e="way" k="piste:type" v="*" >
