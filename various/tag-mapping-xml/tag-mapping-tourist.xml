@@ -437,6 +437,7 @@
 		<osm-tag key="waterway" value="stream" zoom-appear="13" />
 		<osm-tag key="waterway" value="waterfall" zoom-appear="13" />
 		<osm-tag key="waterway" value="weir" zoom-appear="14" />
+		<osm-tag key="intermittent" value="yes" zoom-appear="14" renderable="false"/>
 		
 		<!-- more detailed natural=wetland -->
 		<osm-tag key="wetland" value="bog" zoom-appear="13" />
