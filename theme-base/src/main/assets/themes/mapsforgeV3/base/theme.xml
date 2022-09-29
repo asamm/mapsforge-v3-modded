@@ -233,17 +233,17 @@ version 2.4.0
 				<rule e="way" k="*" v="*"  zoom-max="13">
 					<area fill="#cce1b2" /> 
 				</rule>
-				<rule e="way" k="natural|landuse|wood" v="forest|wood" zoom-min="14">
+				<rule e="way" k="natural|landuse" v="forest|wood" zoom-min="14">
 					<area fill="#80a0ca6c" /> 
-					<rule e="way" k="wood" v="*" zoom-min="16">
-						<rule e="way" k="wood" v="coniferous">
-							<area src="file:/patterns/wood_coniferous_transparent.svg" scale-icon-size="17,1.15" symbol-width="16dp" />
+					<rule e="way" k="leaf_type" v="*" zoom-min="16">
+						<rule e="way" k="leaf_type" v="needleleaved">
+							<area src="file:/patterns/wood_coniferous_transparent.svg" scale-icon-size="17,1.15" symbol-width="32dp" />
 						</rule>
-						<rule e="way" k="wood" v="deciduous">
-							<area src="file:/patterns/wood_deciduous_transparent.svg" scale-icon-size="17,1.15" symbol-width="16dp" />
+						<rule e="way" k="leaf_type" v="broadleaved">
+							<area src="file:/patterns/wood_deciduous_transparent.svg" scale-icon-size="17,1.15" symbol-width="32dp" />
 						</rule>
-						<rule e="way" k="wood" v="mixed">
-							<area src="file:/patterns/wood_mixed_transparent.svg" scale-icon-size="17,1.15" symbol-width="16dp" />
+						<rule e="way" k="leaf_type" v="mixed">
+							<area src="file:/patterns/wood_mixed_transparent.svg" scale-icon-size="17,1.15" symbol-width="32dp" />
 						</rule>
 					</rule>					
 				</rule>
@@ -692,36 +692,58 @@ version 2.4.0
 	
 			<!-- waterway cores -->
 			<rule e="way" k="tunnel" v="~|no|false">
-				<rule e="way" k="waterway" v="drain|ditch">
-					<line stroke="#9CC9E8" stroke-width="0.6dp" />
-				</rule>		
-				<rule e="way" k="waterway" v="canal">
-					<rule e="way" k="*" v="*" zoom-min="10" zoom-max="13">
-						<line stroke="#9CC9E8" stroke-width="0.8dp" />
+				<!-- standard rivers, stream, etc -->
+				<rule e="way" k="intermittent" v="~|no|false">
+					<rule e="way" k="waterway" v="drain|ditch">
+						<line stroke="#9CC9E8" stroke-width="0.6dp" />
+					</rule>		
+					<rule e="way" k="waterway" v="canal">
+						<rule e="way" k="*" v="*" zoom-min="10" zoom-max="13">
+							<line stroke="#9CC9E8" stroke-width="0.8dp" />
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="14">
+							<line stroke="#9CC9E8" stroke-width="1dp" />
+							<pathText k="name" font-style="bold_italic" font-size="9dp" scale-font-size="15,1.15" fill="#4f9cbf" stroke="#ffffff" stroke-width="2.5dp" />
+						</rule>
 					</rule>
-					<rule e="way" k="*" v="*" zoom-min="14">
-						<line stroke="#9CC9E8" stroke-width="1dp" />
-						<pathText k="name" font-style="bold_italic" font-size="9dp" scale-font-size="15,1.15" fill="#4f9cbf" stroke="#ffffff" stroke-width="2.5dp" />
+					<rule e="way" k="waterway" v="stream" zoom-min="13">
+						<rule e="way" k="*" v="*" zoom-min="13" zoom-max="14">
+							<line stroke="#9CC9E8" stroke-width="0.5dp" curve="cubic" />
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="15">
+							<line stroke="#9CC9E8" stroke-width="0.3dp" curve="cubic" />
+							<pathText k="name" font-style="bold_italic" font-size="8dp" dy="-8" scale-font-size="15,1.15" fill="#4f9cbf" stroke="#ffffff" stroke-width="2dp" />
+						</rule>
+					</rule>
+					<rule e="way" k="waterway" v="river">
+						<rule e="way" k="*" v="*" zoom-min="9" zoom-max="13">
+							<line stroke="#9CC9E8" stroke-width="0.8dp" />
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="14">
+							<line stroke="#9CC9E8" stroke-width="1.3dp" />
+							<pathText k="name" font-style="bold_italic" font-size="11dp" scale-font-size="15,1.15" fill="#4f9cbf" stroke="#ffffff" stroke-width="2.5dp" />
+						</rule>
 					</rule>
 				</rule>
-				<rule e="way" k="waterway" v="stream" zoom-min="13">
-					<rule e="way" k="*" v="*" zoom-min="13" zoom-max="14">
-						<line stroke="#9CC9E8" stroke-width="0.5dp" curve="cubic" />
-					</rule>
-					<rule e="way" k="*" v="*" zoom-min="15">
-						<line stroke="#9CC9E8" stroke-width="0.3dp" curve="cubic" />
-						<pathText k="name" font-style="bold_italic" font-size="8dp" dy="-8" scale-font-size="15,1.15" fill="#4f9cbf" stroke="#ffffff" stroke-width="2dp" />
+				
+				<!-- Intermittent water -->
+				<rule e="way" k="intermittent" v="yes">
+					<rule e="way" k="waterway" v="drain|ditch|stream">
+						<line stroke="#9CC9E8" stroke-width="0.3dp" stroke-dasharray="5,5" stroke-linecap="butt" />	
+					</rule>	
+					<rule e="way" k="waterway" v="river|canal">
+						<rule e="way" k="*" v="*" zoom-min="14">
+							<rule e="way" k="*" v="*" zoom-max="16">
+								<line stroke="#9CC9E8" stroke-width="0.6dp" stroke-dasharray="7,6" stroke-linecap="butt" />
+							</rule>
+							<rule e="way" k="*" v="*" zoom-min="17">
+								<line stroke="#9CC9E8" stroke-width="0.6dp" stroke-dasharray="10,9" stroke-linecap="butt" />
+							</rule>
+							<pathText k="name" font-style="bold_italic" font-size="11dp" scale-font-size="15,1.15" fill="#4f9cbf" stroke="#ffffff" stroke-width="2dp" />
+						</rule>
 					</rule>
 				</rule>
-				<rule e="way" k="waterway" v="river">
-					<rule e="way" k="*" v="*" zoom-min="9" zoom-max="13">
-						<line stroke="#9CC9E8" stroke-width="0.8dp" />
-					</rule>
-					<rule e="way" k="*" v="*" zoom-min="14">
-						<line stroke="#9CC9E8" stroke-width="1.3dp" />
-						<pathText k="name" font-style="bold_italic" font-size="11dp" scale-font-size="15,1.15" fill="#4f9cbf" stroke="#ffffff" stroke-width="2.5dp" />
-					</rule>
-				</rule>
+				
 			</rule>
 			<!-- waterway bridges-->
 			<rule e="way" k="bridge" v="yes|aqueduct|movable" zoom-min="15">
@@ -742,7 +764,7 @@ version 2.4.0
 				</rule>	
 				<rule e="way" k="waterway" v="river|canal">
 					<rule e="way" k="*" v="*" zoom-min="14">
-						<line stroke="#9CC9E8" stroke-width="0.6dp" stroke-dasharray="1,7"  />
+						<line stroke="#9CC9E8" stroke-width="0.6dp" stroke-dasharray="1,7" />
 						<pathText k="name" font-style="bold_italic" font-size="11dp" scale-font-size="15,1.15" fill="#4f9cbf" stroke="#ffffff" stroke-width="2dp" />
 					</rule>
 				</rule>
@@ -770,7 +792,6 @@ version 2.4.0
 			</rule>	
 		</rule>	 <!-- end of water -->	
 		
-
 				
 		<!-- wetland -->
 		<rule cat="base_topo" e="way" k="natural|wetland" v="*" zoom-min="13">	
@@ -3178,7 +3199,7 @@ version 2.4.0
 					<line stroke="#77BF79" stroke-width="0.9dp" />
 				</rule>
 			</rule>
-			<rule cat="pistes_nordic" e="way" k="piste:type" v="nordic|alpine" >
+			<rule cat="pistes_nordic" e="way" k="piste:type" v="nordic|alpine|nordic;skitour" >
 				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
 					<rule e="way" k="piste:difficulty" v="novice|easy|intermediate">					
 						<rule e="way" k="*" v="classic|classic+skating|classic;skating|skating"  >
@@ -4865,6 +4886,9 @@ version 2.4.0
 		<rule e="any" k="natural" v="rock" zoom-min="15" >
 			<symbol src="file:/symbols/db_poi_rock.svg" symbol-width="14dp" scale-icon-size="17,1.15" />
 		</rule>
+		<rule e="any" k="natural" v="sinkhole" zoom-min="15"  >
+			<symbol src="file:/symbols/db_poi_sinkhole.svg" symbol-width="14dp" scale-icon-size="17,1.15" />
+		</rule>	
 		<rule e="any" k="natural" v="stone" zoom-min="15"  >
 			<symbol src="file:/symbols/db_poi_stone.svg" symbol-width="12dp" scale-icon-size="17,1.15" />
 		</rule>		
