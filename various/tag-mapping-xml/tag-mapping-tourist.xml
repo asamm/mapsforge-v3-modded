@@ -226,9 +226,6 @@
 		<osm-tag key="waterway" value="drain" zoom-appear="13" />
 		<osm-tag key="waterway" value="waterfall" zoom-appear="13" />
 		<osm-tag key="waterway" value="weir" zoom-appear="14" />
-		
-		<osm-tag key="wood" value="coniferous" renderable="false" />
-		<osm-tag key="wood" value="mixed" renderable="false" />
 	</pois>
 
 	<!-- OTHER POIS -->
@@ -957,10 +954,6 @@
 		<osm-tag key="tunnel" value="no" renderable="false" />
 		<osm-tag key="tunnel" value="culvert" renderable="false" />
 		<osm-tag key="tunnel" value="building_passage" renderable="false" />
-		<!--   wood=coniferous/deciduous/mixed is already depricated but keep it for some time in the map -->
-		<osm-tag key="wood" value="coniferous" renderable="false" />
-		<osm-tag key="wood" value="deciduous" renderable="false" />
-		<osm-tag key="wood" value="mixed" renderable="false" />
 		
 		<osm-tag key="leaf_type" value="broadleaved" renderable="false" />
 		<osm-tag key="leaf_type" value="needleleaved" renderable="false" />
