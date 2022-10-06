@@ -945,8 +945,8 @@ public class DatabaseRenderer implements MapGenerator {
                 Paint paintFill, Paint paintStroke,
                 BgRectangle bgRect, int priority, boolean forceDraw) {
             mCounterRenderPoiCaption++;
-            Utils.getHandler().logD(TAG, "renderPointOfInterestCaption(" + caption + ", " + horOffset + ", " + verOffset +
-                    ", ..., " + priority + ", " + forceDraw + ")");
+//            Utils.getHandler().logD(TAG, "renderPointOfInterestCaption(" + caption + ", " + horOffset + ", " + verOffset +
+//                    ", ..., " + priority + ", " + forceDraw + ")");
             this.nodes.add(new PaintContainerPointText(
                     caption, this.poiX + horOffset, this.poiY + verOffset,
                     paintFill, paintStroke, bgRect, priority, forceDraw));
