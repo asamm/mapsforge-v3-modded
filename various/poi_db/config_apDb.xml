@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <pois>
+
+        <!-- ======= ACCOMODATION ======= -->
+
+        <folder name="accommodation">
+            <sub-folder name="alpine_hut">
+                <tag key="tourism" value="alpine_hut" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="camp_caravan">
+                <tag key="tourism" value="camp_site" type="poi,way" />
+                <tag key="tourism" value="caravan_site" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="motel">
+                <tag key="tourism" value="motel" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="hostel">
+                <tag key="tourism" value="hostel" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="hotel">
+                <tag key="tourism" value="hotel" type="poi,way" />
+            </sub-folder>
+			
+			<sub-folder name="guest_house_chalet">
+                <tag key="tourism" value="guest_house" type="poi,way" />
+				<tag key="tourism" value="chalet" type="poi,way" />
+            </sub-folder>
+        </folder>
+
+        <!-- ======= FINANCIAL & POST SERVICES ======= -->
+
+        <folder name="financial_post_services">
+            <sub-folder name="bank">
+                <tag key="amenity" value="bank" type="poi,way" />
+            </sub-folder>
+            <sub-folder name="exchange">
+                <tag key="amenity" value="bureau_de_change" type="poi" />
+            </sub-folder>
+            <sub-folder name="atm">
+                <tag key="amenity" value="atm" type="poi" />
+            </sub-folder>
+            <sub-folder name="post_office">
+                <tag key="amenity" value="post_office" type="poi,way" />
+            </sub-folder>
+            <sub-folder name="post_box">
+                <tag key="amenity" value="post_box" type="poi" />
+            </sub-folder>
+        </folder>
+
+        <!-- ======= CULTURE & TOURISM ======= -->
+
+        <folder name="culture_tourism">
+            <sub-folder name="info">
+                <tag key="information" value="office" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="museum">
+                <tag key="tourism" value="museum" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="cinema">
+                <tag key="amenity" value="cinema" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="theatre">
+                <tag key="amenity" value="theatre" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="castle_ruin_monument">
+                <tag key="historic" value="castle" type="poi,way" />
+                <tag key="historic" value="memorial" type="poi,way" />
+                <tag key="historic" value="monument" type="poi,way" />
+                <tag key="historic" value="ruins" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="attraction">
+                <tag key="tourism" value="attraction" type="poi,way" />
+                <tag key="tourism" value="zoo" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="toilets">
+                <tag key="amenity" value="toilets" type="poi,way" />
+            </sub-folder>
+
+        </folder>
+
+        <!-- ======= PUBLIC SERVICES ======= -->
+
+        <folder name="public_services">
+            <sub-folder name="townhall">
+				<tag key="amenity" value="townhall" type="poi,way" /> 
+            </sub-folder>
+
+            <sub-folder name="library">
+				<tag key="amenity" value="library" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="education">
+<!--                <tag key="amenity" value="kindergarten" type="poi,way" /> Deleted first revision 2014-10-24 -->
+<!--               <tag key="amenity" value="college" type="poi,way" /> Deleted first revision 2014-10-24 -->
+<!--               <tag key="amenity" value="school" type="poi,way" />Deleted first revision 2014-10-24 -->
+                <tag key="amenity" value="university" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="embassy">
+                <tag key="amenity" value="embassy" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="telephone">
+<!--                <tag key="amenity" value="telephone" type="poi,way" /> Deleted first revision 2014-10-24 -->
+            </sub-folder>
+
+            <sub-folder name="grave_yard">
+                <tag key="landuse" value="cemetery" type="way" /> 
+				<tag key="amenity" value="grave_yard" type="poi,way" />
+            </sub-folder>
+
+        </folder>
+
+        <!-- ======= HIKING & CYCLING ======= -->
+
+        <folder name="hiking_cycling">
+            <sub-folder name="bicycle_parking">
+                <tag key="amenity" value="bicycle_parking" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="guidepost">
+                <tag key="information" value="guidepost" type="poi" />
+            </sub-folder>
+
+            <sub-folder name="map">
+<!--                <tag key="information" value="map" type="poi" /> Deleted first revision 2014-10-24 -->
+            </sub-folder>
+
+            <sub-folder name="picnic_site">
+                <tag key="tourism" value="picnic_site" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="shelter">
+                <tag key="amenity" value="shelter" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="viewpoint">
+                <tag key="tourism" value="viewpoint" type="poi,way" />
+            </sub-folder>
+        </folder>
+
+        <!-- ======= NATURE ======= -->
+
+        <folder name="nature">
+            <sub-folder name="protected_area">
+                <tag key="boundary" value="protected_area" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="peak">
+                <tag key="natural" value="peak" type="poi" />
+            </sub-folder>
+
+            <sub-folder name="spring">
+                <tag key="natural" value="spring" type="poi" />
+            </sub-folder>
+
+            <sub-folder name="mine_cave">
+                <tag key="man_made" value="adit" type="poi" />
+                <tag key="man_made" value="mineshaft" type="poi,way" />
+                <tag key="natural" value="cave_entrance" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="glacier">
+                <tag key="natural" value="glacier" type="poi,way" />
+            </sub-folder>
+        </folder>
+
+        <!-- ======= EMERGENCY & HEALTH ======= -->
+
+        <folder name="emergency_health">
+            <sub-folder name="fire_station">
+                <tag key="amenity" value="fire_station" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="police">
+                <tag key="amenity" value="police" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="doctor_dentist">
+                <tag key="amenity" value="doctors" type="poi,way" />
+                <tag key="amenity" value="dentist" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="hospital_clinic">
+                <tag key="amenity" value="hospital" type="poi,way" />
+                <tag key="amenity" value="clinic" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="veterinary">
+                <tag key="amenity" value="veterinary" type="poi,way" />
+            </sub-folder>
+        </folder>
+
+
+        <!-- ======= RELIGION ======= -->
+
+        <folder name="place_of_worship">
+
+            <sub-folder name="buddhist">
+                <tag key="religion" value="buddhist" type="poi,way" />
+            </sub-folder>
+            <sub-folder name="christian">
+                <tag key="religion" value="christian" type="poi,way" />
+            </sub-folder>
+            <sub-folder name="hindu">
+                <tag key="religion" value="hindu" type="poi,way" />
+            </sub-folder>
+            <sub-folder name="jewish">
+                <tag key="religion" value="jewish" type="poi,way" />
+            </sub-folder>
+            <sub-folder name="muslim">
+                <tag key="religion" value="muslim" type="poi,way" />
+            </sub-folder>
+            <sub-folder name="shinto">
+                <tag key="religion" value="shinto" type="poi,way" />
+            </sub-folder>
+            <sub-folder name="taoist">
+                <tag key="religion" value="taoist" type="poi,way" />
+            </sub-folder>
+        </folder>
+
+        <!-- ======= FOOD & DRINK ======= -->
+
+        <folder name="food_drink">
+
+            <sub-folder name="bar_pub">
+                <tag key="amenity" value="bar" type="poi,way" />
+                <tag key="amenity" value="pub" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="cafe">
+                <tag key="amenity" value="cafe" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="restaurant">
+                <tag key="amenity" value="restaurant" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="fast_food">
+                <tag key="amenity" value="fast_food" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="confectionery">
+                <tag key="shop" value="pastry" type="poi,way" />
+                <tag key="shop" value="confectionery" type="poi,way" />
+            </sub-folder>
+			
+			<sub-folder name="drinking_water">
+                <tag key="amenity" value="drinking_water" type="poi" />
+            </sub-folder>
+
+            <sub-folder name="veg_food">
+                <tag key="diet:vegetarian" value="yes" type="poi,way" />
+                <tag key="diet:lacto_vegetarian" value="yes" type="poi,way" />
+                <tag key="diet:ovo_vegetarian" value="yes" type="poi,way" />
+                <tag key="diet:vegan" value="yes" type="poi,way" />
+                <tag key="diet:fruitarian" value="yes" type="poi,way" />
+                <tag key="vegetarian" value="yes" type="poi,way" />
+            </sub-folder>
+
+        </folder>
+
+        <!-- ======= SHOPPING ======= -->
+
+        <folder name="shopping">
+
+            <sub-folder name="department_store">
+                <tag key="shop" value="department_store" type="poi,way" />
+                <tag key="shop" value="mall" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="pharmacy">
+                <tag key="amenity" value="pharmacy" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="bakery">
+                <tag key="shop" value="bakery" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="other">
+                <tag key="shop" value="general" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="supermarket_convenience">
+                <tag key="shop" value="convenience" type="poi,way" />
+                <tag key="shop" value="supermarket" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="sport_outdoor">
+                <tag key="shop" value="bicycle" type="poi,way" />
+                <tag key="shop" value="dive" type="poi,way" />
+                <tag key="shop" value="outdoor" type="poi,way" />
+                <tag key="shop" value="sports" type="poi,way" />
+            </sub-folder>
+        </folder>
+
+        <!-- ======= SPORT & LEISURE ======= -->
+
+        <folder name="sport_leisure">
+
+            <sub-folder name="golf">
+                <tag key="leisure" value="golf_course" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="swimming">
+                <tag key="leisure" value="swimming_pool" type="poi,way" >
+					<filter key="access" value="~|customers|yes" />
+				</tag>
+                <tag key="amenity" value="swimming_pool" type="poi,way" >
+					<filter key="access" value="~|customers|yes" />
+				</tag>
+                <tag key="leisure" value="water_park" type="poi,way" />
+                <tag key="sport" value="swimming" type="poi,way" >
+					<filter key="access" value="~|customers|yes" />
+				</tag>
+            </sub-folder>
+
+            <sub-folder name="sport_centre">
+                <tag key="leisure" value="sports_centre" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="sport_pitch">
+                <tag key="leisure" value="pitch" type="poi,way" >
+					<filter key="access" value="~|customers|yes" />
+				</tag>
+            </sub-folder>
+
+            <sub-folder name="stadium">
+                <tag key="leisure" value="stadium" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="skiing">
+                <tag key="sport" value="skiing" type="poi,way" />
+                <tag key="aerialway"  value="drag_lift" type="way" />
+                <tag key="aerialway"  value="gondola" type="way" />
+                <tag key="aerialway"  value="chair_lift" type="way" />
+                <tag key="aerialway"  value="cable_car" type="way" />
+                <tag key="aerialway"  value="t-bar" type="way" />
+                <tag key="aerialway"  value="j-bar" type="way" />
+            </sub-folder>
+
+            <sub-folder name="clubs_dancing">
+                <tag key="leisure" value="nightclub" type="poi,way" />
+                <tag key="club" value="music" type="poi,way" />
+            </sub-folder>
+        </folder>
+
+        <!-- ======= TRANSPORT ======= -->
+
+        <folder name="car_services">
+
+            <sub-folder name="gas_station">
+				<tag key="amenity" value="fuel" type="poi,way" />
+				<tag key="amenity" value="charging_station" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="rest_area">
+                <tag key="highway" value="rest_area" type="poi,way" />
+            </sub-folder>
+  
+            <sub-folder name="parking">
+                <tag key="amenity" value="parking" type="poi,way">
+					<filter key="access" value="yes|public|customers"  />					
+					<filter key="capacity" value="*"  />	
+				</tag>
+            </sub-folder>
+
+            <sub-folder name="car_shop_and_repair">
+                <tag key="shop" value="car" type="poi,way" />
+                <tag key="shop" value="car_repair" type="poi,way" />
+                <tag key="shop" value="car_parts" type="poi,way" />
+            </sub-folder>
+        </folder>
+
+        <folder name="transportation">
+            <sub-folder name="bus_and_tram_stop">
+                <tag key="highway" value="bus_stop" type="poi" />
+                <tag key="railway" value="tram_stop" type="poi" />
+            </sub-folder>
+
+            <sub-folder name="bus_station">
+                <tag key="amenity" value="bus_station" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="railway_station">
+                <tag key="railway" value="halt" type="poi" />
+                <tag key="railway" value="station" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="subway">
+                <tag key="station" value="subway" type="poi" />
+            </sub-folder>
+
+            <sub-folder name="airport">
+                <tag key="aeroway" value="aerodrome" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="ferries">
+                <tag key="amenity" value="ferry_terminal" type="poi,way" />
+            </sub-folder>
+
+        </folder>
+
+    </pois>
+
+    <params>
+        <poi-details>
+            <tag key="brand" />
+            <tag key="cuisine" />
+            <tag key="description" />
+            <tag key="opening_hours" />
+            <tag key="operator" /> <!-- name a company for hotel, restaurant, shop ... -->
+            <tag key="shop" />
+            <tag key="sport" />
+            <tag key="stars" /> <!-- hotel classification -->
+            <tag key="wikipedia" /> <!-- Is human readable title of the article, eg: wikipedia=en:St Paul's Cathedral -->
+
+            <tag key="denomination" />
+        </poi-details>
+
+        <poi-email>
+            <tag key="contact:email" />
+            <tag key="email" />
+        </poi-email>
+        <poi-phone>
+            <tag key="contact:phone" />
+            <tag key="phone" />
+        </poi-phone>
+        <poi-url >
+            <tag key="website" /> <!-- OSM suggest to use web site but URL key is also possible-->
+            <tag key="url" />
+            <tag key="contact:website" />
+        </poi-url>
+    </params>
+</configuration>

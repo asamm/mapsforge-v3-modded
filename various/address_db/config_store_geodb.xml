@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This is settings file similar to config file for generation of LoMaps. It uses same folder structure for extracted maps.
+It defines for which countries will be generated content of Locus store region table
+
+Regions to create manually
+AFRICA
+Western Sahara
+
+-->
+
+<maps>
+
+	<mapPack dir="_world" name="_world" regionCode="" parentRegionId="wo" sourceId="planet" type="extract">
+		<map file="planet-latest" id="planet" name="planet-latest" regionCode="" regionId="wo" type="download" url="http://ftp.snt.utwente.nl/pub/misc/openstreetmap/planet-latest.osm.pbf" />
+		<map file="africa" id="africa" name="Africa" regionCode="WO-AF" regionId="wo.af" />
+		<map file="americas" id="americas" name="Americas" regionCode="" regionId="wo.am" />
+		<map file="antartica" id="antartica" name="Antartica" regionCode="" regionId="wo.an" />
+		<map file="asia" id="asia" name="Asia" regionCode="WO-AS" regionId="wo.as" />
+		<map file="europe" id="europe" name="Europe" regionCode="WO-EU" regionId="wo.eu" />
+		<map file="oceania" id="oceania" name="Oceania" regionCode="WO-OC" regionId="wo.oc" />
+	</mapPack>
+	
+	<mapPack dir="europe" name="Europe" regionCode="WO-EU" parentRegionId="wo.eu" sourceId="europe" type="extract|storeGeoDb">
+			
+		<map file="_france" id="_france" name="France" regionCode="FR" regionId="wo.eu.france" />
+		<map file="_germany" id="_germany" name="Germany" regionCode="DE" regionId="wo.eu.germany" />
+		<map file="_netherlands" id="_netherlands" name="Netherlands" regionCode="NL" regionId="wo.eu.netherlands" />
+		<map file="_united_kingdom" id="_united_kingdom" name="United Kingdom" regionCode="GB" regionId="wo.eu.united_kingdom" />
+		<map file="_spain" id="_spain" name="Spain" regionCode="ES" regionId="wo.eu.spain" />
+	
+		<map file="aland" name="Aland" regionCode="AX" regionId="wo.eu.aland" />
+		<map file="albania" name="Albania" regionCode="AL" regionId="wo.eu.albania" />
+		<map file="andorra" name="Andorra" regionCode="AD" regionId="wo.eu.andorra" />
+		<map file="austria" name="Austria" regionCode="AT" regionId="wo.eu.austria" />
+		<map file="belarus" name="Belarus" regionCode="BY" regionId="wo.eu.belarus" />
+		<map file="belgium" name="Belgium" regionCode="BE" regionId="wo.eu.belgium" />
+		<map file="bosnia_and_herzegovina" name="Bosnia and Herzegovina" regionCode="BA" regionId="wo.eu.bosnia_and_herzegovina" />
+		<map file="bulgaria" name="Bulgaria" regionCode="BG" regionId="wo.eu.bulgaria" />
+		<map file="croatia" name="Croatia" regionCode="HR" regionId="wo.eu.croatia" />
+		<map file="cyprus" name="Cyprus" regionCode="CY" regionId="wo.eu.cyprus" sourceId="asia" />		
+		<map file="czech_republic" name="Czech republic" regionCode="CZ" regionId="wo.eu.czech_republic" />
+		<map file="denmark" name="Denmark" regionCode="DK" regionId="wo.eu.denmark" />
+		<map file="estonia" name="Estonia" regionCode="EE" regionId="wo.eu.estonia" />
+		<map file="faroe_islands" name="Faroe Islands" regionCode="FO" regionId="wo.eu.faroe_islands" />
+		<map file="finland" name="Finland" regionCode="FI" regionId="wo.eu.finland" />
+		<map file="gibraltar" name="Gibraltar" regionCode="GI" regionId="wo.eu.gibraltar" />
+		<map file="greece" name="Greece" regionCode="GR" regionId="wo.eu.greece" />
+		<map file="guernsey" name="Guernsey" regionCode="GG" regionId="wo.eu.guernsey" />
+		<map file="hungary" name="Hungary" regionCode="HU" regionId="wo.eu.hungary" />
+		<map file="iceland" name="Iceland" regionCode="IS" regionId="wo.eu.iceland" />
+		<map file="ireland" name="Ireland" regionCode="IE" regionId="wo.eu.ireland" />
+		<map file="italy" name="Italy" regionCode="IT" regionId="wo.eu.italy" />
+		<map file="kosovo" name="Kosovo" regionCode="XK" regionId="wo.eu.kosovo" />
+		<map file="latvia" name="Latvia" regionCode="LV" regionId="wo.eu.latvia" />
+		<map file="liechtenstein" name="Liechtenstein" regionCode="LI" regionId="wo.eu.liechtenstein" />
+		<map file="lithuania" name="Lithuania" regionCode="LT" regionId="wo.eu.lithuania" />
+		<map file="luxembourg" name="Luxembourg" regionCode="LU" regionId="wo.eu.luxembourg" />
+		<map file="macedonia" name="Macedonia" regionCode="MK" regionId="wo.eu.macedonia" />
+		<map file="malta" name="Malta" regionCode="MT" regionId="wo.eu.malta" />
+		<map file="moldova" name="Moldova" regionCode="MD" regionId="wo.eu.moldova" />
+		<map file="monaco" name="Monaco" regionCode="MC" regionId="wo.eu.monaco" />
+		<map file="montenegro" name="Montenegro" regionCode="ME" regionId="wo.eu.montenegro" />
+		<map file="norway" name="Norway" regionCode="NO" regionId="wo.eu.norway" />
+		<map file="poland" name="Poland" regionCode="PL" regionId="wo.eu.poland" />
+		<map file="portugal" name="Portugal" regionCode="PT" regionId="wo.eu.portugal" />
+		<map file="romania" name="Romania" regionCode="RO" regionId="wo.eu.romania" />
+		<map file="san_marino" name="San Marino" regionCode="SM" regionId="wo.eu.san_marino" />
+		<map file="serbia" name="Serbia" regionCode="RS" regionId="wo.eu.serbia" />
+		<map file="slovakia" name="Slovakia" regionCode="SK" regionId="wo.eu.slovakia" />
+		<map file="slovenia" name="Slovenia" regionCode="SI" regionId="wo.eu.slovenia" />
+		<map file="sweden" name="Sweden" regionCode="SE" regionId="wo.eu.sweden" /> 
+		<map file="switzerland" name="Switzerland" regionCode="CH" regionId="wo.eu.switzerland" />
+		<map file="ukraine" name="Ukraine" regionCode="UA" regionId="wo.eu.ukraine" />
+
+		<mapPack dir="france" name="France" regionCode="FR" parentRegionId="wo.eu.france" sourceId="_france" type="storeGeoDb">
+		
+			<map file="auvergne-rhone-alpes" name="Auvergne-Rhone-Alpes" regionCode="" regionId="wo.eu.france.auvergne-rhone-alpes" />
+			<map file="bourgogne-franche-comte" name="Bourgogne-Franche-Comte" regionCode="" regionId="wo.eu.france.bourgogne-franche-comte" />
+			<map file="bretagne" name="Bretagne" regionCode="" regionId="wo.eu.france.bretagne" />
+			<map file="centre-val_de_loire" name="Centre-Val de Loire" regionCode="" regionId="wo.eu.france.centre-val_de_loire" />
+			<map file="corsica" name="Corsica" regionCode="" regionId="wo.eu.france.corsica" />
+			<map file="grand_est" name="Grand Est" regionCode="" regionId="wo.eu.france.grand_est" />
+			<map file="hauts-de-france" name="Hauts-de-France" regionCode="" regionId="wo.eu.france.hauts-de-france" />
+			<map file="ile-de-france" name="Ile-de-France" regionCode="" regionId="wo.eu.france.ile-de-france" />
+			<map file="normandy" name="Normandy" regionCode="" regionId="wo.eu.france.normandy" />
+			<map file="nouvelle-aquitaine" name="Nouvelle-Aquitaine" regionCode="" regionId="wo.eu.france.nouvelle-aquitaine" />
+			<map file="occitanie" name="Occitanie" regionCode="" regionId="wo.eu.france.occitanie" />
+			<map file="pays_de_la_loire" name="Pays de la Loire" regionCode="" regionId="wo.eu.france.pays_de_la_loire" />
+			<map file="provence-alpes-cote_d_azur" name="Provence-Alpes-Cote d Azur" regionCode="" regionId="wo.eu.france.provence-alpes-cote_d_azur" />			
+		</mapPack>
+		
+	
+		<mapPack dir="germany" name="Germany" regionCode="DE" parentRegionId="wo.eu.germany" sourceId="_germany" type="storeGeoDb">
+			<map file="baden-wurttemberg" name="Baden-Wurttemberg" regionCode="" regionId="wo.eu.germany.baden" />
+			<map file="bayern" name="Bayern" regionCode="" regionId="wo.eu.germany.bayern" />
+			<map file="berlin" name="Berlin" regionCode="" regionId="wo.eu.germany.berlin" />
+			<map file="brandenburg" name="Brandenburg" regionCode="" regionId="wo.eu.germany.brandenburg" />
+			<map file="bremen" name="Bremen" regionCode="" regionId="wo.eu.germany.bremen" />
+			<map file="hamburg" name="Hamburg" regionCode="" regionId="wo.eu.germany.hamburg" />
+			<map file="hessen" name="Hessen" regionCode="" regionId="wo.eu.germany.hessen" />
+			<map file="mecklenburg-vorpommern" name="Mecklenburg-Vorpommern" regionCode="" regionId="wo.eu.germany.mecklenburg" />
+			<map file="niedersachsen" name="Niedersachsen" regionCode="" regionId="wo.eu.germany.niedersachsen" />
+			<map file="nordrhein-westfalen" name="Nordrhein-Westfalen" regionCode="" regionId="wo.eu.germany.nordrhein" />
+			<map file="rheinland-pfalz" name="Rheinland-Pfalz" regionCode="" regionId="wo.eu.germany.rheinland" />
+			<map file="saarland" name="Saarland" regionCode="" regionId="wo.eu.germany.saarland" />
+			<map file="sachsen" name="Sachsen" regionCode="" regionId="wo.eu.germany.sachsen" />
+			<map file="sachsen-anhalt" name="Sachsen-Anhalt" regionCode="" regionId="wo.eu.germany.sachsen_anhalt" />
+			<map file="schleswig-holstein" name="Schleswig-Holstein" regionCode="" regionId="wo.eu.germany.schleswig" />
+			<map file="thuringen" name="Thuringen" regionCode="" regionId="wo.eu.germany.thuringen" />
+		</mapPack>
+
+		<mapPack dir="netherlands" name="Netherlands" regionCode="NL" parentRegionId="wo.eu.netherlands" sourceId="_netherlands" type="storeGeoDb">
+			<map file="drenthe" name="Drenthe" regionCode="" regionId="wo.eu.netherlands.drenthe" />
+			<map file="flevoland" name="Flevoland" regionCode="" regionId="wo.eu.netherlands.flevoland" />
+			<map file="friesland" name="Friesland" regionCode="" regionId="wo.eu.netherlands.friesland" />
+			<map file="gelderland" name="Gelderland" regionCode="" regionId="wo.eu.netherlands.gelderland" />
+			<map file="groningen" name="Groningen" regionCode="" regionId="wo.eu.netherlands.groningen" />
+			<map file="limburg" name="Limburg" regionCode="" regionId="wo.eu.netherlands.limburg" />
+			<map file="noord-brabant" name="Noord-brabant" regionCode="" regionId="wo.eu.netherlands.noord_braband" />
+			<map file="noord-holland" name="Noord-holland" regionCode="" regionId="wo.eu.netherlands.noord_holland" />
+			<map file="overijssel" name="Overijssel" regionCode="" regionId="wo.eu.netherlands.overijssel" />
+			<map file="utrecht" name="Utrecht" regionCode="" regionId="wo.eu.netherlands.utrecht" />
+			<map file="zeeland" name="Zeeland" regionCode="" regionId="wo.eu.netherlands.zeeland" />
+			<map file="zuid-holland" name="Zuid-holland" regionCode="" regionId="wo.eu.netherlands.zuid" />
+			
+		</mapPack>
+				
+		<mapPack dir="spain" name="Spain" regionCode="ES" parentRegionId="wo.eu.spain" sourceId="_spain" type="storeGeoDb">
+			<map file="canary_islands" name="Canary Islands" regionCode="" regionId="wo.eu.spain.canary_islands" />
+		</mapPack>
+		
+		<mapPack dir="united_kingdom" name="United Kingdom" regionCode="GB" parentRegionId="wo.eu.united_kingdom" sourceId="_united_kingdom" type="storeGeoDb">
+			<map file="england" name="England" regionCode="" regionId="wo.eu.united_kingdom.england" />
+			<map file="northern_ireland" name="Northern Ireland" regionCode="" regionId="wo.eu.united_kingdom.northern_ireland" />
+			<map file="scotland" name="Scotland" regionCode="" regionId="wo.eu.united_kingdom.scotland" />
+			<map file="wales" name="Wales" regionCode="" regionId="wo.eu.united_kingdom.wales" />
+			<map file="isle_of_man" name="Isle of man" regionCode="" regionId="wo.eu.united_kingdom.isle_of_man" />
+			<map file="jersey" name="Jersey" regionCode="" regionId="wo.eu.united_kingdom.jersey" />
+		</mapPack>
+						
+	</mapPack>	
+
+	<mapPack dir="africa" name="Africa" regionCode="WO-AF" parentRegionId="wo.af" sourceId="africa" type="storeGeoDb">
+		<map file="algeria" name="Algeria" regionCode="DZ" regionId="wo.af.algeria" />
+		<map file="angola" name="Angola" regionCode="AO" regionId="wo.af.angola" />
+		<map file="benin" name="Benin" regionCode="BJ" regionId="wo.af.benin" />
+		<map file="botswana" name="Botswana" regionCode="BW" regionId="wo.af.botswana" />
+		<map file="burkina_faso" name="Burkina Faso" regionCode="BF" regionId="wo.af.burkina_faso" />
+		<map file="burundi" name="Burundi" regionCode="BI" regionId="wo.af.burundi" />
+		<map file="cameroon" name="Cameroon" regionCode="CM" regionId="wo.af.cameroon" />
+		<map file="cape_verde" name="Cape Verde" regionCode="CV" regionId="wo.af.cape_verde" />
+		<map file="central_african_republic" name="Central African republic" regionCode="CF" regionId="wo.af.central_african_republic" />
+		<map file="chad" name="Chad" regionCode="TD" regionId="wo.af.chad" />
+		<map file="comoros" name="Comoros" regionCode="KM" regionId="wo.af.comoros" />
+		<map file="cote_d_ivoire" name="Cote d Ivoire" regionCode="CI" regionId="wo.af.cote_d_ivoire" />
+		<map file="democratic_republic_of_the_congo" name="Democratic republic of the Congo" regionCode="CD" regionId="wo.af.democratic_republic_of_the_congo" />
+		<map file="djibouti" name="Djibouti" regionCode="DJ" regionId="wo.af.djibouti" />
+		<map file="egypt" name="Egypt" regionCode="EG" regionId="wo.af.egypt" />
+		<map file="equatorial_guinea" name="Equatorial Guinea" regionCode="GQ" regionId="wo.af.equatorial_guinea" />
+		<map file="eritrea" name="Eritrea" regionCode="ER" regionId="wo.af.eritrea" />
+		<map file="ethiopia" name="Ethiopia" regionCode="ET" regionId="wo.af.ethiopia" />
+		<map file="gabon" name="Gabon" regionCode="GA" regionId="wo.af.gabon" />
+		<map file="gambia" name="Gambia" regionCode="GM" regionId="wo.af.gambia" />
+		<map file="ghana" name="Ghana" regionCode="GH" regionId="wo.af.ghana" />
+		<map file="guinea" name="Guinea" regionCode="GN" regionId="wo.af.guinea" />
+		<map file="guinea-bissau" name="Guinea Bissau" regionCode="GW" regionId="wo.af.guinea-bissau" />
+		<map file="kenya" name="Kenya" regionCode="KE" regionId="wo.af.kenya" />
+		<map file="lesotho" name="Lesotho" regionCode="LS" regionId="wo.af.lesotho" />
+		<map file="liberia" name="Liberia" regionCode="LR" regionId="wo.af.liberia" />
+		<map file="libya" name="Libya" regionCode="LY" regionId="wo.af.libya" />
+		<map file="madagascar" name="Madagascar" regionCode="MG" regionId="wo.af.madagascar" />
+		<map file="malawi" name="Malawi" regionCode="MW" regionId="wo.af.malawi" />
+		<map file="mali" name="Mali" regionCode="ML" regionId="wo.af.mali" />
+		<map file="mauritania" name="Mauritania" regionCode="MR" regionId="wo.af.mauritania" />
+		<map file="mauritius" name="Mauritius" regionCode="MU" regionId="wo.af.mauritius" />
+		<map file="mayotte" name="Mayotte" regionCode="YT" regionId="wo.af.mayotte" />
+		<map file="morocco" name="Morocco" regionCode="MA" regionId="wo.af.morocco" />
+		<map file="mozambique" name="Mozambique" regionCode="MZ" regionId="wo.af.mozambique" />
+		<map file="namibia" name="Namibia" regionCode="NA" regionId="wo.af.namibia" />
+		<map file="niger" name="Niger" regionCode="NE" regionId="wo.af.niger" />
+		<map file="nigeria" name="Nigeria" regionCode="NG" regionId="wo.af.nigeria" />
+		<map file="republic_of_congo" name="Republic of the Congo" regionCode="CG" regionId="wo.af.republic_of_congo" />
+		<map file="reunion" name="Reunion" regionCode="RE" regionId="wo.af.reunion" />
+		<map file="rwanda" name="Rwanda" regionCode="RW" regionId="wo.af.rwanda" />
+		<map file="saint_helena" name="Saint Helena" regionCode="SH" regionId="wo.af.saint_helena" />
+		<map file="sao_tome_and_principe" name="Sao Tome and Principe" regionCode="ST" regionId="wo.af.sao_tome_and_principe" />
+		<map file="senegal" name="Senegal" regionCode="SN" regionId="wo.af.senegal" />
+		<map file="seychelles" name="Seychelles" regionCode="SC" regionId="wo.af.seychelles" />
+		<map file="sierra_leone" name="Sierra Leone" regionCode="SL" regionId="wo.af.sierra_leone" />
+		<map file="somalia" name="Somalia" regionCode="SO" regionId="wo.af.somalia" />
+		<map file="south_africa" name="South Africa" regionCode="ZA" regionId="wo.af.south_africa" />
+		<map file="south_sudan" name="South Sudan" regionCode="SS" regionId="wo.af.south_sudan" />
+		<map file="sudan" name="Sudan" regionCode="SD" regionId="wo.af.sudan" />
+		<map file="swaziland" name="Swaziland" regionCode="SZ" regionId="wo.af.swaziland" />
+		<map file="tanzania" name="Tanzania" regionCode="TZ" regionId="wo.af.tanzania" />
+		<map file="togo" name="Togo" regionCode="TG" regionId="wo.af.togo" />
+		<map file="tunisia" name="Tunisia" regionCode="TN" regionId="wo.af.tunisia" />
+		<map file="uganda" name="Uganda" regionCode="UG" regionId="wo.af.uganda" />
+		<map file="zambia" name="Zambia" regionCode="ZM" regionId="wo.af.zambia" />
+		<map file="zimbabwe" name="Zimbabwe" regionCode="ZW" regionId="wo.af.zimbabwe" />
+	</mapPack>
+
+
+	<mapPack dir="americas" name="South America" regionCode="" parentRegionId="wo.am" sourceId="americas" type="extract|storeGeoDb">
+		
+		<map file="_brazil" id="_brazil" name="Brazil" regionCode="BR" regionId="wo.am.brazil" />
+		
+		<map file="argentina" name="Argentina" regionCode="AR" regionId="wo.am.argentina" />
+		<map file="bolivia" name="Bolivia" regionCode="BO" regionId="wo.am.bolivia" />
+		<map file="chile" name="Chile" regionCode="CL" regionId="wo.am.chile" />
+		<map file="colombia" name="Colombia" regionCode="CO" regionId="wo.am.colombia" />
+		<map file="falkland_islands" name="Falkland Islands" regionCode="FK" regionId="wo.am.falkland_islands" />
+		<map file="guyana" name="Guyana" regionCode="GY" regionId="wo.am.guyana" />
+		<map file="honduras" name="Honduras" regionCode="HN" regionId="wo.am.honduras" />
+		<map file="paraguay" name="Paraguay" regionCode="PY" regionId="wo.am.paraguay" />
+		<map file="peru" name="Peru" regionCode="PE" regionId="wo.am.peru" />
+     	<map file="suriname" name="Suriname" regionCode="SR" regionId="wo.am.suriname" />
+		<map file="uruguay" name="Uruguay" regionCode="UY" regionId="wo.am.uruguay" />
+		<map file="venezuela" name="Venezuela" regionCode="VE" regionId="wo.am.venezuela" />
+		
+		<mapPack dir="brazil" name="Brazil" regionCode="BR" parentRegionId="wo.am.brazil" sourceId="_brazil">
+		    <map file="acre" name="Acre" regionCode="" regionId="wo.am.brazil.acre" />
+        	<map file="alagoas" name="Alagoas" regionCode="" regionId="wo.am.brazil.alagoas" />
+        	<map file="amapa" name="Amapa" regionCode="" regionId="wo.am.brazil.amapa" />
+        	<map file="amazonas" name="Amazonas" regionCode="" regionId="wo.am.brazil.amazonas" />
+        	<map file="bahia" name="Bahia" regionCode="" regionId="wo.am.brazil.bahia" />
+        	<map file="ceara" name="Ceara" regionCode="" regionId="wo.am.brazil.ceara" />
+        	<map file="distrito_federal_brasilia" name="Federal District" regionCode="" regionId="wo.am.brazil.distrito_federal_brasilia" />
+        	<map file="espirito_santo" name="Espirito Santo" regionCode="" regionId="wo.am.brazil.espirito_santo" />
+        	<map file="goias" name="Goias" regionCode="" regionId="wo.am.brazil.goias" />
+        	<map file="maranhao" name="Maranhao" regionCode="" regionId="wo.am.brazil.maranhao" />
+        	<map file="mato_grosso" name="Mato Grosso" regionCode="" regionId="wo.am.brazil.mato_grosso" />
+        	<map file="mato_grosso_do_sul" name="Mato Grosso do Sul" regionCode="" regionId="wo.am.brazil.mato_grosso_do_sul" />
+        	<map file="minas_gerais" name="Minas Gerais" regionCode="" regionId="wo.am.brazil.minas_gerais" />
+        	<map file="para" name="Para" regionCode="" regionId="wo.am.brazil.para" />
+        	<map file="paraiba" name="Paraiba" regionCode="" regionId="wo.am.brazil.paraiba" />
+        	<map file="parana" name="Parana" regionCode="" regionId="wo.am.brazil.parana" />
+        	<map file="pernambuco" name="Pernambuco" regionCode="" regionId="wo.am.brazil.pernambuco" />
+        	<map file="piaui" name="Piaui" regionCode="" regionId="wo.am.brazil.piaui" />
+        	<map file="rio_de_janeiro" name="Rio de Janeiro" regionCode="" regionId="wo.am.brazil.rio_de_janeiro" />
+        	<map file="rio_grande_do_norte" name="Rio Grande do Norte" regionCode="" regionId="wo.am.brazil.rio_grande_do_norte" />
+        	<map file="rio_grande_do_sul" name="Rio Grande do Sul" regionCode="" regionId="wo.am.brazil.rio_grande_do_sul" />
+        	<map file="rondonia" name="Rondonia" regionCode="" regionId="wo.am.brazil.rondonia" />
+        	<map file="roraima" name="Roraima" regionCode="" regionId="wo.am.brazil.roraima" />
+        	<map file="santa_catarina" name="Santa Catarina" regionCode="" regionId="wo.am.brazil.santa_catarina" />
+        	<map file="sao_paulo" name="Sao Paulo" regionCode="" regionId="wo.am.brazil.sao_paulo" />
+        	<map file="sergipe" name="Sergipe" regionCode="" regionId="wo.am.brazil.sergipe" />
+        	<map file="tocantins" name="Tocantins" regionCode="" regionId="wo.am.brazil.tocantins" />
+		</mapPack>
+	</mapPack>
+
+
+	<mapPack dir="americas" name="North America" regionCode="" parentRegionId="wo.an" sourceId="americas" type="extract|storeGeoDb">
+		
+		<map file="_canada" id="_canada" name="Canada" regionCode="CA" regionId="wo.am.canada" />
+		
+		<map file="_caribbean" id="_caribbean" name="_caribbean" regionCode="" regionId="wo.am.caribbean" type="extract" />
+		
+		<map file="_united_states" id="_united_states" name="United States" regionCode="US" regionId="wo.am.united_states" />
+		
+		<map file="belize" name="Belize" regionCode="BZ" regionId="wo.am.belize" />
+		<map file="bermuda" name="Bermuda" regionCode="BM" regionId="wo.am.bermuda" />
+		<map file="costa_rica" name="Costa Rica" regionCode="CR" regionId="wo.am.costa_rica" />
+		<map file="ecuador" name="Ecuador" regionCode="EC" regionId="wo.am.ecuador" />
+		<map file="el_salvador" name="El Salvador" regionCode="SV" regionId="wo.am.el_salvador" />
+		<map file="french_guiana" name="French Guiana" regionCode="GF" regionId="wo.am.french_guiana" />
+		<map file="greenland" name="Greenland" regionCode="GL" regionId="wo.am.greenland" /> 
+		<map file="guatemala" name="Guatemala" regionCode="GT" regionId="wo.am.guatemala" />
+		<map file="honduras" name="Honduras" regionCode="HN" regionId="wo.am.honduras" />
+		<map file="mexico" name="Mexico" regionCode="MX" regionId="wo.am.mexico" />
+		<map file="nicaragua" name="Nicaragua" regionCode="NI" regionId="wo.am.nicaragua" />
+		<map file="panama" name="Panama" regionCode="PA" regionId="wo.am.panama" />
+     	<map file="saint_pierre_and_miquelon" name="Saint Pierre and Miquelon" regionCode="PM" regionId="wo.am.saint_pierre_and_miquelon" />
+		<map file="anguilla" name="Anguilla" regionCode="AI" regionId="wo.am.anguilla" sourceId="_caribbean" />
+		<map file="antigua_and_barbuda" name="Antigua and Barbuda" regionCode="AG" regionId="wo.am.antigua_and_barbuda" sourceId="_caribbean" />
+		<map file="aruba" name="Aruba" regionCode="AW" regionId="wo.am.aruba" sourceId="_caribbean" />
+		<map file="bahamas" name="Bahamas" regionCode="BS" regionId="wo.am.bahamas" sourceId="_caribbean" />
+		<map file="barbados" name="Barbados" regionCode="BB" regionId="wo.am.barbados" sourceId="_caribbean" />
+		<map file="british_virgin_islands" name="British Virgin Islands" regionCode="VG" regionId="wo.am.british_virgin_islands" sourceId="_caribbean" />
+		<map file="cayman_islands" name="Cayman Islands" regionCode="KY" regionId="wo.am.cayman_islands" sourceId="_caribbean" />
+		<map file="cuba" name="Cuba" regionCode="CU" regionId="wo.am.cuba" sourceId="_caribbean" />
+		<map file="dominica" name="Dominica" regionCode="DM" regionId="wo.am.dominica" sourceId="_caribbean" />
+		<map file="dominican_republic" name="Dominican republic" regionCode="DO" regionId="wo.am.dominican_republic" sourceId="_caribbean" />
+		<map file="grenada" name="Grenada" regionCode="GD" regionId="wo.am.grenada" sourceId="_caribbean" />
+		<map file="guadeloupe" name="Guadeloupe" regionCode="GP" regionId="wo.am.guadeloupe" sourceId="_caribbean" />
+		<map file="haiti" name="Haiti" regionCode="HT" regionId="wo.am.haiti" sourceId="_caribbean" />
+		<map file="jamaica" name="Jamaica" regionCode="JM" regionId="wo.am.jamaica" />
+		<map file="martinique" name="Martinique" regionCode="MQ" regionId="wo.am.martinique" sourceId="_caribbean" />
+		<map file="montserrat" name="Montserrat" regionCode="MS" regionId="wo.am.montserrat" sourceId="_caribbean" />		
+		<map file="puerto_rico" name="Puerto Rico" regionCode="PR" regionId="wo.am.puerto_rico" sourceId="_caribbean" />
+		<map file="saint_kitts_and_nevis" name="Saint Kitts and Nevis" regionCode="KN" regionId="wo.am.saint_kitts_and_nevis" sourceId="_caribbean" />
+		<map file="saint_lucia" name="Saint Lucia" regionCode="LC" regionId="wo.am.saint_lucia" sourceId="_caribbean" />
+		<map file="saint_vincent_and_the_grenadines" name="Saint Vincent and the Grenadines" regionCode="VC" regionId="wo.am.saint_vincent_and_the_grenadines" sourceId="_caribbean" />
+		<map file="trinidad_and_tobago" name="Trinidad and Tobago" regionCode="TT" regionId="wo.am.trinidad_and_tobago" sourceId="_caribbean" />
+		<map file="turks_and_caicos_islands" name="Turks and Caicos Islands" regionCode="TC" regionId="wo.am.turks_and_caicos_islands" sourceId="_caribbean" />
+		<map file="virgin_islands_us" name="United States Virgin Islands" regionCode="VI" regionId="wo.am.virgin_islands_us" sourceId="_caribbean" />		
+		
+		<map file="netherlands_antilles" name="Sint Maarten" regionCode="SX" regionId="wo.am.sint_maarten" sourceId="_caribbean" />
+		<map file="netherlands_antilles" name="Curaçao" regionCode="CW" regionId="wo.am.curacao" sourceId="_caribbean" />
+		<map file="netherlands_antilles" name="Caribbean Netherlands" regionCode="BQ" regionId="wo.am.netherlands_antilles" sourceId="_caribbean" />		
+		
+		<mapPack dir="canada" name="Canada" regionCode="CA" parentRegionId="wo.am.canada" sourceId="_canada">
+			<map file="alberta" name="Alberta" regionCode="" regionId="wo.am.canada.alberta" />
+			<map file="british_columbia" name="British Columbia" regionCode="" regionId="wo.am.canada.british_columbia" />
+			<map file="manitoba" name="Manitoba" regionCode="" regionId="wo.am.canada.manitoba" />
+			<map file="new_brunswick" name="New Brunswick" regionCode="" regionId="wo.am.canada.new_brunswick" />
+			<map file="newfoundland_and_labrador" name="Newfoundland and Labrador" regionCode="" regionId="wo.am.canada.newfoundland_and_labrador" />
+			<map file="northwest_territories" name="Northwest Territories" regionCode="" regionId="wo.am.canada.northwest_territories" />
+			<map file="nova_scotia" name="Nova Scotia" regionCode="" regionId="wo.am.canada.nova_scotia" />
+			<map file="nunavut" forceType="hd" name="Nunavut" regionCode="" regionId="wo.am.canada.nunavut" />
+			<map clipEntities="1" file="ontario" name="Ontario" regionCode="" regionId="wo.am.canada.ontario" />
+			<map file="prince_edward_island" name="Prince Edward Island" regionCode="" regionId="wo.am.canada.prince_edward_island" />
+			<map file="quebec" name="Quebec" regionCode="" regionId="wo.am.canada.quebec" />
+			<map file="saskatchewan" name="Saskatchewan" regionCode="" regionId="wo.am.canada.saskatchewan" />
+			<map file="yukon" name="Yukon" regionCode="" regionId="wo.am.canada.yukon" />
+		</mapPack>
+
+		<mapPack dir="united_states" name="United States" regionCode="US" parentRegionId="wo.am.united_states" sourceId="_united_states">
+			<map file="alabama" name="Alabama" regionCode="" regionId="wo.am.united_states.alabama" />
+			<map file="alaska" name="Alaska" regionCode="" regionId="wo.am.united_states.alaska" />
+			<map file="arizona" name="Arizona" regionCode="" regionId="wo.am.united_states.arizona" />
+			<map file="arkansas" name="Arkansas" regionCode="" regionId="wo.am.united_states.arkansas" />
+			<map file="california" name="California" regionCode="" regionId="wo.am.united_states.california" />
+			<map file="colorado" name="Colorado" regionCode="" regionId="wo.am.united_states.colorado" />
+			<map file="connecticut" name="Connecticut" regionCode="" regionId="wo.am.united_states.connecticut" />
+			<map file="delaware" name="Delaware" regionCode="" regionId="wo.am.united_states.delaware" />
+			<map file="district_of_columbia" name="District of Columbia" regionCode="" regionId="wo.am.united_states.district_of_columbia" />
+			<map file="florida" name="Florida" regionCode="" regionId="wo.am.united_states.florida" />
+			<map file="georgia" name="Georgia" regionCode="" regionId="wo.am.united_states.georgia" />
+			<map file="hawaii" name="Hawaii" regionCode="" regionId="wo.am.united_states.hawaii" />
+			<map file="idaho" name="Idaho" regionCode="" regionId="wo.am.united_states.idaho" />
+			<map file="illinois" name="Illinois" regionCode="" regionId="wo.am.united_states.illinois" />
+			<map file="indiana" name="Indiana" regionCode="" regionId="wo.am.united_states.indiana" />
+			<map file="iowa" name="Iowa" regionCode="" regionId="wo.am.united_states.iowa" />
+			<map file="kansas" name="Kansas" regionCode="" regionId="wo.am.united_states.kansas" />
+			<map file="kentucky" name="Kentucky" regionCode="" regionId="wo.am.united_states.kentucky" />
+			<map file="louisiana" name="Louisiana" regionCode="" regionId="wo.am.united_states.louisiana" />
+			<map file="maine" name="Maine" regionCode="" regionId="wo.am.united_states.maine" />
+			<map file="maryland" name="Maryland" regionCode="" regionId="wo.am.united_states.maryland" />
+			<map file="massachusetts" name="Massachusetts" regionCode="" regionId="wo.am.united_states.massachusetts" />
+			<map file="michigan" name="Michigan" regionCode="" regionId="wo.am.united_states.michigan" />
+			<map file="minnesota" name="Minnesota" regionCode="" regionId="wo.am.united_states.minnesota" />
+			<map file="mississippi" name="Mississippi" regionCode="" regionId="wo.am.united_states.mississippi" />
+			<map file="missouri" name="Missouri" regionCode="" regionId="wo.am.united_states.missouri" />
+			<map file="montana" name="Montana" regionCode="" regionId="wo.am.united_states.montana" />
+			<map file="nebraska" name="Nebraska" regionCode="" regionId="wo.am.united_states.nebraska" />
+			<map file="nevada" name="Nevada" regionCode="" regionId="wo.am.united_states.nevada" />
+			<map file="new_hampshire" name="New Hampshire" regionCode="" regionId="wo.am.united_states.new_hampshire" />
+			<map file="new_jersey" name="New Jersey" regionCode="" regionId="wo.am.united_states.new_jersey" />
+			<map file="new_mexico" name="New Mexico" regionCode="" regionId="wo.am.united_states.new_mexico" />
+			<map file="new_york" name="New York" regionCode="" regionId="wo.am.united_states.new_york" />
+			<map file="north_carolina" name="North Carolina" regionCode="" regionId="wo.am.united_states.north_carolina" />
+			<map file="north_dakota" name="North Dakota" regionCode="" regionId="wo.am.united_states.north_dakota" />
+			<map file="ohio" name="Ohio" regionCode="" regionId="wo.am.united_states.ohio" />
+			<map file="oklahoma" name="Oklahoma" regionCode="" regionId="wo.am.united_states.oklahoma" />
+			<map file="oregon" name="Oregon" regionCode="" regionId="wo.am.united_states.oregon" />
+			<map file="pennsylvania" name="Pennsylvania" regionCode="" regionId="wo.am.united_states.pennsylvania" />
+			<map file="rhode_island" name="Rhode Island" regionCode="" regionId="wo.am.united_states.rhode_island" />
+			<map file="south_carolina" name="South Carolina" regionCode="" regionId="wo.am.united_states.south_carolina" />
+			<map file="south_dakota" name="South Dakota" regionCode="" regionId="wo.am.united_states.south_dakota" />
+			<map file="tennessee" name="Tennessee" regionCode="" regionId="wo.am.united_states.tennessee" />
+			<map file="texas" name="Texas" regionCode="" regionId="wo.am.united_states.texas" />
+			<map file="utah" name="Utah" regionCode="" regionId="wo.am.united_states.utah" />
+			<map file="vermont" name="Vermont" regionCode="" regionId="wo.am.united_states.vermont" />
+			<map file="virginia" name="Virginia" regionCode="" regionId="wo.am.united_states.virginia" />
+			<map file="washington" name="Washington" regionCode="" regionId="wo.am.united_states.washington" />
+			<map file="west_virginia" name="West Virginia" regionCode="" regionId="wo.am.united_states.west_virginia" />
+			<map file="wisconsin" name="Wisconsin" regionCode="" regionId="wo.am.united_states.wisconsin" />
+			<map file="wyoming" name="Wyoming" regionCode="" regionId="wo.am.united_states.wyoming" />
+		</mapPack>
+	</mapPack>
+
+	<mapPack dir="asia" name="Asia" regionCode="WO-AS" parentRegionId="wo.as" sourceId="asia" type="extract|storeGeoDb">
+			
+		<map file="_japan" id="_japan" name="Japan" regionCode="JP" regionId="wo.as.japan" />
+		<map file="_china" id="_china" name="China" regionCode="CN" regionId="wo.as.china" />
+		<map file="_india" id="_india" name="India" regionCode="IN" regionId="wo.as.india" />
+		
+		<map file="_russia" id="_russia" name="Russia" regionCode="RU" regionId="wo.as.russia" />
+		
+		<map file="afghanistan" name="Afghanistan" regionCode="AF" regionId="wo.as.afghanistan" />
+		<map file="armenia" name="Armenia" regionCode="AM" regionId="wo.as.armenia" />
+		<map file="azerbaijan" name="Azerbaijan" regionCode="AZ" regionId="wo.as.azerbaijan" />
+		<map file="bahrain" name="Bahrain" regionCode="BH" regionId="wo.as.bahrain" />
+		<map file="bangladesh" name="Bangladesh" regionCode="BD" regionId="wo.as.bangladesh" />
+		<map file="bhutan" name="Bhutan" regionCode="BT" regionId="wo.as.bhutan" />
+		<map file="british_indian_ocean_territory" name="British Indian Ocean Territory" regionCode="IO" regionId="wo.as.british_indian_ocean_territory" />
+		<map file="brunei" name="Brunei" regionCode="BN" regionId="wo.as.brunei" />
+		<map file="cambodia" name="Cambodia" regionCode="KH" regionId="wo.as.cambodia" />
+		<map file="christmas_island" name="Christmas Island" regionCode="CX" regionId="wo.as.christmas_island" />
+		<map file="east_timor" name="East Timor" regionCode="TL" regionId="wo.as.east_timor" />
+		<map file="georgia" name="Georgia" regionCode="GE" regionId="wo.as.georgia" />
+		<map file="indonesia" name="Indonesia" regionCode="ID" regionId="wo.as.indonesia" />
+		<map file="iran" name="Iran" regionCode="IR" regionId="wo.as.iran" />
+		<map file="iraq" name="Iraq" regionCode="IQ" regionId="wo.as.iraq" />
+		<map file="israel" name="Israel" regionCode="IL" regionId="wo.as.israel" />
+		<map file="jordan" name="Jordan" regionCode="JO" regionId="wo.as.jordan" />
+		<map file="kazakhstan" name="Kazakhstan" regionCode="KZ" regionId="wo.as.kazakhstan" />
+		<map file="kuwait" name="Kuwait" regionCode="KW" regionId="wo.as.kuwait" />
+		<map file="kyrgyzstan" name="Kyrgyzstan" regionCode="KG" regionId="wo.as.kyrgyzstan" />
+		<map file="laos" name="Laos" regionCode="LA" regionId="wo.as.laos" />
+		<map file="lebanon" name="Lebanon" regionCode="LB" regionId="wo.as.lebanon" />
+		<map file="malaysia" name="Malaysia" regionCode="MY" regionId="wo.as.malaysia" />
+		<map file="maldives" name="Maldives" regionCode="MV" regionId="wo.as.maldives" />
+		<map file="mongolia" name="Mongolia" regionCode="MN" regionId="wo.as.mongolia" />
+		<map file="myanmar" name="Myanmar" regionCode="MM" regionId="wo.as.myanmar" />
+		<map file="nepal" name="Nepal" regionCode="NP" regionId="wo.as.nepal" />
+		<map file="north_korea" name="North Korea" regionCode="KP" regionId="wo.as.north_korea" />
+		<map file="oman" name="Oman" regionCode="OM" regionId="wo.as.oman" />
+		<map file="pakistan" name="Pakistan" regionCode="PK" regionId="wo.as.pakistan" />
+		<map file="palestina" name="Palestine" regionCode="PS" regionId="wo.as.palestina" />
+		<map file="philippines" name="Philippines" regionCode="PH" regionId="wo.as.philippines" />
+		<map file="qatar" name="Qatar" regionCode="QA" regionId="wo.as.qatar" />
+		<map file="saudi_arabia" name="Saudi Arabia" regionCode="SA" regionId="wo.as.saudi_arabia" />
+		<map file="singapore" name="Singapore" regionCode="SG" regionId="wo.as.singapore" />
+		<map file="south_korea" name="South Korea" regionCode="KR" regionId="wo.as.south_korea" />
+		<map file="sri_lanka" name="Sri Lanka" regionCode="LK" regionId="wo.as.sri_lanka" />
+		<map file="syria" name="Syria" regionCode="SY" regionId="wo.as.syria" />
+		<map file="taiwan" name="Taiwan" regionCode="TW" regionId="wo.as.taiwan" />
+		<map file="tajikistan" name="Tajikistan" regionCode="TJ" regionId="wo.as.tajikistan" />
+		<map file="thailand" name="Thailand" regionCode="TH" regionId="wo.as.thailand" />
+		<map file="tibet" name="Tibet" regionCode="CN-54" regionId="wo.as.tibet" sourceId="_china" />
+		<map file="turkey" name="Turkey" regionCode="TR" regionId="wo.as.turkey" />
+		<map file="turkmenistan" name="Turkmenistan" regionCode="TM" regionId="wo.as.turkmenistan" />
+		<map file="united_arab_emirates" name="United Arab Emirates" regionCode="AE" regionId="wo.as.united_arab_emirates" />
+		<map file="uzbekistan" name="Uzbekistan" regionCode="UZ" regionId="wo.as.uzbekistan" />
+		<map file="vietnam" name="Vietnam" regionCode="VN" regionId="wo.as.vietnam" />
+		<map file="yemen" name="Yemen" regionCode="YE" regionId="wo.as.yemen" />
+
+		<mapPack dir="china" name="China" regionCode="CN" parentRegionId="wo.as.china" sourceId="_china">
+			<map file="anhui" name="Anhui" regionCode="" regionId="wo.as.china.anhui" />
+			<map file="beijing" name="Beijing" regionCode="" regionId="wo.as.china.beijing" />
+			<map file="chongqing" name="Chongqing" regionCode="" regionId="wo.as.china.chongqing" />
+			<map file="fujian" name="Fujian" regionCode="" regionId="wo.as.china.fujian" />
+			<map file="gansu" name="Gansu" regionCode="" regionId="wo.as.china.gansu" />
+			<map file="guangdong" name="Guangdong" regionCode="" regionId="wo.as.china.guangdong" />
+			<map file="guangxi" name="Guangxi" regionCode="" regionId="wo.as.china.guangxi" />
+			<map file="guizhou" name="Guizhou" regionCode="" regionId="wo.as.china.guizhou" />
+			<map file="hainan" name="Hainan" regionCode="" regionId="wo.as.china.hainan" />
+			<map file="hebei" name="Hebei" regionCode="" regionId="wo.as.china.hebei" />
+			<map file="heilongjiang" name="Heilongjiang" regionCode="" regionId="wo.as.china.heilongjiang" />
+			<map file="henan" name="Henan" regionCode="" regionId="wo.as.china.henan" />
+			<map file="hong_kong" name="Hong Kong" regionCode="" regionId="wo.as.china.hong_kong" />
+			<map file="hubei" name="Hubei" regionCode="" regionId="wo.as.china.hubei" />
+			<map file="hunan" name="Hunan" regionCode="" regionId="wo.as.china.hunan" />
+			<map file="inner_mongolia" name="Inner Mongolia" regionCode="" regionId="wo.as.china.inner_mongolia" />
+			<map file="jiangsu" name="Jiangsu" regionCode="" regionId="wo.as.china.jiangsu" />
+			<map file="jiangxi" name="Jiangxi" regionCode="" regionId="wo.as.china.jiangxi" />
+			<map file="jilin" name="Jilin" regionCode="" regionId="wo.as.china.jilin" />
+			<map file="liaoning" name="Liaoning" regionCode="" regionId="wo.as.china.liaoning" />
+			<map file="macau" name="Macau" regionCode="" regionId="wo.as.china.macau" />
+			<map file="ningxia_hui" name="Ningxia Hui" regionCode="" regionId="wo.as.china.ningxia_hui" />
+			<map file="qinghai" name="Qinghai" regionCode="" regionId="wo.as.china.qinghai" />
+			<map file="shaanxi" name="Shaanxi" regionCode="" regionId="wo.as.china.shaanxi" />
+			<map file="shandong" name="Shandong" regionCode="" regionId="wo.as.china.shandong" />
+			<map file="shanghai" name="Shanghai" regionCode="" regionId="wo.as.china.shanghai" />
+			<map file="shanxi" name="Shanxi" regionCode="" regionId="wo.as.china.shanxi" />
+			<map file="sichuan" name="Sichuan" regionCode="" regionId="wo.as.china.sichuan" />
+			<map file="tianjin" name="Tianjin" regionCode="" regionId="wo.as.china.tianjin" />
+			<map file="xinjiang" name="Xinjiang" regionCode="" regionId="wo.as.china.xinjiang" />
+			<map file="yunnan" name="Yunnan" regionCode="" regionId="wo.as.china.yunnan" />
+			<map file="zhejiang" name="Zhejiang" regionCode="" regionId="wo.as.china.zhejiang" />
+		</mapPack>
+
+		<mapPack dir="india" name="India" regionCode="IN" parentRegionId="wo.as.india" sourceId="_india">
+			
+			<map file="andhra_pradesh" name="Andhra Pradesh" regionCode="" regionId="wo.as.india.andhra_pradesh" />
+			<map file="arunachal_pradesh" name="Arunachal Pradesh" regionCode="" regionId="wo.as.india.arunachal_pradesh" />
+			<map file="assam" name="Assam" regionCode="" regionId="wo.as.india.assam" />
+			<map file="bihar" name="Bihar" regionCode="" regionId="wo.as.india.bihar" />			
+			<map file="chhattisgarh" name="Chhattisgarh" regionCode="" regionId="wo.as.india.chhattisgarh" />			
+			<map file="goa" name="Goa" regionCode="" regionId="wo.as.india.goa" />
+			<map file="gujarat" name="Gujarat" regionCode="" regionId="wo.as.india.gujarat" />
+			<map file="haryana" name="Haryana" regionCode="" regionId="wo.as.india.haryana" />
+			<map file="himachal_pradesh" name="Himachal Pradesh" regionCode="" regionId="wo.as.india.himachal_pradesh" />
+			<map file="jammu_and_kashmir" name="Jammu and Kashmir" regionCode="" regionId="wo.as.india.jammu_and_kashmir" />
+			<map file="jharkhand" name="Jharkhand" regionCode="" regionId="wo.as.india.jharkhand" />
+			<map file="karnataka" name="Karnataka" regionCode="" regionId="wo.as.india.karnataka" />
+			<map file="kerala" name="Kerala" regionCode="" regionId="wo.as.india.kerala" />			
+			<map file="madhya_pradesh" name="Madhya Pradesh" regionCode="" regionId="wo.as.india.madhya_pradesh" />
+			<map file="maharashtra" name="Maharashtra" regionCode="" regionId="wo.as.india.maharashtra" />
+			<map file="manipur" name="Manipur" regionCode="" regionId="wo.as.india.manipur" />
+			<map file="meghalaya" name="Meghalaya" regionCode="" regionId="wo.as.india.meghalaya" />
+			<map file="mizoram" name="Mizoram" regionCode="" regionId="wo.as.india.mizoram" />
+			<map file="nagaland" name="Nagaland" regionCode="" regionId="wo.as.india.nagaland" />
+			<map file="odisha" name="Odisha" regionCode="" regionId="wo.as.india.odisha" />
+			<map file="punjab" name="Punjab" regionCode="" regionId="wo.as.india.punjab" />
+			<map file="rajasthan" name="Rajasthan" regionCode="" regionId="wo.as.india.rajasthan" />
+			<map file="sikkim" name="Sikkim" regionCode="" regionId="wo.as.india.sikkim" />
+			<map file="tamil_nadu" name="Tamil Nadu" regionCode="" regionId="wo.as.india.tamil_nadu" />
+			<map file="telangana" name="Telangana" regionCode="" regionId="wo.as.india.telangana" />
+			<map file="tripura" name="Tripura" regionCode="" regionId="wo.as.india.tripura" />
+			<map file="uttarakhand" name="Uttarakhand" regionCode="" regionId="wo.as.india.uttarakhand" />
+			<map file="uttar_pradesh" name="Uttar Pradesh" regionCode="" regionId="wo.as.india.uttar_pradesh" />
+			<map file="west_bengal" name="West Bengal" regionCode="" regionId="wo.as.india.west_bengal" />
+			
+			<map file="andaman_and_nicobar_islands" name="Andaman and Nicobar Islands" regionCode="" regionId="wo.as.india.andaman_and_nicobar_islands" />
+			<map file="chandigarh" name="Chandigarh" regionCode="" regionId="wo.as.india.chandigarh" />
+			<map file="dadra_and_nagar_haveli" name="Union Territory of Dadra &amp; Nagar Haveli" regionCode="" regionId="wo.as.india.dadra_and_nagar_haveli" />
+			<map file="dadra_and_nagar_haveli" name="Daman and Diu" regionCode="" regionId="wo.as.india.daman_and_diu" />
+			<map file="lakshadweep" name="Lakshadweep" regionCode="" regionId="wo.as.india.lakshadweep" />
+			<map file="national_capital_territory" name="Delhi" regionCode="" regionId="wo.as.india.national_capital_territory" />
+			<map file="dadra_and_nagar_haveli" name="Puducherry" regionCode="" regionId="wo.as.puducherry" />
+			
+		</mapPack>
+
+		<mapPack dir="russia" name="Russia" regionCode="RU" parentRegionId="wo.as.russia" sourceId="_russia">
+		
+			<map file="adygea" name="Adygea" regionCode="" regionId="wo.as.russia.adygea" />
+			<map file="altai_krai" name="Altai Krai" regionCode="" regionId="wo.as.russia.altai_krai" />
+			<map file="altai_republic" name="Altai Republic" regionCode="" regionId="wo.as.russia.altai_republic" />
+			<map file="amur_oblast" name="Amur Oblast" regionCode="" regionId="wo.as.russia.amur_oblast" />
+			<map file="arkhangelsk_oblast" name="Arkhangelsk Oblast" regionCode="" regionId="wo.as.russia.arkhangelsk_oblast" />
+			<map file="astrakhan_oblast" name="Astrakhan Oblast"   regionCode="" regionId="wo.as.russia.astrakhan_oblast" />
+			<map file="bashkortostan" name="Bashkortostan" regionCode="" regionId="wo.as.russia.bashkortostan" />
+			<map file="belgorod_oblast" name="Belgorod Oblast" regionCode="" regionId="wo.as.russia.belgorod_oblast" />
+			<map file="bryansk_oblast" name="Bryansk Oblast" regionCode="" regionId="wo.as.russia.bryansk_oblast" />
+			<map file="buryatia" name="Buryatia" regionCode="" regionId="wo.as.russia.buryatia" />
+			<map file="chechen_republic" name="Chechen Republic" regionCode="" regionId="wo.as.russia.chechen_republic" />
+			<map file="chelyabinsk_oblast" name="Chelyabinsk Oblast" regionCode="" regionId="wo.as.russia.chelyabinsk_oblast" />
+			<map file="chukot_east" name="Chukotka Autonomous Okrug"  regionCode="" regionId="wo.as.russia.chukotka_autonomous_okrug" />		
+			<map file="chuvashia" name="Chuvashia" regionCode="" regionId="wo.as.russia.chuvashia" />
+			<map file="dagestan" name="Dagestan" regionCode="" regionId="wo.as.russia.dagestan" />
+			<map file="ingushetia" name="Ingushetia" regionCode="" regionId="wo.as.russia.ingushetia" />
+			<map file="irkutsk_oblast" name="Irkutsk Oblast"  regionCode="" regionId="wo.as.russia.irkutsk_oblast" />
+			<map file="ivanovo_oblast" name="Ivanovo Oblast" regionCode="" regionId="wo.as.russia.ivanovo_oblast" />
+			<map file="jewish_autonomous_oblast" name="Jewish Autonomous Oblast" regionCode="" regionId="wo.as.russia.jewish_autonomous_oblast" />
+			<map file="kabardino-balkaria" name="Kabardino-Balkaria"  regionCode="" regionId="wo.as.russia.kabardino-balkaria" />
+			<map file="kaliningrad" name="Kaliningrad" sourceId="europe" regionCode="" regionId="wo.as.russia.kaliningrad" />
+			<map file="kalmykia" name="Kalmykia" regionCode="" regionId="wo.as.russia.kalmykia" />
+			<map file="kaluga_oblast" name="Kaluga Oblast" regionCode="" regionId="wo.as.russia.kaluga_oblast" />
+			<map file="kamchatka_krai" name="Kamchatka Krai"   regionCode="" regionId="wo.as.russia.kamchatka_krai" />
+			<map file="karachay-cherkessia" name="Karachay-Cherkessia"  regionCode="" regionId="wo.as.russia.karachay-cherkessia" />
+			<map file="republic_of_karelia" name="Republic of Karelia"   regionCode="" regionId="wo.as.russia.republic_of_karelia" />
+			<map file="kemerovo_oblast" name="Kemerovo Oblast" regionCode="" regionId="wo.as.russia.kemerovo_oblast" />
+			<map file="khabarovsk_krai" name="Khabarovsk Krai"   regionCode="" regionId="wo.as.russia.khabarovsk_krai" />
+			<map file="khakassia" name="Khakassia" regionCode="" regionId="wo.as.russia.khakassia" />
+			<map file="khanty-mansiysk_autonomous_okrug_-_ugra" name="Khanty-Mansiysk Autonomous Okrug – Ugra"  regionCode="" regionId="wo.as.russia.khanty-mansiysk_autonomous_okrug" />
+			<map file="kirov_oblast" name="Kirov Oblast" regionCode="" regionId="wo.as.russia.kirov_oblast" />
+			<map file="komi_republic" name="Komi Republic"  regionCode="" regionId="wo.as.russia.komi_republic" />
+			<map file="kostroma_oblast" name="Kostroma Oblast" regionCode="" regionId="wo.as.russia.kostroma_oblast" />
+			<map file="krasnodar_krai" name="Krasnodar Krai"  regionCode="" regionId="wo.as.russia.krasnodar_krai" />
+			<map file="krasnoyarsk_krai" name="Krasnoyarsk Krai"   regionCode="" regionId="wo.as.russia.krasnoyarsk_krai" />
+			<map file="kurgan_oblast" name="Kurgan Oblast" regionCode="" regionId="wo.as.russia.kurgan_oblast" />
+			<map file="kursk_oblast" name="Kursk Oblast" regionCode="" regionId="wo.as.russia.kursk_oblast" />
+			<map file="leningrad_oblast" name="Leningrad Oblast"  regionCode="" regionId="wo.as.russia.leningrad_oblast" />
+			<map file="lipetsk_oblast" name="Lipetsk Oblast" regionCode="" regionId="wo.as.russia.lipetsk_oblast" />
+			<map file="magadan_oblast" name="Magadan Oblast"   regionCode="" regionId="wo.as.russia.magadan_oblast" />
+			<map file="mari_el" name="Mari El" regionCode="" regionId="wo.as.russia.mari_el" />
+			<map file="mordovia" name="Mordovia" regionCode="" regionId="wo.as.russia.mordovia" />
+			<map file="moscow" name="Moscow" regionCode="" regionId="wo.as.russia.moscow" />
+			<map file="moscow_oblast" name="Moscow Oblast" regionCode="" regionId="wo.as.russia.moscow_oblast" />
+			<map file="murmansk_oblast" name="Murmansk Oblast"   regionCode="" regionId="wo.as.russia.murmansk_oblast" />
+			<map file="nenets_autonomous_okrug" name="Nenets Autonomous Okrug"   regionCode="" regionId="wo.as.russia.nenets_autonomous_okrug" />
+			<map file="nizhny_novgorod_oblast" name="Nizhny Novgorod Oblast" regionCode="" regionId="wo.as.russia.nizhny_novgorod_oblast" />
+			<map file="novgorod_oblast" name="Novgorod Oblast" regionCode="" regionId="wo.as.russia.novgorod_oblast" />
+			<map file="novosibirsk_oblast" name="Novosibirsk Oblast" regionCode="" regionId="wo.as.russia.novosibirsk_oblast" />
+			<map file="omsk_oblast" name="Omsk Oblast" regionCode="" regionId="wo.as.russia.omsk_oblast" />
+			<map file="orenburg_oblast" name="Orenburg Oblast" regionCode="" regionId="wo.as.russia.orenburg_oblast" />
+			<map file="oryol_oblast" name="Oryol Oblast" regionCode="" regionId="wo.as.russia.oryol_oblast" />
+			<map file="penza_oblast" name="Penza Oblast" regionCode="" regionId="wo.as.russia.penza_oblast" />
+			<map file="perm_krai" name="Perm Krai" regionCode="" regionId="wo.as.russia.perm_krai" />
+			<map file="primorsky_krai" name="Primorsky Krai"  regionCode="" regionId="wo.as.russia.primorsky_krai" />
+			<map file="pskov_oblast" name="Pskov Oblast"  regionCode="" regionId="wo.as.russia.pskov_oblast" />
+			<map file="rostov_oblast" name="Rostov Oblast"  regionCode="" regionId="wo.as.russia.rostov_oblast" />
+			<map file="ryazan_oblast" name="Ryazan Oblast" regionCode="" regionId="wo.as.russia.ryazan_oblast" />
+			<map file="saint_petersburg" name="Saint Petersburg"  regionCode="" regionId="wo.as.russia.saint_petersburg" />
+			<map file="sakha_republic" name="Sakha Republic"  regionCode="" regionId="wo.as.russia.sakha_republic" />
+			<map file="sakhalin_oblast" name="Sakhalin Oblast"  regionCode="" regionId="wo.as.russia.sakhalin_oblast" />
+			<map file="samara_oblast" name="Samara Oblast" regionCode="" regionId="wo.as.russia.samara_oblast" />
+			<map file="saratov_oblast" name="Saratov Oblast" regionCode="" regionId="wo.as.russia.saratov_oblast" />
+			<map file="sevastopol" name="Sevastopol"  regionCode="" regionId="wo.as.russia.sevastopol" />
+			<map file="smolensk_oblast" name="Smolensk Oblast" regionCode="" regionId="wo.as.russia.smolensk_oblast" />
+			<map file="stavropol_krai" name="Stavropol Krai" regionCode="" regionId="wo.as.russia.stavropol_krai" />
+			<map file="sverdlovsk_oblast" name="Sverdlovsk Oblast" regionCode="" regionId="wo.as.russia.sverdlovsk_oblast" />
+			<map file="tambov_oblast" name="Tambov Oblast" regionCode="" regionId="wo.as.russia.tambov_oblast" />
+			<map file="tatarstan" name="Tatarstan" regionCode="" regionId="wo.as.russia.tatarstan" />
+			<map file="tomsk_oblast" name="Tomsk Oblast" regionCode="" regionId="wo.as.russia.tomsk_oblast" />
+			<map file="tula_oblast" name="Tula Oblast" regionCode="" regionId="wo.as.russia.tula_oblast" />
+			<map file="tuva" name="Tuva" regionCode="" regionId="wo.as.russia.tuva" />
+			<map file="tver_oblast" name="Tver Oblast" regionCode="" regionId="wo.as.russia.tver_oblast" />
+			<map file="tyumen_oblast" name="Tyumen Oblast" regionCode="" regionId="wo.as.russia.tyumen_oblast" />
+			<map file="udmurt_republic" name="Udmurt Republic" regionCode="" regionId="wo.as.russia.udmurt_republic" />
+			<map file="ulyanovsk_oblast" name="Ulyanovsk Oblast" regionCode="" regionId="wo.as.russia.ulyanovsk_oblast" />
+			<map file="vladimir_oblast" name="Vladimir Oblast" regionCode="" regionId="wo.as.russia.vladimir_oblast" />
+			<map file="volgograd_oblast" name="Volgograd Oblast" regionCode="" regionId="wo.as.russia.volgograd_oblast" />
+			<map file="vologda_oblast" name="Vologda Oblast" regionCode="" regionId="wo.as.russia.vologda_oblast" />
+			<map file="voronezh_oblast" name="Voronezh Oblast" regionCode="" regionId="wo.as.russia.voronezh_oblast" />
+			<map file="yamalo-nenets_autonomous_okrug" name="Yamalo-Nenets Autonomous Okrug"   regionCode="" regionId="wo.as.russia.yamalo-nenets_autonomous_okrug" />
+			<map file="yaroslavl_oblast" name="Yaroslavl Oblast" regionCode="" regionId="wo.as.russia.yaroslavl_oblast" />
+			<map file="zabaykalsky_krai" name="Zabaykalsky Krai" regionCode="" regionId="wo.as.russia.zabaykalsky_krai" />
+
+		</mapPack>
+	</mapPack>	
+	
+	<mapPack dir="oceania" name="Oceania" regionCode="WO-OC" parentRegionId="wo.oc" sourceId="oceania" type="storeGeoDb">
+		<map file="american_samoa" name="American Samoa" regionCode="AS" regionId="wo.oc.american_samoa" />
+		<map file="cocos_islands" name="Cocos (Keeling) Islands" regionCode="CC" regionId="wo.oc.cocos_islands" />
+		<map file="cook_islands" name="Cook Islands" regionCode="CK" regionId="wo.oc.cook_islands" />
+		<map file="fiji" name="Fiji" regionCode="FJ" regionId="wo.oc.fiji" />
+		<map file="french_polynesia" name="French Polynesia" regionCode="PF" regionId="wo.oc.french_polynesia" />
+		<map file="guam" name="Guam" regionCode="GU" regionId="wo.oc.guam" />
+		<map file="kiribati" name="Kiribati" regionCode="KI" regionId="wo.oc.kiribati" />
+		<map file="marshall_islands" name="Marshall Islands" regionCode="MH" regionId="wo.oc.marshall_islands" />
+		<map file="micronesia" name="Federated States of Micronesia" regionCode="FM" regionId="wo.oc.micronesia" />
+		<map file="nauru" name="Nauru" regionCode="NR" regionId="wo.oc.nauru" />
+		<map file="new_caledonia" name="New Caledonia" regionCode="NC" regionId="wo.oc.new_caledonia" />
+		<map file="new_zealand" name="New Zealand" regionCode="NZ" regionId="wo.oc.new_zealand" />
+		<map file="niue" name="Niue" regionCode="NU" regionId="wo.oc.niue" />
+		<map file="norfolk_island" name="Norfolk Island" regionCode="NF" regionId="wo.oc.norfolk_island" />
+		<map file="northern_mariana_islands" name="Northern Mariana Islands" regionCode="MP" regionId="wo.oc.northern_mariana_islands" />
+		<map file="palau" name="Palau" regionCode="PW" regionId="wo.oc.palau" />
+		<map file="papua_new_guinea" name="Papua New Guinea" regionCode="PG" regionId="wo.oc.papua_new_guinea" />
+		<map file="pitcairn_islands" name="Pitcairn Islands" regionCode="PN" regionId="wo.oc.pitcairn_islands" />
+		<map file="samoa" name="Samoa" regionCode="WS" regionId="wo.oc.samoa" />
+		<map file="solomon_islands" name="Solomon Islands" regionCode="SB" regionId="wo.oc.solomon_islands" />
+		<map file="tokelau" name="Tokelau" regionCode="TK" regionId="wo.oc.tokelau" />
+		<map file="tonga" name="Tonga" regionCode="TO" regionId="wo.oc.tonga" />
+		<map file="tuvalu" name="Tuvalu" regionCode="TV" regionId="wo.oc.tuvalu" />
+		<map file="vanuatu" name="Vanuatu" regionCode="VU" regionId="wo.oc.vanuatu" />
+		<map file="wallis_and_futuna" name="Wallis and Futuna" regionCode="WF" regionId="wo.oc.wallis_and_futuna" />
+
+		<map file="australia" name="Australia" regionCode="AU" regionId="wo.oc.australia" type="storeGeoDb" />	
+		
+		<mapPack dir="australia" name="Australia" regionCode="AU" parentRegionId="wo.oc.australia" sourceId="oceania">
+			<map file="ashmore_and_cartier_islands" name="Ashmore and cartier islands" regionCode="" regionId="wo.oc.australia.ashmore_and_cartier_islands" />
+			<map file="australian_capital_territory" name="Australian Capital Territory" regionCode="" regionId="wo.oc.australia.australian_capital_territory" />
+			<map file="coral_sea_islands" name="Coral Sea Islands Territory" regionCode="" regionId="wo.oc.australia.coral_sea_islands" />
+			<map file="new_south_wales" name="New South Wales" regionCode="" regionId="wo.oc.australia.new_south_wales" />
+			<map file="northern_territory" name="Northern Territory" regionCode="" regionId="wo.oc.australia.northern_territory" />
+			<map file="queensland" name="Queensland" regionCode="" regionId="wo.oc.australia.queensland" />
+			<map file="south_australia" name="South Australia" regionCode="" regionId="wo.oc.australia.south_australia" />
+			<map file="tasmania" name="Tasmania" regionCode="" regionId="wo.oc.australia.tasmania" />
+			<map file="victoria" name="Victoria" regionCode="" regionId="wo.oc.australia.victoria" />
+			<map file="western_australia" name="Western Australia" regionCode="" regionId="wo.oc.australia.western_australia" />
+		</mapPack>
+	</mapPack>
+
+</maps>

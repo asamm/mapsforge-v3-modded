@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<maps>
+	
+	<!--
+	http://ftp.heanet.ie/mirrors/openstreetmap.org/full-experimental/full-planet-120601-1150.osm.bz2
+	http://ftp.heanet.ie/mirrors/openstreetmap.org/pbf/planet-latest.osm.pbf
+	http://ftp5.gwdg.de/pub/misc/openstreetmap/planet.openstreetmap.org/pbf/planet-latest.osm.pbf
+	-->
+
+	<mapPack regionId="wo" name="_world" dir="_world" sourceId="planet" type="extract">
+		<map regionId="wo" file="planet-latest" name="planet-latest" id="planet" type="download" url="http://ftp.snt.utwente.nl/pub/misc/openstreetmap/planet-latest.osm.pbf" />
+		<map regionId="wo.af" file="africa" name="Africa" id="africa" />
+		<map regionId="wo.am" file="americas" name="Americas" id="americas" />
+		<map regionId="wo.at" file="antartica" name="Antartica" id="antartica" />
+		<map regionId="wo.as" file="asia" name="Asia" id="asia" />
+		<map regionId="wo.eu" file="europe" name="Europe" id="europe" />
+		<map regionId="wo.oc" file="oceania" name="Oceania" id="oceania" />
+	</mapPack> 
+
+	<mapPack parentRegionId="wo.eu" name="Europe" coastline="yes" contourSep="no" dir="europe" prefLang="en,zxx" sourceId="europe" type="extract|generate|contour|tourist|graphHopper|apDb">
+		
+		<map regionId="wo.eu.france" file="_france" name="France (complete)" countryname="France" id="_france" type="extract" />
+		
+		<map regionId="wo.eu.france" file="_france_north" name="France (north)" countryname="France" fileGen="france/_france_north" id="_france_north" sourceId="_france" />
+		<map regionId="wo.eu.france" file="_france_south" name="France (south)" countryname="France" fileGen="france/_france_south" id="_france_south" sourceId="_france" />	 
+			 
+		<map regionId="wo.eu.germany" file="_germany" name="Germany (Complete)" countryname="Germany" id="_germany" type="extract" />		
+		<map regionId="wo.eu.germany" file="_germany_north" name="Germany (north)" countryname="Germany" fileGen="germany/_germany_north" forceInterval="3,0,5,7,6,7,9,8,9,11,10,11,14,12,21" id="_germany_north" sourceId="_germany" />
+		<map regionId="wo.eu.germany" file="_germany_south" name="Germany (South)" countryname="Germany" fileGen="germany/_germany_south" forceInterval="3,0,5,7,6,7,9,8,9,11,10,11,14,12,21" id="_germany_south" sourceId="_germany" />		
+		
+		
+		<map regionId="wo.eu.italy" file="_italy_north" name="Italy (north)" countryname="Italy" fileGen="italy/_italy_north" id="_italy_north" />
+		<map regionId="wo.eu.italy" file="_italy_south" name="Italy (south)" countryname="Italy" fileGen="italy/_italy_south" id="_italy_south" />
+		
+		<map regionId="wo.eu.netherlands" file="_netherlands" name="Netherlands (complete)" cyclo_node="NLBE" fileGen="netherlands/_netherlands" id="_netherlands"  forceInterval="3,0,5,7,6,7,8,8,8,9,9,9,11,10,11,15,12,21" />
+		
+		<map regionId="wo.eu.spain" file="_spain" name="Spain" id="_spain" />	
+		
+		<map regionId="wo.eu.united_kingdom" file="_united_kingdom" coastline="no" id="_united_kingdom" type="extract" />
+
+		<map regionId="wo.eu.aland" file="aland" name="Aland" />
+		<map regionId="wo.eu.albania" file="albania" name="Albania" />
+		<map regionId="wo.eu.andorra" file="andorra" name="Andorra" coastline="no" />
+		<map regionId="wo.eu.austria" file="austria" name="Austria" coastline="no" />
+		<map regionId="wo.eu.belarus" file="belarus" name="Belarus" coastline="no" />
+		<map regionId="wo.eu.belgium" file="belgium" name="Belgium" cyclo_node="NLBE" />
+		<map regionId="wo.eu.bosnia_and_herzegovina" file="bosnia_and_herzegovina" name="Bosnia and Herzegovina" />
+		<map regionId="wo.eu.bulgaria" file="bulgaria" name="Bulgaria" />
+		<map regionId="wo.eu.croatia" file="croatia" name="Croatia" />
+		<map regionId="wo.eu.cyprus" file="cyprus" name="Cyprus" sourceId="asia" />		
+		<map regionId="wo.eu.czech_republic" file="czech_republic" name="Czech republic" coastline="no" />
+		<map regionId="wo.eu.denmark" file="denmark" name="Denmark" />
+		<map regionId="wo.eu.estonia" file="estonia" name="Estonia" />
+		<map regionId="wo.eu.faroe_islands" file="faroe_islands" name="Faroe Islands" />
+		<map regionId="wo.eu.finland" file="finland" name="Finland" />
+		<map regionId="wo.eu.gibraltar" file="gibraltar" name="Gibraltar" />
+		<map regionId="wo.eu.greece" file="greece" name="Greece" />
+		<map regionId="wo.eu.guernsey" file="guernsey" name="Guernsey" />
+		<map regionId="wo.eu.hungary" file="hungary" name="Hungary" coastline="no" />
+		<map regionId="wo.eu.iceland" file="iceland" name="Iceland" />
+		<map regionId="wo.eu.ireland" file="ireland" name="Ireland" />
+		<map regionId="wo.eu.kosovo" file="kosovo" name="Kosovo" coastline="no" />
+		<map regionId="wo.eu.latvia" file="latvia" name="Latvia" />
+		<map regionId="wo.eu.liechtenstein" file="liechtenstein" name="Liechtenstein" coastline="no" />
+		<map regionId="wo.eu.lithuania" file="lithuania" name="Lithuania" />
+		<map regionId="wo.eu.luxembourg" file="luxembourg" name="Luxembourg" coastline="no" />
+		<map regionId="wo.eu.macedonia" file="macedonia" name="Macedonia (FYROM)" coastline="no" />
+		<map regionId="wo.eu.malta" file="malta" name="Malta" />
+		<map regionId="wo.eu.moldova" file="moldova" name="Moldova" coastline="no" />
+		<map regionId="wo.eu.monaco" file="monaco" name="Monaco" />
+		<map regionId="wo.eu.montenegro" file="montenegro" name="Montenegro" />
+		<map regionId="wo.eu.norway" file="norway" name="Norway" />
+		<map regionId="wo.eu.poland" file="poland" name="Poland" />
+		<map regionId="wo.eu.portugal" file="portugal" name="Portugal" />
+		<map regionId="wo.eu.romania" file="romania" name="Romania" />
+		<map regionId="wo.eu.san_marino" file="san_marino" name="San Marino" coastline="no" />
+		<map regionId="wo.eu.serbia" file="serbia" name="Serbia" coastline="no" />
+		<map regionId="wo.eu.slovakia" file="slovakia" name="Slovakia" coastline="no" />
+		<map regionId="wo.eu.slovenia" file="slovenia" name="Slovenia" />
+		<map regionId="wo.eu.norway" file="svalbard_and_jan_mayen" name="Svalbard and Jan Mayer" countryname="Norway" />
+	        <map regionId="wo.eu.sweden" file="sweden" name="Sweden" /> 
+		<map regionId="wo.eu.switzerland" file="switzerland" name="Switzerland" coastline="no" />
+		<map regionId="wo.eu.ukraine" file="ukraine" name="Ukraine" />
+
+		<mapPack parentRegionId="wo.eu.france" name="France" coastline="yes" contourSep="no" countryname="France" dir="france" sourceId="_france">
+			
+			<map regionId="wo.eu.france.auvergne-rhone-alpes" file="auvergne-rhone-alpes" name="Auvergne-Rhone-Alpes" coastline="no" />
+			<map regionId="wo.eu.france.bourgogne-franche-comte" file="bourgogne-franche-comte" name="Bourgogne-Franche-Comte" coastline="no" />
+			<map regionId="wo.eu.france.bretagne" file="bretagne" name="Bretagne" />
+			<map regionId="wo.eu.france.centre-val_de_loire" file="centre-val_de_loire" name="Centre-Val de Loire" coastline="no" />
+			<map regionId="wo.eu.france.corsica" file="corsica" name="Corsica" />
+			<map regionId="wo.eu.france.grand_est" file="grand_est" name="Grand Est" coastline="no" />
+			<map regionId="wo.eu.france.hauts-de-france" file="hauts-de-france" name="Hauts-de-France" />
+			<map regionId="wo.eu.france.ile-de-france" file="ile-de-france" name="Ile-de-France" coastline="no" />
+			<map regionId="wo.eu.france.normandy" file="normandy" name="Normandy" />
+			<map regionId="wo.eu.france.nouvelle-aquitaine" file="nouvelle-aquitaine" name="Nouvelle-Aquitaine" />
+			<map regionId="wo.eu.france.occitanie" file="occitanie" name="Occitanie" />
+			<map regionId="wo.eu.france.pays_de_la_loire" file="pays_de_la_loire" name="Pays de la Loire" />
+			<map regionId="wo.eu.france.provence-alpes-cote_d_azur" file="provence-alpes-cote_d_azur" name="Provence-Alpes-Cote d Azur" />
+			
+		</mapPack>
+
+		<mapPack parentRegionId="wo.eu.germany" name="Germany" coastline="yes" contourSep="no" countryname="Germany" dir="germany" sourceId="_germany">
+			<map regionId="wo.eu.germany.baden" file="baden-wurttemberg" name="Baden-Wurttemberg" coastline="no" />
+			<map regionId="wo.eu.germany.bayern" file="bayern" name="Bayern" coastline="no" />
+			<map regionId="wo.eu.germany.berlin" file="berlin" name="Berlin" coastline="no" />
+			<map regionId="wo.eu.germany.brandenburg" file="brandenburg" name="Brandenburg" coastline="no" />
+			<map regionId="wo.eu.germany.bremen" file="bremen" name="Bremen" coastline="no" />
+			<map regionId="wo.eu.germany.hamburg" file="hamburg" name="Hamburg" />
+			<map regionId="wo.eu.germany.hessen" file="hessen" name="Hessen" coastline="no" />
+			<map regionId="wo.eu.germany.mecklenburg" file="mecklenburg-vorpommern" name="Mecklenburg-Vorpommern" />
+			<map regionId="wo.eu.germany.niedersachsen" file="niedersachsen" name="Niedersachsen" />
+			<map regionId="wo.eu.germany.nordrhein" file="nordrhein-westfalen" name="Nordrhein-Westfalen" coastline="no" forceInterval="3,0,5,7,6,7,9,8,9,11,10,11,14,12,21" />
+			<map regionId="wo.eu.germany.rheinland" file="rheinland-pfalz" name="Rheinland-Pfalz" coastline="no" />
+			<map regionId="wo.eu.germany.saarland" file="saarland" name="Saarland" coastline="no" />
+			<map regionId="wo.eu.germany.sachsen" file="sachsen" name="Sachsen" coastline="no" />
+			<map regionId="wo.eu.germany.sachsen_anhalt" file="sachsen-anhalt" name="Sachsen-Anhalt" coastline="no" />
+			<map regionId="wo.eu.germany.schleswig" file="schleswig-holstein" name="Schleswig-Holstein" />
+			<map regionId="wo.eu.germany.thuringen" file="thuringen" name="Thuringen" coastline="no" />
+		</mapPack>
+		
+	
+		<mapPack parentRegionId="wo.eu.netherlands" name="Netherlands" coastline="yes" contourSep="no" countryname="Netherlands" cyclo_node="NLBE" dir="netherlands" sourceId="_netherlands"  forceInterval="3,0,5,7,6,7,9,8,9,11,10,11,15,12,21">
+			<map regionId="wo.eu.netherlands.drenthe" file="drenthe" name="Drenthe" coastline="no" />
+			<map regionId="wo.eu.netherlands.flevoland" file="flevoland" name="Flevoland" />
+			<map regionId="wo.eu.netherlands.friesland" file="friesland" name="Friesland" />
+			<map regionId="wo.eu.netherlands.gelderland" file="gelderland" name="Gelderland" />
+			<map regionId="wo.eu.netherlands.groningen" file="groningen" name="Groningen" />
+			<map regionId="wo.eu.netherlands" file="ijsselmeer" name="Ijsselmeer" />
+			<map regionId="wo.eu.netherlands.limburg" file="limburg" name="Limburg" coastline="no" />
+			<map regionId="wo.eu.netherlands.noord_braband" file="noord-brabant" name="Noord-brabant" />
+			<map regionId="wo.eu.netherlands.noord_holland" file="noord-holland" name="Noord-holland" />
+			<map regionId="wo.eu.netherlands.overijssel" file="overijssel" name="Overijssel" coastline="no" />
+			<map regionId="wo.eu.netherlands.utrecht" file="utrecht" name="Utrecht" />
+			<map regionId="wo.eu.netherlands.zeeland" file="zeeland" name="Zeeland" />
+			<map regionId="wo.eu.netherlands" file="zeeuwse_meren" name="Zeeuwse meren" />
+			<map regionId="wo.eu.netherlands.zuid" file="zuid-holland" name="Zuid-holland" />
+		</mapPack>
+	
+		<mapPack parentRegionId="wo.eu.spain" name="Spain" coastline="yes" contourSep="no" dir="spain" sourceId="_spain">
+			<map regionId="wo.eu.spain.canary_islands" file="canary_islands" name="Canary Islands" />
+		</mapPack>
+		
+		<mapPack parentRegionId="wo.eu.united_kingdom" name="United Kingdom" coastline="yes" contourSep="no" countryname="United Kingdom" dir="united_kingdom" sourceId="_united_kingdom">
+			<map regionId="wo.eu.united_kingdom.england" file="england" name="England" />
+			<map regionId="wo.eu.united_kingdom.northern_ireland" file="northern_ireland" name="Northern Ireland" />
+			<map regionId="wo.eu.united_kingdom.scotland" file="scotland" name="Scotland" />
+			<map regionId="wo.eu.united_kingdom.wales" file="wales" name="Wales" />
+			<map regionId="wo.eu.united_kingdom.isle_of_man" file="isle_of_man" name="Isle of man" />
+			<map regionId="wo.eu.united_kingdom.jersey" file="jersey" name="Jersey" />
+		</mapPack>
+	</mapPack>
+	
+	<mapPack parentRegionId="wo.af" name="Africa" coastline="yes" contourSep="no" dir="africa" prefLang="en,zxx" sourceId="africa" type="extract|generate|contour|tourist|graphHopper|apDb">
+		
+		<map regionId="wo.af.algeria" file="algeria" name="Algeria" />
+		<map regionId="wo.af.angola" file="angola" name="Angola" />
+		<map regionId="wo.af.benin" file="benin" name="Benin" />
+		<map regionId="wo.af.botswana" file="botswana" name="Botswana" coastline="no" />
+		<map regionId="wo.af.burkina_faso" file="burkina_faso" name="Burkina Faso" coastline="no" />
+		<map regionId="wo.af.burundi" file="burundi" name="Burundi" coastline="no" />
+		<map regionId="wo.af.cameroon" file="cameroon" name="Cameroon" />
+		<map regionId="wo.af.cape_verde" file="cape_verde" name="Cape Verde" />
+		<map regionId="wo.af.central_african_republic" file="central_african_republic" name="Central African republic" coastline="no" />
+		<map regionId="wo.af.chad" file="chad" name="Chad" coastline="no" />
+		<map regionId="wo.af.comoros" file="comoros" name="Comoros" />
+		<map regionId="wo.af.cote_d_ivoire" file="cote_d_ivoire" name="Cote d Ivoire" />
+		<map regionId="wo.af.democratic_republic_of_the_congo" file="democratic_republic_of_the_congo" name="Democratic republic of Congo" />
+		<map regionId="wo.af.djibouti" file="djibouti" name="Djibouti" />
+		<map regionId="wo.af.egypt" file="egypt" name="Egypt" />
+		<map regionId="wo.af.equatorial_guinea" file="equatorial_guinea" name="Equatorial Guinea" />
+		<map regionId="wo.af.eritrea" file="eritrea" name="Eritrea" />
+		<map regionId="wo.af.ethiopia" file="ethiopia" name="Ethiopia" coastline="no" />
+		<map regionId="wo.af.gabon" file="gabon" name="Gabon" />
+		<map regionId="wo.af.gambia" file="gambia" name="Gambia" />
+		<map regionId="wo.af.ghana" file="ghana" name="Ghana" />
+		<map regionId="wo.af.guinea" file="guinea" name="Guinea" />
+		<map regionId="wo.af.guinea" file="guinea-bissau" name="Guinea Bissau" />
+		<map regionId="wo.af.kenya" file="kenya" name="Kenya" />
+		<map regionId="wo.af.lesotho" file="lesotho" name="Lesotho" coastline="no" />
+		<map regionId="wo.af.liberia" file="liberia" name="Liberia" />
+		<map regionId="wo.af.libya" file="libya" name="Libya" />
+		<map regionId="wo.af.madagascar" file="madagascar" name="Madagascar" />
+		<map regionId="wo.af.malawi" file="malawi" name="Malawi" />
+		<map regionId="wo.af.mali" file="mali" name="Mali" coastline="no" />
+		<map regionId="wo.af.mauritania" file="mauritania" name="Mauritania" />
+		<map regionId="wo.af.mauritius" file="mauritius" name="Mauritius" />
+		<map regionId="wo.af.mayotte" file="mayotte" name="Mayotte" />
+		<map regionId="wo.af.morocco" file="morocco" name="Morocco" />
+		<map regionId="wo.af.mozambique" file="mozambique" name="Mozambique" />
+		<map regionId="wo.af.namibia" file="namibia" name="Namibia" />
+		<map regionId="wo.af.niger" file="niger" name="Niger" coastline="no" />
+		<map regionId="wo.af.nigeria" file="nigeria" name="Nigeria" />
+		<map regionId="wo.af.republic_of_congo" file="republic_of_congo" name="Republic of Congo" />
+		<map regionId="wo.af.reunion" file="reunion" name="Reunion" />
+		<map regionId="wo.af.rwanda" file="rwanda" name="Rwanda" coastline="no" />
+		<map regionId="wo.af.saint_helena" file="saint_helena" name="Saint Helena" />
+		<map regionId="wo.af.sao_tome_and_principe" file="sao_tome_and_principe" name="Sao Tome and Principe" />
+		<map regionId="wo.af.senegal" file="senegal" name="Senegal" />
+		<map regionId="wo.af.seychelles" file="seychelles" name="Seychelles" />
+		<map regionId="wo.af.sierra_leone" file="sierra_leone" name="Sierra Leone" />
+		<map regionId="wo.af.somalia" file="somalia" name="Somalia" />
+		<map regionId="wo.af.south_africa" file="south_africa" name="South Africa" />
+		<map regionId="wo.af.sudan" file="sudan" name="Sudan" />
+		<map regionId="wo.af.swaziland" file="swaziland" name="Swaziland" coastline="no" />
+		<map regionId="wo.af.tanzania" file="tanzania" name="Tanzania" />
+		<map regionId="wo.af.togo" file="togo" name="Togo" />
+		<map regionId="wo.af.tunisia" file="tunisia" name="Tunisia" />
+		<map regionId="wo.af.uganda" file="uganda" name="Uganda" />
+		<map regionId="wo.af.western_sahara" file="western_sahara" name="Western Sahara" />
+		<map regionId="wo.af.zambia" file="zambia" name="Zambia" coastline="no" />
+		<map regionId="wo.af.zimbabwe" file="zimbabwe" name="Zimbabwe" coastline="no" />
+	</mapPack>
+
+	<mapPack parentRegionId="wo.am" name="Americas" coastline="yes" contourSep="no" dir="americas" prefLang="en,zxx" sourceId="americas" type="extract|generate|contour|tourist|graphHopper|apDb">
+		
+		<map regionId="wo.am.canada" file="_canada" name="_canada" coastline="no" id="_canada" type="extract" />
+		<map regionId="wo.am.caribbean" file="_caribbean" name="_caribbean" coastline="no" id="_caribbean" type="extract" />
+		<map regionId="wo.am.united_states" file="_united_states" name="_united_states" coastline="no" id="_united_states" type="extract" />
+		<map regionId="wo.am.brazil" file="_brazil" name="_brazil" coastline="no" id="_brazil" type="extract" />
+
+		<map regionId="wo.am.argentina" file="argentina" name="Argentina" />
+		<map regionId="wo.am.belize" file="belize" name="Belize" />
+		<map regionId="wo.am.bermuda" file="bermuda" name="Bermuda" />
+		<map regionId="wo.am.bolivia" file="bolivia" name="Bolivia" coastline="no" />
+		<map regionId="wo.am.chile" file="chile" name="Chile" />
+		<map regionId="wo.am" file="clipperton_island" name="Clipperton Island" type="extract|generate|contour|tourist|apDb" />
+		<map regionId="wo.am.colombia" file="colombia" name="Colombia" />
+		<map regionId="wo.am.costa_rica" file="costa_rica" name="Costa Rica" />
+		<map regionId="wo.am.ecuador" file="ecuador" name="Ecuador" />
+		<map regionId="wo.am.el_salvador" file="el_salvador" name="El Salvador" />
+		<map regionId="wo.am.falkland_islands" file="falkland_islands" name="Falkland Islands" />
+		<map regionId="wo.am.french_guiana" file="french_guiana" name="French Guiana" />
+<!--		<map regionId="wo.am.greenland" file="greenland" name="Greenland" forceType="hd"  forceInterval="5,0,7,10,8,11,13,12,21"/> -->
+		<map regionId="wo.am.guatemala" file="guatemala" name="Guatemala" />
+		<map regionId="wo.am.guyana" file="guyana" name="Guyana" />
+		<map regionId="wo.am.honduras" file="honduras" name="Honduras" />
+		<map regionId="wo.am.mexico" file="mexico" name="Mexico" />
+		<map regionId="wo.am.nicaragua" file="nicaragua" name="Nicaragua" />
+		<map regionId="wo.am.panama" file="panama" name="Panama" />
+		<map regionId="wo.am.paraguay" file="paraguay" name="Paraguay" coastline="no" />
+		<map regionId="wo.am.peru" file="peru" name="Peru" />
+		<map regionId="wo.am.saint_pierre_and_miquelon" file="saint_pierre_and_miquelon" name="Saint Pierre and miquelon" />
+		<map regionId="wo.am.suriname" file="suriname" name="Suriname" />
+		<map regionId="wo.am.united_states" file="united_states_minor_outlying_islands" name="United States Minor Outlying Islands" type="extract|generate|contour|tourist|apDb" />
+		<map regionId="wo.am.uruguay" file="uruguay" name="Uruguay" />
+		<map regionId="wo.am.venezuela" file="venezuela" name="Venezuela" />
+
+		<mapPack parentRegionId="wo.am" coastline="yes" contourSep="no" sourceId="_caribbean" type="extract|generate|contour|tourist|graphHopper|apDb">
+			<map regionId="wo.am.anguilla" file="anguilla" name="Anguilla" />
+			<map regionId="wo.am.antigua_and_barbuda" file="antigua_and_barbuda" name="Antigua and Barbuda" />
+			<map regionId="wo.am.aruba" file="aruba" name="Aruba" />
+			<map regionId="wo.am.bahamas" file="bahamas" name="Bahamas" />
+			<map regionId="wo.am.barbados" file="barbados" name="Barbados" />
+			<map regionId="wo.am.british_virgin_islands" file="british_virgin_islands" name="British Virgin Islands" />
+			<map regionId="wo.am.cayman_islands" file="cayman_islands" name="Cayman Islands" />
+			<map regionId="wo.am.cuba" file="cuba" name="Cuba" />
+			<map regionId="wo.am.dominica" file="dominica" name="Dominica" />
+			<map regionId="wo.am.dominican_republic" file="dominican_republic" name="Dominican republic" />
+			<map regionId="wo.am.grenada" file="grenada" name="Grenada" />
+			<map regionId="wo.am.guadeloupe" file="guadeloupe" name="Guadeloupe" />
+			<map regionId="wo.am.haiti" file="haiti" name="Haiti" />
+			<map regionId="wo.am.jamaica" file="jamaica" name="Jamaica" />
+			<map regionId="wo.am.martinique" file="martinique" name="Martinique" />
+			<map regionId="wo.am.montserrat" file="montserrat" name="Montserrat" />
+			<map regionId="wo.am.netherlands_antilles" file="netherlands_antilles" name="Netherlands Antilles" />
+			<map regionId="wo.am.puerto_rico" file="puerto_rico" name="Puerto Rico" />
+			<map regionId="wo.am.saint_kitts_and_nevis" file="saint_kitts_and_nevis" name="Saint Kitts and Nevis" />
+			<map regionId="wo.am.saint_lucia" file="saint_lucia" name="Saint Lucia" />
+			<map regionId="wo.am.saint_vincent_and_the_grenadines" file="saint_vincent_and_the_grenadines" name="Saint Vincent and the Grenadines" />
+			<map regionId="wo.am.trinidad_and_tobago" file="trinidad_and_tobago" name="Trinidad and Tobago" />
+			<map regionId="wo.am.turks_and_caicos_islands" file="turks_and_caicos_islands" name="Turks and Caicos Islands" />
+			<map regionId="wo.am.virgin_islands_us" file="virgin_islands_us" name="United States Virgin Islands" />
+		</mapPack>	
+		
+		<mapPack parentRegionId="wo.am.brazil" name="Brazil" coastline="yes" contourSep="no" countryname="Brazil" dir="brazil" sourceId="_brazil" type="extract|generate|contour|tourist|graphHopper|apDb">
+		    <map regionId="wo.am.brazil.acre" file="acre" name="Acre" coastline="no" />
+        	<map regionId="wo.am.brazil.alagoas" file="alagoas" name="Alagoas" />
+        	<map regionId="wo.am.brazil.amapa" file="amapa" name="Amapa" />
+        	<map regionId="wo.am.brazil.amazonas" file="amazonas" name="Amazonas" coastline="no" />
+        	<map regionId="wo.am.brazil.bahia" file="bahia" name="Bahia" />
+        	<map regionId="wo.am.brazil.ceara" file="ceara" name="Ceara" />
+        	<map regionId="wo.am.brazil.distrito_federal_brasilia" file="distrito_federal_brasilia" name="Distrito Federal Brasilia" coastline="no" />
+        	<map regionId="wo.am.brazil.espirito_santo" file="espirito_santo" name="Espirito Santo" />
+        	<map regionId="wo.am.brazil.goias" file="goias" name="Goias" coastline="no" />
+        	<map regionId="wo.am.brazil.maranhao" file="maranhao" name="Maranhao" />
+        	<map regionId="wo.am.brazil.mato_grosso" file="mato_grosso" name="Mato Grosso" coastline="no" />
+        	<map regionId="wo.am.brazil.mato_grosso_do_sul" file="mato_grosso_do_sul" name="Mato Grosso do Sul" coastline="no" />
+        	<map regionId="wo.am.brazil.minas_gerais" file="minas_gerais" name="Minas Gerais" coastline="no" />
+        	<map regionId="wo.am.brazil.para" file="para" name="Para" />
+        	<map regionId="wo.am.brazil.paraiba" file="paraiba" name="Paraiba" />
+        	<map regionId="wo.am.brazil.parana" file="parana" name="Parana" />
+        	<map regionId="wo.am.brazil.pernambuco" file="pernambuco" name="Pernambuco" />
+        	<map regionId="wo.am.brazil.piaui" file="piaui" name="Piaui" />
+        	<map regionId="wo.am.brazil.rio_de_janeiro" file="rio_de_janeiro" name="Rio de Janeiro" />
+        	<map regionId="wo.am.brazil.rio_grande_do_norte" file="rio_grande_do_norte" name="Rio Grande do Norte" />
+        	<map regionId="wo.am.brazil.rio_grande_do_sul" file="rio_grande_do_sul" name="Rio Grande do Sul" />
+        	<map regionId="wo.am.brazil.rondonia" file="rondonia" name="Rondonia" coastline="no" />
+        	<map regionId="wo.am.brazil.roraima" file="roraima" name="Roraima" coastline="no" />
+        	<map regionId="wo.am.brazil.santa_catarina" file="santa_catarina" name="Santa Catarina" />
+        	<map regionId="wo.am.brazil.sao_paulo" file="sao_paulo" name="Sao Paulo" />
+        	<map regionId="wo.am.brazil.sergipe" file="sergipe" name="Sergipe" />
+        	<map regionId="wo.am.brazil.tocantins" file="tocantins" name="Tocantins" coastline="no" />
+		</mapPack>
+
+		<mapPack parentRegionId="wo.am.canada" name="Canada" coastline="yes" contourSep="no" countryname="Canada" dir="canada" sourceId="_canada" type="extract|contour|tourist|generate|graphHopper|apDb">
+			<map regionId="wo.am.canada.alberta" file="alberta" name="Alberta" />
+			<map regionId="wo.am.canada.british_columbia" file="british_columbia" name="British Columbia" />
+			<map regionId="wo.am.canada.manitoba" file="manitoba" name="Manitoba" />
+			<map regionId="wo.am.canada.new_brunswick" file="new_brunswick" name="New Brunswick" />
+			<map regionId="wo.am.canada.newfoundland_and_labrador" file="newfoundland_and_labrador" name="Newfoundland and Labrador" />
+			<map regionId="wo.am.canada.northwest_territories" file="northwest_territories" name="Northwest Territories" forceInterval="5,0,7,10,8,11,13,12,21" />
+			<map regionId="wo.am.canada.nova_scotia" file="nova_scotia" name="Nova Scotia" />
+			<map regionId="wo.am.canada.nunavut" file="nunavut" name="Nunavut" forceInterval="5,0,7,10,8,11,13,12,21" forceType="hd" />
+			<map regionId="wo.am.canada.ontario" file="ontario" name="Ontario" clipEntities="1" />
+			<map regionId="wo.am.canada.prince_edward_island" file="prince_edward_island" name="Prince Edward Island" />
+			<map regionId="wo.am.canada.quebec" file="quebec" name="Quebec" />
+			<map regionId="wo.am.canada.saskatchewan" file="saskatchewan" name="Saskatchewan" />
+			<map regionId="wo.am.canada.yukon" file="yukon" name="Yukon" />
+		</mapPack>
+
+
+
+		<mapPack parentRegionId="wo.am.united_states" name="United States" coastline="yes" contourSep="no" countryname="United States" dir="united_states" sourceId="_united_states" type="extract|generate|contour|tourist|graphHopper|apDb">
+			<map regionId="wo.am.united_states.alabama" file="alabama" name="Alabama" />
+		<!--	<map regionId="wo.am.united_states.alaska" file="alaska" name="Alaska" forceInterval="5,0,7,10,8,11,13,12,21" />-->
+			<map regionId="wo.am.united_states.arizona" file="arizona" name="Arizona" coastline="no" />
+			<map regionId="wo.am.united_states.arkansas" file="arkansas" name="Arkansas" coastline="no" />
+			<map regionId="wo.am.united_states.california" file="california" name="California" />
+			<map regionId="wo.am.united_states.colorado" file="colorado" name="Colorado" coastline="no" />
+			<map regionId="wo.am.united_states.connecticut" file="connecticut" name="Connecticut" />
+			<map regionId="wo.am.united_states.delaware" file="delaware" name="Delaware" />
+			<map regionId="wo.am.united_states.district_of_columbia" file="district_of_columbia" name="District of Columbia" coastline="no" />
+			<map regionId="wo.am.united_states.florida" file="florida" name="Florida" />
+			<map regionId="wo.am.united_states.georgia" file="georgia" name="Georgia (U.S.)" />
+			<map regionId="wo.am.united_states.hawaii" file="hawaii" name="Hawaii" />
+			<map regionId="wo.am.united_states.idaho" file="idaho" name="Idaho" />
+			<map regionId="wo.am.united_states.illinois" file="illinois" name="Illinois" />
+			<map regionId="wo.am.united_states.indiana" file="indiana" name="Indiana" />
+			<map regionId="wo.am.united_states.iowa" file="iowa" name="Iowa" coastline="no" />
+			<map regionId="wo.am.united_states.kansas" file="kansas" name="Kansas" coastline="no" />
+			<map regionId="wo.am.united_states.kentucky" file="kentucky" name="Kentucky" coastline="no" />
+			<map regionId="wo.am.united_states.louisiana" file="louisiana" name="Louisiana" />
+			<map regionId="wo.am.united_states.maine" file="maine" name="Maine" />
+			<map regionId="wo.am.united_states.maryland" file="maryland" name="Maryland" />
+			<map regionId="wo.am.united_states.massachusetts" file="massachusetts" name="Massachusetts" />
+			<map regionId="wo.am.united_states.michigan" file="michigan" name="Michigan" />
+			<map regionId="wo.am.united_states.minnesota" file="minnesota" name="Minnesota" />
+			<map regionId="wo.am.united_states.mississippi" file="mississippi" name="Mississippi" />
+			<map regionId="wo.am.united_states.missouri" file="missouri" name="Missouri" coastline="no" />
+			<map regionId="wo.am.united_states.montana" file="montana" name="Montana" coastline="no" />
+			<map regionId="wo.am.united_states.nebraska" file="nebraska" name="Nebraska" coastline="no" />
+			<map regionId="wo.am.united_states.nevada" file="nevada" name="Nevada" coastline="no" />
+			<map regionId="wo.am.united_states.new_hampshire" file="new_hampshire" name="New Hampshire" />
+			<map regionId="wo.am.united_states.new_jersey" file="new_jersey" name="New Jersey" />
+			<map regionId="wo.am.united_states.new_mexico" file="new_mexico" name="New Mexico" coastline="no" />
+			<map regionId="wo.am.united_states.new_york" file="new_york" name="New York" />
+			<map regionId="wo.am.united_states.north_carolina" file="north_carolina" name="North Carolina" />
+			<map regionId="wo.am.united_states.north_dakota" file="north_dakota" name="North Dakota" coastline="no" />
+			<map regionId="wo.am.united_states.ohio" file="ohio" name="Ohio" />
+			<map regionId="wo.am.united_states.oklahoma" file="oklahoma" name="Oklahoma" coastline="no" />
+			<map regionId="wo.am.united_states.oregon" file="oregon" name="Oregon" />
+			<map regionId="wo.am.united_states.pennsylvania" file="pennsylvania" name="Pennsylvania" />
+			<map regionId="wo.am.united_states.rhode_island" file="rhode_island" name="Rhode Island" />
+			<map regionId="wo.am.united_states.south_carolina" file="south_carolina" name="South Carolina" />
+			<map regionId="wo.am.united_states.south_dakota" file="south_dakota" name="South Dakota" coastline="no" />
+			<map regionId="wo.am.united_states.tennessee" file="tennessee" name="Tennessee" coastline="no" />
+			<map regionId="wo.am.united_states.texas" file="texas" name="Texas" />
+			<map regionId="wo.am.united_states.utah" file="utah" name="Utah" coastline="no" />
+			<map regionId="wo.am.united_states.vermont" file="vermont" name="Vermont" coastline="no" />
+			<map regionId="wo.am.united_states.virginia" file="virginia" name="Virginia" />
+			<map regionId="wo.am.united_states.washington" file="washington" name="Washington" />
+			<map regionId="wo.am.united_states.west_virginia" file="west_virginia" name="West Virginia" coastline="no" />
+			<map regionId="wo.am.united_states.wisconsin" file="wisconsin" name="Wisconsin" />
+			<map regionId="wo.am.united_states.wyoming" file="wyoming" name="Wyoming" coastline="no" />
+		</mapPack>
+	</mapPack>
+
+	<mapPack parentRegionId="wo.as" name="Asia" coastline="yes" contourSep="no" dir="asia" prefLang="en,zxx" sourceId="asia" type="extract|generate|contour|tourist|graphHopper|apDb">
+
+		<map regionId="wo.as.japan" file="_japan" name="_japan" coastline="no" id="_japan" type="extract" />
+		<map regionId="wo.as.china" file="_china" name="_china" coastline="no" id="_china" type="extract" />
+		<map regionId="wo.as.india" file="_india" name="_india" coastline="no" id="_india" type="extract" />
+		<map regionId="wo.as.russia" file="_russia" name="Russia" coastline="no" id="_russia" type="extract" />
+
+		<map regionId="wo.as.afghanistan" file="afghanistan" name="Afghanistan" coastline="no" contourSep="no" />
+		<map regionId="wo.as.armenia" file="armenia" name="Armenia" coastline="no" />
+		<map regionId="wo.as.azerbaijan" file="azerbaijan" name="Azerbaijan" />
+		<map regionId="wo.as.bahrain" file="bahrain" name="Bahrain" />
+		<map regionId="wo.as.bangladesh" file="bangladesh" name="Bangladesh" />
+		<map regionId="wo.as.bhutan" file="bhutan" name="Bhutan" coastline="no" />
+		<map regionId="wo.as.british_indian_ocean_territory" file="british_indian_ocean_territory" name="British Indian Ocean Territory" />
+		<map regionId="wo.as.brunei" file="brunei" name="Brunei" />
+		<map regionId="wo.as.cambodia" file="cambodia" name="Cambodia" />
+		<map regionId="wo.as.christmas_island" file="christmas_island" name="Christmas Island" />
+		<map regionId="wo.as.east_timor" file="east_timor" name="East Timor" />
+		<map regionId="wo.as.georgia" file="georgia" name="Georgia" />
+		<map regionId="wo.as.indonesia" file="indonesia" name="Indonesia" />
+		<map regionId="wo.as.iran" file="iran" name="Iran" />
+		<map regionId="wo.as.iraq" file="iraq" name="Iraq" />
+		<map regionId="wo.as.israel" file="israel" name="Israel" />
+		<map regionId="wo.as.jordan" file="jordan" name="Jordan" />
+		<map regionId="wo.as.kazakhstan" file="kazakhstan" name="Kazakhstan" />
+		<map regionId="wo.as.kuwait" file="kuwait" name="Kuwait" />
+		<map regionId="wo.as.kyrgyzstan" file="kyrgyzstan" name="Kyrgyzstan" coastline="no" />
+		<map regionId="wo.as.laos" file="laos" name="Laos" coastline="no" />
+		<map regionId="wo.as.lebanon" file="lebanon" name="Lebanon" />
+		<map regionId="wo.as.malaysia" file="malaysia" name="Malaysia" />
+		<map regionId="wo.as.maldives" file="maldives" name="Maldives" />
+		<map regionId="wo.as.mongolia" file="mongolia" name="Mongolia" coastline="no" />
+		<map regionId="wo.as.myanmar" file="myanmar" name="Myanmar" />
+		<map regionId="wo.as.nepal" file="nepal" name="Nepal" coastline="no" />
+		<map regionId="wo.as.north_korea" file="north_korea" name="North Korea" />
+		<map regionId="wo.as.oman" file="oman" name="Oman" />
+		<map regionId="wo.as.pakistan" file="pakistan" name="Pakistan" />
+		<map regionId="wo.as.palestina" file="palestina" name="Palestina" coastline="no" /> 
+		<map regionId="wo.as.philippines" file="philippines" name="Philippines" />
+		<map regionId="wo.as.qatar" file="qatar" name="Qatar" />
+		<map regionId="wo.as.saudi_arabia" file="saudi_arabia" name="Saudi Arabia" />
+		<map regionId="wo.as.singapore" file="singapore" name="Singapore" />
+		<map regionId="wo.as.south_korea" file="south_korea" name="South Korea" />
+		<map regionId="wo.as" file="spratly_islands" name="Spratly Islands" type="extract|generate|contour|tourist|apDb" />
+		<map regionId="wo.as.sri_lanka" file="sri_lanka" name="Sri Lanka" />
+		<map regionId="wo.as.syria" file="syria" name="Syria" />
+			<!--	<map regionId="wo.as.taiwan" file="taiwan" name="Taiwan" />-->
+		<map regionId="wo.as.tajikistan" file="tajikistan" name="Tajikistan" coastline="no" />
+		<map regionId="wo.as.thailand" file="thailand" name="Thailand" />
+		<map regionId="wo.as.tibet" file="tibet" name="Tibet" coastline="no" sourceId="_china" />
+		<map regionId="wo.as.turkey" file="turkey" name="Turkey" />
+		<map regionId="wo.as.turkmenistan" file="turkmenistan" name="Turkmenistan" />
+		<map regionId="wo.as.united_arab_emirates" file="united_arab_emirates" name="United Arab Emirates" />
+		<map regionId="wo.as.uzbekistan" file="uzbekistan" name="Uzbekistan" coastline="no" />
+		<map regionId="wo.as.vietnam" file="vietnam" name="Vietnam" />
+		<map regionId="wo.as.yemen" file="yemen" name="Yemen" />
+
+		<mapPack parentRegionId="wo.as.japan" name="Japan" coastline="yes" contourSep="no" countryname="Japan" dir="japan" sourceId="_japan" type="extract|generate|contour|tourist|graphHopper|apDb">
+			<map regionId="wo.as.japan" file="hokkaido" name="Hokkaido" />
+			<map regionId="wo.as.japan" file="honshu" name="Honshu" forceInterval="3,0,5,7,6,7,9,8,9,11,10,11,14,12,21" />
+			<map regionId="wo.as.japan" file="kyushu" name="Kyushu" />
+			<map regionId="wo.as.japan" file="shikoku" name="Shikoku" />
+		</mapPack>
+
+		<mapPack parentRegionId="wo.as.china" name="China" coastline="yes" contourSep="no" countryname="China" dir="china" sourceId="_china" type="extract|generate|contour|tourist|graphHopper|apDb">
+			<map regionId="wo.as.china.anhui" file="anhui" name="Anhui" coastline="no" />
+			<map regionId="wo.as.china.beijing" file="beijing" name="Beijing" coastline="no" />
+			<map regionId="wo.as.china.chongqing" file="chongqing" name="Chongqing" coastline="no" />
+			<map regionId="wo.as.china.fujian" file="fujian" name="Fujian" />
+			<map regionId="wo.as.china.gansu" file="gansu" name="Gansu" coastline="no" />
+			<map regionId="wo.as.china.guangdong" file="guangdong" name="Guangdong" />
+			<map regionId="wo.as.china.guangxi" file="guangxi" name="Guangxi" />
+			<map regionId="wo.as.china.guizhou" file="guizhou" name="Guizhou" coastline="no" />
+			<map regionId="wo.as.china.hainan" file="hainan" name="Hainan" />
+			<map regionId="wo.as.china.hebei" file="hebei" name="Hebei" />
+			<map regionId="wo.as.china.heilongjiang" file="heilongjiang" name="Heilongjiang" coastline="no" />
+			<map regionId="wo.as.china.henan" file="henan" name="Henan" coastline="no" />
+			<map regionId="wo.as.china.hong_kong" file="hong_kong" name="Hong Kong" />
+			<map regionId="wo.as.china.hubei" file="hubei" name="Hubei" coastline="no" />
+			<map regionId="wo.as.china.hunan" file="hunan" name="Hunan" coastline="no" />
+			<map regionId="wo.as.china.inner_mongolia" file="inner_mongolia" name="Inner Mongolia" coastline="no" />
+			<map regionId="wo.as.china.jiangsu" file="jiangsu" name="Jiangsu" />
+			<map regionId="wo.as.china.jiangxi" file="jiangxi" name="Jiangxi" coastline="no" />
+			<map regionId="wo.as.china.jilin" file="jilin" name="Jilin" />
+			<map regionId="wo.as.china.liaoning" file="liaoning" name="Liaoning" />
+			<map regionId="wo.as.china.macau" file="macau" name="Macau" />
+			<map regionId="wo.as.china.ningxia_hui" file="ningxia_hui" name="Ningxia Hui" coastline="no" />
+			<map regionId="wo.as.china.qinghai" file="qinghai" name="Qinghai" coastline="no" />
+			<map regionId="wo.as.china.shaanxi" file="shaanxi" name="Shaanxi" coastline="no" />
+			<map regionId="wo.as.china.shandong" file="shandong" name="Shandong" />
+			<map regionId="wo.as.china.shanghai" file="shanghai" name="Shanghai" />
+			<map regionId="wo.as.china.shanxi" file="shanxi" name="Shanxi" coastline="no" />
+			<map regionId="wo.as.china.sichuan" file="sichuan" name="Sichuan" coastline="no" />
+			<map regionId="wo.as.china.tianjin" file="tianjin" name="Tianjin" />
+			<map regionId="wo.as.china.xinjiang" file="xinjiang" name="Xinjiang" coastline="no" />
+			<map regionId="wo.as.china.yunnan" file="yunnan" name="Yunnan" coastline="no" />
+			<map regionId="wo.as.china.zhejiang" file="zhejiang" name="Zhejiang" />
+		</mapPack>
+
+		<mapPack parentRegionId="wo.as.india" name="India" coastline="yes" contourSep="no" countryname="India" dir="india" sourceId="_india" type="extract|generate|contour|tourist|graphHopper|apDb">
+			<map regionId="wo.as.india.andaman_and_nicobar_islands" file="andaman_and_nicobar_islands" name="Andaman and Nicobar Islands" coastline="yes" />
+			<map regionId="wo.as.india.andhra_pradesh" file="andhra_pradesh" name="Andhra Pradesh" coastline="yes" />
+			<map regionId="wo.as.india.arunachal_pradesh" file="arunachal_pradesh" name="Arunachal Pradesh" coastline="no" />
+			<map regionId="wo.as.india.assam" file="assam" name="Assam" coastline="no" />
+			<map regionId="wo.as.india.bihar" file="bihar" name="Bihar" coastline="no" />
+			<map regionId="wo.as.india.chandigarh" file="chandigarh" name="Chandigarh" coastline="no" />
+			<map regionId="wo.as.india.chhattisgarh" file="chhattisgarh" name="Chhattisgarh" coastline="no" />
+			<map regionId="wo.as.india.dadra_and_nagar_haveli" file="dadra_and_nagar_haveli" name="Dadra and Nagar Haveli" coastline="no" />
+			<map regionId="wo.as.india.goa" file="goa" name="Goa" coastline="yes" />
+			<map regionId="wo.as.india.gujarat" file="gujarat" name="Gujarat" coastline="yes" />
+			<map regionId="wo.as.india.haryana" file="haryana" name="Haryana" coastline="no" />
+			<map regionId="wo.as.india.himachal_pradesh" file="himachal_pradesh" name="Himachal Pradesh" coastline="no" />
+			<map regionId="wo.as.india.jammu_and_kashmir" file="jammu_and_kashmir" name="Jammu and Kashmir" coastline="no" />
+			<map regionId="wo.as.india.jharkhand" file="jharkhand" name="Jharkhand" coastline="no" />
+			<map regionId="wo.as.india.karnataka" file="karnataka" name="Karnataka" coastline="yes" />
+			<map regionId="wo.as.india.kerala" file="kerala" name="Kerala" coastline="yes" />
+			<map regionId="wo.as.india.lakshadweep" file="lakshadweep" name="Lakshadweep" coastline="yes" type="extract|generate|contour|tourist|apDb" />
+			<map regionId="wo.as.india.madhya_pradesh" file="madhya_pradesh" name="Madhya Pradesh" coastline="no" />
+			<map regionId="wo.as.india.maharashtra" file="maharashtra" name="Maharashtra" coastline="yes" />
+			<map regionId="wo.as.india.manipur" file="manipur" name="Manipur" coastline="no" />
+			<map regionId="wo.as.india.meghalaya" file="meghalaya" name="Meghalaya" coastline="no" />
+			<map regionId="wo.as.india.mizoram" file="mizoram" name="Mizoram" coastline="no" />
+			<map regionId="wo.as.india.nagaland" file="nagaland" name="Nagaland" coastline="no" />
+			<map regionId="wo.as.india.national_capital_territory" file="national_capital_territory" name="National Capital Territory" coastline="no" />
+			<map regionId="wo.as.india.odisha" file="odisha" name="Odisha" coastline="yes" />
+			<map regionId="wo.as.india.punjab" file="punjab" name="Punjab" coastline="no" />
+			<map regionId="wo.as.india.rajasthan" file="rajasthan" name="Rajasthan" coastline="no" />
+			<map regionId="wo.as.india.sikkim" file="sikkim" name="Sikkim" coastline="no" />
+			<map regionId="wo.as.india.tamil_nadu" file="tamil_nadu" name="Tamil Nadu" coastline="yes" />
+			<map regionId="wo.as.india.tripura" file="tripura" name="Tripura" coastline="no" />
+			<map regionId="wo.as.india.telangana" file="telangana" name="Telangana" coastline="no" />
+			<map regionId="wo.as.india.uttarakhand" file="uttarakhand" name="Uttarakhand" coastline="no" />
+			<map regionId="wo.as.india.uttar_pradesh" file="uttar_pradesh" name="Uttar Pradesh" coastline="no" />
+			<map regionId="wo.as.india.west_bengal" file="west_bengal" name="West Bengal" coastline="yes" />
+		</mapPack>
+
+		<mapPack parentRegionId="wo.as.russia" name="Russia" coastline="no" contourSep="no" countryname="Russia" dir="russia" sourceId="_russia" type="extract|generate|contour|tourist|graphHopper|apDb">
+								
+				<map regionId="wo.as.russia.adygea" file="adygea" name="Adygea" coastline="no" />
+				<map regionId="wo.as.russia.altai_krai" file="altai_krai" name="Altai Krai" />
+				<map regionId="wo.as.russia.altai_republic" file="altai_republic" name="Altai Republic" />
+				<map regionId="wo.as.russia.amur_oblast" file="amur_oblast" name="Amur Oblast" />
+				<map regionId="wo.as.russia.arkhangelsk_oblast" file="arkhangelsk_oblast" name="Arkhangelsk Oblast" coastline="yes" forceInterval="5,0,7,10,8,11,13,12,21" />
+				<map regionId="wo.as.russia.astrakhan_oblast" file="astrakhan_oblast" name="Astrakhan Oblast" coastline="yes" />
+				<map regionId="wo.as.russia.bashkortostan" file="bashkortostan" name="Bashkortostan" />
+				<map regionId="wo.as.russia.belgorod_oblast" file="belgorod_oblast" name="Belgorod Oblast" />
+				<map regionId="wo.as.russia.bryansk_oblast" file="bryansk_oblast" name="Bryansk Oblast" />
+				<map regionId="wo.as.russia.buryatia" file="buryatia" name="Buryatia" />
+				<map regionId="wo.as.russia.chechen_republic" file="chechen_republic" name="Chechen Republic" />
+				<map regionId="wo.as.russia.chelyabinsk_oblast" file="chelyabinsk_oblast" name="Chelyabinsk Oblast" />
+				<map regionId="wo.as.russia.chukotka_autonomous_okrug" file="chukot_east" name="Chukotka Autonomous Okrug (east)" coastline="yes" />
+				<map regionId="wo.as.russia.chukotka_autonomous_okrug" file="chukot_west" name="Chukotka Autonomous Okrug (west)" coastline="yes" />		 		
+				<map regionId="wo.as.russia.chuvashia" file="chuvashia" name="Chuvashia" />
+				<map regionId="wo.as.russia.dagestan" file="dagestan" name="Dagestan" coastline="yes" />
+				<map regionId="wo.as.russia.ingushetia" file="ingushetia" name="Ingushetia" />
+				<map regionId="wo.as.russia.irkutsk_oblast" file="irkutsk_oblast" name="Irkutsk Oblast" forceInterval="5,0,7,10,8,11,13,12,21" />
+				<map regionId="wo.as.russia.ivanovo_oblast" file="ivanovo_oblast" name="Ivanovo Oblast" />
+				<map regionId="wo.as.russia.jewish_autonomous_oblast" file="jewish_autonomous_oblast" name="Jewish Autonomous Oblast" />
+				<map regionId="wo.as.russia.kabardino-balkaria" file="kabardino-balkaria" name="Kabardino-Balkaria" forceInterval="5,0,7,10,8,11,13,12,21" />
+				<map regionId="wo.as.russia.kaliningrad" file="kaliningrad" name="Kaliningrad" coastline="yes" sourceId="europe" />
+				<map regionId="wo.as.russia.kalmykia" file="kalmykia" name="Kalmykia" coastline="yes" />
+				<map regionId="wo.as.russia.kaluga_oblast" file="kaluga_oblast" name="Kaluga Oblast" />
+				<map regionId="wo.as.russia.kamchatka_krai" file="kamchatka_krai" name="Kamchatka Krai" coastline="yes" forceInterval="5,0,7,10,8,11,13,12,21" />
+				<map regionId="wo.as.russia.karachay-cherkessia" file="karachay-cherkessia" name="Karachay-Cherkessia" coastline="yes" />
+				<map regionId="wo.as.russia.republic_of_karelia" file="republic_of_karelia" name="Republic of Karelia" coastline="yes" />
+				<map regionId="wo.as.russia.kemerovo_oblast" file="kemerovo_oblast" name="Kemerovo Oblast" />
+				<map regionId="wo.as.russia.khabarovsk_krai" file="khabarovsk_krai" name="Khabarovsk Krai" coastline="yes" />
+				<map regionId="wo.as.russia.khakassia" file="khakassia" name="Khakassia" />
+				<map regionId="wo.as.russia.khanty-mansiysk_autonomous_okrug" file="khanty-mansiysk_autonomous_okrug_-_ugra" name="Khanty-Mansiysk Autonomous Okrug – Ugra" forceInterval="5,0,7,10,8,11,13,12,21" />
+				<map regionId="wo.as.russia.kirov_oblast" file="kirov_oblast" name="Kirov Oblast" />
+				<map regionId="wo.as.russia.komi_republic" file="komi_republic" name="Komi Republic" forceInterval="5,0,7,10,8,11,13,12,21" />
+				<map regionId="wo.as.russia.kostroma_oblast" file="kostroma_oblast" name="Kostroma Oblast" />
+				<map regionId="wo.as.russia.krasnodar_krai" file="krasnodar_krai" name="Krasnodar Krai" coastline="yes" />
+				<map regionId="wo.as.russia.krasnoyarsk_krai" file="krasnoyarsk_krai" name="Krasnoyarsk Krai" coastline="yes" forceInterval="5,0,7,10,8,11,13,12,21" />
+				<map regionId="wo.as.russia.kurgan_oblast" file="kurgan_oblast" name="Kurgan Oblast" />
+				<map regionId="wo.as.russia.kursk_oblast" file="kursk_oblast" name="Kursk Oblast" />
+				<map regionId="wo.as.russia.leningrad_oblast" file="leningrad_oblast" name="Leningrad Oblast" coastline="yes" />
+				<map regionId="wo.as.russia.lipetsk_oblast" file="lipetsk_oblast" name="Lipetsk Oblast" />
+				<map regionId="wo.as.russia.magadan_oblast" file="magadan_oblast" name="Magadan Oblast" coastline="yes" forceInterval="5,0,7,10,8,11,13,12,21" />
+				<map regionId="wo.as.russia.mari_el" file="mari_el" name="Mari El" />
+				<map regionId="wo.as.russia.mordovia" file="mordovia" name="Mordovia" />
+				<map regionId="wo.as.russia.moscow" file="moscow" name="Moscow" />
+				<map regionId="wo.as.russia.moscow_oblast" file="moscow_oblast" name="Moscow Oblast" />
+				<map regionId="wo.as.russia.murmansk_oblast" file="murmansk_oblast" name="Murmansk Oblast" coastline="yes" forceInterval="5,0,7,10,8,11,13,12,21" />
+				<map regionId="wo.as.russia.nenets_autonomous_okrug" file="nenets_autonomous_okrug" name="Nenets Autonomous Okrug" coastline="yes" forceInterval="5,0,7,10,8,11,13,12,21" />
+				<map regionId="wo.as.russia.nizhny_novgorod_oblast" file="nizhny_novgorod_oblast" name="Nizhny Novgorod Oblast" />
+				<map regionId="wo.as.russia.north_ossetia_-_alania" file="north_ossetia_-_alania" name="North Ossetia–Alania" />				
+				<map regionId="wo.as.russia.novgorod_oblast" file="novgorod_oblast" name="Novgorod Oblast" />
+				<map regionId="wo.as.russia.novosibirsk_oblast" file="novosibirsk_oblast" name="Novosibirsk Oblast" />
+				<map regionId="wo.as.russia.omsk_oblast" file="omsk_oblast" name="Omsk Oblast" />
+				<map regionId="wo.as.russia.orenburg_oblast" file="orenburg_oblast" name="Orenburg Oblast" />
+				<map regionId="wo.as.russia.oryol_oblast" file="oryol_oblast" name="Oryol Oblast" />
+				<map regionId="wo.as.russia.penza_oblast" file="penza_oblast" name="Penza Oblast" />
+				<map regionId="wo.as.russia.perm_krai" file="perm_krai" name="Perm Krai" />
+				<map regionId="wo.as.russia.primorsky_krai" file="primorsky_krai" name="Primorsky Krai" coastline="yes" />
+				<map regionId="wo.as.russia.pskov_oblast" file="pskov_oblast" name="Pskov Oblast" coastline="yes" />
+				<map regionId="wo.as.russia.rostov_oblast" file="rostov_oblast" name="Rostov Oblast" coastline="yes" />
+				<map regionId="wo.as.russia.ryazan_oblast" file="ryazan_oblast" name="Ryazan Oblast" />
+				<map regionId="wo.as.russia.saint_petersburg" file="saint_petersburg" name="Saint Petersburg" coastline="yes" />
+				<map regionId="wo.as.russia.sakha_republic" file="sakha_republic" name="Sakha Republic" coastline="yes" forceInterval="5,0,7,10,8,11,13,12,21" />
+				<map regionId="wo.as.russia.sakhalin_oblast" file="sakhalin_oblast" name="Sakhalin Oblast" coastline="yes" />
+				<map regionId="wo.as.russia.samara_oblast" file="samara_oblast" name="Samara Oblast" />
+				<map regionId="wo.as.russia.saratov_oblast" file="saratov_oblast" name="Saratov Oblast" />
+				<map regionId="wo.as.russia.sevastopol" file="sevastopol" name="Sevastopol" coastline="yes" />
+				<map regionId="wo.as.russia.smolensk_oblast" file="smolensk_oblast" name="Smolensk Oblast" />
+				<map regionId="wo.as.russia.stavropol_krai" file="stavropol_krai" name="Stavropol Krai" />
+				<map regionId="wo.as.russia.sverdlovsk_oblast" file="sverdlovsk_oblast" name="Sverdlovsk Oblast" />
+				<map regionId="wo.as.russia.tambov_oblast" file="tambov_oblast" name="Tambov Oblast" />
+				<map regionId="wo.as.russia.tatarstan" file="tatarstan" name="Tatarstan" />
+				<map regionId="wo.as.russia.tomsk_oblast" file="tomsk_oblast" name="Tomsk Oblast" />
+				<map regionId="wo.as.russia.tula_oblast" file="tula_oblast" name="Tula Oblast" />
+				<map regionId="wo.as.russia.tuva" file="tuva" name="Tuva" />
+				<map regionId="wo.as.russia.tver_oblast" file="tver_oblast" name="Tver Oblast" />
+				<map regionId="wo.as.russia.tyumen_oblast" file="tyumen_oblast" name="Tyumen Oblast" />
+				<map regionId="wo.as.russia.udmurt_republic" file="udmurt_republic" name="Udmurt Republic" />
+				<map regionId="wo.as.russia.ulyanovsk_oblast" file="ulyanovsk_oblast" name="Ulyanovsk Oblast" />
+				<map regionId="wo.as.russia.vladimir_oblast" file="vladimir_oblast" name="Vladimir Oblast" />
+				<map regionId="wo.as.russia.volgograd_oblast" file="volgograd_oblast" name="Volgograd Oblast" />
+				<map regionId="wo.as.russia.vologda_oblast" file="vologda_oblast" name="Vologda Oblast" />
+				<map regionId="wo.as.russia.voronezh_oblast" file="voronezh_oblast" name="Voronezh Oblast" />
+				<map regionId="wo.as.russia.yamalo-nenets_autonomous_okrug" file="yamalo-nenets_autonomous_okrug" name="Yamalo-Nenets Autonomous Okrug" coastline="yes" forceInterval="5,0,7,10,8,11,13,12,21" />
+				<map regionId="wo.as.russia.yaroslavl_oblast" file="yaroslavl_oblast" name="Yaroslavl Oblast" />
+				<map regionId="wo.as.russia.zabaykalsky_krai" file="zabaykalsky_krai" name="Zabaykalsky Krai" />
+			</mapPack>
+	</mapPack>
+
+	
+	<mapPack parentRegionId="wo.oc" name="Oceania" coastline="yes" contourSep="no" dir="oceania" prefLang="en,zxx" sourceId="oceania" type="extract|generate|contour|tourist|graphHopper|apDb">
+		<map regionId="wo.oc.american_samoa" file="american_samoa" name="American Samoa" />
+		<map regionId="wo.oc.cocos_islands" file="cocos_islands" name="Cocos Islands" type="extract|generate|contour|tourist|apDb" />
+		<map regionId="wo.oc.cook_islands" file="cook_islands" name="Cook Islands" />
+		<map regionId="wo.oc.fiji" file="fiji_east" name="Fiji (east)" />
+		<map regionId="wo.oc.fiji" file="fiji_west" name="Fiji (west)" type="extract|generate|contour|tourist|apDb" />
+		<map regionId="wo.oc.french_polynesia" file="french_polynesia" name="French Polynesia" />
+		<map regionId="wo.oc.guam" file="guam" name="Guam" />
+		<map regionId="wo.oc.kiribati" file="kiribati_east" name="Kiribati (east)" />
+		<map regionId="wo.oc.kiribati" file="kiribati_west" name="Kiribati (west)" />
+		<map regionId="wo.oc.marshall_islands" file="marshall_islands" name="Marshall Islands" />
+		<map regionId="wo.oc.micronesia" file="micronesia" name="Micronesia" />
+		<map regionId="wo.oc.nauru" file="nauru" name="Nauru" />
+		<map regionId="wo.oc.new_caledonia" file="new_caledonia" name="New Caledonia" />
+		<map regionId="wo.oc.new_zealand" file="new_zealand_east" name="New Zealand (east)" />
+		<map regionId="wo.oc.new_zealand" file="new_zealand_west" name="New Zealand (west)" type="extract|generate|contour|tourist|apDb" />
+		<map regionId="wo.oc.niue" file="niue" name="Niue" />
+		<map regionId="wo.oc.norfolk_island" file="norfolk_island" name="Norfolk Island" />
+		<map regionId="wo.oc.northern_mariana_islands" file="northern_mariana_islands" name="Northern Mariana Islands" />
+		<map regionId="wo.oc.palau" file="palau" name="Palau" />
+		<map regionId="wo.oc.papua_new_guinea" file="papua_new_guinea" name="Papua New Guinea" />
+		<map regionId="wo.oc.pitcairn_islands" file="pitcairn_islands" name="Pitcairn Islands" type="extract|generate|contour|tourist|apDb" />
+		<map regionId="wo.oc.samoa" file="samoa" name="Samoa" />
+		<map regionId="wo.oc.solomon_islands" file="solomon_islands" name="Solomon Islands" />
+		<map regionId="wo.oc.tokelau" file="tokelau" name="Tokelau" type="extract|generate|contour|tourist|apDb" />
+		<map regionId="wo.oc.tonga" file="tonga" name="Tonga" />
+		<map regionId="wo.oc.tuvalu" file="tuvalu" name="Tuvalu" type="extract|generate|contour|tourist|apDb" />
+		<map regionId="wo.oc.vanuatu" file="vanuatu" name="Vanuatu" />
+		<map regionId="wo.oc.wallis_and_futuna" file="wallis_and_futuna" name="Wallis and Futuna" />
+
+		<mapPack parentRegionId="wo.oc.australia" name="Australia" coastline="yes" contourSep="no" countryname="Australia" dir="australia" sourceId="oceania">
+			<map regionId="wo.oc.australia.ashmore_and_cartier_islands" file="ashmore_and_cartier_islands" name="Ashmore and cartier islands" type="extract|generate|contour|tourist|apDb" />
+			<map regionId="wo.oc.australia.australian_capital_territory" file="australian_capital_territory" name="Australian Capital Territory" />
+			<map regionId="wo.oc.australia.coral_sea_islands" file="coral_sea_islands" name="Coral Sea Islands" type="extract|generate|contour|tourist|apDb" />
+			<map regionId="wo.oc.australia.new_south_wales" file="new_south_wales" name="New South Wales" />
+			<map regionId="wo.oc.australia.northern_territory" file="northern_territory" name="Northern Territory" />
+			<map regionId="wo.oc.australia.queensland" file="queensland" name="Queensland" />
+			<map regionId="wo.oc.australia.south_australia" file="south_australia" name="South Australia" />
+			<map regionId="wo.oc.australia.tasmania" file="tasmania" name="Tasmania" />
+			<map regionId="wo.oc.australia.victoria" file="victoria" name="Victoria" />
+			<map regionId="wo.oc.australia.western_australia" file="western_australia" name="Western Australia" />
+		</mapPack>
+	</mapPack>
+</maps>

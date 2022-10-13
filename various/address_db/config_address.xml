@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+There is several settings in this file.
+
+cityLevels - define that only places with this admin_level can be used for creation of cities
+regionLevel - defines that boundary with specidief admin_level will be used as counties or higher administrative country parts
+boundaryMapper - especially big capital cities have custom border there is sometime bigger than country regions. This settings define that exact border will be used as geometry for defined city. IDs are OSM id for relation or node
+boundaryPhrases - especially in Austria contains boundary names some custom words similar to Czech "Obec". The boundaryPhrases are used when is compared name of city with name of boundary. Phrases defines words that can be removed from boundary name to get clear name.
+
+-->
+
+
+
+<maps>
+	
+	<!-- ======= DEFAULT FOR MAPS THAT ARE NOT DEFINED ======= -->
+	<map id="default_definition" cityLevels="7,8,9,10" regionLevel="6"/>
+	
+	<!-- ======= CUSTOM DEFINITION ======= -->
+	
+	<!-- == EUROPE == -->
+	<map id="andorra" cityLevels="7,8,9,10" regionLevel="2" />
+	<map id="austria" cityLevels="8,9,10" regionLevel="4" >
+		<boundaryMapper boundaryid="109166" cityid="17328659"  cityname="Vien" boundaryname="Wien" />	
+		<boundaryMapper boundaryid="63175" cityid="26748998" boundaryname="Wels" cityname="Wels" />
+		<boundaryMapper boundaryid="90143" cityid="240079480" boundaryname="Steyr" cityname="Steyr" />			
+		<boundaryPhrases phrases="Gemeinde" />
+	</map>	
+	<map id="bosnia_and_herzegovina" cityLevels="7,8,9,10" regionLevel="5" />
+	<map id="canary_islands" cityLevels="8,9,10" regionLevel="4" />
+	<map id="czech_republic" cityLevels="8,9,10" regionLevel="7" />
+	<map id="denmark" cityLevels="8,9,10" regionLevel="4" />
+	<map id="finland" cityLevels="8,9,10" regionLevel="6" />
+	<map id="gibraltar" cityLevels="6,7,8,9,10" regionLevel="2" />
+	<map id="greece" cityLevels="7,8,9,10" regionLevel="5" />
+	<map id="romania" cityLevels="4,6,8,9,10" regionLevel="4" />
+	
+	<!-- Germany -->
+	<map id="_germany_south" cityLevels="6,8,9,10" regionLevel="6" />
+	<map id="_germany_north" cityLevels="6,8,9,10" regionLevel="6" >
+		<!-- Custom germany cities that have boundary admin=6 https://de.wikipedia.org/wiki/Liste_der_kreisfreien_Städte_in_Deutschland-->
+		<boundaryMapper boundaryid="62422" cityid="240109189" boundaryname="Berlin" cityname="Berlin" />		
+		<boundaryMapper boundaryid="62782" cityid="20833623" boundaryname="Hamburg" cityname="Hamburg" />		
+		<boundaryMapper boundaryid="62718" cityid="20982927" boundaryname="Bremen" cityname="Bremen" />		
+		<boundaryMapper boundaryid="124297" cityid="240035701" boundaryname="Bernburg" cityname="Bernburg (Saale)" />			
+	</map>
+	
+	<map id="berlin" cityLevels="6,8,9,10" regionLevel="6" >
+		<boundaryMapper boundaryid="62422" cityid="240109189" boundaryname="Berlin" cityname="Berlin" />		
+	</map>
+	<map id="bremen" cityLevels="6,8,9,10" regionLevel="6" >		
+		<boundaryMapper boundaryid="62718" cityid="20982927" boundaryname="Bremen" cityname="Bremen" />			
+	</map>
+	<map id="hamburg" cityLevels="6,8,9,10" regionLevel="6" >			
+		<boundaryMapper boundaryid="62782" cityid="20833623" boundaryname="Hamburg" cityname="Hamburg" />		
+	</map>
+	<map id="baden" cityLevels="6,8,9,10" regionLevel="6" ></map>
+	<map id="bayern" cityLevels="6,8,9,10" regionLevel="6" ></map>
+	<map id="brandenburg" cityLevels="6,8,9,10" regionLevel="6" ></map>
+	<map id="hessen" cityLevels="6,8,9,10" regionLevel="6" >
+		<boundaryMapper boundaryid="452196" cityid="240097790" boundaryname="Homberg" cityname="Homberg (Efze)" />	
+	</map>
+	<map id="mecklenburg" cityLevels="6,8,9,10" regionLevel="6" ></map>
+	<map id="niedersachsen" cityLevels="6,8,9,10" regionLevel="6" ></map>
+	<map id="nordrhein" cityLevels="6,8,9,10" regionLevel="6" ></map>
+	<map id="rheinland" cityLevels="6,8,9,10" regionLevel="6" ></map>
+	<map id="saarland" cityLevels="6,8,9,10" regionLevel="6" ></map>
+	<map id="sachsen" cityLevels="6,8,9,10" regionLevel="6" ></map>
+	<map id="schleswig" cityLevels="6,8,9,10" regionLevel="6" ></map>
+	<map id="hamburg" cityLevels="6,8,9,10" regionLevel="6" ></map>
+	<map id="hamburg" cityLevels="6,8,9,10" regionLevel="6" ></map>
+	<map id="hamburg" cityLevels="6,8,9,10" regionLevel="6" ></map>
+	<map id="thuringen" cityLevels="6,8,9,10" regionLevel="6" ></map>
+	
+	<!-- England -->
+	<map id="england" cityLevels="8,9,10" regionLevel="6" >
+		<boundaryMapper boundaryid="175342" cityid="107775" boundaryname="Greater London" cityname="London" />		
+	</map>
+	<map id="northern_ireland" cityLevels="8,9,10" regionLevel="6" />
+	<map id="scotland" cityLevels="8,9,10" regionLevel="6" />
+	<map id="wales" cityLevels="8,9,10" regionLevel="6" />
+	
+	<!-- == AMERICAS == -->
+	<!-- CANADA -->
+	<map id="quebec" cityLevels="7,8,9,10" regionLevel="6" >			
+		<boundaryMapper boundaryid="1634158" cityid="299790200" boundaryname="Montreal city" cityname="Montreal" />		
+	</map>
+	
+	<!-- == ASIA == -->
+	<map id="turkey" cityLevels="6,7,8,9,10" regionLevel="4" />
+</maps>
