@@ -1740,282 +1740,284 @@ version 2.4.0
 				</rule>	
 				
 				<!-- OFFSET HIKING PATH OSMC:SYMBOL before highway core-->
-				<rule cat="hik_routes" e="way" k="osmc" v="yes" >
-				
-					<rule e="way" k="osmc" v="*" zoom-min="13" zoom-max="13">
-						<rule e="way" k="osmc_color" v="blue">
-							<line stroke="#0026ff" stroke-width="1dp" stroke-linecap="butt"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="yellow">
-							<line stroke="#f4eaa3" stroke-width="1.8dp" stroke-linecap="butt"/> 
-							<line stroke="#dac11a" stroke-width="1.2dp" stroke-linecap="butt"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="green">
-							<line stroke="#267f00" stroke-width="1dp" stroke-linecap="butt"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="red">
-							<line stroke="#EA3200" stroke-width="1dp" stroke-linecap="butt"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="black">
-							<line stroke="#000000" stroke-width="1dp" stroke-linecap="butt"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="white">
-							<line stroke="#EA3200" stroke-width="1dp" stroke-dasharray="6,6" stroke-linecap="butt"/> 
-						</rule>
-						
-						<rule e="way" k="osmc_color" v="blue">
-							<line stroke="#0026ff" stroke-width="0.9dp" stroke-dasharray="1,20" /> 
-						</rule>
-						<rule e="way" k="osmc_color" v="yellow">
-							<line stroke="#dac11a" stroke-width="0.9dp" stroke-dasharray="0,6,1,16" /> 
-						</rule>
-						<rule e="way" k="osmc_color" v="green">
-							<line stroke="#267f00" stroke-width="0.9dp" stroke-dasharray="0,10,1,10" /> 
-						</rule>
-						<rule e="way" k="osmc_color" v="red">
-							<line stroke="#EA3200" stroke-width="0.9dp" stroke-dasharray="0,15,1,5" /> 
-						</rule>
-					</rule>
-				
-					<rule e="way" k="osmc" v="*" zoom-min="14" zoom-max="15">
-						<rule e="way" k="osmc_color" v="blue">
-							<line dy="2.5dp" stroke="#0026ff" stroke-width="1dp" stroke-linecap="butt"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="yellow">
-							<line dy="2.5dp" stroke="#f4eaa3" stroke-width="1.8dp" stroke-linecap="butt"/> 
-							<line dy="2.5dp" stroke="#dac11a" stroke-width="1.2dp" stroke-linecap="butt"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="green">
-							<rule e="way" k="osmc_foreground" v=	"~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x">
-								<line dy="-2.5dp" stroke="#267f00" stroke-width="1dp" stroke-linecap="butt"/> 
-							</rule>
-							<rule e="way" k="osmc_foreground" v="green_backslash">
-								<line dy="-2.5dp" stroke="#267f00" stroke-width="1dp" stroke-dasharray="1,6,8,6" /> 								
-							</rule>							
-						</rule>
-						<rule e="way" k="osmc_color" v="red">
-							<line dy="-2.5dp" stroke="#EA3200" stroke-width="1dp" stroke-linecap="butt"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="black">
-							<line dy="-2.5dp" stroke="#000000" stroke-width="1dp" stroke-linecap="butt"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="white">
-							<line dy="2.5dp" stroke="#EA3200" stroke-width="1dp" stroke-dasharray="8,7" stroke-linecap="butt"/> 
-						</rule>
-						
-						<rule e="way" k="osmc_color" v="blue">
-							<line dy="2.5dp" stroke="#0026ff" stroke-width="0.9dp" stroke-dasharray="1,20" /> 
-						</rule>
-						<rule e="way" k="osmc_color" v="yellow">
-							<line dy="2.5dp" stroke="#dac11a" stroke-width="0.9dp" stroke-dasharray="0,6,1,16" /> 
-						</rule>
-						<rule e="way" k="osmc_color" v="green">
-							<line dy="-2.5dp" stroke="#267f00" stroke-width="0.9dp" stroke-dasharray="0,10,1,10" /> 
-						</rule>
-						<rule e="way" k="osmc_color" v="red">
-							<line dy="-2.5dp" stroke="#EA3200" stroke-width="0.9dp" stroke-dasharray="0,15,1,5" /> 
-						</rule>
-					</rule>
+				<rule e="way" k="route" v="hiking|foot">
+					<rule cat="hik_routes" e="way" k="osmc" v="yes" >
 					
-					<rule e="way" k="osmc" v="*" zoom-min="16" zoom-max="16">
-						<rule e="way" k="osmc_color" v="blue">
-							<line dy="3dp" stroke="#0026ff" stroke-width="0.7dp" stroke-linecap="butt"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="yellow">
-							<line dy="3dp" stroke="#f4eaa3" stroke-width="1.2dp" stroke-linecap="butt"/> 
-							<line dy="3dp" stroke="#dac11a" stroke-width="0.8dp" stroke-linecap="butt"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="green">
-							<rule e="way" k="osmc_foreground" v=	"~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x">
-								<line dy="-3dp" stroke="#267f00" stroke-width="0.7dp" stroke-linecap="butt"/> 
+						<rule e="way" k="osmc" v="*" zoom-min="13" zoom-max="13">
+							<rule e="way" k="osmc_color" v="blue">
+								<line stroke="#0026ff" stroke-width="1dp" stroke-linecap="butt"/> 
 							</rule>
-							<rule e="way" k="osmc_foreground" v="green_backslash">
-								<line dy="-3dp" stroke="#267f00" stroke-width="0.7dp" stroke-dasharray="1,6,8,6" /> 								
-							</rule>							
+							<rule e="way" k="osmc_color" v="yellow">
+								<line stroke="#f4eaa3" stroke-width="1.8dp" stroke-linecap="butt"/> 
+								<line stroke="#dac11a" stroke-width="1.2dp" stroke-linecap="butt"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="green">
+								<line stroke="#267f00" stroke-width="1dp" stroke-linecap="butt"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="red">
+								<line stroke="#EA3200" stroke-width="1dp" stroke-linecap="butt"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="black">
+								<line stroke="#000000" stroke-width="1dp" stroke-linecap="butt"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="white">
+								<line stroke="#EA3200" stroke-width="1dp" stroke-dasharray="6,6" stroke-linecap="butt"/> 
+							</rule>
+							
+							<rule e="way" k="osmc_color" v="blue">
+								<line stroke="#0026ff" stroke-width="0.9dp" stroke-dasharray="1,20" /> 
+							</rule>
+							<rule e="way" k="osmc_color" v="yellow">
+								<line stroke="#dac11a" stroke-width="0.9dp" stroke-dasharray="0,6,1,16" /> 
+							</rule>
+							<rule e="way" k="osmc_color" v="green">
+								<line stroke="#267f00" stroke-width="0.9dp" stroke-dasharray="0,10,1,10" /> 
+							</rule>
+							<rule e="way" k="osmc_color" v="red">
+								<line stroke="#EA3200" stroke-width="0.9dp" stroke-dasharray="0,15,1,5" /> 
+							</rule>
 						</rule>
-						<rule e="way" k="osmc_color" v="red">
-							<line dy="-3dp" stroke="#EA3200" stroke-width="0.7dp" stroke-linecap="butt"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="black">
-							<line dy="-3dp" stroke="#000000" stroke-width="0.7dp" stroke-linecap="butt"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="white">
-							<line dy="2.5dp" stroke="#EA3200" stroke-width="0.7dp" stroke-dasharray="10,7" stroke-linecap="butt"/> 
-						</rule>
-						
-						<rule e="way" k="osmc_color" v="blue">
-							<line dy="3dp" stroke="#0026ff" stroke-width="0.6dp" stroke-dasharray="1,20" /> 
-						</rule>
-						<rule e="way" k="osmc_color" v="yellow">
-							<line dy="3dp" stroke="#dac11a" stroke-width="0.6dp" stroke-dasharray="0,6,1,16" /> 
-						</rule>
-						<rule e="way" k="osmc_color" v="green">
-							<line dy="-3dp" stroke="#267f00" stroke-width="0.6dp" stroke-dasharray="0,10,1,10" /> 
-						</rule>
-						<rule e="way" k="osmc_color" v="red">
-							<line dy="-3dp" stroke="#EA3200" stroke-width="0.6dp" stroke-dasharray="0,15,1,5" /> 
-						</rule>
-					</rule>
 					
-					<rule e="way" k="osmc" v="*" zoom-min="17" zoom-max="17">
-						<rule e="way" k="osmc_color" v="blue">
-							<line dy="3.7dp" stroke="#0026ff" stroke-width="0.6dp"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="yellow">
-							<line dy="3.7dp" stroke="#f4eaa3" stroke-width="0.9dp" stroke-linecap="butt"/> 
-							<line dy="3.7dp" stroke="#dac11a" stroke-width="0.7dp" stroke-linecap="butt"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="green">
-							<rule e="way" k="osmc_foreground" v=	"~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x">
-								<line dy="-3.7dp" stroke="#267f00" stroke-width="0.6dp" stroke-linecap="butt"/> 
+						<rule e="way" k="osmc" v="*" zoom-min="14" zoom-max="15">
+							<rule e="way" k="osmc_color" v="blue">
+								<line dy="2.5dp" stroke="#0026ff" stroke-width="1dp" stroke-linecap="butt"/> 
 							</rule>
-							<rule e="way" k="osmc_foreground" v="green_backslash">
-								<line dy="-3.7dp" stroke="#267f00" stroke-width="0.6dp" stroke-dasharray="1,6,8,6" /> 								
-							</rule>							
-						</rule>
-						<rule e="way" k="osmc_color" v="red">
-							<line dy="-3.7dp" stroke="#EA3200" stroke-width="0.6dp"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="black">
-							<line dy="-3.7dp" stroke="#000000" stroke-width="0.6dp"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="white">
-							<line dy="3.7dp" stroke="#EA3200" stroke-width="0.6dp" stroke-dasharray="8,6" stroke-linecap="butt" /> 
-						</rule>
-						
-						<rule e="way" k="osmc_color" v="blue">
-							<line dy="3.7dp" stroke="#0026ff" stroke-width="0.5dp" stroke-dasharray="1,20" /> 
-						</rule>
-						<rule e="way" k="osmc_color" v="yellow">
-							<line dy="3.7dp" stroke="#dac11a" stroke-width="0.5dp" stroke-dasharray="0,6,1,16" /> 
-						</rule>
-						<rule e="way" k="osmc_color" v="green">
-							<line dy="-3.7dp" stroke="#267f00" stroke-width="0.5dp" stroke-dasharray="0,10,1,10" /> 
-						</rule>
-						<rule e="way" k="osmc_color" v="red">
-							<line dy="-3.7dp" stroke="#EA3200" stroke-width="0.5dp" stroke-dasharray="0,15,1,5" /> 
-						</rule>
-					</rule>
-					
-					<rule e="way" k="osmc" v="*" zoom-min="18" zoom-max="18">
-						<rule e="way" k="osmc_color" v="blue">
-							<line dy="4.5dp" stroke="#0026ff" stroke-width="0.6dp"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="yellow">
-							<line dy="4.5dp" stroke="#f4eaa3" stroke-width="0.8dp" stroke-linecap="butt"/> 
-							<line dy="4.5dp" stroke="#dac11a" stroke-width="0.7dp" stroke-linecap="butt"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="green">
-							<rule e="way" k="osmc_foreground" v=	"~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x">
-								<line dy="-4.5dp" stroke="#267f00" stroke-width="0.6dp" stroke-linecap="butt"/> 
+							<rule e="way" k="osmc_color" v="yellow">
+								<line dy="2.5dp" stroke="#f4eaa3" stroke-width="1.8dp" stroke-linecap="butt"/> 
+								<line dy="2.5dp" stroke="#dac11a" stroke-width="1.2dp" stroke-linecap="butt"/> 
 							</rule>
-							<rule e="way" k="osmc_foreground" v="green_backslash">
-								<line dy="-4.5dp" stroke="#267f00" stroke-width="0.6dp" stroke-dasharray="1,6,8,6" /> 								
-							</rule>							
-						</rule>
-						<rule e="way" k="osmc_color" v="red">
-							<line dy="-4.5dp" stroke="#EA3200" stroke-width="0.6dp"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="black">
-							<line dy="-4.5dp" stroke="#000000" stroke-width="0.6dp"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="white">
-							<line dy="4.5dp" stroke="#EA3200" stroke-width="0.6dp" stroke-dasharray="7,5" stroke-linecap="butt" /> 
-						</rule>
-						
-						<rule e="way" k="osmc_color" v="blue">
-							<line dy="4.5dp" stroke="#0026ff" stroke-width="0.5dp" stroke-dasharray="1,20" /> 
-						</rule>
-						<rule e="way" k="osmc_color" v="yellow">
-							<line dy="4.5dp" stroke="#dac11a" stroke-width="0.5dp" stroke-dasharray="0,6,1,16" /> 
-						</rule>
-						<rule e="way" k="osmc_color" v="green">
-							<line dy="-4.5dp" stroke="#267f00" stroke-width="0.5dp" stroke-dasharray="0,10,1,10" /> 
-						</rule>
-						<rule e="way" k="osmc_color" v="red">
-							<line dy="-4.5dp" stroke="#EA3200" stroke-width="0.5dp" stroke-dasharray="0,15,1,5" /> 
-						</rule>
-					</rule>
-					
-					<rule e="way" k="osmc" v="*" zoom-min="19" zoom-max="19" >
-						<rule e="way" k="osmc_color" v="blue">
-							<line dy="5.5dp" stroke="#0026ff" stroke-width="0.6dp"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="yellow"> 
-							<line dy="5.5dp" stroke="#dac11a" stroke-width="0.7dp" stroke-linecap="butt"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="green">
-							<rule e="way" k="osmc_foreground" v=	"~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x">
-								<line dy="-5.5dp" stroke="#267f00" stroke-width="0.6dp" stroke-linecap="butt"/> 
+							<rule e="way" k="osmc_color" v="green">
+								<rule e="way" k="osmc_foreground" v=	"~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x">
+									<line dy="-2.5dp" stroke="#267f00" stroke-width="1dp" stroke-linecap="butt"/> 
+								</rule>
+								<rule e="way" k="osmc_foreground" v="green_backslash">
+									<line dy="-2.5dp" stroke="#267f00" stroke-width="1dp" stroke-dasharray="1,6,8,6" /> 								
+								</rule>							
 							</rule>
-							<rule e="way" k="osmc_foreground" v="green_backslash">
-								<line dy="-5.5dp" stroke="#267f00" stroke-width="0.6dp" stroke-dasharray="1,6,8,6" /> 								
-							</rule>							
-						</rule>
-						<rule e="way" k="osmc_color" v="red">
-							<line dy="-5.5dp" stroke="#EA3200" stroke-width="0.6dp"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="black">
-							<line dy="-5.5dp" stroke="#000000" stroke-width="0.6dp"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="white">
-							<line dy="5.5dp" stroke="#EA3200" stroke-width="0.6dp" stroke-dasharray="7,5" stroke-linecap="butt" /> 
-						</rule>
-						
-						
-						<rule e="way" k="osmc_color" v="blue">
-							<line dy="5.5dp" stroke="#0026ff" stroke-width="0.5dp" stroke-dasharray="1,20" /> 
-						</rule>
-						<rule e="way" k="osmc_color" v="yellow">
-							<line dy="5.5dp" stroke="#dac11a" stroke-width="0.5dp" stroke-dasharray="0,6,1,16" /> 
-						</rule>
-						<rule e="way" k="osmc_color" v="green">
-							<line dy="-5.5dp" stroke="#267f00" stroke-width="0.5dp" stroke-dasharray="0,10,1,10" /> 
-						</rule>
-						<rule e="way" k="osmc_color" v="red">
-							<line dy="-5.5dp" stroke="#EA3200" stroke-width="0.5dp" stroke-dasharray="0,15,1,5" /> 
-						</rule>
-					</rule>
-					
-					<rule e="way" k="osmc" v="*" zoom-min="20" >
-						<rule e="way" k="osmc_color" v="blue">
-							<line dy="8dp" stroke="#0026ff" stroke-width="0.6dp"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="yellow"> 
-							<line dy="8dp" stroke="#dac11a" stroke-width="0.6dp" stroke-linecap="butt"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="green">
-							<rule e="way" k="osmc_foreground" v=	"~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x">
-								<line dy="-8dp" stroke="#267f00" stroke-width="0.6dp" stroke-linecap="butt"/> 
+							<rule e="way" k="osmc_color" v="red">
+								<line dy="-2.5dp" stroke="#EA3200" stroke-width="1dp" stroke-linecap="butt"/> 
 							</rule>
-							<rule e="way" k="osmc_foreground" v="green_backslash">
-								<line dy="-8dp" stroke="#267f00" stroke-width="0.6dp" stroke-dasharray="1,6,8,6" /> 								
-							</rule>							
-						</rule>
-						<rule e="way" k="osmc_color" v="red">
-							<line dy="-8dp" stroke="#EA3200" stroke-width="0.6dp"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="black">
-							<line dy="-8dp" stroke="#000000" stroke-width="0.6dp"/> 
-						</rule>
-						<rule e="way" k="osmc_color" v="white">
-							<line dy="8dp" stroke="#EA3200" stroke-width="0.6dp" stroke-dasharray="6,4" stroke-linecap="butt" /> 
+							<rule e="way" k="osmc_color" v="black">
+								<line dy="-2.5dp" stroke="#000000" stroke-width="1dp" stroke-linecap="butt"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="white">
+								<line dy="2.5dp" stroke="#EA3200" stroke-width="1dp" stroke-dasharray="8,7" stroke-linecap="butt"/> 
+							</rule>
+							
+							<rule e="way" k="osmc_color" v="blue">
+								<line dy="2.5dp" stroke="#0026ff" stroke-width="0.9dp" stroke-dasharray="1,20" /> 
+							</rule>
+							<rule e="way" k="osmc_color" v="yellow">
+								<line dy="2.5dp" stroke="#dac11a" stroke-width="0.9dp" stroke-dasharray="0,6,1,16" /> 
+							</rule>
+							<rule e="way" k="osmc_color" v="green">
+								<line dy="-2.5dp" stroke="#267f00" stroke-width="0.9dp" stroke-dasharray="0,10,1,10" /> 
+							</rule>
+							<rule e="way" k="osmc_color" v="red">
+								<line dy="-2.5dp" stroke="#EA3200" stroke-width="0.9dp" stroke-dasharray="0,15,1,5" /> 
+							</rule>
 						</rule>
 						
-						<rule e="way" k="osmc_color" v="blue">
-							<line dy="8dp" stroke="#0026ff" stroke-width="0.5dp" stroke-dasharray="1,20" /> 
+						<rule e="way" k="osmc" v="*" zoom-min="16" zoom-max="16">
+							<rule e="way" k="osmc_color" v="blue">
+								<line dy="3dp" stroke="#0026ff" stroke-width="0.7dp" stroke-linecap="butt"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="yellow">
+								<line dy="3dp" stroke="#f4eaa3" stroke-width="1.2dp" stroke-linecap="butt"/> 
+								<line dy="3dp" stroke="#dac11a" stroke-width="0.8dp" stroke-linecap="butt"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="green">
+								<rule e="way" k="osmc_foreground" v=	"~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x">
+									<line dy="-3dp" stroke="#267f00" stroke-width="0.7dp" stroke-linecap="butt"/> 
+								</rule>
+								<rule e="way" k="osmc_foreground" v="green_backslash">
+									<line dy="-3dp" stroke="#267f00" stroke-width="0.7dp" stroke-dasharray="1,6,8,6" /> 								
+								</rule>							
+							</rule>
+							<rule e="way" k="osmc_color" v="red">
+								<line dy="-3dp" stroke="#EA3200" stroke-width="0.7dp" stroke-linecap="butt"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="black">
+								<line dy="-3dp" stroke="#000000" stroke-width="0.7dp" stroke-linecap="butt"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="white">
+								<line dy="2.5dp" stroke="#EA3200" stroke-width="0.7dp" stroke-dasharray="10,7" stroke-linecap="butt"/> 
+							</rule>
+							
+							<rule e="way" k="osmc_color" v="blue">
+								<line dy="3dp" stroke="#0026ff" stroke-width="0.6dp" stroke-dasharray="1,20" /> 
+							</rule>
+							<rule e="way" k="osmc_color" v="yellow">
+								<line dy="3dp" stroke="#dac11a" stroke-width="0.6dp" stroke-dasharray="0,6,1,16" /> 
+							</rule>
+							<rule e="way" k="osmc_color" v="green">
+								<line dy="-3dp" stroke="#267f00" stroke-width="0.6dp" stroke-dasharray="0,10,1,10" /> 
+							</rule>
+							<rule e="way" k="osmc_color" v="red">
+								<line dy="-3dp" stroke="#EA3200" stroke-width="0.6dp" stroke-dasharray="0,15,1,5" /> 
+							</rule>
 						</rule>
-						<rule e="way" k="osmc_color" v="yellow">
-							<line dy="8dp" stroke="#dac11a" stroke-width="0.5dp" stroke-dasharray="0,6,1,16" /> 
+						
+						<rule e="way" k="osmc" v="*" zoom-min="17" zoom-max="17">
+							<rule e="way" k="osmc_color" v="blue">
+								<line dy="3.7dp" stroke="#0026ff" stroke-width="0.6dp"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="yellow">
+								<line dy="3.7dp" stroke="#f4eaa3" stroke-width="0.9dp" stroke-linecap="butt"/> 
+								<line dy="3.7dp" stroke="#dac11a" stroke-width="0.7dp" stroke-linecap="butt"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="green">
+								<rule e="way" k="osmc_foreground" v=	"~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x">
+									<line dy="-3.7dp" stroke="#267f00" stroke-width="0.6dp" stroke-linecap="butt"/> 
+								</rule>
+								<rule e="way" k="osmc_foreground" v="green_backslash">
+									<line dy="-3.7dp" stroke="#267f00" stroke-width="0.6dp" stroke-dasharray="1,6,8,6" /> 								
+								</rule>							
+							</rule>
+							<rule e="way" k="osmc_color" v="red">
+								<line dy="-3.7dp" stroke="#EA3200" stroke-width="0.6dp"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="black">
+								<line dy="-3.7dp" stroke="#000000" stroke-width="0.6dp"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="white">
+								<line dy="3.7dp" stroke="#EA3200" stroke-width="0.6dp" stroke-dasharray="8,6" stroke-linecap="butt" /> 
+							</rule>
+							
+							<rule e="way" k="osmc_color" v="blue">
+								<line dy="3.7dp" stroke="#0026ff" stroke-width="0.5dp" stroke-dasharray="1,20" /> 
+							</rule>
+							<rule e="way" k="osmc_color" v="yellow">
+								<line dy="3.7dp" stroke="#dac11a" stroke-width="0.5dp" stroke-dasharray="0,6,1,16" /> 
+							</rule>
+							<rule e="way" k="osmc_color" v="green">
+								<line dy="-3.7dp" stroke="#267f00" stroke-width="0.5dp" stroke-dasharray="0,10,1,10" /> 
+							</rule>
+							<rule e="way" k="osmc_color" v="red">
+								<line dy="-3.7dp" stroke="#EA3200" stroke-width="0.5dp" stroke-dasharray="0,15,1,5" /> 
+							</rule>
 						</rule>
-						<rule e="way" k="osmc_color" v="green">
-							<line dy="-8dp" stroke="#267f00" stroke-width="0.5dp" stroke-dasharray="0,10,1,10" /> 
+						
+						<rule e="way" k="osmc" v="*" zoom-min="18" zoom-max="18">
+							<rule e="way" k="osmc_color" v="blue">
+								<line dy="4.5dp" stroke="#0026ff" stroke-width="0.6dp"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="yellow">
+								<line dy="4.5dp" stroke="#f4eaa3" stroke-width="0.8dp" stroke-linecap="butt"/> 
+								<line dy="4.5dp" stroke="#dac11a" stroke-width="0.7dp" stroke-linecap="butt"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="green">
+								<rule e="way" k="osmc_foreground" v=	"~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x">
+									<line dy="-4.5dp" stroke="#267f00" stroke-width="0.6dp" stroke-linecap="butt"/> 
+								</rule>
+								<rule e="way" k="osmc_foreground" v="green_backslash">
+									<line dy="-4.5dp" stroke="#267f00" stroke-width="0.6dp" stroke-dasharray="1,6,8,6" /> 								
+								</rule>							
+							</rule>
+							<rule e="way" k="osmc_color" v="red">
+								<line dy="-4.5dp" stroke="#EA3200" stroke-width="0.6dp"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="black">
+								<line dy="-4.5dp" stroke="#000000" stroke-width="0.6dp"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="white">
+								<line dy="4.5dp" stroke="#EA3200" stroke-width="0.6dp" stroke-dasharray="7,5" stroke-linecap="butt" /> 
+							</rule>
+							
+							<rule e="way" k="osmc_color" v="blue">
+								<line dy="4.5dp" stroke="#0026ff" stroke-width="0.5dp" stroke-dasharray="1,20" /> 
+							</rule>
+							<rule e="way" k="osmc_color" v="yellow">
+								<line dy="4.5dp" stroke="#dac11a" stroke-width="0.5dp" stroke-dasharray="0,6,1,16" /> 
+							</rule>
+							<rule e="way" k="osmc_color" v="green">
+								<line dy="-4.5dp" stroke="#267f00" stroke-width="0.5dp" stroke-dasharray="0,10,1,10" /> 
+							</rule>
+							<rule e="way" k="osmc_color" v="red">
+								<line dy="-4.5dp" stroke="#EA3200" stroke-width="0.5dp" stroke-dasharray="0,15,1,5" /> 
+							</rule>
 						</rule>
-						<rule e="way" k="osmc_color" v="red">
-							<line dy="-8dp" stroke="#EA3200" stroke-width="0.5dp" stroke-dasharray="0,15,1,5" /> 
+						
+						<rule e="way" k="osmc" v="*" zoom-min="19" zoom-max="19" >
+							<rule e="way" k="osmc_color" v="blue">
+								<line dy="5.5dp" stroke="#0026ff" stroke-width="0.6dp"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="yellow"> 
+								<line dy="5.5dp" stroke="#dac11a" stroke-width="0.7dp" stroke-linecap="butt"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="green">
+								<rule e="way" k="osmc_foreground" v=	"~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x">
+									<line dy="-5.5dp" stroke="#267f00" stroke-width="0.6dp" stroke-linecap="butt"/> 
+								</rule>
+								<rule e="way" k="osmc_foreground" v="green_backslash">
+									<line dy="-5.5dp" stroke="#267f00" stroke-width="0.6dp" stroke-dasharray="1,6,8,6" /> 								
+								</rule>							
+							</rule>
+							<rule e="way" k="osmc_color" v="red">
+								<line dy="-5.5dp" stroke="#EA3200" stroke-width="0.6dp"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="black">
+								<line dy="-5.5dp" stroke="#000000" stroke-width="0.6dp"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="white">
+								<line dy="5.5dp" stroke="#EA3200" stroke-width="0.6dp" stroke-dasharray="7,5" stroke-linecap="butt" /> 
+							</rule>
+							
+							
+							<rule e="way" k="osmc_color" v="blue">
+								<line dy="5.5dp" stroke="#0026ff" stroke-width="0.5dp" stroke-dasharray="1,20" /> 
+							</rule>
+							<rule e="way" k="osmc_color" v="yellow">
+								<line dy="5.5dp" stroke="#dac11a" stroke-width="0.5dp" stroke-dasharray="0,6,1,16" /> 
+							</rule>
+							<rule e="way" k="osmc_color" v="green">
+								<line dy="-5.5dp" stroke="#267f00" stroke-width="0.5dp" stroke-dasharray="0,10,1,10" /> 
+							</rule>
+							<rule e="way" k="osmc_color" v="red">
+								<line dy="-5.5dp" stroke="#EA3200" stroke-width="0.5dp" stroke-dasharray="0,15,1,5" /> 
+							</rule>
 						</rule>
-					</rule>
-				</rule> 
+						
+						<rule e="way" k="osmc" v="*" zoom-min="20" >
+							<rule e="way" k="osmc_color" v="blue">
+								<line dy="8dp" stroke="#0026ff" stroke-width="0.6dp"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="yellow"> 
+								<line dy="8dp" stroke="#dac11a" stroke-width="0.6dp" stroke-linecap="butt"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="green">
+								<rule e="way" k="osmc_foreground" v=	"~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x">
+									<line dy="-8dp" stroke="#267f00" stroke-width="0.6dp" stroke-linecap="butt"/> 
+								</rule>
+								<rule e="way" k="osmc_foreground" v="green_backslash">
+									<line dy="-8dp" stroke="#267f00" stroke-width="0.6dp" stroke-dasharray="1,6,8,6" /> 								
+								</rule>							
+							</rule>
+							<rule e="way" k="osmc_color" v="red">
+								<line dy="-8dp" stroke="#EA3200" stroke-width="0.6dp"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="black">
+								<line dy="-8dp" stroke="#000000" stroke-width="0.6dp"/> 
+							</rule>
+							<rule e="way" k="osmc_color" v="white">
+								<line dy="8dp" stroke="#EA3200" stroke-width="0.6dp" stroke-dasharray="6,4" stroke-linecap="butt" /> 
+							</rule>
+							
+							<rule e="way" k="osmc_color" v="blue">
+								<line dy="8dp" stroke="#0026ff" stroke-width="0.5dp" stroke-dasharray="1,20" /> 
+							</rule>
+							<rule e="way" k="osmc_color" v="yellow">
+								<line dy="8dp" stroke="#dac11a" stroke-width="0.5dp" stroke-dasharray="0,6,1,16" /> 
+							</rule>
+							<rule e="way" k="osmc_color" v="green">
+								<line dy="-8dp" stroke="#267f00" stroke-width="0.5dp" stroke-dasharray="0,10,1,10" /> 
+							</rule>
+							<rule e="way" k="osmc_color" v="red">
+								<line dy="-8dp" stroke="#EA3200" stroke-width="0.5dp" stroke-dasharray="0,15,1,5" /> 
+							</rule>
+						</rule>
+					</rule> 
+				</rule>
 
 				<!-- OFFSET VIA FERRATA-->
 				<!-- via_ferrata-->
