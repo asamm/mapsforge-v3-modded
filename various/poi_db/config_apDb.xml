@@ -148,10 +148,14 @@
 				<tag key="amenity" value="library" type="poi,way" />
             </sub-folder>
 
+            <sub-folder name="kindergarten">
+                <tag key="amenity" value="kindergarten" type="poi,way" />
+            </sub-folder>
+
             <sub-folder name="education">
-<!--                <tag key="amenity" value="kindergarten" type="poi,way" /> Deleted first revision 2014-10-24 -->
-<!--               <tag key="amenity" value="college" type="poi,way" /> Deleted first revision 2014-10-24 -->
-<!--               <tag key="amenity" value="school" type="poi,way" />Deleted first revision 2014-10-24 -->
+<!--            <tag key="amenity" value="kindergarten" type="poi,way" /> Deleted first revision 2014-10-24 -->
+                <tag key="amenity" value="college" type="poi,way" /> <!-- Deleted first revision 2014-10-24, put back 2022-10-19 when unifying online / offline sets -->
+                <tag key="amenity" value="school" type="poi,way" /> <!-- Deleted first revision 2014-10-24, put back 2022-10-19 when unifying online / offline sets -->
                 <tag key="amenity" value="university" type="poi,way" />
             </sub-folder>
 
@@ -160,7 +164,7 @@
             </sub-folder>
 
             <sub-folder name="telephone">
-<!--                <tag key="amenity" value="telephone" type="poi,way" /> Deleted first revision 2014-10-24 -->
+<!--            <tag key="amenity" value="telephone" type="poi,way" /> Deleted first revision 2014-10-24 -->
             </sub-folder>
 
             <sub-folder name="grave_yard">
