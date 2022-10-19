@@ -215,20 +215,83 @@
         <folder name="nature">
             <sub-folder name="protected_area">
                 <tag key="boundary" value="protected_area" type="poi,way" />
+                <tag key="leisure" value="nature_reserve" type="poi,way" />
+                <tag key="boundary" value="natural_park" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="rock">
+                <tag key="natural" value="rock" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="stone">
+                <tag key="natural" value="stone" type="poi,way" />
             </sub-folder>
 
             <sub-folder name="peak">
                 <tag key="natural" value="peak" type="poi" />
             </sub-folder>
 
+            <sub-folder name="mountain_pass">
+                <tag key="mountain_pass" value="yes" type="poi,way" />
+            </sub-folder>
+
             <sub-folder name="spring">
                 <tag key="natural" value="spring" type="poi" />
             </sub-folder>
 
-            <sub-folder name="mine_cave">
+            <sub-folder name="botanical_garden">
+                <tag key="garden:type" value="botanical" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="park">
+                <tag key="leisure" value="park" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="beach">
+                <tag key="natural" value="beach" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="waterfall">
+                <tag key="waterway" value="waterfall" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="mine">
                 <tag key="man_made" value="adit" type="poi" />
                 <tag key="man_made" value="mineshaft" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="cave">
                 <tag key="natural" value="cave_entrance" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="sinkhole">
+                <tag key="natural" value="sinkhole" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="cliff">
+                <tag key="natural" value="cliff" type="poi,way" />
+                    <filter key="name" value="*"  />                   
+                    <filter key="denotation" value="natural_monument|landmark"  />
+            </sub-folder>
+
+            <sub-folder name="tree">
+                <tag key="natural" value="tree" type="poi" />
+                    <filter key="name" value="*"  />                   
+                    <filter key="denotation" value="natural_monument|landmark"  />
+            </sub-folder>
+
+            <sub-folder name="volcano">
+                <tag key="natural" value="volcano" type="poi" />                
+                    <filter key="volcano" value="active|dormant" />
+                    <filter key="volcano:status" value="active|dormant" />
+            </sub-folder>
+
+            <sub-folder name="geyser">
+                <tag key="natural" value="geyser" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="hot_spring">
+                <tag key="natural" value="hot_spring" type="poi,way" />
             </sub-folder>
 
             <sub-folder name="glacier">
