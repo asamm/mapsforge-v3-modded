@@ -9,6 +9,10 @@
                 <tag key="tourism" value="alpine_hut" type="poi,way" />
             </sub-folder>
 
+            <sub-folder name="wilderness_hut">
+                <tag key="tourism" value="wilderness_hut" type="poi,way" />
+            </sub-folder>
+
             <sub-folder name="camp_caravan">
                 <tag key="tourism" value="camp_site" type="poi,way" />
                 <tag key="tourism" value="caravan_site" type="poi,way" />
