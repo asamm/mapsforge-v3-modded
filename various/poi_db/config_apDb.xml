@@ -66,8 +66,16 @@
                 <tag key="information" value="office" type="poi,way" />
             </sub-folder>
 
+            <sub-folder name="info_board">
+                <tag key="information" value="board" type="poi,way" />
+            </sub-folder>
+
             <sub-folder name="museum">
                 <tag key="tourism" value="museum" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="gallery">
+                <tag key="tourism" value="gallery" type="poi,way" />
             </sub-folder>
 
             <sub-folder name="cinema">
@@ -78,16 +86,49 @@
                 <tag key="amenity" value="theatre" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="castle_ruin_monument">
+            <sub-folder name="castle">
                 <tag key="historic" value="castle" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="memorial">
                 <tag key="historic" value="memorial" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="monument">
                 <tag key="historic" value="monument" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="ruin">
                 <tag key="historic" value="ruins" type="poi,way" />
             </sub-folder>
 
             <sub-folder name="attraction">
                 <tag key="tourism" value="attraction" type="poi,way" />
+                <tag key="tourism" value="artwork" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="zoo">
                 <tag key="tourism" value="zoo" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="watermill">
+                <tag key="man_made" value="watermill" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="aqueduct">
+                <tag key="historic" value="aqueduct" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="windmill">
+                <tag key="man_made" value="windmill" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="lighthouse">
+                <tag key="man_made" value="lighthouse" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="fountain">
+                <tag key="amenity" value="fountain" type="poi,way" />
             </sub-folder>
 
             <sub-folder name="toilets">
