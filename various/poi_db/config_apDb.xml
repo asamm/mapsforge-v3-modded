@@ -193,8 +193,16 @@
                 <tag key="tourism" value="picnic_site" type="poi,way" />
             </sub-folder>
 
+            <sub-folder name="fire_pit">
+                <tag key="leisure" value="firepit" type="poi,way" />
+            </sub-folder>
+
             <sub-folder name="shelter">
                 <tag key="amenity" value="shelter" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="hunting_stand">
+                <tag key="amenity" value="hunting_stand" type="poi,way" />
             </sub-folder>
 
             <sub-folder name="viewpoint">
