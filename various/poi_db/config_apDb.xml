@@ -48,6 +48,9 @@
             <sub-folder name="atm">
                 <tag key="amenity" value="atm" type="poi" />
             </sub-folder>
+            <sub-folder name="parcel_locker">
+                <tag key="amenity" value="parcel_locker" type="poi" />
+            </sub-folder>
             <sub-folder name="post_office">
                 <tag key="amenity" value="post_office" type="poi,way" />
             </sub-folder>
