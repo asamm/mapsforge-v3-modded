@@ -574,6 +574,12 @@
 				<tag key="amenity" value="charging_station" type="poi,way" />
             </sub-folder>
 
+            <sub-folder name="charging_station_cars">
+                <tag key="amenity" value="charging_station" type="poi,way">
+                    <filter key="bicycle" value="~|no"  />    
+                </tag>
+            </sub-folder>
+
             <sub-folder name="rest_area">
                 <tag key="highway" value="rest_area" type="poi,way" />
             </sub-folder>
