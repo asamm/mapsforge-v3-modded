@@ -183,6 +183,11 @@
                 <tag key="information" value="guidepost" type="poi" />
             </sub-folder>
 
+            <sub-folder name="charging_station_bikes">
+                <tag key="amenity" value="charging_station" type="poi" />
+                <filter key="bicycle" value="yes"  /> 
+            </sub-folder>
+
             <sub-folder name="map">
 <!--                <tag key="information" value="map" type="poi" /> Deleted first revision 2014-10-24 -->
             </sub-folder>
@@ -565,7 +570,6 @@
         <folder name="car_services">
             <sub-folder name="gas_station">
 				<tag key="amenity" value="fuel" type="poi,way" />
-				<tag key="amenity" value="charging_station" type="poi,way" />
             </sub-folder>
 
             <sub-folder name="charging_station_cars">
