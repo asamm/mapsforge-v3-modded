@@ -621,8 +621,22 @@
                 <tag key="aeroway" value="aerodrome" type="poi,way" />
             </sub-folder>
 
+            <sub-folder name="helipad">
+                <tag key="aeroway" value="helipad" type="poi,way" />
+                <tag key="aeroway" value="heliport" type="poi,way" />
+            </sub-folder>
+
             <sub-folder name="ferries">
                 <tag key="amenity" value="ferry_terminal" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="cable_car">
+                <tag key="aerialway" value="cable_car" type="way" />
+                <tag key="aerialway" value="gondola" type="way" />
+            </sub-folder>
+
+            <sub-folder name="funicular">
+                <tag key="railway" value="funicular" type="way" />
             </sub-folder>
 
         </folder>
