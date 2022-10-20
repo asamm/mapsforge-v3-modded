@@ -134,7 +134,6 @@
             <sub-folder name="toilets">
                 <tag key="amenity" value="toilets" type="poi,way" />
             </sub-folder>
-
         </folder>
 
         <!-- ======= PUBLIC SERVICES ======= -->
@@ -171,7 +170,6 @@
                 <tag key="landuse" value="cemetery" type="way" /> 
 				<tag key="amenity" value="grave_yard" type="poi,way" />
             </sub-folder>
-
         </folder>
 
         <!-- ======= HIKING & CYCLING ======= -->
@@ -399,7 +397,6 @@
         <!-- ======= FOOD & DRINK ======= -->
 
         <folder name="food_drink">
-
             <sub-folder name="bar_pub">
                 <tag key="amenity" value="bar" type="poi,way" />
                 <tag key="amenity" value="pub" type="poi,way" />
@@ -440,7 +437,6 @@
                 <tag key="diet:fruitarian" value="yes" type="poi,way" />
                 <tag key="vegetarian" value="yes" type="poi,way" />
             </sub-folder>
-
         </folder>
 
         <!-- ======= SHOPPING ======= -->
@@ -485,7 +481,6 @@
         <!-- ======= SPORT & LEISURE ======= -->
 
         <folder name="sport_leisure">
-
             <sub-folder name="golf">
                 <tag key="leisure" value="golf_course" type="poi,way" />
             </sub-folder>
@@ -568,7 +563,6 @@
         <!-- ======= TRANSPORT ======= -->
 
         <folder name="car_services">
-
             <sub-folder name="gas_station">
 				<tag key="amenity" value="fuel" type="poi,way" />
 				<tag key="amenity" value="charging_station" type="poi,way" />
@@ -638,7 +632,6 @@
             <sub-folder name="funicular">
                 <tag key="railway" value="funicular" type="way" />
             </sub-folder>
-
         </folder>
 
     </pois>
