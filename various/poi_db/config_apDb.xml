@@ -306,17 +306,49 @@
                 <tag key="amenity" value="fire_station" type="poi,way" />
             </sub-folder>
 
+            <sub-folder name="mountain_rescue">
+                <tag key="emergency" value="mountain_rescue" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="lifeguard">
+                <tag key="lifeguard" value="yes" type="poi,way" />
+                <tag key="emergency" value="lifeguard" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="emergency_point">
+                <tag key="emergency" value="assembly_point" type="poi" />
+                <tag key="emergency" value="access_point" type="poi" />
+            </sub-folder>
+
+            <sub-folder name="emergency_helipad">
+                <tag key="emergency" value="landing_site" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="emergency_phone">
+                <tag key="emergency" value="phone" type="poi" />
+            </sub-folder>
+
+            <sub-folder name="defibrillator">
+                <tag key="emergency" value="defibrillator" type="poi" />
+            </sub-folder>
+
             <sub-folder name="police">
                 <tag key="amenity" value="police" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="doctor_dentist">
+            <sub-folder name="doctor">
                 <tag key="amenity" value="doctors" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="dentist">
                 <tag key="amenity" value="dentist" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="hospital_clinic">
+            <sub-folder name="hospital">
                 <tag key="amenity" value="hospital" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="clinic">
                 <tag key="amenity" value="clinic" type="poi,way" />
             </sub-folder>
 
