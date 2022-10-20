@@ -413,6 +413,12 @@
                 <tag key="amenity" value="restaurant" type="poi,way" />
             </sub-folder>
 
+            <sub-folder name="brewery">
+                <tag key="product" value="beer" type="poi,way" />
+                <tag key="craft" value="brewery" type="poi,way" />
+                <tag key="microbrewery" value="yes" type="poi,way" />
+            </sub-folder>
+
             <sub-folder name="fast_food">
                 <tag key="amenity" value="fast_food" type="poi,way" />
             </sub-folder>
