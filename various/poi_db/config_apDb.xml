@@ -446,6 +446,9 @@
         <!-- ======= SHOPPING ======= -->
 
         <folder name="shopping">
+            <sub-folder name="kiosk">
+                <tag key="shop" value="kiosk" type="poi,way" />
+            </sub-folder>
 
             <sub-folder name="department_store">
                 <tag key="shop" value="department_store" type="poi,way" />
@@ -472,8 +475,10 @@
             <sub-folder name="sport_outdoor">
                 <tag key="shop" value="bicycle" type="poi,way" />
                 <tag key="shop" value="dive" type="poi,way" />
+                <tag key="shop" value="scuba_diving" type="poi,way" />
                 <tag key="shop" value="outdoor" type="poi,way" />
                 <tag key="shop" value="sports" type="poi,way" />
+                <tag key="shop" value="water_sports" type="poi,way" />
             </sub-folder>
         </folder>
 
