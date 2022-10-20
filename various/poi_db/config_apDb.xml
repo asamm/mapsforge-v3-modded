@@ -517,14 +517,46 @@
                 <tag key="leisure" value="stadium" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="skiing">
-                <tag key="sport" value="skiing" type="poi,way" />
+            <sub-folder name="drag_lift">
+                <tag key="aerialway" value="magic_carpet" type="poi,way" />
+                <tag key="aerialway"  value="rope_tow" type="way" />
+                <tag key="aerialway"  value="platter" type="way" />
                 <tag key="aerialway"  value="drag_lift" type="way" />
-                <tag key="aerialway"  value="gondola" type="way" />
-                <tag key="aerialway"  value="chair_lift" type="way" />
-                <tag key="aerialway"  value="cable_car" type="way" />
                 <tag key="aerialway"  value="t-bar" type="way" />
                 <tag key="aerialway"  value="j-bar" type="way" />
+            </sub-folder>
+
+            <sub-folder name="chair_lift">
+                <tag key="aerialway"  value="chair_lift" type="way" />
+                <tag key="aerialway"  value="mixed_lift" type="way" />
+            </sub-folder>
+
+            <sub-folder name="ski_jumping">
+                <tag key="sport"  value="ski_jumping" type="poi,way" />
+                <tag key="piste:type"  value="ski_jump" type="poi,way" />
+                <tag key="man_made"  value="ski_jump" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="ski_resort">
+                <tag key="landuse"  value="winter_sports" type="way" />
+            </sub-folder>
+
+            <sub-folder name="ski_school">
+                <tag key="amenity"  value="ski_school" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="ski_services">
+                <tag key="shop"  value="ski" type="poi,way" />
+                <tag key="ski:rental"  value="*" type="poi,way" />
+                <tag key="ski:repair"  value="*" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="marina">
+                <tag key="leisure"  value="marina" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="playground">
+                <tag key="leisure"  value="playground" type="poi,way" />
             </sub-folder>
 
             <sub-folder name="clubs_dancing">
