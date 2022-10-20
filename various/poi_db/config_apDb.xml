@@ -361,6 +361,17 @@
         <!-- ======= RELIGION ======= -->
 
         <folder name="place_of_worship">
+            <sub-folder name="wayside_shrine">
+                <tag key="historic" value="wayside_shrine" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="wayside_cross">
+                <tag key="historic" value="wayside_cross" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="cross">
+                <tag key="man_made" value="cross" type="poi,way" />
+            </sub-folder>
 
             <sub-folder name="buddhist">
                 <tag key="religion" value="buddhist" type="poi,way" />
