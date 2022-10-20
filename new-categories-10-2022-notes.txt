@@ -1,0 +1,94 @@
+--accommodation
+wilderness_hut
+
+--financial & post services
+parcel_locker
+
+--culture & tourism
+info_board
+gallery
+zoo
+castle_ruin_monument NO MORE EXISTS
+castle
+memorial
+monument
+ruin
+watermill
+aqueduct
+windmill
+lighthouse
+fountain
+
+--public services
+kindergarten
+
+--hiking & cycling
+picnic_site
+fire_pit
+hunting_stand
+
+--nature
+rock
+stone
+botanical_garden
+park
+beach
+mountain_pass
+waterfall
+mine_cave NO MORE EXISTS
+mine
+cave
+sinkhole
+cliff
+tree
+geyser
+volcano
+hot_spring
+
+--emergency & health
+mountain_rescue
+emergency_point
+lifeguard
+emergency_helipad
+emergency_phone
+defibrillator
+doctor_dentist NO MORE EXISTS
+doctor
+dentist
+hospital_clinic NO MORE EXISTS
+hospital
+clinic
+
+--place_of_worship (religion)
+wayside_shrine
+wayside_cross
+cross
+
+-- food & drink
+brewery
+
+-- shopping
+kiosk
+
+-- sport & leisure
+skiing NO MORE EXISTS
+drag_lift
+chair_lift
+ski_jumping
+ski_resort
+ski_school
+ski_services
+marina
+playground
+
+-- car services
+charging_station_cars
+
+-- transportation
+helipad
+cable_car
+funicular
+
+
+
+
