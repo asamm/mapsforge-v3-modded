@@ -185,7 +185,7 @@
 
             <sub-folder name="charging_station_bikes">
                 <tag key="amenity" value="charging_station" type="poi" />
-                <filter key="bicycle" value="yes"  /> 
+                <filter key="bicycle" value="yes" /> 
             </sub-folder>
 
             <sub-folder name="map">
