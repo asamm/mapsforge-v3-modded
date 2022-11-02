@@ -4,7 +4,7 @@
 
         <!-- ======= ACCOMODATION ======= -->
 
-        <folder name="accommodation">
+        <folder name="accommodation" zoom-min="15" icon="accommodation" >
             <sub-folder name="alpine_hut">
                 <tag key="tourism" value="alpine_hut" type="poi,way" />
             </sub-folder>
@@ -38,7 +38,7 @@
 
         <!-- ======= FINANCIAL & POST SERVICES ======= -->
 
-        <folder name="financial_post_services">
+        <folder name="financial_post_services" zoom-min="15" icon="financial_post" >
             <sub-folder name="bank">
                 <tag key="amenity" value="bank" type="poi,way" />
             </sub-folder>
@@ -61,8 +61,8 @@
 
         <!-- ======= CULTURE & TOURISM ======= -->
 
-        <folder name="culture_tourism">
-            <sub-folder name="info">
+        <folder name="culture_tourism" zoom-min="15" icon="culture_tourism" >
+            <sub-folder name="info" zoom-min="15" icon="info-square" >
                 <tag key="information" value="office" type="poi,way" />
             </sub-folder>
 
@@ -138,7 +138,7 @@
 
         <!-- ======= PUBLIC SERVICES ======= -->
 
-        <folder name="public_services">
+        <folder name="public_services" zoom-min="15" icon="public_services" >
             <sub-folder name="townhall">
 				<tag key="amenity" value="townhall" type="poi,way" /> 
             </sub-folder>
@@ -174,7 +174,7 @@
 
         <!-- ======= HIKING & CYCLING ======= -->
 
-        <folder name="hiking_cycling">
+        <folder name="hiking_cycling" zoom-min="15" icon="hiking_cycling" >
             <sub-folder name="bicycle_parking">
                 <tag key="amenity" value="bicycle_parking" type="poi,way" />
             </sub-folder>
@@ -215,7 +215,7 @@
 
         <!-- ======= NATURE ======= -->
 
-        <folder name="nature">
+        <folder name="nature" zoom-min="15" icon="nature" >
             <sub-folder name="protected_area">
                 <tag key="boundary" value="protected_area" type="poi,way" />
                 <tag key="leisure" value="nature_reserve" type="poi,way" />
@@ -304,7 +304,7 @@
 
         <!-- ======= EMERGENCY & HEALTH ======= -->
 
-        <folder name="emergency_health">
+        <folder name="emergency_health" zoom-min="15" icon="emergency" >
             <sub-folder name="fire_station">
                 <tag key="amenity" value="fire_station" type="poi,way" />
             </sub-folder>
@@ -363,7 +363,7 @@
 
         <!-- ======= RELIGION ======= -->
 
-        <folder name="place_of_worship">
+        <folder name="place_of_worship" zoom-min="15" icon="place_of_worship" >
             <sub-folder name="wayside_shrine">
                 <tag key="historic" value="wayside_shrine" type="poi,way" />
             </sub-folder>
@@ -401,7 +401,7 @@
 
         <!-- ======= FOOD & DRINK ======= -->
 
-        <folder name="food_drink">
+        <folder name="food_drink" zoom-min="15" icon="food_drink" >
             <sub-folder name="bar_pub">
                 <tag key="amenity" value="bar" type="poi,way" />
                 <tag key="amenity" value="pub" type="poi,way" />
@@ -446,7 +446,7 @@
 
         <!-- ======= SHOPPING ======= -->
 
-        <folder name="shopping">
+        <folder name="shopping" zoom-min="15" icon="shopping" >
             <sub-folder name="kiosk">
                 <tag key="shop" value="kiosk" type="poi,way" />
             </sub-folder>
@@ -485,7 +485,7 @@
 
         <!-- ======= SPORT & LEISURE ======= -->
 
-        <folder name="sport_leisure">
+        <folder name="sport_leisure" zoom-min="15" icon="sports" >
             <sub-folder name="golf">
                 <tag key="leisure" value="golf_course" type="poi,way" />
             </sub-folder>
@@ -567,7 +567,7 @@
 
         <!-- ======= TRANSPORT ======= -->
 
-        <folder name="car_services">
+        <folder name="car_services" zoom-min="15" icon="car_services" >
             <sub-folder name="gas_station">
 				<tag key="amenity" value="fuel" type="poi,way" />
             </sub-folder>
@@ -596,7 +596,7 @@
             </sub-folder>
         </folder>
 
-        <folder name="transportation">
+        <folder name="transportation" zoom-min="15" icon="transport" >
             <sub-folder name="bus_and_tram_stop">
                 <tag key="highway" value="bus_stop" type="poi" />
                 <tag key="railway" value="tram_stop" type="poi" />
