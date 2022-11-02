@@ -139,34 +139,36 @@
         <!-- ======= PUBLIC SERVICES ======= -->
 
         <folder name="public_services" zoom-min="15" icon="public_services" >
-            <sub-folder name="townhall">
+            <sub-folder name="townhall" zoom-min="17" icon="townhall" >
 				<tag key="amenity" value="townhall" type="poi,way" /> 
             </sub-folder>
 
-            <sub-folder name="library">
+            <sub-folder name="library" zoom-min="18" icon="library" >
 				<tag key="amenity" value="library" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="kindergarten">
+            <sub-folder name="kindergarten" zoom-min="17" icon="kindergarten" >
                 <tag key="amenity" value="kindergarten" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="education">
+            <sub-folder name="education" zoom-min="17" icon="education" >
 <!--            <tag key="amenity" value="kindergarten" type="poi,way" /> Deleted first revision 2014-10-24 -->
                 <tag key="amenity" value="college" type="poi,way" /> <!-- Deleted first revision 2014-10-24, put back 2022-10-19 when unifying online / offline sets -->
                 <tag key="amenity" value="school" type="poi,way" /> <!-- Deleted first revision 2014-10-24, put back 2022-10-19 when unifying online / offline sets -->
                 <tag key="amenity" value="university" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="embassy">
+            <sub-folder name="embassy" zoom-min="17" icon="embassy" >
                 <tag key="amenity" value="embassy" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="telephone">
-<!--            <tag key="amenity" value="telephone" type="poi,way" /> Deleted first revision 2014-10-24 -->
+<!--
+            <sub-folder name="telephone" zoom-min="17" icon="toilets" >
+            <tag key="amenity" value="telephone" type="poi,way" /> Deleted first revision 2014-10-24 
             </sub-folder>
+-->
 
-            <sub-folder name="grave_yard">
+            <sub-folder name="grave_yard" zoom-min="17" icon="grave_yard" >
                 <tag key="landuse" value="cemetery" type="way" /> 
 				<tag key="amenity" value="grave_yard" type="poi,way" />
             </sub-folder>
