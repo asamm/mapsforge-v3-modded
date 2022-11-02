@@ -5,32 +5,32 @@
         <!-- ======= ACCOMODATION ======= -->
 
         <folder name="accommodation" zoom-min="15" icon="accommodation" >
-            <sub-folder name="alpine_hut">
+            <sub-folder name="alpine_hut" zoom-min="15" icon="alpine_hut" >
                 <tag key="tourism" value="alpine_hut" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="wilderness_hut">
+            <sub-folder name="wilderness_hut" zoom-min="15" icon="wilderness_hut" >
                 <tag key="tourism" value="wilderness_hut" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="camp_caravan">
+            <sub-folder name="camp_caravan" zoom-min="15" icon="camp_caravan" >
                 <tag key="tourism" value="camp_site" type="poi,way" />
                 <tag key="tourism" value="caravan_site" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="motel">
+            <sub-folder name="motel" zoom-min="18" icon="motel" >
                 <tag key="tourism" value="motel" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="hostel">
+            <sub-folder name="hostel" zoom-min="17" icon="hostel" >
                 <tag key="tourism" value="hostel" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="hotel">
+            <sub-folder name="hotel" zoom-min="17" icon="hostel" >
                 <tag key="tourism" value="hotel" type="poi,way" />
             </sub-folder>
 			
-			<sub-folder name="guest_house_chalet">
+			<sub-folder name="guest_house_chalet" zoom-min="17" icon="hostel" >
                 <tag key="tourism" value="guest_house" type="poi,way" />
 				<tag key="tourism" value="chalet" type="poi,way" />
             </sub-folder>
