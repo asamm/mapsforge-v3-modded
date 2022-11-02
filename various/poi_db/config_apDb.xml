@@ -220,88 +220,88 @@
         <!-- ======= NATURE ======= -->
 
         <folder name="nature" zoom-min="15" icon="nature" >
-            <sub-folder name="protected_area">
+            <sub-folder name="protected_area" zoom-min="14" icon="nature" >
                 <tag key="boundary" value="protected_area" type="poi,way" />
                 <tag key="leisure" value="nature_reserve" type="poi,way" />
                 <tag key="boundary" value="natural_park" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="rock">
+            <sub-folder name="rock" zoom-min="15" icon="rock" >
                 <tag key="natural" value="rock" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="stone">
+            <sub-folder name="stone" zoom-min="16" icon="stone" >
                 <tag key="natural" value="stone" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="peak">
+            <sub-folder name="peak" zoom-min="13" icon="peak" >
                 <tag key="natural" value="peak" type="poi" />
             </sub-folder>
 
-            <sub-folder name="mountain_pass">
+            <sub-folder name="mountain_pass" zoom-min="14" icon="pass" >
                 <tag key="mountain_pass" value="yes" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="spring">
+            <sub-folder name="spring" zoom-min="15" icon="spring" >
                 <tag key="natural" value="spring" type="poi" />
             </sub-folder>
 
-            <sub-folder name="botanical_garden">
+            <sub-folder name="botanical_garden" zoom-min="15" icon="botanical_garden" >
                 <tag key="garden:type" value="botanical" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="park">
+            <sub-folder name="park" zoom-min="16" icon="park" >
                 <tag key="leisure" value="park" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="beach">
+            <sub-folder name="beach" zoom-min="16" icon="beach" >
                 <tag key="natural" value="beach" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="waterfall">
+            <sub-folder name="waterfall" zoom-min="15" icon="waterfall" >
                 <tag key="waterway" value="waterfall" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="mine">
+            <sub-folder name="mine" zoom-min="14" icon="mineshaft" >
                 <tag key="man_made" value="adit" type="poi" />
                 <tag key="man_made" value="mineshaft" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="cave">
+            <sub-folder name="cave" zoom-min="14" icon="cave_entrance" >
                 <tag key="natural" value="cave_entrance" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="sinkhole">
+            <sub-folder name="sinkhole" zoom-min="15" icon="sinkhole" >
                 <tag key="natural" value="sinkhole" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="cliff">
+            <sub-folder name="cliff" zoom-min="15" icon="cliff" >
                 <tag key="natural" value="cliff" type="poi,way" />
                     <filter key="name" value="*"  />                   
                     <filter key="denotation" value="natural_monument|landmark"  />
             </sub-folder>
 
-            <sub-folder name="tree">
+            <sub-folder name="tree" zoom-min="16" icon="tree" >
                 <tag key="natural" value="tree" type="poi" />
                     <filter key="name" value="*"  />                   
                     <filter key="denotation" value="natural_monument|landmark"  />
             </sub-folder>
 
-            <sub-folder name="volcano">
+            <sub-folder name="volcano" zoom-min="13" icon="volcano" >
                 <tag key="natural" value="volcano" type="poi" />                
                     <filter key="volcano" value="active|dormant" />
                     <filter key="volcano:status" value="active|dormant" />
             </sub-folder>
 
-            <sub-folder name="geyser">
+            <sub-folder name="geyser" zoom-min="16" icon="geyser" >
                 <tag key="natural" value="geyser" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="hot_spring">
+            <sub-folder name="hot_spring" zoom-min="17" icon="hot_spring" >
                 <tag key="natural" value="hot_spring" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="glacier">
+            <sub-folder name="glacier" zoom-min="14" icon="glacier" >
                 <tag key="natural" value="glacier" type="poi,way" />
             </sub-folder>
         </folder>
