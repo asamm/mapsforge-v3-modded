@@ -177,40 +177,42 @@
         <!-- ======= HIKING & CYCLING ======= -->
 
         <folder name="hiking_cycling" zoom-min="15" icon="hiking_cycling" >
-            <sub-folder name="bicycle_parking">
+            <sub-folder name="bicycle_parking" zoom-min="17" icon="bicycle_parking" >
                 <tag key="amenity" value="bicycle_parking" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="guidepost">
+            <sub-folder name="guidepost" zoom-min="15" icon="guidepost" >
                 <tag key="information" value="guidepost" type="poi" />
             </sub-folder>
 
-            <sub-folder name="charging_station_bikes">
+            <sub-folder name="charging_station_bikes" zoom-min="16" icon="charging_station_bikes" >
                 <tag key="amenity" value="charging_station" type="poi" />
                 <filter key="bicycle" value="yes" /> 
             </sub-folder>
 
-            <sub-folder name="map">
-<!--                <tag key="information" value="map" type="poi" /> Deleted first revision 2014-10-24 -->
+<!--
+            <sub-folder name="map" zoom-min="15" icon="hiking_cycling" >
+                <tag key="information" value="map" type="poi" /> Deleted first revision 2014-10-24 
             </sub-folder>
+-->
 
-            <sub-folder name="picnic_site">
+            <sub-folder name="picnic_site" zoom-min="15" icon="picnic_site" >
                 <tag key="tourism" value="picnic_site" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="fire_pit">
+            <sub-folder name="fire_pit" zoom-min="16" icon="fire_pit" >
                 <tag key="leisure" value="firepit" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="shelter">
+            <sub-folder name="shelter" zoom-min="16" icon="shelter" >
                 <tag key="amenity" value="shelter" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="hunting_stand">
+            <sub-folder name="hunting_stand" zoom-min="16" icon="hunting_post" >
                 <tag key="amenity" value="hunting_stand" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="viewpoint">
+            <sub-folder name="viewpoint" zoom-min="16" icon="viewpoint" >
                 <tag key="tourism" value="viewpoint" type="poi,way" />
             </sub-folder>
         </folder>
