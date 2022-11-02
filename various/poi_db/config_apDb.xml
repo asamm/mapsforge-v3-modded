@@ -66,72 +66,72 @@
                 <tag key="information" value="office" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="info_board">
+            <sub-folder name="info_board" zoom-min="17" icon="infoboard" >
                 <tag key="information" value="board" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="museum">
+            <sub-folder name="museum" zoom-min="15" icon="museum" >
                 <tag key="tourism" value="museum" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="gallery">
+            <sub-folder name="gallery" zoom-min="15" icon="gallery" >
                 <tag key="tourism" value="gallery" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="cinema">
+            <sub-folder name="cinema" zoom-min="17" icon="cinema" >
                 <tag key="amenity" value="cinema" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="theatre">
+            <sub-folder name="theatre" zoom-min="16" icon="theatre" >
                 <tag key="amenity" value="theatre" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="castle">
+            <sub-folder name="castle" zoom-min="15" icon="castle" >
                 <tag key="historic" value="castle" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="memorial">
+            <sub-folder name="memorial" zoom-min="15" icon="memorial" >
                 <tag key="historic" value="memorial" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="monument">
+            <sub-folder name="monument" zoom-min="14" icon="monument" >
                 <tag key="historic" value="monument" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="ruin">
+            <sub-folder name="ruin" zoom-min="13" icon="castle_ruin" >
                 <tag key="historic" value="ruins" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="attraction">
+            <sub-folder name="attraction" zoom-min="15" icon="attraction" >
                 <tag key="tourism" value="attraction" type="poi,way" />
                 <tag key="tourism" value="artwork" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="zoo">
+            <sub-folder name="zoo" zoom-min="15" icon="zoo" >
                 <tag key="tourism" value="zoo" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="watermill">
+            <sub-folder name="watermill" zoom-min="14" icon="watermill" >
                 <tag key="man_made" value="watermill" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="aqueduct">
+            <sub-folder name="aqueduct" zoom-min="17" icon="aqueduct" >
                 <tag key="historic" value="aqueduct" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="windmill">
+            <sub-folder name="windmill" zoom-min="14" icon="windmill" >
                 <tag key="man_made" value="windmill" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="lighthouse">
+            <sub-folder name="lighthouse" zoom-min="14" icon="lighthouse" >
                 <tag key="man_made" value="lighthouse" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="fountain">
+            <sub-folder name="fountain" zoom-min="17" icon="fountain" >
                 <tag key="amenity" value="fountain" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="toilets">
+            <sub-folder name="toilets" zoom-min="17" icon="toilets" >
                 <tag key="amenity" value="toilets" type="poi,way" />
             </sub-folder>
         </folder>
