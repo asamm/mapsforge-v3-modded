@@ -39,22 +39,22 @@
         <!-- ======= FINANCIAL & POST SERVICES ======= -->
 
         <folder name="financial_post_services" zoom-min="15" icon="financial_post" >
-            <sub-folder name="bank">
+            <sub-folder name="bank" zoom-min="18" icon="bank" >
                 <tag key="amenity" value="bank" type="poi,way" />
             </sub-folder>
-            <sub-folder name="exchange">
+            <sub-folder name="exchange" zoom-min="18" icon="exchange" >
                 <tag key="amenity" value="bureau_de_change" type="poi" />
             </sub-folder>
-            <sub-folder name="atm">
+            <sub-folder name="atm" zoom-min="18" icon="atm" >
                 <tag key="amenity" value="atm" type="poi" />
             </sub-folder>
-            <sub-folder name="parcel_locker">
+            <sub-folder name="parcel_locker" zoom-min="18" icon="parcel_locker" >
                 <tag key="amenity" value="parcel_locker" type="poi" />
             </sub-folder>
-            <sub-folder name="post_office">
+            <sub-folder name="post_office" zoom-min="16" icon="post_office" >
                 <tag key="amenity" value="post_office" type="poi,way" />
             </sub-folder>
-            <sub-folder name="post_box">
+            <sub-folder name="post_box" zoom-min="18" icon="post_box" >
                 <tag key="amenity" value="post_box" type="poi" />
             </sub-folder>
         </folder>
