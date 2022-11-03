@@ -490,11 +490,11 @@
         <!-- ======= SPORT & LEISURE ======= -->
 
         <folder name="sport_leisure" zoom-min="15" icon="sports" >
-            <sub-folder name="golf">
+            <sub-folder name="golf" zoom-min="15" icon="golf" >
                 <tag key="leisure" value="golf_course" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="swimming">
+            <sub-folder name="swimming" zoom-min="16" icon="swimming" >
                 <tag key="leisure" value="swimming_pool" type="poi,way" >
 					<filter key="access" value="~|customers|yes" />
 				</tag>
@@ -507,21 +507,21 @@
 				</tag>
             </sub-folder>
 
-            <sub-folder name="sport_centre">
+            <sub-folder name="sport_centre" zoom-min="16" icon="sport_centre" >
                 <tag key="leisure" value="sports_centre" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="sport_pitch">
+            <sub-folder name="sport_pitch" zoom-min="16" icon="sport_pitch" >
                 <tag key="leisure" value="pitch" type="poi,way" >
 					<filter key="access" value="~|customers|yes" />
 				</tag>
             </sub-folder>
 
-            <sub-folder name="stadium">
+            <sub-folder name="stadium" zoom-min="16" icon="stadium" >
                 <tag key="leisure" value="stadium" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="drag_lift">
+            <sub-folder name="drag_lift" zoom-min="16" icon="drag_lift" >
                 <tag key="aerialway" value="magic_carpet" type="poi,way" />
                 <tag key="aerialway"  value="rope_tow" type="way" />
                 <tag key="aerialway"  value="platter" type="way" />
@@ -530,40 +530,40 @@
                 <tag key="aerialway"  value="j-bar" type="way" />
             </sub-folder>
 
-            <sub-folder name="chair_lift">
+            <sub-folder name="chair_lift" zoom-min="16" icon="chair_lift" >
                 <tag key="aerialway"  value="chair_lift" type="way" />
                 <tag key="aerialway"  value="mixed_lift" type="way" />
             </sub-folder>
 
-            <sub-folder name="ski_jumping">
+            <sub-folder name="ski_jumping" zoom-min="16" icon="skijumping" >
                 <tag key="sport"  value="ski_jumping" type="poi,way" />
                 <tag key="piste:type"  value="ski_jump" type="poi,way" />
                 <tag key="man_made"  value="ski_jump" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="ski_resort">
+            <sub-folder name="ski_resort" zoom-min="13" icon="skiing" >
                 <tag key="landuse"  value="winter_sports" type="way" />
             </sub-folder>
 
-            <sub-folder name="ski_school">
+            <sub-folder name="ski_school" zoom-min="17" icon="skiing_school" >
                 <tag key="amenity"  value="ski_school" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="ski_services">
+            <sub-folder name="ski_services" zoom-min="17" icon="skiing_shop" >
                 <tag key="shop"  value="ski" type="poi,way" />
                 <tag key="ski:rental"  value="*" type="poi,way" />
                 <tag key="ski:repair"  value="*" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="marina">
+            <sub-folder name="marina" zoom-min="16" icon="marina" >
                 <tag key="leisure"  value="marina" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="playground">
+            <sub-folder name="playground" zoom-min="18" icon="playground" >
                 <tag key="leisure"  value="playground" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="clubs_dancing">
+            <sub-folder name="clubs_dancing" zoom-min="17" icon="clubs_dancing" >
                 <tag key="leisure" value="nightclub" type="poi,way" />
                 <tag key="club" value="music" type="poi,way" />
             </sub-folder>
