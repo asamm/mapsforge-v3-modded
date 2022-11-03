@@ -309,57 +309,57 @@
         <!-- ======= EMERGENCY & HEALTH ======= -->
 
         <folder name="emergency_health" zoom-min="15" icon="emergency" >
-            <sub-folder name="fire_station">
+            <sub-folder name="fire_station" zoom-min="17" icon="fire_station" >
                 <tag key="amenity" value="fire_station" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="mountain_rescue">
+            <sub-folder name="mountain_rescue" zoom-min="15" icon="mountain_rescue" >
                 <tag key="emergency" value="mountain_rescue" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="lifeguard">
+            <sub-folder name="lifeguard" zoom-min="17" icon="lifeguard" >
                 <tag key="lifeguard" value="yes" type="poi,way" />
                 <tag key="emergency" value="lifeguard" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="emergency_point">
+            <sub-folder name="emergency_point" zoom-min="17" icon="emergency_point" >
                 <tag key="emergency" value="assembly_point" type="poi" />
                 <tag key="emergency" value="access_point" type="poi" />
             </sub-folder>
 
-            <sub-folder name="emergency_helipad">
+            <sub-folder name="emergency_helipad" zoom-min="17" icon="emergency_helipad" >
                 <tag key="emergency" value="landing_site" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="emergency_phone">
+            <sub-folder name="emergency_phone" zoom-min="17" icon="emergency_phone" >
                 <tag key="emergency" value="phone" type="poi" />
             </sub-folder>
 
-            <sub-folder name="defibrillator">
+            <sub-folder name="defibrillator" zoom-min="18" icon="aed" >
                 <tag key="emergency" value="defibrillator" type="poi" />
             </sub-folder>
 
-            <sub-folder name="police">
+            <sub-folder name="police" zoom-min="17" icon="police" >
                 <tag key="amenity" value="police" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="doctor">
+            <sub-folder name="doctor" zoom-min="16" icon="doctor" >
                 <tag key="amenity" value="doctors" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="dentist">
+            <sub-folder name="dentist" zoom-min="17" icon="doctor_dentist" >
                 <tag key="amenity" value="dentist" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="hospital">
+            <sub-folder name="hospital" zoom-min="14" icon="hospital" >
                 <tag key="amenity" value="hospital" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="clinic">
+            <sub-folder name="clinic" zoom-min="14" icon="clinic" >
                 <tag key="amenity" value="clinic" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="veterinary">
+            <sub-folder name="veterinary" zoom-min="16" icon="veterinary" >
                 <tag key="amenity" value="veterinary" type="poi,way" />
             </sub-folder>
         </folder>
