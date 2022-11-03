@@ -368,37 +368,37 @@
         <!-- ======= RELIGION ======= -->
 
         <folder name="place_of_worship" zoom-min="15" icon="place_of_worship" >
-            <sub-folder name="wayside_shrine">
+            <sub-folder name="wayside_shrine" zoom-min="15" icon="wayside_shrine" >
                 <tag key="historic" value="wayside_shrine" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="wayside_cross">
+            <sub-folder name="wayside_cross" zoom-min="15" icon="cross" >
                 <tag key="historic" value="wayside_cross" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="cross">
+            <sub-folder name="cross" zoom-min="16" icon="cross" >
                 <tag key="man_made" value="cross" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="buddhist">
+            <sub-folder name="buddhist" zoom-min="14" icon="buddhist" >
                 <tag key="religion" value="buddhist" type="poi,way" />
             </sub-folder>
-            <sub-folder name="christian">
+            <sub-folder name="christian" zoom-min="14" icon="church" >
                 <tag key="religion" value="christian" type="poi,way" />
             </sub-folder>
-            <sub-folder name="hindu">
+            <sub-folder name="hindu" zoom-min="14" icon="hindu" >
                 <tag key="religion" value="hindu" type="poi,way" />
             </sub-folder>
-            <sub-folder name="jewish">
+            <sub-folder name="jewish" zoom-min="14" icon="jewish_star" >
                 <tag key="religion" value="jewish" type="poi,way" />
             </sub-folder>
-            <sub-folder name="muslim">
+            <sub-folder name="muslim" zoom-min="14" icon="muslim" >
                 <tag key="religion" value="muslim" type="poi,way" />
             </sub-folder>
-            <sub-folder name="shinto">
+            <sub-folder name="shinto" zoom-min="14" icon="shinto" >
                 <tag key="religion" value="shinto" type="poi,way" />
             </sub-folder>
-            <sub-folder name="taoist">
+            <sub-folder name="taoist" zoom-min="14" icon="taoist" >
                 <tag key="religion" value="taoist" type="poi,way" />
             </sub-folder>
         </folder>
