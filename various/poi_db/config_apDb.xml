@@ -451,33 +451,33 @@
         <!-- ======= SHOPPING ======= -->
 
         <folder name="shopping" zoom-min="15" icon="shopping" >
-            <sub-folder name="kiosk">
+            <sub-folder name="kiosk" zoom-min="16" icon="kiosk" >
                 <tag key="shop" value="kiosk" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="department_store">
+            <sub-folder name="department_store" zoom-min="17" icon="department_store" >
                 <tag key="shop" value="department_store" type="poi,way" />
                 <tag key="shop" value="mall" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="pharmacy">
+            <sub-folder name="pharmacy" zoom-min="17" icon="pharmacy" >
                 <tag key="amenity" value="pharmacy" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="bakery">
+            <sub-folder name="bakery" zoom-min="17" icon="bakery" >
                 <tag key="shop" value="bakery" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="other">
+            <sub-folder name="other" zoom-min="18" icon="other" >
                 <tag key="shop" value="general" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="supermarket_convenience">
+            <sub-folder name="supermarket_convenience" zoom-min="17" icon="supermarket_convenience" >
                 <tag key="shop" value="convenience" type="poi,way" />
                 <tag key="shop" value="supermarket" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="sport_outdoor">
+            <sub-folder name="sport_outdoor" zoom-min="16" icon="sport_outdoor" >
                 <tag key="shop" value="bicycle" type="poi,way" />
                 <tag key="shop" value="dive" type="poi,way" />
                 <tag key="shop" value="scuba_diving" type="poi,way" />
