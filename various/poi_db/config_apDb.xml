@@ -572,28 +572,28 @@
         <!-- ======= TRANSPORT ======= -->
 
         <folder name="car_services" zoom-min="15" icon="car_services" >
-            <sub-folder name="gas_station">
+            <sub-folder name="gas_station" zoom-min="14" icon="gas_station" >
 				<tag key="amenity" value="fuel" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="charging_station_cars">
+            <sub-folder name="charging_station_cars" zoom-min="14" icon="charging_station" >
                 <tag key="amenity" value="charging_station" type="poi,way">
                     <filter key="bicycle" value="~|no"  />    
                 </tag>
             </sub-folder>
 
-            <sub-folder name="rest_area">
+            <sub-folder name="rest_area" zoom-min="16" icon="rest_area" >
                 <tag key="highway" value="rest_area" type="poi,way" />
             </sub-folder>
   
-            <sub-folder name="parking">
+            <sub-folder name="parking" zoom-min="16" icon="parking" >
                 <tag key="amenity" value="parking" type="poi,way">
 					<filter key="access" value="yes|public|customers"  />					
 					<filter key="capacity" value="*"  />	
 				</tag>
             </sub-folder>
 
-            <sub-folder name="car_shop_and_repair">
+            <sub-folder name="car_shop_and_repair" zoom-min="17" icon="car_shop_and_repair" >
                 <tag key="shop" value="car" type="poi,way" />
                 <tag key="shop" value="car_repair" type="poi,way" />
                 <tag key="shop" value="car_parts" type="poi,way" />
