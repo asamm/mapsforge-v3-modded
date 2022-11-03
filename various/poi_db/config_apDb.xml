@@ -601,43 +601,43 @@
         </folder>
 
         <folder name="transportation" zoom-min="15" icon="transport" >
-            <sub-folder name="bus_and_tram_stop">
+            <sub-folder name="bus_and_tram_stop" zoom-min="17" icon="bus_and_tram_stop" >
                 <tag key="highway" value="bus_stop" type="poi" />
                 <tag key="railway" value="tram_stop" type="poi" />
             </sub-folder>
 
-            <sub-folder name="bus_station">
+            <sub-folder name="bus_station" zoom-min="15" icon="bus_station" >
                 <tag key="amenity" value="bus_station" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="railway_station">
+            <sub-folder name="railway_station" zoom-min="15" icon="railway_station" >
                 <tag key="railway" value="halt" type="poi" />
                 <tag key="railway" value="station" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="subway">
+            <sub-folder name="subway" zoom-min="15" icon="subway" >
                 <tag key="station" value="subway" type="poi" />
             </sub-folder>
 
-            <sub-folder name="airport">
+            <sub-folder name="airport" zoom-min="14" icon="airport" >
                 <tag key="aeroway" value="aerodrome" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="helipad">
+            <sub-folder name="helipad" zoom-min="16" icon="heliport" >
                 <tag key="aeroway" value="helipad" type="poi,way" />
                 <tag key="aeroway" value="heliport" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="ferries">
+            <sub-folder name="ferries" zoom-min="15" icon="ferries" >
                 <tag key="amenity" value="ferry_terminal" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="cable_car">
+            <sub-folder name="cable_car" zoom-min="15" icon="cable_car" >
                 <tag key="aerialway" value="cable_car" type="way" />
                 <tag key="aerialway" value="gondola" type="way" />
             </sub-folder>
 
-            <sub-folder name="funicular">
+            <sub-folder name="funicular" zoom-min="16" icon="funicular" >
                 <tag key="railway" value="funicular" type="way" />
             </sub-folder>
         </folder>
