@@ -406,39 +406,39 @@
         <!-- ======= FOOD & DRINK ======= -->
 
         <folder name="food_drink" zoom-min="15" icon="food_drink" >
-            <sub-folder name="bar_pub">
+            <sub-folder name="bar_pub" zoom-min="18" icon="bar_pub" >
                 <tag key="amenity" value="bar" type="poi,way" />
                 <tag key="amenity" value="pub" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="cafe">
+            <sub-folder name="cafe" zoom-min="17" icon="cafe" >
                 <tag key="amenity" value="cafe" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="restaurant">
+            <sub-folder name="restaurant" zoom-min="16" icon="restaurant" >
                 <tag key="amenity" value="restaurant" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="brewery">
+            <sub-folder name="brewery" zoom-min="16" icon="brewery" >
                 <tag key="product" value="beer" type="poi,way" />
                 <tag key="craft" value="brewery" type="poi,way" />
                 <tag key="microbrewery" value="yes" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="fast_food">
+            <sub-folder name="fast_food" zoom-min="17" icon="fast_food" >
                 <tag key="amenity" value="fast_food" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="confectionery">
+            <sub-folder name="confectionery" zoom-min="18" icon="confectionery" >
                 <tag key="shop" value="pastry" type="poi,way" />
                 <tag key="shop" value="confectionery" type="poi,way" />
             </sub-folder>
 			
-			<sub-folder name="drinking_water">
+			<sub-folder name="drinking_water" zoom-min="16" icon="drinking_water" >
                 <tag key="amenity" value="drinking_water" type="poi" />
             </sub-folder>
 
-            <sub-folder name="veg_food">
+            <sub-folder name="veg_food" zoom-min="17" icon="veg_food" >
                 <tag key="diet:vegetarian" value="yes" type="poi,way" />
                 <tag key="diet:lacto_vegetarian" value="yes" type="poi,way" />
                 <tag key="diet:ovo_vegetarian" value="yes" type="poi,way" />
