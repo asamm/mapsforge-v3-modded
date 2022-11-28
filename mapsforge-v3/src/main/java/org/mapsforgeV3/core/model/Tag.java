@@ -81,7 +81,9 @@ public class Tag {
 			return false;
 		} else if (value == 0 && other.value != 0) {
 			return false;
-		} else return value == 0 || value == other.value;
+		} else {
+			return value == 0 || value == other.value;
+		}
     }
 
     public String getKeyAsString() {
