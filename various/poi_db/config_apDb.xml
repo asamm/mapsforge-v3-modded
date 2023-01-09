@@ -322,12 +322,12 @@
                 <tag key="emergency" value="lifeguard" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="emergency_point" zoom-min="17" icon="emergency_point" >
+            <sub-folder name="emergency_point" zoom-min="17" icon="emergency" >
                 <tag key="emergency" value="assembly_point" type="poi" />
                 <tag key="emergency" value="access_point" type="poi" />
             </sub-folder>
 
-            <sub-folder name="emergency_helipad" zoom-min="17" icon="emergency_helipad" >
+            <sub-folder name="emergency_helipad" zoom-min="17" icon="heliport_emergency" >
                 <tag key="emergency" value="landing_site" type="poi,way" />
             </sub-folder>
 
