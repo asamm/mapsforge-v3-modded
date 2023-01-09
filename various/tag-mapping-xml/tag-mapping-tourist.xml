@@ -73,8 +73,7 @@
 		<osm-tag key="aerialway" value="rope_tow" zoom-appear="12" />
 		<osm-tag key="aerialway" value="t-bar" zoom-appear="12" />
 		
-		<osm-tag key="bicycle" value="designated" renderable="false" />
-		<osm-tag key="bicycle" value="yes" renderable="false" />
+		<osm-tag key="bicycle" value="yes" renderable="false" equivalent-values="designated" />
 	
 		<osm-tag key="emergency" value="phone" zoom-appear="16" />
 		
@@ -115,7 +114,9 @@
 		<osm-tag key="shop" value="convenience" zoom-appear="17" />
 		<osm-tag key="shop" value="hairdresser" zoom-appear="17" />
 		<osm-tag key="shop" value="organic" zoom-appear="17" />
-		<osm-tag key="shop" value="supermarket" zoom-appear="16" />
+		<osm-tag key="shop" value="department_store" zoom-appear="17" />
+		<osm-tag key="shop" value="mall" zoom-appear="17" />
+		<osm-tag key="shop" value="supermarket" zoom-appear="17" />
 		
 		<osm-tag key="vending" value="bicycle_tube" zoom-appear="16" />
 		<osm-tag key="vending" value="excrement_bags" zoom-appear="16" />
@@ -152,6 +153,7 @@
 		<osm-tag key="tourism" value="camp_site" zoom-appear="14" />
 		<osm-tag key="tourism" value="caravan_site" zoom-appear="14" />
 		<osm-tag key="tourism" value="guest_house" zoom-appear="14" />
+		<osm-tag key="tourism" value="guest_house_chalet" zoom-appear="15" />
 		<osm-tag key="tourism" value="hostel" zoom-appear="14" />
 		<osm-tag key="tourism" value="hotel" zoom-appear="14" />
 		<osm-tag key="tourism" value="information" zoom-appear="14" />
@@ -169,22 +171,23 @@
 		<osm-tag key="tourism" value="viewpoint" zoom-appear="13" />
 
 		<osm-tag key="historic" value="battlefield" zoom-appear="14" />
-		<osm-tag key="historic" value="castle" zoom-appear="13" />
+		<osm-tag key="historic" value="castle" zoom-appear="14" />
 		<osm-tag key="historic" value="memorial" zoom-appear="15" />
 		<osm-tag key="historic" value="monument" zoom-appear="15" />
-		<osm-tag key="historic" value="ruins" zoom-appear="13" />
+		<osm-tag key="historic" value="ruins" zoom-appear="14" />
 	</pois>
 
 	<!-- PLACES TAGS -->
 	<pois>
 		<osm-tag key="place" value="city" zoom-appear="6" />
 		<osm-tag key="place" value="country" zoom-appear="3" />
-		<osm-tag key="place" value="hamlet" zoom-appear="13" />
+		<osm-tag key="place" value="hamlet" zoom-appear="11" />
 		<osm-tag key="place" value="island" zoom-appear="10" />
-		<osm-tag key="place" value="locality" zoom-appear="16" />
+		<osm-tag key="place" value="locality" zoom-appear="14" />
 		<osm-tag key="place" value="suburb" zoom-appear="12" />
-		<osm-tag key="place" value="town" zoom-appear="9" />
-		<osm-tag key="place" value="village" zoom-appear="11" />
+		<osm-tag key="place" value="town" zoom-appear="8" />
+		<osm-tag key="place" value="village" zoom-appear="10" />
+		<osm-tag key="place" value="isolated_dwelling" zoom-appear="14" />
 	</pois>
 
 	<!-- NATURAL TAGS -->
@@ -250,9 +253,11 @@
 		<osm-tag key="barrier" value="full-height_turnstile" zoom-appear="15" />
 
 		<osm-tag key="bunker_type" value="pillbox" zoom-appear="14" />
-
+		
 		<osm-tag key="denotation" value="landmark" renderable="false" />
 		<osm-tag key="denotation" value="natural_monument" renderable="false" />
+
+		<osm-tag key="garden:type" value="botanical" zoom-appear="14" />
 
 		<osm-tag key="historic" value="wayside_cross" zoom-appear="14" />
 		<osm-tag key="historic" value="wayside_shrine" zoom-appear="14" />
@@ -309,6 +314,8 @@
 		<osm-tag key="power" value="substation" zoom-appear="14" />
 		<osm-tag key="tower:type" value="communication" zoom-appear="13" />
 		<osm-tag key="tower:type" value="observation" zoom-appear="13" />
+		<osm-tag key="tower:type" value="tower:type=communication;observation" zoom-appear="13" />
+		
 		
 		<osm-tag key="service" value="siding" zoom-appear="13" />
 		<osm-tag key="service" value="spur" zoom-appear="13" />
@@ -362,8 +369,8 @@
 		<osm-tag key="highway" value="secondary_link" zoom-appear="12" />
 		<osm-tag key="highway" value="service" zoom-appear="14" />
 		<osm-tag key="highway" value="services" zoom-appear="14" />
-		<osm-tag key="highway" value="steps" zoom-appear="16" />
-		<osm-tag key="highway" value="tertiary" zoom-appear="12" />
+		<osm-tag key="highway" value="steps" zoom-appear="14" />
+		<osm-tag key="highway" value="tertiary" zoom-appear="11" />
 		<osm-tag key="highway" value="tertiary_link" zoom-appear="12" />
 		<osm-tag key="highway" value="track" zoom-appear="13" />
 		<osm-tag key="highway" value="traffic_signals" zoom-appear="17" />
@@ -387,6 +394,8 @@
 		
 		<osm-tag key="denotation" value="landmark" renderable="false" />
 		<osm-tag key="denotation" value="natural_monument" renderable="false" />
+		
+		<osm-tag key="garden:type" value="botanical" zoom-appear="14" />
 		
 		<osm-tag key="lock" value="yes" zoom-appear="14" />
 		
@@ -465,7 +474,7 @@
 		<osm-tag key="landuse" value="farm" zoom-appear="14" />
 		<osm-tag key="landuse" value="farmland" zoom-appear="14" />
 		<osm-tag key="landuse" value="farmyard" zoom-appear="14" />
-		<osm-tag key="landuse" value="forest" zoom-appear="10" />
+		<osm-tag key="landuse" value="forest" zoom-appear="8" />
 		<osm-tag key="landuse" value="grass" zoom-appear="14" />
 		<osm-tag key="landuse" value="greenfield" zoom-appear="14" />
 		<osm-tag key="landuse" value="hop_garden" zoom-appear="14" />
@@ -521,6 +530,7 @@
 		<osm-tag key="tourism" value="camp_site" zoom-appear="12" />
 		<osm-tag key="tourism" value="caravan_site" zoom-appear="14" />
 		<osm-tag key="tourism" value="guest_house" zoom-appear="14" />
+		<osm-tag key="tourism" value="guest_house_chalet" zoom-appear="14" />
 		<osm-tag key="tourism" value="hostel" zoom-appear="14" />
 		<osm-tag key="tourism" value="hotel" zoom-appear="14" />
 		<osm-tag key="tourism" value="information" zoom-appear="14" />
@@ -583,7 +593,9 @@
 		<osm-tag key="shop" value="convenience" zoom-appear="17" />
 		<osm-tag key="shop" value="hairdresser" zoom-appear="17" />
 		<osm-tag key="shop" value="organic" zoom-appear="17" />
-		<osm-tag key="shop" value="supermarket" zoom-appear="16" />
+		<osm-tag key="shop" value="department_store" zoom-appear="17" />
+		<osm-tag key="shop" value="mall" zoom-appear="17" />
+		<osm-tag key="shop" value="supermarket" zoom-appear="17" />
 		
 		<osm-tag key="vending" value="bicycle_tube" zoom-appear="16" />
 		<osm-tag key="vending" value="excrement_bags" zoom-appear="16" />
@@ -605,11 +617,13 @@
 
 	<!-- PUBLIC TRANSPORT -->
 	<ways>
+		<osm-tag key="railway" value="abandoned" zoom-appear="12" />
 		<osm-tag key="railway" value="disused" zoom-appear="12" />
 		<osm-tag key="railway" value="funicular" zoom-appear="12" />
 		<osm-tag key="railway" value="halt" zoom-appear="15" />
 		<osm-tag key="railway" value="level_crossing" zoom-appear="16" />
 		<osm-tag key="railway" value="light_rail" zoom-appear="12" />
+		<osm-tag key="railway" value="miniature" zoom-appear="13" />
 		<osm-tag key="railway" value="narrow_gauge" zoom-appear="13" />
 		<osm-tag key="railway" value="platform" zoom-appear="14" />
 		<osm-tag key="railway" value="preserved" zoom-appear="12" />
@@ -849,10 +863,10 @@
 		<osm-tag key="boundary" value="protected_area" force-polygon-line="true" zoom-appear="12" />
 		
 		<osm-tag key="historic" value="battlefield" zoom-appear="14" />
-		<osm-tag key="historic" value="castle" zoom-appear="13" />
+		<osm-tag key="historic" value="castle" zoom-appear="14" />
 		<osm-tag key="historic" value="memorial" zoom-appear="15" />
 		<osm-tag key="historic" value="monument" zoom-appear="15" />
-		<osm-tag key="historic" value="ruins" zoom-appear="13" />
+		<osm-tag key="historic" value="ruins" zoom-appear="14" />
 		<osm-tag key="historic" value="wayside_cross" zoom-appear="14" />
 		<osm-tag key="historic" value="wayside_shrine" zoom-appear="14" />
 		
@@ -893,6 +907,7 @@
 		<osm-tag key="area" value="yes" zoom-appear="12" />
 		<osm-tag key="tower:type" value="communication" zoom-appear="13" />
 		<osm-tag key="tower:type" value="observation" zoom-appear="13" />
+		<osm-tag key="tower:type" value="communication;observation" zoom-appear="13" />
 		
 		<!-- embankments -->
 		<osm-tag key="embankment" value="yes" zoom-appear="14" />
@@ -977,12 +992,15 @@
 		<osm-tag key="route" value="ski" zoom-appear="13" />
 		<osm-tag key="route" value="piste" zoom-appear="13" />
 		
-		<osm-tag key="osmc_color" value="blue" zoom-appear="12" />
-		<osm-tag key="osmc_color" value="yellow" zoom-appear="12" />
-		<osm-tag key="osmc_color" value="green" zoom-appear="12" />
-		<osm-tag key="osmc_color" value="red" zoom-appear="12" />
 		<osm-tag key="osmc_color" value="black" zoom-appear="12" />
+		<osm-tag key="osmc_color" value="blue" zoom-appear="12" />
+		<osm-tag key="osmc_color" value="brown" zoom-appear="12" />
+		<osm-tag key="osmc_color" value="green" zoom-appear="12" />
+		<osm-tag key="osmc_color" value="orange" zoom-appear="12" />
+		<osm-tag key="osmc_color" value="purple" zoom-appear="12" />
+		<osm-tag key="osmc_color" value="red" zoom-appear="12" />
 		<osm-tag key="osmc_color" value="white" zoom-appear="12" />
+		<osm-tag key="osmc_color" value="yellow" zoom-appear="12" />
 		<osm-tag key="network" value="iwn" zoom-appear="12" />
 		<osm-tag key="network" value="nwn" zoom-appear="12" />     
 		<osm-tag key="network" value="rwn" zoom-appear="12" />
@@ -1075,7 +1093,7 @@
 	
 	 <!-- Elevation TAGS -->
    <ways>
-      <osm-tag key="contour_ext" value="elevation_minor" zoom-appear="14" force-polygon-line="true" />
+      <osm-tag key="contour_ext" value="elevation_minor" zoom-appear="13" force-polygon-line="true" />
       <osm-tag key="contour_ext" value="elevation_medium" zoom-appear="13" force-polygon-line="true" />
       <osm-tag key="contour_ext" value="elevation_major" zoom-appear="13" force-polygon-line="true" />
       <osm-tag key="ele" value="100" zoom-appear="14" />
@@ -1169,7 +1187,30 @@
       <osm-tag key="ele" value="8900" zoom-appear="14" />
    </ways> 
    
-   
+	 <!-- OSMC text  -->
+	<ways>  
+	
+		<osm-tag key="osmc_text" value="%s" renderable="false" zoom-appear="12" />
+		<osm-tag key="osmc_text_length" value="%f" renderable="false" zoom-appear="12" />
+		
+		<osm-tag key="osmc_order" value="1" renderable="false" zoom-appear="12" />
+		<osm-tag key="osmc_order" value="2" renderable="false" zoom-appear="12" />
+		<osm-tag key="osmc_order" value="3" renderable="false" zoom-appear="12" />		
+		
+		<osm-tag key="osmc_highway" value="track" equivalent-values="track,pedestrian,path,via_ferrata,steps,bridleway" renderable="false"/>
+		<osm-tag key="osmc_highway" value="unclassified" equivalent-values="living_street,service,unclassified,road,raceway,residential,cycleway,footway,tertiary_link,tertiary" renderable="false"/>
+		<osm-tag key="osmc_highway" value="class" equivalent-values="secondary_link,secondary,primary,primary_link,trunk_link,trunk" renderable="false"/>	
+	
+		<osm-tag key="osmc_text_color" value="black" renderable="false" zoom-appear="12" />
+		<osm-tag key="osmc_text_color" value="blue" renderable="false" zoom-appear="12" />
+		<osm-tag key="osmc_text_color" value="brown" renderable="false" zoom-appear="12" />
+		<osm-tag key="osmc_text_color" value="green" renderable="false" zoom-appear="12" />
+		<osm-tag key="osmc_text_color" value="orange" renderable="false" zoom-appear="12" />
+		<osm-tag key="osmc_text_color" value="purple" renderable="false" zoom-appear="12" />
+		<osm-tag key="osmc_text_color" value="red" renderable="false" zoom-appear="12" />
+		<osm-tag key="osmc_text_color" value="white" renderable="false" zoom-appear="12" />
+		<osm-tag key="osmc_text_color" value="yellow" renderable="false" zoom-appear="12" />
+	</ways>
  <!-- OSMC background -->
    <ways>   
 		<osm-tag key="osmc_background" value="black" renderable="false" />
