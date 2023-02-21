@@ -1,0 +1,95 @@
+--accommodation
+wilderness_hut, z15+
+
+--financial & post services
+parcel_locker, z18+
+
+--culture & tourism
+info_board z17+
+gallery z15+
+zoo z15+
+castle_ruin_monument NO MORE EXISTS
+castle z15+
+memorial z15+
+monument z14+
+ruin z13+
+watermill z14+
+aqueduct z17+
+windmill z15+
+lighthouse z14+
+fountain z17+
+
+--public services
+kindergarten z17+
+
+--hiking & cycling
+charging_station_bikes z16+
+picnic_site z15+
+fire_pit z16+
+hunting_stand z16+
+
+--nature
+rock z15+
+stone z16+
+botanical_garden z15+
+park z16+
+beach z16+
+mountain_pass z14+
+waterfall z15+
+mine_cave NO MORE EXISTS
+mine z14+
+cave z14+
+sinkhole z15+
+cliff z15+
+tree z16+
+geyser z16+
+volcano z13+
+hot_spring z17+
+
+--emergency & health
+mountain_rescue z15+
+emergency_point z17+
+lifeguard z17+
+emergency_helipad z17+
+emergency_phone z17+
+defibrillator z18+
+doctor_dentist NO MORE EXISTS
+doctor z16+
+dentist z17+
+hospital_clinic NO MORE EXISTS
+hospital z14+
+clinic z14+
+
+--place_of_worship (religion)
+wayside_shrine z15+
+wayside_cross z15+
+cross z15+
+
+-- food & drink
+brewery z16+
+
+-- shopping
+kiosk z16+
+
+-- sport & leisure
+skiing NO MORE EXISTS
+drag_lift z16+ SKI
+chair_lift z16+
+ski_jumping z16+
+ski_resort z13+ SKI
+ski_school z17+ SKI
+ski_services z17+ SKI
+marina z16+
+playground z18+
+
+-- car services
+charging_station_cars z14+
+
+-- transportation
+helipad z16+
+cable_car z15+
+funicular z16+
+
+
+
+
