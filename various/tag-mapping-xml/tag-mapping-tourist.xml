@@ -185,6 +185,8 @@
 		<osm-tag key="place" value="suburb" zoom-appear="12" />
 		<osm-tag key="place" value="town" zoom-appear="9" />
 		<osm-tag key="place" value="village" zoom-appear="11" />
+		
+		<osm-tag key="capital" value="yes" renderable="false" />
 	</pois>
 
 	<!-- NATURAL TAGS -->
@@ -353,7 +355,7 @@
 		<osm-tag key="highway" value="motorway_link" zoom-appear="12" />
 		<osm-tag key="highway" value="path" zoom-appear="12" />
 		<osm-tag key="highway" value="pedestrian" zoom-appear="14" />
-		<osm-tag key="highway" value="primary" zoom-appear="8" />
+		<osm-tag key="highway" value="primary" zoom-appear="9" />
 		<osm-tag key="highway" value="primary_link" zoom-appear="12" />
 		<osm-tag key="highway" value="raceway" zoom-appear="12" />
 		<osm-tag key="highway" value="residential" zoom-appear="12" />
@@ -402,7 +404,7 @@
 		<osm-tag key="natural" value="grassland" zoom-appear="14" />
 		<osm-tag key="natural" value="gully" zoom-appear="14" />
 		<osm-tag key="natural" value="heath" zoom-appear="13" />
-		<osm-tag key="natural" value="land" zoom-appear="8" />
+		<osm-tag key="natural" value="land" zoom-appear="10" />
 		<osm-tag key="natural" value="marsh" zoom-appear="13" />
 		<osm-tag key="natural" value="massif" zoom-appear="12" />
 		<osm-tag key="natural" value="mountain_range" zoom-appear="12" />
@@ -422,15 +424,15 @@
 		<osm-tag key="natural" value="volcano" zoom-appear="12" />
 		<osm-tag key="natural" value="water" zoom-appear="8" />
 		<osm-tag key="natural" value="wetland" zoom-appear="14" />
-		<osm-tag key="natural" value="wood" zoom-appear="8" />		
+		<osm-tag key="natural" value="wood" zoom-appear="9" />		
 
 		<osm-tag key="waterway" value="canal" zoom-appear="10" />
 		<osm-tag key="waterway" value="dam" zoom-appear="12" />
 		<osm-tag key="waterway" value="ditch" zoom-appear="13" />
-		<osm-tag key="waterway" value="dock" zoom-appear="8" />
+		<osm-tag key="waterway" value="dock" zoom-appear="10" />
 		<osm-tag key="waterway" value="drain" zoom-appear="13" />
-		<osm-tag key="waterway" value="river" zoom-appear="8" />
-		<osm-tag key="waterway" value="riverbank" zoom-appear="8" />
+		<osm-tag key="waterway" value="river" zoom-appear="9" />
+		<osm-tag key="waterway" value="riverbank" zoom-appear="9" />
 		<osm-tag key="waterway" value="stream" zoom-appear="13" />
 		<osm-tag key="waterway" value="waterfall" zoom-appear="13" />
 		<osm-tag key="waterway" value="weir" zoom-appear="14" />
@@ -468,19 +470,19 @@
 		<osm-tag key="landuse" value="forest" zoom-appear="10" />
 		<osm-tag key="landuse" value="grass" zoom-appear="14" />
 		<osm-tag key="landuse" value="greenfield" zoom-appear="14" />
-		<osm-tag key="landuse" value="hop_garden" zoom-appear="14" />
+		<osm-tag key="landuse" value="hop_garden" zoom-appear="13" />
 		<osm-tag key="landuse" value="industrial" zoom-appear="12" />
 		<osm-tag key="landuse" value="landfill" zoom-appear="14" />
 		<osm-tag key="landuse" value="meadow" zoom-appear="14" />
 		<osm-tag key="landuse" value="military" zoom-appear="10" />
-		<osm-tag key="landuse" value="orchard" zoom-appear="14" />
+		<osm-tag key="landuse" value="orchard" zoom-appear="13" />
 		<osm-tag key="landuse" value="quarry" zoom-appear="10" />
 		<osm-tag key="landuse" value="railway" zoom-appear="10" />
 		<osm-tag key="landuse" value="recreation_ground" zoom-appear="14" />
 		<osm-tag key="landuse" value="reservoir" zoom-appear="10" />
 		<osm-tag key="landuse" value="retail" zoom-appear="14" />
 		<osm-tag key="landuse" value="village_green" zoom-appear="14" />
-		<osm-tag key="landuse" value="vineyard" zoom-appear="14" />		
+		<osm-tag key="landuse" value="vineyard" zoom-appear="13" />		
 		<osm-tag key="landuse" value="wood" zoom-appear="10" />
 	</ways>
 
