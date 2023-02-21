@@ -960,6 +960,9 @@
 		<osm-tag key="oneway" value="-1" renderable="false" />
 		<osm-tag key="oneway" value="no" equivalent-values="0,false" renderable="false" />	
 		<osm-tag key="oneway:bicycle" value="no" equivalent-values="0,false" renderable="false" />	
+		<osm-tag key="cycleway" value="opposite" renderable="false" />	
+		<osm-tag key="cycleway:left" value="opposite_lane" equivalent-values="opposite_track" renderable="false" />
+		<osm-tag key="cycleway:right" value="opposite_lane" equivalent-values="opposite_track" renderable="false" />
 
 		<osm-tag key="tracktype" value="grade1" renderable="false" />
 		<osm-tag key="tracktype" value="grade2" renderable="false" />
