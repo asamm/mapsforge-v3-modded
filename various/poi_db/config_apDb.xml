@@ -4,7 +4,7 @@
 
         <!-- ======= ACCOMODATION ======= -->
 
-        <folder name="accommodation" zoom-min="15" icon="accommodation" >
+        <folder name="accommodation" zoom-min="15" icon="accommodation" theme="hike_bike,ski,car,city" >
             <sub-folder name="alpine_hut" zoom-min="15" icon="alpine_hut" >
                 <tag key="tourism" value="alpine_hut" type="poi,way" />
             </sub-folder>
@@ -38,7 +38,7 @@
 
         <!-- ======= FINANCIAL & POST SERVICES ======= -->
 
-        <folder name="financial_post_services" zoom-min="15" icon="financial_post" >
+        <folder name="financial_post_services" zoom-min="15" icon="financial_post" theme="hike_bike,ski,car,city" >
             <sub-folder name="bank" zoom-min="18" icon="bank" >
                 <tag key="amenity" value="bank" type="poi,way" />
             </sub-folder>
@@ -61,7 +61,7 @@
 
         <!-- ======= CULTURE & TOURISM ======= -->
 
-        <folder name="culture_tourism" zoom-min="15" icon="culture_tourism" >
+        <folder name="culture_tourism" zoom-min="15" icon="culture_tourism" theme="hike_bike,ski,car,city" >
             <sub-folder name="info" zoom-min="15" icon="info-square" >
                 <tag key="information" value="office" type="poi,way" />
             </sub-folder>
@@ -138,7 +138,7 @@
 
         <!-- ======= PUBLIC SERVICES ======= -->
 
-        <folder name="public_services" zoom-min="15" icon="public_services" >
+        <folder name="public_services" zoom-min="15" icon="public_services" theme="hike_bike,ski,car,city">
             <sub-folder name="townhall" zoom-min="17" icon="townhall" >
 				<tag key="amenity" value="townhall" type="poi,way" /> 
             </sub-folder>
@@ -176,7 +176,7 @@
 
         <!-- ======= HIKING & CYCLING ======= -->
 
-        <folder name="hiking_cycling" zoom-min="15" icon="hiking_cycling" >
+        <folder name="hiking_cycling" zoom-min="15" icon="hiking_cycling" theme="hike_bike,ski,car,city" >
             <sub-folder name="bicycle_parking" zoom-min="17" icon="bicycle_parking" >
                 <tag key="amenity" value="bicycle_parking" type="poi,way" />
             </sub-folder>
@@ -200,7 +200,7 @@
                 <tag key="tourism" value="picnic_site" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="fire_pit" zoom-min="16" icon="fire_pit" >
+            <sub-folder name="fire_pit" zoom-min="16" icon="firepit" >
                 <tag key="leisure" value="firepit" type="poi,way" />
             </sub-folder>
 
@@ -219,7 +219,7 @@
 
         <!-- ======= NATURE ======= -->
 
-        <folder name="nature" zoom-min="15" icon="nature" >
+        <folder name="nature" zoom-min="15" icon="nature" theme="hike_bike,ski,car,city">
             <sub-folder name="protected_area" zoom-min="14" icon="nature" >
                 <tag key="boundary" value="protected_area" type="poi,way" />
                 <tag key="leisure" value="nature_reserve" type="poi,way" />
@@ -308,7 +308,7 @@
 
         <!-- ======= EMERGENCY & HEALTH ======= -->
 
-        <folder name="emergency_health" zoom-min="15" icon="emergency" >
+        <folder name="emergency_health" zoom-min="15" icon="emergency" theme="hike_bike,ski,car,city" >
             <sub-folder name="fire_station" zoom-min="17" icon="fire_station" >
                 <tag key="amenity" value="fire_station" type="poi,way" />
             </sub-folder>
@@ -367,7 +367,7 @@
 
         <!-- ======= RELIGION ======= -->
 
-        <folder name="place_of_worship" zoom-min="15" icon="place_of_worship" >
+        <folder name="place_of_worship" zoom-min="15" icon="place_of_worship" theme="hike_bike,ski,car,city" >
             <sub-folder name="wayside_shrine" zoom-min="15" icon="wayside_shrine" >
                 <tag key="historic" value="wayside_shrine" type="poi,way" />
             </sub-folder>
@@ -405,7 +405,7 @@
 
         <!-- ======= FOOD & DRINK ======= -->
 
-        <folder name="food_drink" zoom-min="15" icon="food_drink" >
+        <folder name="food_drink" zoom-min="15" icon="food_drink" theme="hike_bike,ski,car,city" >
             <sub-folder name="bar_pub" zoom-min="18" icon="bar_pub" >
                 <tag key="amenity" value="bar" type="poi,way" />
                 <tag key="amenity" value="pub" type="poi,way" />
@@ -450,7 +450,7 @@
 
         <!-- ======= SHOPPING ======= -->
 
-        <folder name="shopping" zoom-min="15" icon="shopping" >
+        <folder name="shopping" zoom-min="15" icon="shopping" theme="hike_bike,ski,car,city" >
             <sub-folder name="kiosk" zoom-min="16" icon="kiosk" >
                 <tag key="shop" value="kiosk" type="poi,way" />
             </sub-folder>
@@ -489,9 +489,10 @@
 
         <!-- ======= SPORT & LEISURE ======= -->
 
-        <folder name="sport_leisure" zoom-min="15" icon="sports" >
+        <folder name="sport_leisure" zoom-min="15" icon="sports" theme="hike_bike,ski,car,city">
             <sub-folder name="golf" zoom-min="15" icon="golf" >
                 <tag key="leisure" value="golf_course" type="poi,way" />
+
             </sub-folder>
 
             <sub-folder name="swimming" zoom-min="16" icon="swimming" >
@@ -521,7 +522,7 @@
                 <tag key="leisure" value="stadium" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="drag_lift" zoom-min="16" icon="drag_lift" >
+            <sub-folder name="drag_lift" zoom-min="16" icon="drag_lift" theme="ski" >
                 <tag key="aerialway" value="magic_carpet" type="poi,way" />
                 <tag key="aerialway"  value="rope_tow" type="way" />
                 <tag key="aerialway"  value="platter" type="way" />
@@ -530,7 +531,7 @@
                 <tag key="aerialway"  value="j-bar" type="way" />
             </sub-folder>
 
-            <sub-folder name="chair_lift" zoom-min="16" icon="chair_lift" >
+            <sub-folder name="chair_lift" zoom-min="16" icon="chair_lift" theme="ski" >
                 <tag key="aerialway"  value="chair_lift" type="way" />
                 <tag key="aerialway"  value="mixed_lift" type="way" />
             </sub-folder>
@@ -541,15 +542,15 @@
                 <tag key="man_made"  value="ski_jump" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="ski_resort" zoom-min="13" icon="skiing" >
+            <sub-folder name="ski_resort" zoom-min="13" icon="skiing" theme="ski" >
                 <tag key="landuse"  value="winter_sports" type="way" />
             </sub-folder>
 
-            <sub-folder name="ski_school" zoom-min="17" icon="skiing_school" >
+            <sub-folder name="ski_school" zoom-min="17" icon="skiing_school" theme="ski" >
                 <tag key="amenity"  value="ski_school" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="ski_services" zoom-min="17" icon="skiing_shop" >
+            <sub-folder name="ski_services" zoom-min="17" icon="skiing_shop" theme="ski" >
                 <tag key="shop"  value="ski" type="poi,way" />
                 <tag key="ski:rental"  value="*" type="poi,way" />
                 <tag key="ski:repair"  value="*" type="poi,way" />
@@ -571,7 +572,7 @@
 
         <!-- ======= TRANSPORT ======= -->
 
-        <folder name="car_services" zoom-min="15" icon="car_services" >
+        <folder name="car_services" zoom-min="15" icon="car_services" theme="hike_bike,ski,car,city" >
             <sub-folder name="gas_station" zoom-min="14" icon="gas_station" >
 				<tag key="amenity" value="fuel" type="poi,way" />
             </sub-folder>
@@ -600,7 +601,7 @@
             </sub-folder>
         </folder>
 
-        <folder name="transportation" zoom-min="15" icon="transport" >
+        <folder name="transportation" zoom-min="15" icon="transport" theme="hike_bike,ski,car,city"  >
             <sub-folder name="bus_and_tram_stop" zoom-min="17" icon="bus_and_tram_stop" >
                 <tag key="highway" value="bus_stop" type="poi" />
                 <tag key="railway" value="tram_stop" type="poi" />
