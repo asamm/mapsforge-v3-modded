@@ -4,29 +4,33 @@
 
         <!-- ======= ACCOMODATION ======= -->
 
-        <folder name="accommodation">
-            <sub-folder name="alpine_hut">
+        <folder name="accommodation" zoom-min="15" icon="accommodation" >
+            <sub-folder name="alpine_hut" zoom-min="15" icon="alpine_hut" >
                 <tag key="tourism" value="alpine_hut" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="camp_caravan">
+            <sub-folder name="wilderness_hut" zoom-min="15" icon="wilderness_hut" >
+                <tag key="tourism" value="wilderness_hut" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="camp_caravan" zoom-min="15" icon="camp_caravan" >
                 <tag key="tourism" value="camp_site" type="poi,way" />
                 <tag key="tourism" value="caravan_site" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="motel">
+            <sub-folder name="motel" zoom-min="18" icon="motel" >
                 <tag key="tourism" value="motel" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="hostel">
+            <sub-folder name="hostel" zoom-min="17" icon="hostel" >
                 <tag key="tourism" value="hostel" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="hotel">
+            <sub-folder name="hotel" zoom-min="17" icon="hostel" >
                 <tag key="tourism" value="hotel" type="poi,way" />
             </sub-folder>
 			
-			<sub-folder name="guest_house_chalet">
+			<sub-folder name="guest_house_chalet" zoom-min="17" icon="hostel" >
                 <tag key="tourism" value="guest_house" type="poi,way" />
 				<tag key="tourism" value="chalet" type="poi,way" />
             </sub-folder>
@@ -34,170 +38,328 @@
 
         <!-- ======= FINANCIAL & POST SERVICES ======= -->
 
-        <folder name="financial_post_services">
-            <sub-folder name="bank">
+        <folder name="financial_post_services" zoom-min="15" icon="financial_post" >
+            <sub-folder name="bank" zoom-min="18" icon="bank" >
                 <tag key="amenity" value="bank" type="poi,way" />
             </sub-folder>
-            <sub-folder name="exchange">
+            <sub-folder name="exchange" zoom-min="18" icon="exchange" >
                 <tag key="amenity" value="bureau_de_change" type="poi" />
             </sub-folder>
-            <sub-folder name="atm">
+            <sub-folder name="atm" zoom-min="18" icon="atm" >
                 <tag key="amenity" value="atm" type="poi" />
             </sub-folder>
-            <sub-folder name="post_office">
+            <sub-folder name="parcel_locker" zoom-min="18" icon="parcel_locker" >
+                <tag key="amenity" value="parcel_locker" type="poi" />
+            </sub-folder>
+            <sub-folder name="post_office" zoom-min="16" icon="post_office" >
                 <tag key="amenity" value="post_office" type="poi,way" />
             </sub-folder>
-            <sub-folder name="post_box">
+            <sub-folder name="post_box" zoom-min="18" icon="post_box" >
                 <tag key="amenity" value="post_box" type="poi" />
             </sub-folder>
         </folder>
 
         <!-- ======= CULTURE & TOURISM ======= -->
 
-        <folder name="culture_tourism">
-            <sub-folder name="info">
+        <folder name="culture_tourism" zoom-min="15" icon="culture_tourism" >
+            <sub-folder name="info" zoom-min="15" icon="info-square" >
                 <tag key="information" value="office" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="museum">
+            <sub-folder name="info_board" zoom-min="17" icon="infoboard" >
+                <tag key="information" value="board" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="museum" zoom-min="15" icon="museum" >
                 <tag key="tourism" value="museum" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="cinema">
+            <sub-folder name="gallery" zoom-min="15" icon="gallery" >
+                <tag key="tourism" value="gallery" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="cinema" zoom-min="17" icon="cinema" >
                 <tag key="amenity" value="cinema" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="theatre">
+            <sub-folder name="theatre" zoom-min="16" icon="theatre" >
                 <tag key="amenity" value="theatre" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="castle_ruin_monument">
+            <sub-folder name="castle" zoom-min="15" icon="castle" >
                 <tag key="historic" value="castle" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="memorial" zoom-min="15" icon="memorial" >
                 <tag key="historic" value="memorial" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="monument" zoom-min="14" icon="monument" >
                 <tag key="historic" value="monument" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="ruin" zoom-min="13" icon="castle_ruin" >
                 <tag key="historic" value="ruins" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="attraction">
+            <sub-folder name="attraction" zoom-min="15" icon="attraction" >
                 <tag key="tourism" value="attraction" type="poi,way" />
+                <tag key="tourism" value="artwork" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="zoo" zoom-min="15" icon="zoo" >
                 <tag key="tourism" value="zoo" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="toilets">
-                <tag key="amenity" value="toilets" type="poi,way" />
+            <sub-folder name="watermill" zoom-min="14" icon="watermill" >
+                <tag key="man_made" value="watermill" type="poi,way" />
             </sub-folder>
 
+            <sub-folder name="aqueduct" zoom-min="17" icon="aqueduct" >
+                <tag key="historic" value="aqueduct" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="windmill" zoom-min="14" icon="windmill" >
+                <tag key="man_made" value="windmill" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="lighthouse" zoom-min="14" icon="lighthouse" >
+                <tag key="man_made" value="lighthouse" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="fountain" zoom-min="17" icon="fountain" >
+                <tag key="amenity" value="fountain" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="toilets" zoom-min="17" icon="toilets" >
+                <tag key="amenity" value="toilets" type="poi,way" />
+            </sub-folder>
         </folder>
 
         <!-- ======= PUBLIC SERVICES ======= -->
 
-        <folder name="public_services">
-            <sub-folder name="townhall">
+        <folder name="public_services" zoom-min="15" icon="public_services" >
+            <sub-folder name="townhall" zoom-min="17" icon="townhall" >
 				<tag key="amenity" value="townhall" type="poi,way" /> 
             </sub-folder>
 
-            <sub-folder name="library">
+            <sub-folder name="library" zoom-min="18" icon="library" >
 				<tag key="amenity" value="library" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="education">
-<!--                <tag key="amenity" value="kindergarten" type="poi,way" /> Deleted first revision 2014-10-24 -->
-<!--               <tag key="amenity" value="college" type="poi,way" /> Deleted first revision 2014-10-24 -->
-<!--               <tag key="amenity" value="school" type="poi,way" />Deleted first revision 2014-10-24 -->
+            <sub-folder name="kindergarten" zoom-min="17" icon="kindergarten" >
+                <tag key="amenity" value="kindergarten" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="education" zoom-min="17" icon="education" >
+<!--            <tag key="amenity" value="kindergarten" type="poi,way" /> Deleted first revision 2014-10-24 -->
+                <tag key="amenity" value="college" type="poi,way" /> <!-- Deleted first revision 2014-10-24, put back 2022-10-19 when unifying online / offline sets -->
+                <tag key="amenity" value="school" type="poi,way" /> <!-- Deleted first revision 2014-10-24, put back 2022-10-19 when unifying online / offline sets -->
                 <tag key="amenity" value="university" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="embassy">
+            <sub-folder name="embassy" zoom-min="17" icon="embassy" >
                 <tag key="amenity" value="embassy" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="telephone">
-<!--                <tag key="amenity" value="telephone" type="poi,way" /> Deleted first revision 2014-10-24 -->
+<!--
+            <sub-folder name="telephone" zoom-min="17" icon="toilets" >
+            <tag key="amenity" value="telephone" type="poi,way" /> Deleted first revision 2014-10-24 
             </sub-folder>
+-->
 
-            <sub-folder name="grave_yard">
+            <sub-folder name="grave_yard" zoom-min="17" icon="grave_yard" >
                 <tag key="landuse" value="cemetery" type="way" /> 
 				<tag key="amenity" value="grave_yard" type="poi,way" />
             </sub-folder>
-
         </folder>
 
         <!-- ======= HIKING & CYCLING ======= -->
 
-        <folder name="hiking_cycling">
-            <sub-folder name="bicycle_parking">
+        <folder name="hiking_cycling" zoom-min="15" icon="hiking_cycling" >
+            <sub-folder name="bicycle_parking" zoom-min="17" icon="bicycle_parking" >
                 <tag key="amenity" value="bicycle_parking" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="guidepost">
+            <sub-folder name="guidepost" zoom-min="15" icon="guidepost" >
                 <tag key="information" value="guidepost" type="poi" />
             </sub-folder>
 
-            <sub-folder name="map">
-<!--                <tag key="information" value="map" type="poi" /> Deleted first revision 2014-10-24 -->
+            <sub-folder name="charging_station_bikes" zoom-min="16" icon="charging_station_bikes" >
+                <tag key="amenity" value="charging_station" type="poi" />
+                <filter key="bicycle" value="yes" /> 
             </sub-folder>
 
-            <sub-folder name="picnic_site">
+<!--
+            <sub-folder name="map" zoom-min="15" icon="hiking_cycling" >
+                <tag key="information" value="map" type="poi" /> Deleted first revision 2014-10-24 
+            </sub-folder>
+-->
+
+            <sub-folder name="picnic_site" zoom-min="15" icon="picnic_site" >
                 <tag key="tourism" value="picnic_site" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="shelter">
+            <sub-folder name="fire_pit" zoom-min="16" icon="fire_pit" >
+                <tag key="leisure" value="firepit" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="shelter" zoom-min="16" icon="shelter" >
                 <tag key="amenity" value="shelter" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="viewpoint">
+            <sub-folder name="hunting_stand" zoom-min="16" icon="hunting_post" >
+                <tag key="amenity" value="hunting_stand" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="viewpoint" zoom-min="16" icon="viewpoint" >
                 <tag key="tourism" value="viewpoint" type="poi,way" />
             </sub-folder>
         </folder>
 
         <!-- ======= NATURE ======= -->
 
-        <folder name="nature">
-            <sub-folder name="protected_area">
+        <folder name="nature" zoom-min="15" icon="nature" >
+            <sub-folder name="protected_area" zoom-min="14" icon="nature" >
                 <tag key="boundary" value="protected_area" type="poi,way" />
+                <tag key="leisure" value="nature_reserve" type="poi,way" />
+                <tag key="boundary" value="natural_park" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="peak">
+            <sub-folder name="rock" zoom-min="15" icon="rock" >
+                <tag key="natural" value="rock" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="stone" zoom-min="16" icon="stone" >
+                <tag key="natural" value="stone" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="peak" zoom-min="13" icon="peak" >
                 <tag key="natural" value="peak" type="poi" />
             </sub-folder>
 
-            <sub-folder name="spring">
+            <sub-folder name="mountain_pass" zoom-min="14" icon="pass" >
+                <tag key="mountain_pass" value="yes" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="spring" zoom-min="15" icon="spring" >
                 <tag key="natural" value="spring" type="poi" />
             </sub-folder>
 
-            <sub-folder name="mine_cave">
+            <sub-folder name="botanical_garden" zoom-min="15" icon="botanical_garden" >
+                <tag key="garden:type" value="botanical" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="park" zoom-min="16" icon="park" >
+                <tag key="leisure" value="park" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="beach" zoom-min="16" icon="beach" >
+                <tag key="natural" value="beach" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="waterfall" zoom-min="15" icon="waterfall" >
+                <tag key="waterway" value="waterfall" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="mine" zoom-min="14" icon="mineshaft" >
                 <tag key="man_made" value="adit" type="poi" />
                 <tag key="man_made" value="mineshaft" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="cave" zoom-min="14" icon="cave_entrance" >
                 <tag key="natural" value="cave_entrance" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="glacier">
+            <sub-folder name="sinkhole" zoom-min="15" icon="sinkhole" >
+                <tag key="natural" value="sinkhole" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="cliff" zoom-min="15" icon="cliff" >
+                <tag key="natural" value="cliff" type="poi,way" />
+                    <filter key="name" value="*"  />                   
+                    <filter key="denotation" value="natural_monument|landmark"  />
+            </sub-folder>
+
+            <sub-folder name="tree" zoom-min="16" icon="tree" >
+                <tag key="natural" value="tree" type="poi" />
+                    <filter key="name" value="*"  />                   
+                    <filter key="denotation" value="natural_monument|landmark"  />
+            </sub-folder>
+
+            <sub-folder name="volcano" zoom-min="13" icon="volcano" >
+                <tag key="natural" value="volcano" type="poi" />                
+                    <filter key="volcano" value="active|dormant" />
+                    <filter key="volcano:status" value="active|dormant" />
+            </sub-folder>
+
+            <sub-folder name="geyser" zoom-min="16" icon="geyser" >
+                <tag key="natural" value="geyser" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="hot_spring" zoom-min="17" icon="hot_spring" >
+                <tag key="natural" value="hot_spring" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="glacier" zoom-min="14" icon="glacier" >
                 <tag key="natural" value="glacier" type="poi,way" />
             </sub-folder>
         </folder>
 
         <!-- ======= EMERGENCY & HEALTH ======= -->
 
-        <folder name="emergency_health">
-            <sub-folder name="fire_station">
+        <folder name="emergency_health" zoom-min="15" icon="emergency" >
+            <sub-folder name="fire_station" zoom-min="17" icon="fire_station" >
                 <tag key="amenity" value="fire_station" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="police">
+            <sub-folder name="mountain_rescue" zoom-min="15" icon="mountain_rescue" >
+                <tag key="emergency" value="mountain_rescue" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="lifeguard" zoom-min="17" icon="lifeguard" >
+                <tag key="lifeguard" value="yes" type="poi,way" />
+                <tag key="emergency" value="lifeguard" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="emergency_point" zoom-min="17" icon="emergency" >
+                <tag key="emergency" value="assembly_point" type="poi" />
+                <tag key="emergency" value="access_point" type="poi" />
+            </sub-folder>
+
+            <sub-folder name="emergency_helipad" zoom-min="17" icon="heliport_emergency" >
+                <tag key="emergency" value="landing_site" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="emergency_phone" zoom-min="17" icon="emergency_phone" >
+                <tag key="emergency" value="phone" type="poi" />
+            </sub-folder>
+
+            <sub-folder name="defibrillator" zoom-min="18" icon="aed" >
+                <tag key="emergency" value="defibrillator" type="poi" />
+            </sub-folder>
+
+            <sub-folder name="police" zoom-min="17" icon="police" >
                 <tag key="amenity" value="police" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="doctor_dentist">
+            <sub-folder name="doctor" zoom-min="16" icon="doctor" >
                 <tag key="amenity" value="doctors" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="dentist" zoom-min="17" icon="doctor_dentist" >
                 <tag key="amenity" value="dentist" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="hospital_clinic">
+            <sub-folder name="hospital" zoom-min="14" icon="hospital" >
                 <tag key="amenity" value="hospital" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="clinic" zoom-min="14" icon="clinic" >
                 <tag key="amenity" value="clinic" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="veterinary">
+            <sub-folder name="veterinary" zoom-min="16" icon="veterinary" >
                 <tag key="amenity" value="veterinary" type="poi,way" />
             </sub-folder>
         </folder>
@@ -205,62 +367,78 @@
 
         <!-- ======= RELIGION ======= -->
 
-        <folder name="place_of_worship">
+        <folder name="place_of_worship" zoom-min="15" icon="place_of_worship" >
+            <sub-folder name="wayside_shrine" zoom-min="15" icon="wayside_shrine" >
+                <tag key="historic" value="wayside_shrine" type="poi,way" />
+            </sub-folder>
 
-            <sub-folder name="buddhist">
+            <sub-folder name="wayside_cross" zoom-min="15" icon="cross" >
+                <tag key="historic" value="wayside_cross" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="cross" zoom-min="16" icon="cross" >
+                <tag key="man_made" value="cross" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="buddhist" zoom-min="14" icon="buddhist" >
                 <tag key="religion" value="buddhist" type="poi,way" />
             </sub-folder>
-            <sub-folder name="christian">
+            <sub-folder name="christian" zoom-min="14" icon="church" >
                 <tag key="religion" value="christian" type="poi,way" />
             </sub-folder>
-            <sub-folder name="hindu">
+            <sub-folder name="hindu" zoom-min="14" icon="hindu" >
                 <tag key="religion" value="hindu" type="poi,way" />
             </sub-folder>
-            <sub-folder name="jewish">
+            <sub-folder name="jewish" zoom-min="14" icon="jewish_star" >
                 <tag key="religion" value="jewish" type="poi,way" />
             </sub-folder>
-            <sub-folder name="muslim">
+            <sub-folder name="muslim" zoom-min="14" icon="muslim" >
                 <tag key="religion" value="muslim" type="poi,way" />
             </sub-folder>
-            <sub-folder name="shinto">
+            <sub-folder name="shinto" zoom-min="14" icon="shinto" >
                 <tag key="religion" value="shinto" type="poi,way" />
             </sub-folder>
-            <sub-folder name="taoist">
+            <sub-folder name="taoist" zoom-min="14" icon="taoist" >
                 <tag key="religion" value="taoist" type="poi,way" />
             </sub-folder>
         </folder>
 
         <!-- ======= FOOD & DRINK ======= -->
 
-        <folder name="food_drink">
-
-            <sub-folder name="bar_pub">
+        <folder name="food_drink" zoom-min="15" icon="food_drink" >
+            <sub-folder name="bar_pub" zoom-min="18" icon="bar_pub" >
                 <tag key="amenity" value="bar" type="poi,way" />
                 <tag key="amenity" value="pub" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="cafe">
+            <sub-folder name="cafe" zoom-min="17" icon="cafe" >
                 <tag key="amenity" value="cafe" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="restaurant">
+            <sub-folder name="restaurant" zoom-min="16" icon="restaurant" >
                 <tag key="amenity" value="restaurant" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="fast_food">
+            <sub-folder name="brewery" zoom-min="16" icon="brewery" >
+                <tag key="product" value="beer" type="poi,way" />
+                <tag key="craft" value="brewery" type="poi,way" />
+                <tag key="microbrewery" value="yes" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="fast_food" zoom-min="17" icon="fast_food" >
                 <tag key="amenity" value="fast_food" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="confectionery">
+            <sub-folder name="confectionery" zoom-min="18" icon="confectionery" >
                 <tag key="shop" value="pastry" type="poi,way" />
                 <tag key="shop" value="confectionery" type="poi,way" />
             </sub-folder>
 			
-			<sub-folder name="drinking_water">
+			<sub-folder name="drinking_water" zoom-min="16" icon="drinking_water" >
                 <tag key="amenity" value="drinking_water" type="poi" />
             </sub-folder>
 
-            <sub-folder name="veg_food">
+            <sub-folder name="veg_food" zoom-min="17" icon="veg_food" >
                 <tag key="diet:vegetarian" value="yes" type="poi,way" />
                 <tag key="diet:lacto_vegetarian" value="yes" type="poi,way" />
                 <tag key="diet:ovo_vegetarian" value="yes" type="poi,way" />
@@ -268,52 +446,55 @@
                 <tag key="diet:fruitarian" value="yes" type="poi,way" />
                 <tag key="vegetarian" value="yes" type="poi,way" />
             </sub-folder>
-
         </folder>
 
         <!-- ======= SHOPPING ======= -->
 
-        <folder name="shopping">
+        <folder name="shopping" zoom-min="15" icon="shopping" >
+            <sub-folder name="kiosk" zoom-min="16" icon="kiosk" >
+                <tag key="shop" value="kiosk" type="poi,way" />
+            </sub-folder>
 
-            <sub-folder name="department_store">
+            <sub-folder name="department_store" zoom-min="17" icon="department_store" >
                 <tag key="shop" value="department_store" type="poi,way" />
                 <tag key="shop" value="mall" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="pharmacy">
+            <sub-folder name="pharmacy" zoom-min="17" icon="pharmacy" >
                 <tag key="amenity" value="pharmacy" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="bakery">
+            <sub-folder name="bakery" zoom-min="17" icon="bakery" >
                 <tag key="shop" value="bakery" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="other">
+            <sub-folder name="other" zoom-min="18" icon="other" >
                 <tag key="shop" value="general" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="supermarket_convenience">
+            <sub-folder name="supermarket_convenience" zoom-min="17" icon="supermarket_convenience" >
                 <tag key="shop" value="convenience" type="poi,way" />
                 <tag key="shop" value="supermarket" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="sport_outdoor">
+            <sub-folder name="sport_outdoor" zoom-min="16" icon="sport_outdoor" >
                 <tag key="shop" value="bicycle" type="poi,way" />
                 <tag key="shop" value="dive" type="poi,way" />
+                <tag key="shop" value="scuba_diving" type="poi,way" />
                 <tag key="shop" value="outdoor" type="poi,way" />
                 <tag key="shop" value="sports" type="poi,way" />
+                <tag key="shop" value="water_sports" type="poi,way" />
             </sub-folder>
         </folder>
 
         <!-- ======= SPORT & LEISURE ======= -->
 
-        <folder name="sport_leisure">
-
-            <sub-folder name="golf">
+        <folder name="sport_leisure" zoom-min="15" icon="sports" >
+            <sub-folder name="golf" zoom-min="15" icon="golf" >
                 <tag key="leisure" value="golf_course" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="swimming">
+            <sub-folder name="swimming" zoom-min="16" icon="swimming" >
                 <tag key="leisure" value="swimming_pool" type="poi,way" >
 					<filter key="access" value="~|customers|yes" />
 				</tag>
@@ -326,31 +507,63 @@
 				</tag>
             </sub-folder>
 
-            <sub-folder name="sport_centre">
+            <sub-folder name="sport_centre" zoom-min="16" icon="sport_centre" >
                 <tag key="leisure" value="sports_centre" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="sport_pitch">
+            <sub-folder name="sport_pitch" zoom-min="16" icon="sport_pitch" >
                 <tag key="leisure" value="pitch" type="poi,way" >
 					<filter key="access" value="~|customers|yes" />
 				</tag>
             </sub-folder>
 
-            <sub-folder name="stadium">
+            <sub-folder name="stadium" zoom-min="16" icon="stadium" >
                 <tag key="leisure" value="stadium" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="skiing">
-                <tag key="sport" value="skiing" type="poi,way" />
+            <sub-folder name="drag_lift" zoom-min="16" icon="drag_lift" >
+                <tag key="aerialway" value="magic_carpet" type="poi,way" />
+                <tag key="aerialway"  value="rope_tow" type="way" />
+                <tag key="aerialway"  value="platter" type="way" />
                 <tag key="aerialway"  value="drag_lift" type="way" />
-                <tag key="aerialway"  value="gondola" type="way" />
-                <tag key="aerialway"  value="chair_lift" type="way" />
-                <tag key="aerialway"  value="cable_car" type="way" />
                 <tag key="aerialway"  value="t-bar" type="way" />
                 <tag key="aerialway"  value="j-bar" type="way" />
             </sub-folder>
 
-            <sub-folder name="clubs_dancing">
+            <sub-folder name="chair_lift" zoom-min="16" icon="chair_lift" >
+                <tag key="aerialway"  value="chair_lift" type="way" />
+                <tag key="aerialway"  value="mixed_lift" type="way" />
+            </sub-folder>
+
+            <sub-folder name="ski_jumping" zoom-min="16" icon="skijumping" >
+                <tag key="sport"  value="ski_jumping" type="poi,way" />
+                <tag key="piste:type"  value="ski_jump" type="poi,way" />
+                <tag key="man_made"  value="ski_jump" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="ski_resort" zoom-min="13" icon="skiing" >
+                <tag key="landuse"  value="winter_sports" type="way" />
+            </sub-folder>
+
+            <sub-folder name="ski_school" zoom-min="17" icon="skiing_school" >
+                <tag key="amenity"  value="ski_school" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="ski_services" zoom-min="17" icon="skiing_shop" >
+                <tag key="shop"  value="ski" type="poi,way" />
+                <tag key="ski:rental"  value="*" type="poi,way" />
+                <tag key="ski:repair"  value="*" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="marina" zoom-min="16" icon="marina" >
+                <tag key="leisure"  value="marina" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="playground" zoom-min="18" icon="playground" >
+                <tag key="leisure"  value="playground" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="clubs_dancing" zoom-min="17" icon="clubs_dancing" >
                 <tag key="leisure" value="nightclub" type="poi,way" />
                 <tag key="club" value="music" type="poi,way" />
             </sub-folder>
@@ -358,58 +571,75 @@
 
         <!-- ======= TRANSPORT ======= -->
 
-        <folder name="car_services">
-
-            <sub-folder name="gas_station">
+        <folder name="car_services" zoom-min="15" icon="car_services" >
+            <sub-folder name="gas_station" zoom-min="14" icon="gas_station" >
 				<tag key="amenity" value="fuel" type="poi,way" />
-				<tag key="amenity" value="charging_station" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="rest_area">
+            <sub-folder name="charging_station_cars" zoom-min="14" icon="charging_station" >
+                <tag key="amenity" value="charging_station" type="poi,way">
+                    <filter key="bicycle" value="~|no"  />    
+                </tag>
+            </sub-folder>
+
+            <sub-folder name="rest_area" zoom-min="16" icon="rest_area" >
                 <tag key="highway" value="rest_area" type="poi,way" />
             </sub-folder>
   
-            <sub-folder name="parking">
+            <sub-folder name="parking" zoom-min="16" icon="parking" >
                 <tag key="amenity" value="parking" type="poi,way">
 					<filter key="access" value="yes|public|customers"  />					
 					<filter key="capacity" value="*"  />	
 				</tag>
             </sub-folder>
 
-            <sub-folder name="car_shop_and_repair">
+            <sub-folder name="car_shop_and_repair" zoom-min="17" icon="car_shop_and_repair" >
                 <tag key="shop" value="car" type="poi,way" />
                 <tag key="shop" value="car_repair" type="poi,way" />
                 <tag key="shop" value="car_parts" type="poi,way" />
             </sub-folder>
         </folder>
 
-        <folder name="transportation">
-            <sub-folder name="bus_and_tram_stop">
+        <folder name="transportation" zoom-min="15" icon="transport" >
+            <sub-folder name="bus_and_tram_stop" zoom-min="17" icon="bus_and_tram_stop" >
                 <tag key="highway" value="bus_stop" type="poi" />
                 <tag key="railway" value="tram_stop" type="poi" />
             </sub-folder>
 
-            <sub-folder name="bus_station">
+            <sub-folder name="bus_station" zoom-min="15" icon="bus_station" >
                 <tag key="amenity" value="bus_station" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="railway_station">
+            <sub-folder name="railway_station" zoom-min="15" icon="railway_station" >
                 <tag key="railway" value="halt" type="poi" />
                 <tag key="railway" value="station" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="subway">
+            <sub-folder name="subway" zoom-min="15" icon="subway" >
                 <tag key="station" value="subway" type="poi" />
             </sub-folder>
 
-            <sub-folder name="airport">
+            <sub-folder name="airport" zoom-min="14" icon="airport" >
                 <tag key="aeroway" value="aerodrome" type="poi,way" />
             </sub-folder>
 
-            <sub-folder name="ferries">
+            <sub-folder name="helipad" zoom-min="16" icon="heliport" >
+                <tag key="aeroway" value="helipad" type="poi,way" />
+                <tag key="aeroway" value="heliport" type="poi,way" />
+            </sub-folder>
+
+            <sub-folder name="ferries" zoom-min="15" icon="ferries" >
                 <tag key="amenity" value="ferry_terminal" type="poi,way" />
             </sub-folder>
 
+            <sub-folder name="cable_car" zoom-min="15" icon="cable_car" >
+                <tag key="aerialway" value="cable_car" type="way" />
+                <tag key="aerialway" value="gondola" type="way" />
+            </sub-folder>
+
+            <sub-folder name="funicular" zoom-min="16" icon="funicular" >
+                <tag key="railway" value="funicular" type="way" />
+            </sub-folder>
         </folder>
 
     </pois>
