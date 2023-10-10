@@ -12,6 +12,8 @@ android {
         versionCode versionId
         versionName version
     }
+
+    namespace = "com.asamm.locus.mapsforgeV3.themeBase"
 }
 
 dependencies {

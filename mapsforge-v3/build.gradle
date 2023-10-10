@@ -12,6 +12,8 @@ android {
         versionCode versionId
         versionName version
     }
+
+    namespace = "org.mapsforge"
 }
 
 dependencies {}
